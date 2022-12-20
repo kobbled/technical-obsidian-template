@@ -8,7 +8,7 @@ Recreated from [Cards - Minimal Documentation](https://minimal.guide/Block+types
 
 ```dataviewjs
 let searchterm = dv.current().searchterm;  
-let pages = dv.pages(searchterm).where(p => p.posterurl != undefined).sort(p => p.file.name, 'desc');  
+let pages = dv.pages(searchterm).where(p => p.posterurl != undefined).sort(p => p.ratingImdb, 'desc');  
 // console.log(dv.current());
 // Create table  
 dv.table(["Poster", "File", "Year", "Director", "Rating"],  

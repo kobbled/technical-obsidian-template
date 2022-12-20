@@ -9,6 +9,6 @@ length:: 1h 35m
 cast:: [Benoît Poelvoorde](https://www.imdb.com/name/nm0688143/?ref_=tt_ov_st)[Jacqueline Poelvoorde-Pappaert](https://www.imdb.com/name/nm0688145/?ref_=tt_ov_st) [Nelly Pappaert](https://www.imdb.com/name/nm0660561/?ref_=tt_ov_st)
 ratingImdb:: 7.4
 rating:: 8
-plot:: A film crew follows a ruthless thief and heartless killer as he goes about his daily routine. But complications set in when the film crew lose their objectivity and begin lending a hand.
+plot:: The activities of rampaging, indiscriminate serial killer Ben (Benoît Poelvoorde) are recorded by a willingly complicit documentary team, who eventually become his accomplices and active participants. Ben provides casual commentary on the nature of his work and arbitrary musings on topics of interest to him, such as music or the conditions of low-income housing, and even goes so far as to introduce the documentary crew to his family. But their reckless indulgences soon get the better of them.
 poster:: [![](https://m.media-amazon.com/images/M/MV5BMTVmNDZjNjMtMDZjZi00ODMwLTlhNWQtZDhmZTE4ZjczM2I4XkEyXkFqcGdeQXVyNzgzODI1OTE@._V1_FMjpg_UX1000_.jpg)](https://www.imdb.com/title/tt0103905/)
 posterurl:: https://m.media-amazon.com/images/M/MV5BMTVmNDZjNjMtMDZjZi00ODMwLTlhNWQtZDhmZTE4ZjczM2I4XkEyXkFqcGdeQXVyNzgzODI1OTE@._V1_FMjpg_UX1000_.jpg
