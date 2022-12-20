@@ -1,0 +1,22 @@
+/* for preview */
+ .markdown-preview-view blockquote {
+    background-color: #26272b;
+    border: 0px solid;
+    border-color: #0065d8 !important;
+    border-left-width: 5px !important;
+    border-radius: 0 8px 8px 0;
+    line-height: 1.5em;
+    font-weight: bold;
+    margin: 10 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+		
+} 
+
+/* Vertical centering of text in blockquote */
+blockquote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
