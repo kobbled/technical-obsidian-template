@@ -1,0 +1,10 @@
+{
+  "accentColor": "",
+  "cssTheme": "Minimal",
+  "enabledCssSnippets": [
+    "images",
+    "img-grid",
+    "minimal_theme_mods",
+    "table"
+  ]
+}
