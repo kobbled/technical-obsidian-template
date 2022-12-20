@@ -6,5 +6,6 @@
     "img-grid",
     "minimal_theme_mods",
     "table"
-  ]
+  ],
+  "translucency": false
 }
