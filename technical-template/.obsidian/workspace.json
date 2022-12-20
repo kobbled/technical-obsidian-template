@@ -18,8 +18,21 @@
                 "source": true
               }
             }
+          },
+          {
+            "id": "e217191989b8881e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_templates/Generic Template.md",
+                "mode": "source",
+                "source": true
+              }
+            }
           }
         ],
+        "currentTab": 1,
         "stacked": true
       }
     ],
@@ -86,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Main Landing Page.md",
+                "file": "_templates/Generic Template.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Main Landing Page.md",
+                "file": "_templates/Generic Template.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Main Landing Page.md"
+                "file": "_templates/Generic Template.md"
               }
             }
           },
@@ -145,10 +158,10 @@
     "direction": "horizontal",
     "width": 277.5
   },
-  "active": "63d8fa901ce29f2d",
+  "active": "e217191989b8881e",
   "lastOpenFiles": [
+    "Main Landing Page.md",
     "Excalidraw/Drawing 2022-12-19 20.14.22.excalidraw.md",
-    "Excalidraw/Drawing 2022-12-19 20.13.23.excalidraw.md",
-    "Main Landing Page.md"
+    "Excalidraw/Drawing 2022-12-19 20.13.23.excalidraw.md"
   ]
 }
