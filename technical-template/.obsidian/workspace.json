@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "3641dc5c6f330cb2",
+        "id": "e7c39f5d1b716e68",
         "type": "tabs",
         "children": [
           {
-            "id": "02354910263b3c68",
+            "id": "ecacad78c8488837",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Dataview Tests/Cards Example/Movie Database.md",
+                "file": "papers/High-Resolution Image Synthesis with Latent Diffusion Models.md",
                 "mode": "preview",
                 "source": true
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Dataview Tests/Cards Example/Movie Database.md",
+                "file": "papers/High-Resolution Image Synthesis with Latent Diffusion Models.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Dataview Tests/Cards Example/Movie Database.md",
+                "file": "papers/High-Resolution Image Synthesis with Latent Diffusion Models.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Dataview Tests/Cards Example/Movie Database.md"
+                "file": "papers/High-Resolution Image Synthesis with Latent Diffusion Models.md"
               }
             }
           },
@@ -139,23 +139,23 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 277.5
+    "width": 309.5
   },
-  "active": "02354910263b3c68",
+  "active": "ecacad78c8488837",
   "lastOpenFiles": [
-    "Dataview Tests/Cards Example/movies/The 400 Blows.md",
-    "Dataview Tests/Cards Example/movies/Oldboy.md",
-    "Dataview Tests/Cards Example/movies/Nausicaa of the Valley of the Wind.md",
-    "Dataview Tests/Cards Example/movies/Miller's Crossing.md",
-    "Dataview Tests/Cards Example/movies/Man Bites Dog.md",
-    "Dataview Tests/Cards Example/movies/High and Low.md",
-    "Dataview Tests/Cards Example/Movie Database.md",
-    "Excalidraw/Drawing 2022-12-19 20.14.22.excalidraw.md",
+    "Papers MOC.md",
+    "_templates/Paper Template.md",
+    "papers/High-Resolution Image Synthesis with Latent Diffusion Models.md",
+    "papers/High-Resolution Image Synthesis with Latent Diffusion Models.md",
     "Main Landing Page.md",
-    "_templates/Movie Template.md"
+    "_templates/Movie Template.md",
+    "img/segmentation/segmentation_labelled.png",
+    "img/segmentation/segmentation_preprocessed_depth.png",
+    "img/segmentation/segmentation_original.png",
+    "img/rombachHighResolutionImageSynthesis2022/NF39C8NW.png"
   ]
 }
