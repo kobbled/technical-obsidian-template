@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "papers/High-Resolution Image Synthesis with Latent Diffusion Models.md",
-                "mode": "preview",
+                "file": "_templates/Paper Template.md",
+                "mode": "source",
                 "source": true
               }
             }
@@ -51,9 +51,9 @@
               "state": {
                 "query": "",
                 "matchingCase": false,
-                "explainSearch": false,
-                "collapseAll": false,
-                "extraContext": false,
+                "explainSearch": true,
+                "collapseAll": true,
+                "extraContext": true,
                 "sortOrder": "alphabetical"
               }
             }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "papers/High-Resolution Image Synthesis with Latent Diffusion Models.md",
+                "file": "_templates/Paper Template.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "papers/High-Resolution Image Synthesis with Latent Diffusion Models.md",
+                "file": "_templates/Paper Template.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "papers/High-Resolution Image Synthesis with Latent Diffusion Models.md"
+                "file": "_templates/Paper Template.md"
               }
             }
           },
@@ -148,9 +148,8 @@
   "active": "ecacad78c8488837",
   "lastOpenFiles": [
     "Papers MOC.md",
+    "papers/High-Resolution Image Synthesis with Latent Diffusion Models.md",
     "_templates/Paper Template.md",
-    "papers/High-Resolution Image Synthesis with Latent Diffusion Models.md",
-    "papers/High-Resolution Image Synthesis with Latent Diffusion Models.md",
     "Main Landing Page.md",
     "_templates/Movie Template.md",
     "img/segmentation/segmentation_labelled.png",

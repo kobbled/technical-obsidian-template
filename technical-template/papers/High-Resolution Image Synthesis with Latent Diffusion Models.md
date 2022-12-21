@@ -8,7 +8,8 @@ alias: [\@rombachHighResolutionImageSynthesis2022]
 **Authors**:: Robin Rombach, Andreas Blattmann, Dominik Lorenz, Patrick Esser, Björn Ommer
 **Link**:: 
 **DOI**:: 10.48550/arXiv.2112.10752
-**Links**:: 
+**Links**::
+**Status**:: #reading
 **Tags**:: #Computer-Vision, #Machine-Learning, #Diffusion-Model, #Autoencoders, #Image-Generation, #ml
 **Zotero**:: [Rombach2022-High-Resolution Image Synthesis with Latent Diffusion Models.pdf](zotero://select/library/items/VJIMEWFA)
 

@@ -9,6 +9,7 @@ alias: [\@{{citekey}}]
 **Link**:: {{URL}}
 **DOI**:: {{DOI}}
 **Links**:: 
+**Staus**:: #to-read
 **Tags**:: {% for t in tags %}#{{t.tag|replace(" ", "-")}}{% if not loop.last %}, {% endif %}{% endfor %}
 **Zotero**:: {{pdfZoteroLink}}
 
