@@ -1,0 +1,25 @@
+{
+  "database": "Zotero",
+  "noteImportFolder": "Papers",
+  "pdfExportImageDPI": 120,
+  "pdfExportImageFormat": "jpg",
+  "pdfExportImageQuality": 90,
+  "citeFormats": [
+    {
+      "name": "Format #1",
+      "format": "pandoc",
+      "brackets": true
+    }
+  ],
+  "exportFormats": [
+    {
+      "name": "Import #1",
+      "outputPathTemplate": "papers/{{citekey}}.md",
+      "imageOutputPathTemplate": "img/{{citekey}}/",
+      "imageBaseNameTemplate": "image",
+      "templatePath": "_templates/Paper Template.md"
+    }
+  ],
+  "shouldConcat": true,
+  "exeVersion": "1.0.14"
+}
