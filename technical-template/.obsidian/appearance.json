@@ -7,5 +7,6 @@
     "minimal_theme_mods",
     "table"
   ],
-  "translucency": false
+  "translucency": false,
+  "interfaceFontFamily": "Inter"
 }

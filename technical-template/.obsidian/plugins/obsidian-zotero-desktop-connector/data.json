@@ -15,7 +15,7 @@
     {
       "name": "Import #1",
       "outputPathTemplate": "papers/{{citekey}}.md",
-      "imageOutputPathTemplate": "img/{{citekey}}/",
+      "imageOutputPathTemplate": "img/papers/{{citekey}}/",
       "imageBaseNameTemplate": "image",
       "templatePath": "_templates/Paper Template.md"
     }
