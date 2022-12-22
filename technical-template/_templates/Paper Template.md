@@ -1,15 +1,17 @@
 ---
 title: {{title|replace(":", " –")}}
-year: {{date | format("YYYY")}}
-tags: [paper]
-alias: [\@{{citekey}}]
+tag: [paper]
+alias: {{citekey}}
 ---
 
+[[Papers MOC]]
+
 **Authors**:: {{authors}}{{directors}}
+**Year**:: {{date | format("YYYY")}}
 **Link**:: {{URL}}
 **DOI**:: {{DOI}}
 **Links**:: 
-**Staus**:: #to-read
+**Status**:: #to-read
 **Tags**:: {% for t in tags %}#{{t.tag|replace(" ", "-")}}{% if not loop.last %}, {% endif %}{% endfor %}
 **Zotero**:: {{pdfZoteroLink}}
 
