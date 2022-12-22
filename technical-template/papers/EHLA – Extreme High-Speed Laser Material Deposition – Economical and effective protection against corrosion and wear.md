@@ -8,7 +8,7 @@ alias: schopphovenEHLAExtremeHighSpeed2017
 
 **Authors**:: Thomas Schopphoven, Andres Gasser, Gerhard Backes
 **Year**:: 2017
-**Link**:: 
+**Link**:: https://onlinelibrary.wiley.com/doi/abs/10.1002/latj.201700020
 **DOI**:: 10.1002/latj.201700020
 **Links**:: 
 **Status**:: #read
@@ -27,11 +27,7 @@ Special coatings protect components against corrosion and wear. However, standar
 ![[UQJXV9QT.png]]
 
 	
-> "_EHLA increases the feed rate from 0.5 to 2 meters per minute to between 50 and 500 meters per minute, thus coating a component 100 to 250 times faster than before_"
-		> [Page 3](zotero://open-pdf/library/items/XX4J8NAF?page=3&annotation=AGU4JA2T)
-
-	
-> "_EHLA allows for layers that measure just 25 to 250 micrometers_"
+> "_EHLA increases the feed rate from 0.5 to 2 meters per minute to between 50 and 500 meters per minute, thus coating a component 100 to 250 times faster than before EHLA allows for layers that measure just 25 to 250 micrometers_"
 		> [Page 3](zotero://open-pdf/library/items/XX4J8NAF?page=3&annotation=AAV6Z4YG)
 
 	
@@ -55,11 +51,7 @@ Special coatings protect components against corrosion and wear. However, standar
 		> [Page 3](zotero://open-pdf/library/items/XX4J8NAF?page=3&annotation=BQWEFDR2)
 
 	
-> "_the worldwide market for hard chrome plating was estimated at_"
-		> [Page 4](zotero://open-pdf/library/items/XX4J8NAF?page=4&annotation=LSVLCMUP)
-
-	
-> "_13.64 billion dollars, while the market for thermal spraying amounted to 7.56 billion dollars._"
+> "_the worldwide market for hard chrome plating was estimated at 13.64 billion dollars, while the market for thermal spraying amounted to 7.56 billion dollars._"
 		> [Page 4](zotero://open-pdf/library/items/XX4J8NAF?page=4&annotation=LDLGVKCF)
 
 	

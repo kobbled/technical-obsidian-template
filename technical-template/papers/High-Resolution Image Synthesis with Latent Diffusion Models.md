@@ -8,7 +8,7 @@ alias: rombachHighResolutionImageSynthesis2022
 
 **Authors**:: Robin Rombach, Andreas Blattmann, Dominik Lorenz, Patrick Esser, Björn Ommer
 **Year**:: 2022
-**Link**:: 
+**Link**:: http://arxiv.org/abs/2112.10752
 **DOI**:: 10.48550/arXiv.2112.10752
 **Links**::
 **Status**:: #reading

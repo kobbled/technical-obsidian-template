@@ -147,7 +147,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -170,15 +170,15 @@
   },
   "active": "ecacad78c8488837",
   "lastOpenFiles": [
-    "Dataview Tests/Cards Example/Movie Database.md",
-    "Dataview Tests/Cards Example/movies/High and Low.md",
-    "papers/EHLA – Extreme High-Speed Laser Material Deposition – Economical and effective protection against corrosion and wear.md",
+    "papers/schopphovenEHLAExtremeHighSpeed2017.md",
     "Main Landing Page.md",
-    "Papers MOC.md",
+    "papers/EHLA – Extreme High-Speed Laser Material Deposition – Economical and effective protection against corrosion and wear.md",
     "papers/High-Resolution Image Synthesis with Latent Diffusion Models.md",
-    "img/grid_test/sunset.png",
+    "papers/rombachHighResolutionImageSynthesis2022.md",
     "_templates/Paper Template.md",
-    "Dataview Tests/Cards Example/movies/Man Bites Dog.md",
-    "Dataview Tests/Cards Example/movies/Miller's Crossing.md"
+    "Papers MOC.md",
+    "Dataview Tests/Cards Example/movies/High and Low.md",
+    "Dataview Tests/Cards Example/Movie Database.md",
+    "img/grid_test/sunset.png"
   ]
 }

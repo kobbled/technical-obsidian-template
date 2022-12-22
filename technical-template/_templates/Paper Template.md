@@ -8,7 +8,7 @@ alias: {{citekey}}
 
 **Authors**:: {{authors}}{{directors}}
 **Year**:: {{date | format("YYYY")}}
-**Link**:: {{URL}}
+**Link**:: {{url}}
 **DOI**:: {{DOI}}
 **Links**:: 
 **Status**:: #to-read
