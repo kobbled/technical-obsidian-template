@@ -1,7 +1,7 @@
-#watchlist #classic #french 
+#Movies/status/watchlist #Movies/Genre/classic #Movies/Genre/french 
 
 **category**:: #Movies
-**genre**:: #Crime #Drama
+**genre**:: #Movies/Genre/Crime #Movies/Genre/Drama
 **directors**:: [François Truffaut](https://www.imdb.com/name/nm0000076/?ref_=tt_ov_dr)
 **year**:: [1959](https://www.imdb.com/title/tt0053198/releaseinfo?ref_=tt_ov_rdat)
 **parental-rating**:: [Not Rated](https://www.imdb.com/title/tt0053198/parentalguide/certificates?ref_=tt_ov_pg)

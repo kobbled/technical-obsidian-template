@@ -1,7 +1,7 @@
-#watched #top10
+#Movies/status/watched #Movies/Category/top10
 
 **category**:: #Movies
-**genre**:: #Action #Drama #Mystery
+**genre**:: #Movies/Genre/Action #Movies/Genre/Drama #Movies/Genre/Mystery
 **directors**:: [Park Chan-wook](https://www.imdb.com/name/nm0661791/?ref_=tt_ov_dr)
 **year**:: [2003](https://www.imdb.com/title/tt0364569/releaseinfo?ref_=tt_ov_rdat)
 **parental-rating**:: [R](https://www.imdb.com/title/tt0364569/parentalguide/certificates?ref_=tt_ov_pg)

@@ -1,7 +1,7 @@
-#watchlist 
+#Movies/status/watchlist 
 
 **category**:: #Movies
-**genre**:: #Crime #Drama #Thriller
+**genre**:: #Movies/Genre/Crime #Movies/Genre/Drama #Movies/Genre/Thriller
 **directors**:: [Joel Coen](https://www.imdb.com/name/nm0001054/?ref_=tt_ov_dr) [Ethan Coen](https://www.imdb.com/name/nm0001053/?ref_=tt_ov_dr)
 **year**:: [1990](https://www.imdb.com/title/tt0100150/releaseinfo?ref_=tt_ov_rdat)
 **parental-rating**:: [R](https://www.imdb.com/title/tt0100150/parentalguide/certificates?ref_=tt_ov_pg)

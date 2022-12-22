@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Main Landing Page.md",
+                "file": "Papers MOC.md",
                 "mode": "preview",
                 "source": true
               }
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#Movies",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -70,7 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 318.5
   },
   "right": {
     "id": "52277dd380415613",
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Main Landing Page.md",
+                "file": "Papers MOC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Main Landing Page.md",
+                "file": "Papers MOC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Main Landing Page.md"
+                "file": "Papers MOC.md"
               }
             }
           },
@@ -146,11 +146,12 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 345.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -169,15 +170,15 @@
   },
   "active": "ecacad78c8488837",
   "lastOpenFiles": [
-    "papers/High-Resolution Image Synthesis with Latent Diffusion Models.md",
-    "Main Landing Page.md",
-    "img/grid_test/sunset.png",
-    "Papers MOC.md",
-    "papers/EHLA – Extreme High-Speed Laser Material Deposition – Economical and effective protection against corrosion and wear.md",
     "Dataview Tests/Cards Example/Movie Database.md",
+    "Dataview Tests/Cards Example/movies/High and Low.md",
+    "papers/EHLA – Extreme High-Speed Laser Material Deposition – Economical and effective protection against corrosion and wear.md",
+    "Main Landing Page.md",
+    "Papers MOC.md",
+    "papers/High-Resolution Image Synthesis with Latent Diffusion Models.md",
+    "img/grid_test/sunset.png",
     "_templates/Paper Template.md",
     "Dataview Tests/Cards Example/movies/Man Bites Dog.md",
-    "Dataview Tests/Cards Example/movies/Miller's Crossing.md",
-    "Dataview Tests/Cards Example/movies/The 400 Blows.md"
+    "Dataview Tests/Cards Example/movies/Miller's Crossing.md"
   ]
 }

@@ -1,7 +1,7 @@
-#watchlist #classic #french
+#Movies/status/watchlist #Movies/Genre/classic #Movies/Genre/french
 
 **category**:: #Movies
-**genre**:: #Comedy #Crime #Drama 
+**genre**:: #Movies/Genre/Comedy #Movies/Genre/Crime #Movies/Genre/Drama 
 **directors**:: [Rémy Belvaux](https://www.imdb.com/name/nm0069715/?ref_=tt_ov_dr) [André Bonzel](https://www.imdb.com/name/nm0095298/?ref_=tt_ov_dr) [Benoît Poelvoorde](https://www.imdb.com/name/nm0688143/?ref_=tt_ov_dr)
 **year**:: [1992](https://www.imdb.com/title/tt0103905/releaseinfo?ref_=tt_ov_rdat)
 **parental-rating**:: [NC-17](https://www.imdb.com/title/tt0103905/parentalguide/certificates?ref_=tt_ov_pg)

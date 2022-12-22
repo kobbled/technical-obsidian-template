@@ -1,7 +1,7 @@
-#watchlist #classic #japanese
+#Movies/status/watchlist #Movies/Genre/classic #Movies/Genre/japanese
 
 **category**:: #Movies
-**genre**:: #Crime #Drama #Mystery
+**genre**:: #Movies/Genre/Crime #Movies/Genre/Drama #Movies/Genre/Mystery
 **directors**:: [Akira Kurosawa](https://www.imdb.com/name/nm0000041/?ref_=tt_ov_dr)
 **year**:: [1963](https://www.imdb.com/title/tt0057565/releaseinfo?ref_=tt_ov_rdat)
 **parental-rating**:: [Not Rated](https://www.imdb.com/title/tt0057565/parentalguide/certificates?ref_=tt_ov_pg)

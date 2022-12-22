@@ -1,7 +1,7 @@
-#watched #best-anime
+#Movies/status/watched #Movies/Category/favorite
 
 **category**:: #Movies
-**genre**:: #Animation #Adventure #Sci-Fi
+**genre**:: #Movies/Genre/Animation #Movies/Genre/Adventure #Movies/Genre/Sci-Fi
 **directors**:: [Hayao Miyazaki](https://www.imdb.com/name/nm0594503/?ref_=tt_ov_dr)
 **year**:: [1984](https://www.imdb.com/title/tt0087544/releaseinfo?ref_=tt_ov_rdat)
 **parental-rating**:: [Not Rated](https://www.imdb.com/title/tt0057565/parentalguide/certificates?ref_=tt_ov_pg)

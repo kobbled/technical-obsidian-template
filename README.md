@@ -12,11 +12,14 @@ as well as examples for Temaples, and dataviews:
 ## Features
 
 * **Card Example**
+
 ![|300](img/movie_cards.png)
 
 * **Zotero Import**
+
 ![|300](img/zotero_import.png)
 
 * **Image Grids**
+
 ![](img/img-grid1.png)
 ![](img/img-grid2.png)
