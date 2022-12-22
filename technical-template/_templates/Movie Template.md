@@ -8,15 +8,15 @@
 %>
 ---
 <% tp.file.move("/Dataview Tests/Cards Example/movies/" + `${title}`) %>
-category::
-genre:: 
-directors::
-year::
-parental-rating::
-length::
-cast::
-ratingImdb::
-rating::
-plot::
-poster:: [![]()]()
-posterurl::
+**category:**:
+**genre**:: 
+**directors**::
+**year**::
+**parental-rating**::
+**length**::
+**cast**::
+**ratingImdb**::
+**rating**::
+**plot**::
+**poster**:: [![]()]()
+**posterurl**::
