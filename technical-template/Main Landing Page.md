@@ -1,19 +1,35 @@
  #main #entry
 
 -----------------
+## H2
+### H3
+#### H4
+##### H5
+
 ## Images
 
 Single images with be centered:
 
-![[latent-diffusion-model.png|600]]
+![[NF39C8NW.png|600]]
 
-Images will be displayed in a grid layout:
+### Image Grid Test
 
-![[segmentation_original.png|200]]
-![[segmentation_preprocessed_depth.png|200]]
-![[segmentation_labelled.png|200]]
+Sequential images that are not seperated by a space will be put into a tile grid.
 
-Quotes
+![[sunset.png]]
+
+![[car.png]]
+![[overpass.png]]
+![[parkbench.png]]
+
+---------------------
+
+![[draw_wizard.png]]
+![[draw_space.png]]
+
+![[draw_sunset.png]]
+
+## Quotes
 
 > **General Block**
 > This is a general quote block. Change the theming in CSS snippet `minimal_theme_mods`
