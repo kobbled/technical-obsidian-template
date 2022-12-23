@@ -1,6 +1,6 @@
 ---
 title: High-Resolution Image Synthesis with Latent Diffusion Models
-tag: [paper]
+tag: [paperitem]
 alias: rombachHighResolutionImageSynthesis2022
 ---
 
@@ -11,7 +11,7 @@ alias: rombachHighResolutionImageSynthesis2022
 **Link**:: http://arxiv.org/abs/2112.10752
 **DOI**:: 10.48550/arXiv.2112.10752
 **Links**::
-**Status**:: #reading
+**Status**:: #paper/status/reading
 **Tags**:: #ml, #ml/autoencoders, #ml/diffusion, #ml/generative
 **Zotero**:: [Rombach2022-High-Resolution Image Synthesis with Latent Diffusion Models.pdf](zotero://select/library/items/VJIMEWFA)
 

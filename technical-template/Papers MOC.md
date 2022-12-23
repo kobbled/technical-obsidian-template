@@ -1,9 +1,9 @@
 **Paper Status Tags**:
 
-#to-read #reading #read 
+#paper/status/to-read #paper/status/reading #paper/status/read 
 
 ```dataviewjs
-for (let group of dv.pages('#paper').groupBy(p => p.status)) {
+for (let group of dv.pages('#paperitem').groupBy(p => p.status)) {
   dv.header(3, group.key);
   dv.table(["Name", "Year", "Tags"],
     group.rows

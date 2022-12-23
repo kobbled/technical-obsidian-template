@@ -79,7 +79,7 @@
       {
         "id": "5f0ece000c571db6",
         "type": "tabs",
-        "dimension": 57.26744186046512,
+        "dimension": 57.26744186046513,
         "children": [
           {
             "id": "9294aae2ac2aa350",
@@ -147,12 +147,13 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 2
       },
       {
         "id": "21e3badd15c18f5d",
         "type": "tabs",
-        "dimension": 42.73255813953488,
+        "dimension": 42.73255813953487,
         "children": [
           {
             "id": "ecacad78c8488837",
@@ -219,17 +220,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9b78e651690b4c80",
+  "active": "1fc61cbd175b1b3d",
   "lastOpenFiles": [
     "Main Landing Page.md",
     "Papers MOC.md",
-    "papers/EHLA – Extreme High-Speed Laser Material Deposition – Economical and effective protection against corrosion and wear.md",
     "papers/High-Resolution Image Synthesis with Latent Diffusion Models.md",
-    "Dataview Tests/Cards Example/Movie Database.md",
-    "Dataview Tests/Cards Example/movies/Nausicaa of the Valley of the Wind.md",
-    "Dataview Tests/Cards Example/movies/High and Low.md",
-    "papers/rombachHighResolutionImageSynthesis2022.md",
+    "papers/EHLA – Extreme High-Speed Laser Material Deposition – Economical and effective protection against corrosion and wear.md",
     "_templates/Paper Template.md",
-    "Excalidraw/Drawing 2022-12-19 20.14.22.excalidraw.md"
+    "Dataview Tests/Cards Example/movies/High and Low.md",
+    "_templates/Movie Template.md",
+    "_templates/Generic Template.md",
+    "Dataview Tests/Cards Example/Movie Database.md",
+    "Dataview Tests/Cards Example/movies/Nausicaa of the Valley of the Wind.md"
   ]
 }

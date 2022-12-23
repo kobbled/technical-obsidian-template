@@ -1,6 +1,6 @@
 ---
 title: {{title|replace(":", " –")}}
-tag: [paper]
+tag: [paperitem]
 alias: {{citekey}}
 ---
 
@@ -11,7 +11,7 @@ alias: {{citekey}}
 **Link**:: {{url}}
 **DOI**:: {{DOI}}
 **Links**:: 
-**Status**:: #to-read
+**Status**:: #paper/status/to-read
 **Tags**:: {% for t in tags %}#{{t.tag|replace(" ", "-")}}{% if not loop.last %}, {% endif %}{% endfor %}
 **Zotero**:: {{pdfZoteroLink}}
 
