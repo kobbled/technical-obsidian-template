@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Main Landing Page.md",
+                "file": "papers/EHLA – Extreme High-Speed Laser Material Deposition – Economical and effective protection against corrosion and wear.md",
                 "mode": "preview",
                 "source": true
               }
@@ -87,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Main Landing Page.md",
+                "file": "papers/EHLA – Extreme High-Speed Laser Material Deposition – Economical and effective protection against corrosion and wear.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Main Landing Page.md",
+                "file": "papers/EHLA – Extreme High-Speed Laser Material Deposition – Economical and effective protection against corrosion and wear.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Main Landing Page.md"
+                "file": "papers/EHLA – Extreme High-Speed Laser Material Deposition – Economical and effective protection against corrosion and wear.md"
               }
             }
           },
@@ -169,7 +169,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Main Landing Page.md",
+                "file": "papers/EHLA – Extreme High-Speed Laser Material Deposition – Economical and effective protection against corrosion and wear.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -220,17 +220,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "62bdd7322d8a82d9",
+  "active": "1fc61cbd175b1b3d",
   "lastOpenFiles": [
-    "Papers MOC.md",
+    "Main Landing Page.md",
+    "Dataview Tests/Cards Example/Movie Database.md",
+    "Dataview Tests/Cards Example/movies/Oldboy.md",
     "papers/High-Resolution Image Synthesis with Latent Diffusion Models.md",
     "papers/EHLA – Extreme High-Speed Laser Material Deposition – Economical and effective protection against corrosion and wear.md",
-    "Dataview Tests/Cards Example/Movie Database.md",
+    "Papers MOC.md",
     "Dataview Tests/Cards Example/movies/High and Low.md",
-    "Main Landing Page.md",
     "_templates/Paper Template.md",
     "_templates/Movie Template.md",
-    "_templates/Generic Template.md",
-    "Dataview Tests/Cards Example/movies/Nausicaa of the Valley of the Wind.md"
+    "_templates/Generic Template.md"
   ]
 }

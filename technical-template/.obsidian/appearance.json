@@ -6,7 +6,8 @@
     "img-grid",
     "minimal_theme_mods",
     "table",
-    "mermaid"
+    "mermaid",
+    "carousel"
   ],
   "translucency": false,
   "interfaceFontFamily": "Inter"

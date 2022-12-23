@@ -23,3 +23,7 @@ as well as examples for Temaples, and dataviews:
 
 ![](img/img-grid1.png)
 ![](img/img-grid2.png)
+
+* **Slideshow**
+
+![](img/slidshow.png)
