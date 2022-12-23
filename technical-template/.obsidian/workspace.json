@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "e7c39f5d1b716e68",
+        "id": "490ab92314c79324",
         "type": "tabs",
         "children": [
           {
-            "id": "ecacad78c8488837",
+            "id": "62bdd7322d8a82d9",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Movies",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -79,6 +79,7 @@
       {
         "id": "5f0ece000c571db6",
         "type": "tabs",
+        "dimension": 57.26744186046512,
         "children": [
           {
             "id": "9294aae2ac2aa350",
@@ -146,8 +147,58 @@
               "state": {}
             }
           }
+        ]
+      },
+      {
+        "id": "21e3badd15c18f5d",
+        "type": "tabs",
+        "dimension": 42.73255813953488,
+        "children": [
+          {
+            "id": "ecacad78c8488837",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          },
+          {
+            "id": "9b78e651690b4c80",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "Papers MOC.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 0.7132754626224425,
+                  "close": true
+                }
+              }
+            }
+          }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -168,17 +219,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ecacad78c8488837",
+  "active": "9b78e651690b4c80",
   "lastOpenFiles": [
-    "papers/schopphovenEHLAExtremeHighSpeed2017.md",
     "Main Landing Page.md",
+    "Papers MOC.md",
     "papers/EHLA – Extreme High-Speed Laser Material Deposition – Economical and effective protection against corrosion and wear.md",
     "papers/High-Resolution Image Synthesis with Latent Diffusion Models.md",
+    "Dataview Tests/Cards Example/Movie Database.md",
+    "Dataview Tests/Cards Example/movies/Nausicaa of the Valley of the Wind.md",
+    "Dataview Tests/Cards Example/movies/High and Low.md",
     "papers/rombachHighResolutionImageSynthesis2022.md",
     "_templates/Paper Template.md",
-    "Papers MOC.md",
-    "Dataview Tests/Cards Example/movies/High and Low.md",
-    "Dataview Tests/Cards Example/Movie Database.md",
-    "img/grid_test/sunset.png"
+    "Excalidraw/Drawing 2022-12-19 20.14.22.excalidraw.md"
   ]
 }

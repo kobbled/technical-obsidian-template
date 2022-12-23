@@ -40,7 +40,7 @@ By decomposing the image formation process into a sequential application of deno
 		> [Page 2](zotero://open-pdf/library/items/VJIMEWFA?page=2&annotation=WDRZ8UV7)
 
 	
-> "_enerative Adversarial Networks (GAN) [27] allow for efficient sampling of high resolution images with good perceptual quality [3, 42], but are difficult to optimize [2, 28, 54] and struggle to capture the full data distribution [55]._"
+> "_Generative Adversarial Networks (GAN) [27] allow for efficient sampling of high resolution images with good perceptual quality [3, 42], but are difficult to optimize [2, 28, 54] and struggle to capture the full data distribution [55]._"
 		> [Page 3](zotero://open-pdf/library/items/VJIMEWFA?page=3&annotation=HA5TLSMF)
 
 	
