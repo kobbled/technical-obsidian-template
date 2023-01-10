@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "62bdd7322d8a82d9",
+            "id": "aeb4939f7e49ca4d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "papers/EHLA – Extreme High-Speed Laser Material Deposition – Economical and effective protection against corrosion and wear.md",
+                "file": "Main.md",
                 "mode": "preview",
                 "source": true
               }
@@ -87,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "papers/EHLA – Extreme High-Speed Laser Material Deposition – Economical and effective protection against corrosion and wear.md",
+                "file": "Main.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "papers/EHLA – Extreme High-Speed Laser Material Deposition – Economical and effective protection against corrosion and wear.md",
+                "file": "Main.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "papers/EHLA – Extreme High-Speed Laser Material Deposition – Economical and effective protection against corrosion and wear.md"
+                "file": "Main.md"
               }
             }
           },
@@ -169,7 +169,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "papers/EHLA – Extreme High-Speed Laser Material Deposition – Economical and effective protection against corrosion and wear.md",
+                "file": "Main.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -208,7 +208,6 @@
   "left-ribbon": {
     "hiddenItems": {
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-excalidraw-plugin:New Excalidraw drawing": false,
       "open-vscode:VSCode": false,
       "templater-obsidian:Templater": false,
       "mathpad:Open Mathpad": false,
@@ -217,20 +216,21 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:New Excalidraw drawing": false
     }
   },
-  "active": "1fc61cbd175b1b3d",
+  "active": "aeb4939f7e49ca4d",
   "lastOpenFiles": [
-    "Main Landing Page.md",
-    "Dataview Tests/Cards Example/Movie Database.md",
-    "Dataview Tests/Cards Example/movies/Oldboy.md",
-    "papers/High-Resolution Image Synthesis with Latent Diffusion Models.md",
+    "examples/Text Justify.md",
     "papers/EHLA – Extreme High-Speed Laser Material Deposition – Economical and effective protection against corrosion and wear.md",
-    "Papers MOC.md",
+    "Main.md",
+    "examples/Multi Column Callout.md",
+    "examples/List Cards.md",
+    "examples/Image Slideshow.md",
+    "examples/Image Gallery.md",
+    "Dataview Tests/Cards Example/Movie Database.md",
     "Dataview Tests/Cards Example/movies/High and Low.md",
-    "_templates/Paper Template.md",
-    "_templates/Movie Template.md",
-    "_templates/Generic Template.md"
+    "papers/High-Resolution Image Synthesis with Latent Diffusion Models.md"
   ]
 }
