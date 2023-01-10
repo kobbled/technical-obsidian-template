@@ -26,5 +26,10 @@
   "minimal-style@@bold-color@@dark": "#E798BC",
   "minimal-style@@italic-color@@light": "#FFDAA1",
   "minimal-style@@italic-color@@dark": "#FFDAA1",
-  "minimal-style@@trim-cols": true
+  "minimal-style@@trim-cols": true,
+  "modular-css-layout-mc@@list-grid-min-width": "300px",
+  "modular-css-layout-gc@@list-image-control-off": false,
+  "modular-css-layout-gc@@img-max-width-list": "300px",
+  "modular-css-layout-gc@@image-zoom": true,
+  "modular-css-layout-gc@@img-max-height": "400px"
 }

@@ -2,13 +2,16 @@
   "accentColor": "",
   "cssTheme": "Minimal",
   "enabledCssSnippets": [
-    "images",
-    "img-grid",
-    "minimal_theme_mods",
-    "table",
     "mermaid",
-    "carousel"
+    "MCL Multi Column",
+    "MCL Wide Views",
+    "carousel",
+    "table",
+    "minimal_theme_mods",
+    "MCL Gallery Cards",
+    "images"
   ],
   "translucency": false,
-  "interfaceFontFamily": "Inter"
+  "interfaceFontFamily": "Inter",
+  "baseFontSize": 16
 }
