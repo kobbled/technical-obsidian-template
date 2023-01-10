@@ -10,7 +10,7 @@ alias: {{citekey}}
 **Year**:: {{date | format("YYYY")}}
 **Link**:: {{url}}
 **DOI**:: {{DOI}}
-**Links**:: 
+**Ref-Links**:: 
 **Status**:: #paper/status/to-read
 **Tags**:: {% for t in tags %}#{{t.tag|replace(" ", "-")}}{% if not loop.last %}, {% endif %}{% endfor %}
 **Zotero**:: {{pdfZoteroLink}}
