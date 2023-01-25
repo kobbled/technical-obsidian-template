@@ -1,5 +1,5 @@
 ---
-cssClass: image-gallery
+cssClass: image-gallery, centerImg
 ---
 
  #main #entry
@@ -22,7 +22,12 @@ Modular layout CSS can be found, and installed from [here](https://github.com/ef
 
 ## Images
 
-Single images with be centered:
+Images can be centered with frontmatter
+```
+---
+cssClass: centerImg
+---
+```
 
 ![[NF39C8NW.png]]
 

@@ -1,14 +1,14 @@
 
 
 ---
-cssclass: text-justify, wide-page, minimal-float
+cssclass: wide-page, minimal-float, centerImg
 ---
 
 **reference**: https://efemkay.github.io/obsidian-modular-css-layout/showcases/float-with-mc-dataview/
 
 ## General linear model
 
-> [!blank-container|right] Relationship of Data, Information and Intelligence
+> [!blank-container|right-large] Relationship of Data, Information and Intelligence
 > ![linear regression|400](https://data-science-blog.com/wp-content/uploads/2022/05/linear-regression-error-term.png)
 > **Fig 1**: Example of [simple linear regression](https://en.wikipedia.org/wiki/Simple_linear_regression "Simple linear regression"), which has one independent variable
 
