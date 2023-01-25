@@ -12,6 +12,7 @@ alias: {{citekey}}
 **DOI**:: {{DOI}}
 **Ref-Links**:: 
 **Status**:: #paper/status/to-read
+**Priority**:: 🟢
 **Tags**:: {% for t in tags %}#{{t.tag|replace(" ", "-")}}{% if not loop.last %}, {% endif %}{% endfor %}
 **Zotero**:: {{pdfZoteroLink}}
 

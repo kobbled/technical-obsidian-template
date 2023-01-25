@@ -12,6 +12,7 @@ alias: rombachHighResolutionImageSynthesis2022
 **DOI**:: 10.48550/arXiv.2112.10752
 **Ref-Links**::
 **Status**:: #paper/status/reading
+**Priority**:: 🟢
 **Tags**:: #ml, #ml/autoencoders, #ml/diffusion, #ml/generative
 **Zotero**:: [Rombach2022-High-Resolution Image Synthesis with Latent Diffusion Models.pdf](zotero://select/library/items/VJIMEWFA)
 

@@ -12,6 +12,7 @@ alias: schopphovenEHLAExtremeHighSpeed2017
 **DOI**:: 10.1002/latj.201700020
 **Ref-Links**:: 
 **Status**:: #paper/status/read
+**Priority**:: 🟢
 **Tags**:: #Corrosion, #Wear, #Additive, #Additive/DED, #Additive/EHLA, #Additive/Cladding
 **Zotero**:: [Schopphoven et al. - 2017 - EHLA Extreme High-Speed Laser Material Deposition.pdf](zotero://select/library/items/XX4J8NAF)
 
