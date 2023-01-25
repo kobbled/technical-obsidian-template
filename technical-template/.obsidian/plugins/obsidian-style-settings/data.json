@@ -31,5 +31,6 @@
   "modular-css-layout-gc@@list-image-control-off": false,
   "modular-css-layout-gc@@img-max-width-list": "300px",
   "modular-css-layout-gc@@image-zoom": true,
-  "modular-css-layout-gc@@img-max-height": "400px"
+  "modular-css-layout-gc@@img-max-height": "400px",
+  "minimal-style@@max-col-width": "30em"
 }

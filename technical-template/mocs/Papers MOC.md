@@ -1,3 +1,6 @@
+---
+cssClass: wide-page
+---
 **Paper Status Tags**:
 
 #paper/status/to-read #paper/status/reading #paper/status/read 
