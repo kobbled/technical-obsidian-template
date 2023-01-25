@@ -14,7 +14,7 @@
   "exportFormats": [
     {
       "name": "Import #1",
-      "outputPathTemplate": "papers/{{citekey}}.md",
+      "outputPathTemplate": "papers/{{title|replace(\":\", \" –\")}}.md",
       "imageOutputPathTemplate": "img/papers/{{citekey}}/",
       "imageBaseNameTemplate": "image",
       "templatePath": "_templates/Paper Template.md"
