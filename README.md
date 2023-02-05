@@ -28,15 +28,15 @@ as well as examples for Temaples, and dataviews:
 
 ### Dataview Cards
 
-![](img/movie_cards.PNG)
+![](img/movie_cards2.PNG)
 
 ### Slideshow
 
-![](img/slidshow.PNG)
+![](img/slidshow2.PNG)
 
 ### Zotero Import
 
-![](img/zotero_import.PNG)
+![](img/zotero_import2.PNG)
 
 ### Zotero MOC
 
