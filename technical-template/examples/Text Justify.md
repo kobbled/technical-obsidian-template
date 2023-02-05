@@ -1,7 +1,7 @@
 
 
 ---
-cssclass: wide-page, minimal-float, centerImg
+cssclass: wide-page, minimal-float, centerImg, text-justify
 ---
 
 **reference**: https://efemkay.github.io/obsidian-modular-css-layout/showcases/float-with-mc-dataview/

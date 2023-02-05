@@ -4,16 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "09349325ac771e1b",
+        "id": "b918372a353a70ee",
         "type": "tabs",
         "children": [
           {
-            "id": "1da03f1e9bfe9e3b",
+            "id": "4882bb7cdb047a57",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "img/papers/schopphovenEHLAExtremeHighSpeed2017/UQJXV9QT.png"
+                "file": "examples/Image Slideshow.md",
+                "mode": "preview",
+                "source": true
               }
             }
           }
@@ -85,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "img/papers/schopphovenEHLAExtremeHighSpeed2017/UQJXV9QT.png",
+                "file": "examples/Image Slideshow.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "img/papers/schopphovenEHLAExtremeHighSpeed2017/UQJXV9QT.png",
+                "file": "examples/Image Slideshow.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "img/papers/schopphovenEHLAExtremeHighSpeed2017/UQJXV9QT.png"
+                "file": "examples/Image Slideshow.md"
               }
             }
           },
@@ -167,7 +169,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "img/papers/schopphovenEHLAExtremeHighSpeed2017/UQJXV9QT.png",
+                "file": "examples/Image Slideshow.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -218,17 +220,17 @@
       "mathpad:Open Mathpad": false
     }
   },
-  "active": "1da03f1e9bfe9e3b",
+  "active": "4882bb7cdb047a57",
   "lastOpenFiles": [
-    "img/papers/rombachHighResolutionImageSynthesis2022/NF39C8NW.png",
-    "mocs/Papers MOC.md",
-    "_templates/Paper Template.md",
     "papers/High-Resolution Image Synthesis with Latent Diffusion Models.md",
-    "papers/EHLA – Extreme High-Speed Laser Material Deposition – Economical and effective protection against corrosion and wear.md",
-    "mocs/Paper Symbol Key.md",
-    "Main.md",
-    "_templates/Movie Template.md",
     "examples/Image Gallery.md",
-    "examples/Text Justify.md"
+    "Main.md",
+    "examples/Image Slideshow.md",
+    "examples/List Cards.md",
+    "examples/Multi Column Callout.md",
+    "examples/Text Justify.md",
+    "papers/EHLA – Extreme High-Speed Laser Material Deposition – Economical and effective protection against corrosion and wear.md",
+    "img/papers/schopphovenEHLAExtremeHighSpeed2017/UQJXV9QT.png",
+    "img/papers/rombachHighResolutionImageSynthesis2022/NF39C8NW.png"
   ]
 }
