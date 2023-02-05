@@ -10,22 +10,28 @@ alias: rombachHighResolutionImageSynthesis2022
 **Year**:: 2022
 **Link**:: http://arxiv.org/abs/2112.10752
 **DOI**:: 10.48550/arXiv.2112.10752
-**Ref-Links**::
-**Status**:: #paper/status/reading
-**Priority**:: 🟢
+**Ref-Links**:: 
+**Status**::  #paper/status/reading
+**Priority**:: 🔴
+**Importance**:: 🏛️
 **Tags**:: #ml, #ml/autoencoders, #ml/diffusion, #ml/generative
 **Zotero**:: [Rombach2022-High-Resolution Image Synthesis with Latent Diffusion Models.pdf](zotero://select/library/items/VJIMEWFA)
+
 
 ## Abstract
 
 By decomposing the image formation process into a sequential application of denoising autoencoders, diffusion models (DMs) achieve state-of-the-art synthesis results on image data and beyond. Additionally, their formulation allows for a guiding mechanism to control the image generation process without retraining. However, since these models typically operate directly in pixel space, optimization of powerful DMs often consumes hundreds of GPU days and inference is expensive due to sequential evaluations. To enable DM training on limited computational resources while retaining their quality and flexibility, we apply them in the latent space of powerful pretrained autoencoders. In contrast to previous work, training diffusion models on such a representation allows for the first time to reach a near-optimal point between complexity reduction and detail preservation, greatly boosting visual fidelity. By introducing cross-attention layers into the model architecture, we turn diffusion models into powerful and flexible generators for general conditioning inputs such as text or bounding boxes and high-resolution synthesis becomes possible in a convolutional manner. Our latent diffusion models (LDMs) achieve a new state of the art for image inpainting and highly competitive performance on various tasks, including unconditional image generation, semantic scene synthesis, and super-resolution, while significantly reducing computational requirements compared to pixel-based DMs. Code is available at https://github.com/CompVis/latent-diffusion .
 ## Notes  
 
-> "_Recently, diffusion models [82], which are built from a hierarchy of denoising autoencoders, have shown to achieve impressive results in image synthesis._"
+> "_Recently, diffusion models [82], which are built from a hierarchy of denoising autoencoders, have shown to achieve impressive_"
+		> [Page 1](zotero://open-pdf/library/items/VJIMEWFA?page=1&annotation=GYHP34H7)
+
+	
+> "_results in image synthesis_"
 		> [Page 1](zotero://open-pdf/library/items/VJIMEWFA?page=1&annotation=ETCD68ZX)
 
 	
-> "_DMs are still computationally demanding, since training and evaluating such a model requires repeated function evaluations (and gradient computations) in the high-dimensional space of RGB images._"
+> "_DMs are still computationally demanding, since training and evaluating such a model requires repeated function evaluations (and gradient computations) in the high-dimensional space of RGB images_"
 		> [Page 1](zotero://open-pdf/library/items/VJIMEWFA?page=1&annotation=45Q4SVMU)
 
 	
@@ -41,7 +47,11 @@ By decomposing the image formation process into a sequential application of deno
 		> [Page 2](zotero://open-pdf/library/items/VJIMEWFA?page=2&annotation=WDRZ8UV7)
 
 	
-> "_Generative Adversarial Networks (GAN) [27] allow for efficient sampling of high resolution images with good perceptual quality [3, 42], but are difficult to optimize [2, 28, 54] and struggle to capture the full data distribution [55]._"
+> "_enerative Adversarial Networks (GAN) [27] allow for efficient sampling of high resolution images with good perceptual quality [3, 42], but are diffi-_"
+		> [Page 2](zotero://open-pdf/library/items/VJIMEWFA?page=2&annotation=VUMAR26L)
+
+	
+> "_cult to optimize [2, 28, 54] and struggle to capture the full data distribution [55]._"
 		> [Page 3](zotero://open-pdf/library/items/VJIMEWFA?page=3&annotation=HA5TLSMF)
 
 	
@@ -53,7 +63,11 @@ By decomposing the image formation process into a sequential application of deno
 		> [Page 3](zotero://open-pdf/library/items/VJIMEWFA?page=3&annotation=NDBWVWB2)
 
 	
-> "_Diffusion Probabilistic Models (DM) [82], have achieved state-of-the-art results in density estimation [45] as well as in sample quality [15] Evaluating and optimizing these models in pixel space, however, has the downside of low inference speed and very high training costs_"
+> "_Diffusion Probabilistic Models (DM) [82], have achieved state-of-the-art results in density estimation [45] as well as in sample quality [15]_"
+		> [Page 3](zotero://open-pdf/library/items/VJIMEWFA?page=3&annotation=E6UCPRNN)
+
+	
+> "_Evaluating and optimizing these models in pixel space, however, has the downside of low inference speed and very high training costs_"
 		> [Page 3](zotero://open-pdf/library/items/VJIMEWFA?page=3&annotation=M7TMW83U)
 
 	
@@ -61,9 +75,9 @@ By decomposing the image formation process into a sequential application of deno
 		> [Page 3](zotero://open-pdf/library/items/VJIMEWFA?page=3&annotation=QANSQISZ)
 
 	
-![[NF39C8NW.png]]
+![[img/papers/rombachHighResolutionImageSynthesis2022/NF39C8NW.png]]
 
 	
 
 
-%% Import Date: 2022-12-21T01:00:22.561-07:00 %%
+%% Import Date: 2023-02-05T01:41:12.409-07:00 %%
