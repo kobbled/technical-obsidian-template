@@ -12,19 +12,23 @@ as well as examples for Temaples, and dataviews:
 ## Features
 ### Image Grids
 
-![](img/image-gallery.png)
+![](img/image-gallery.PNG)
 
 ### Cards
 
-![](img/list-cards.png)
+![](img/list-cards.PNG)
 
 ### Callout columns
 
 ![](img/multi-column.png)
 
+### Text Justify
+
+![](img/text-justify.PNG)
+
 ### Dataview Cards
 
-![](img/movie_cards.png)
+![](img/movie_cards.PNG)
 
 ### Slideshow
 
@@ -36,4 +40,4 @@ as well as examples for Temaples, and dataviews:
 
 ### Zotero MOC
 
-![](img/zotero-MOC.png)
+![](img/zotero-MOC.PNG)
