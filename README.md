@@ -20,7 +20,7 @@ as well as examples for Temaples, and dataviews:
 
 ### Callout columns
 
-![](img/multi-column.png)
+![](img/multi-column.PNG)
 
 ### Text Justify
 
@@ -32,11 +32,11 @@ as well as examples for Temaples, and dataviews:
 
 ### Slideshow
 
-![](img/slidshow.png)
+![](img/slidshow.PNG)
 
 ### Zotero Import
 
-![](img/zotero_import.png)
+![](img/zotero_import.PNG)
 
 ### Zotero MOC
 
