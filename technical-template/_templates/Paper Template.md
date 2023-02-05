@@ -11,10 +11,12 @@ alias: {{citekey}}
 **Link**:: {{url}}
 **DOI**:: {{DOI}}
 **Ref-Links**:: 
-**Status**:: #paper/status/to-read
-**Priority**:: 🟢
+**Status**::  {% set regExp = r/Status:\s*([^\n]+)(?=\n)/g %}{% set status = regExp.exec(extra) %}{{status[1]}}
+**Priority**:: {% set regExp = r/Priority:\s*([^\n]+)(?=\n)/g %}{% set priority = regExp.exec(extra) %}{{priority[1]}}
+**Importance**:: {% set regExp = r/Importance:\s*([^\n]+)/g %}{% set importance = regExp.exec(extra) %}{{importance[1]}}
 **Tags**:: {% for t in tags %}#{{t.tag|replace(" ", "-")}}{% if not loop.last %}, {% endif %}{% endfor %}
 **Zotero**:: {{pdfZoteroLink}}
+
 
 ## Abstract
 
