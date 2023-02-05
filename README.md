@@ -10,20 +10,30 @@ as well as examples for Temaples, and dataviews:
 * Enable Community plugins
 
 ## Features
+### Image Grids
 
-* **Card Example**
+![](img/image-gallery.png)
 
-![|300](img/movie_cards.png)
+### Cards
 
-* **Zotero Import**
+![](img/list-cards.png)
 
-![|300](img/zotero_import.png)
+### Callout columns
 
-* **Image Grids**
+![](img/multi-column.png)
 
-![](img/img-grid1.png)
-![](img/img-grid2.png)
+### Dataview Cards
 
-* **Slideshow**
+![](img/movie_cards.png)
+
+### Slideshow
 
 ![](img/slidshow.png)
+
+### Zotero Import
+
+![](img/zotero_import.png)
+
+### Zotero MOC
+
+![](img/zotero-MOC.png)
