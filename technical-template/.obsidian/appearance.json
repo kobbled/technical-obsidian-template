@@ -9,9 +9,11 @@
     "table",
     "minimal_theme_mods",
     "MCL Gallery Cards",
-    "images"
+    "images",
+    "callouts"
   ],
   "translucency": false,
   "interfaceFontFamily": "Inter",
-  "baseFontSize": 16
+  "baseFontSize": 16,
+  "theme": "obsidian"
 }

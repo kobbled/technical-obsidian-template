@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "examples/Image Slideshow.md",
+                "file": "examples/Multi Column Callout.md",
                 "mode": "preview",
                 "source": true
               }
@@ -87,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "examples/Image Slideshow.md",
+                "file": "examples/Multi Column Callout.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "examples/Image Slideshow.md",
+                "file": "examples/Multi Column Callout.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "examples/Image Slideshow.md"
+                "file": "examples/Multi Column Callout.md"
               }
             }
           },
@@ -169,7 +169,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "examples/Image Slideshow.md",
+                "file": "examples/Multi Column Callout.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -222,15 +222,15 @@
   },
   "active": "4882bb7cdb047a57",
   "lastOpenFiles": [
-    "papers/High-Resolution Image Synthesis with Latent Diffusion Models.md",
-    "examples/Image Gallery.md",
-    "Main.md",
-    "examples/Image Slideshow.md",
-    "examples/List Cards.md",
-    "examples/Multi Column Callout.md",
     "examples/Text Justify.md",
+    "examples/Multi Column Callout.md",
+    "examples/List Cards.md",
+    "examples/Image Slideshow.md",
+    "examples/Image Gallery.md",
     "papers/EHLA – Extreme High-Speed Laser Material Deposition – Economical and effective protection against corrosion and wear.md",
-    "img/papers/schopphovenEHLAExtremeHighSpeed2017/UQJXV9QT.png",
-    "img/papers/rombachHighResolutionImageSynthesis2022/NF39C8NW.png"
+    "papers/High-Resolution Image Synthesis with Latent Diffusion Models.md",
+    "_templates/Paper Template.md",
+    "_templates/Movie Template.md",
+    "_templates/Generic Template.md"
   ]
 }

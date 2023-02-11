@@ -1,0 +1,23 @@
+body {
+  --callout-border-width:  0 0 0 4px;
+  --callout-border-opacity:  1;
+  --callout-radius: 0;
+  --callout-padding: 0;
+  --callout-title-padding:  var(--size-4-4) var(--size-4-4);
+  --callout-content-padding:  var(--size-4-2) var(--size-4-4);
+}
+
+.callout {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 9px
+}
+
+:is(.theme-dark) .callout-content {
+  background-color: rgba(41, 41, 41, 0.95);
+}
+
+.callout-title-inner {
+  color: var(--text-normal);
+}
+.callout-content {
+  background-color: var(--background-primary-alt);
+}
