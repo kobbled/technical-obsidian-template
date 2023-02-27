@@ -135,6 +135,9 @@
   width: 100%;
   font-family: monospace;
 }
+.mathpad-plot {
+  cursor: pointer;
+}
 .mathpad-plot .function-plot path.x.origin {
   stroke: var(--text-normal);
 }

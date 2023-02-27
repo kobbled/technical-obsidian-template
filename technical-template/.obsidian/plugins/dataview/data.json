@@ -4,6 +4,7 @@
   "taskCompletionUseEmojiShorthand": false,
   "taskCompletionText": "completion",
   "taskCompletionDateFormat": "yyyy-MM-dd",
+  "recursiveSubTaskCompletion": false,
   "warnOnEmptyResult": true,
   "refreshEnabled": true,
   "refreshInterval": 2500,
@@ -12,11 +13,14 @@
   "maxRecursiveRenderDepth": 4,
   "tableIdColumnName": "File",
   "tableGroupColumnName": "Group",
+  "showResultCount": true,
   "allowHtml": true,
   "inlineQueryPrefix": "=",
   "inlineJsQueryPrefix": "$=",
   "inlineQueriesInCodeblocks": true,
+  "enableInlineDataview": true,
   "enableDataviewJs": true,
-  "enableInlineDataviewJs": false,
-  "prettyRenderInlineFields": true
+  "enableInlineDataviewJs": true,
+  "prettyRenderInlineFields": true,
+  "dataviewJsKeyword": "dataviewjs"
 }

@@ -10,7 +10,13 @@
     "minimal_theme_mods",
     "MCL Gallery Cards",
     "images",
-    "callouts"
+    "callouts",
+    "workspace-background",
+    "buttons",
+    "clock",
+    "stickies",
+    "time_of_day",
+    "headers"
   ],
   "translucency": false,
   "interfaceFontFamily": "Inter",
