@@ -23,6 +23,10 @@ as well as examples for Temaples, and dataviews:
 
 ![](img/papers-dashboard.PNG)
 
+### Post-it Notes
+
+![](img/postit_notes.PNG)
+
 ### Image Grids
 
 ![](img/image-gallery.PNG)
