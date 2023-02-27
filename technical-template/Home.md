@@ -47,6 +47,10 @@ class button-weekly-note
 >>[!info|wide-2]+
 >> ![[Task Progress#^1]]
 >> ![[Time Progress#^1]]
+>
+>>[!important]+ Important Items
+>>  ![[Postit Board.canvas]]
+
 > [!multi-column]
 > 
 >>[!todo]+ Next Weeks Todo List
