@@ -4,6 +4,24 @@
   margin-right: auto !important;
 }
 
+img[alt="center"] {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Circle */
+img[src$="#circle"],
+span[src$="#circle"] img,
+span[src$="#round"] img {
+  border-radius: 50%;
+  aspect-ratio: 1/1; }
+
 .markdown-source-view.mod-cm6 .cm-content > * {
   margin: auto auto !important;
+}
+
+.banner-image {
+  border-radius: 0px !important;
+  opacity : 1 !important;
 }
