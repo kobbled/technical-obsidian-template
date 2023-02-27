@@ -4,23 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "b918372a353a70ee",
+        "id": "6724bfc89a243036",
         "type": "tabs",
         "children": [
           {
-            "id": "4882bb7cdb047a57",
+            "id": "d4a949d5bddda4f9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "examples/Multi Column Callout.md",
-                "mode": "preview",
+                "file": "Widgets/Past Due Tasks.md",
+                "mode": "source",
                 "source": true
               }
             }
           }
-        ],
-        "stacked": true
+        ]
       }
     ],
     "direction": "vertical"
@@ -32,6 +31,7 @@
       {
         "id": "7508fae49b66c26e",
         "type": "tabs",
+        "dimension": 64.9074074074074,
         "children": [
           {
             "id": "1fc61cbd175b1b3d",
@@ -67,93 +67,11 @@
             }
           }
         ]
-      }
-    ],
-    "direction": "horizontal",
-    "width": 318.5
-  },
-  "right": {
-    "id": "52277dd380415613",
-    "type": "split",
-    "children": [
-      {
-        "id": "5f0ece000c571db6",
-        "type": "tabs",
-        "dimension": 57.26744186046513,
-        "children": [
-          {
-            "id": "9294aae2ac2aa350",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "examples/Multi Column Callout.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "4a90c4a9156cf933",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "examples/Multi Column Callout.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "bbe36f83e3f21889",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
-              }
-            }
-          },
-          {
-            "id": "1f0344501fa99825",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "examples/Multi Column Callout.md"
-              }
-            }
-          },
-          {
-            "id": "54796c9dda29e255",
-            "type": "leaf",
-            "state": {
-              "type": "mathpad-view",
-              "state": {}
-            }
-          },
-          {
-            "id": "34f11553111861bb",
-            "type": "leaf",
-            "state": {
-              "type": "advanced-tables-toolbar",
-              "state": {}
-            }
-          }
-        ],
-        "currentTab": 4
       },
       {
-        "id": "21e3badd15c18f5d",
+        "id": "dbcc5e7003c57857",
         "type": "tabs",
-        "dimension": 42.73255813953487,
+        "dimension": 35.092592592592595,
         "children": [
           {
             "id": "ecacad78c8488837",
@@ -169,7 +87,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "examples/Multi Column Callout.md",
+                "file": "Widgets/Past Due Tasks.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -192,7 +110,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 0.5087618855792589,
+                  "scale": 0.36288736930121185,
                   "close": true
                 }
               }
@@ -203,7 +121,139 @@
       }
     ],
     "direction": "horizontal",
-    "width": 345.5
+    "width": 318.5
+  },
+  "right": {
+    "id": "52277dd380415613",
+    "type": "split",
+    "children": [
+      {
+        "id": "5f0ece000c571db6",
+        "type": "tabs",
+        "dimension": 30.555555555555557,
+        "children": [
+          {
+            "id": "da6126be9d5cf3f4",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "1f0344501fa99825",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Widgets/Past Due Tasks.md"
+              }
+            }
+          },
+          {
+            "id": "54796c9dda29e255",
+            "type": "leaf",
+            "state": {
+              "type": "mathpad-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "34f11553111861bb",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": "ef3a214a8db2dda7",
+        "type": "tabs",
+        "dimension": 33.88888888888889,
+        "children": [
+          {
+            "id": "83e2f3795784be41",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "mocs/Dashboard.md",
+                "mode": "preview",
+                "source": true
+              },
+              "pinned": true
+            }
+          },
+          {
+            "id": "55a5b9a6fb873f4f",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Widgets/Youtube Player.md",
+                "mode": "preview",
+                "source": true
+              },
+              "pinned": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "21e3badd15c18f5d",
+        "type": "tabs",
+        "dimension": 35.55555555555556,
+        "children": [
+          {
+            "id": "9294aae2ac2aa350",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Widgets/Past Due Tasks.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "4a90c4a9156cf933",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Widgets/Past Due Tasks.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "bbe36f83e3f21889",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 327.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -214,23 +264,50 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-excalidraw-plugin:New Excalidraw drawing": false,
       "open-vscode:VSCode": false,
       "templater-obsidian:Templater": false,
-      "mathpad:Open Mathpad": false
+      "mathpad:Open Mathpad": false,
+      "homepage:Open homepage": false,
+      "periodic-notes:Open today": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "4882bb7cdb047a57",
+  "active": "d4a949d5bddda4f9",
   "lastOpenFiles": [
-    "examples/Text Justify.md",
-    "examples/Multi Column Callout.md",
-    "examples/List Cards.md",
-    "examples/Image Slideshow.md",
-    "examples/Image Gallery.md",
-    "papers/EHLA – Extreme High-Speed Laser Material Deposition – Economical and effective protection against corrosion and wear.md",
+    "Home.md",
     "papers/High-Resolution Image Synthesis with Latent Diffusion Models.md",
+    "papers/EHLA – Extreme High-Speed Laser Material Deposition – Economical and effective protection against corrosion and wear.md",
+    "Widgets/Papers Read Heatmap.md",
+    "Widgets/Youtube Player.md",
+    "mocs/Dashboard.md",
+    "Widgets/Next Weeks Tasks.md",
+    "Widgets/Next Months Tasks.md",
+    "Widgets/Newly Added Papers.md",
+    "Widgets/Past Due Tasks.md",
+    "Widgets/Task Progress.md",
+    "Widgets/Time Progress.md",
+    "Widgets/Clock.md",
+    "Widgets/Time of Day.md",
+    "Productivity/Postit Board.canvas",
+    "Productivity/Daily Notes/2023-02-26.md",
+    "Productivity/Weekly Notes/2023-W09.md",
+    "Productivity/Postit Notes/Work Todos.md",
+    "Productivity/Postit Notes/Personal Todos.md",
+    "Productivity/Postit Notes",
+    "_templates/Weekly Note.md",
+    "_templates/Generic Template.md",
+    "_templates/Daily Template.md",
+    "2023-02-28.md",
     "_templates/Paper Template.md",
-    "_templates/Movie Template.md",
-    "_templates/Generic Template.md"
+    "Dataview Tests/Cards Example/Movie Database.md",
+    "mocs/Papers MOC.md",
+    "img/tenn_graneet_head.jpg",
+    "img/tenn_graneet.jpg",
+    "tenn_graneet.jpg",
+    "Productivity/Weekly Notes",
+    "Productivity/Daily Notes",
+    "Productivity",
+    "mocs/Paper Symbol Key.md",
+    "Widgets"
   ]
 }
