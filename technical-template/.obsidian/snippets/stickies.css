@@ -1,0 +1,59 @@
+.theme-dark {
+    /* stickies */
+    --stickies-color-1: #FFFF99;
+    --stickies-color-2: #84c584;
+    --stickies-color-3: #c7a3cf;
+    --tape-color: #99999967;
+  }
+  
+.theme-light{
+    /* stickies */
+--stickies-color-1: #b3e2b3;
+--stickies-color-2: #e9c6f1;
+--tape-color: #acacac65;
+
+}
+
+.stickies {
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    background-color: var(--stickies-color-1) !important;
+    box-shadow: 0 10px 10px 2px #9191912d;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    z-index: 1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 0px;
+    color: black;
+}
+
+.stickies .mod-header {
+  font-family: 'Rage';
+  font-size: x-large;
+}
+
+.stickies .el-pre {
+  font-family: 'Segoe Print';
+}
+
+.stickies:hover{animation:.8s ease-in-out shake}
+  
+.stickies-2 {
+    background-color: var(--stickies-color-2) !important;
+}
+
+.stickies-3 {
+    background-color: var(--stickies-color-3) !important;
+}
+
+/* :is(div[class*="stickies"]) .plugin-tasks-list-item {
+    display: inline-block;
+    list-style-type: square;
+    margin-left: 20px;
+    vertical-align: left;
+}  */

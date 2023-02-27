@@ -40,6 +40,26 @@ action Periodic Notes: Open weekly note
 class button-weekly-note
 ```
 
+# <center>Categories</center> 
+---
+
+> [!blank]
+> - ### **Personal Notes** #mcl/list-card
+> 	- ![|center](https://e0.pxfuel.com/wallpapers/48/337/desktop-wallpaper-best-star-wars-death-star-interior-background.jpg)
+> 	- [[Personal Projects|Personal]] — #projects
+> 	- [[Journal MOC|Journal]] — #projects
+> 	- [[Life Goals]] — #life 
+> 
+> - ### **Work Notes**
+> 	- ![|center](http://i.gzn.jp/img/2017/12/26/death-star-construction/00_m.jpg) 
+> 	- [[Research]]  — #research
+> 	- [[Papers MOC|Liturature]]  — #paper 
+> 
+> - ### **Hobbies**
+> 	- ![|center](https://images.mubicdn.net/images/film/116658/cache-96839-1445952162/image-w1280.jpg?size=800x)
+> 	- [[Movie Database]]  — #movies
+
+----
 ## Tasks
 
 > [!multi-column]
@@ -64,3 +84,9 @@ class button-weekly-note
 >>[!warning|wide-2]+ Past Due Tasks
 >> ![[Past Due Tasks]]
 
+## Papers
+
+![[Papers Read Heatmap#^1]]
+
+>[!note]+ Newly Added Papers
+> ![[Newly Added Papers#^1]]
