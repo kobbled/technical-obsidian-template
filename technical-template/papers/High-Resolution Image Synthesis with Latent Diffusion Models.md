@@ -4,19 +4,20 @@ tag: [paperitem]
 alias: rombachHighResolutionImageSynthesis2022
 ---
 
-[[Papers MOC]]
+[[Papers Management Centre]]
 
 **Authors**:: Robin Rombach, Andreas Blattmann, Dominik Lorenz, Patrick Esser, Björn Ommer
 **Year**:: 2022
+**Date_Added**:: 2022-12-20
+**Date_Read**:: 2023-01-10
 **Link**:: http://arxiv.org/abs/2112.10752
 **DOI**:: 10.48550/arXiv.2112.10752
-**Ref-Links**:: 
-**Status**::  #paper/status/reading
-**Priority**:: 🔴
+**Ref_Links**:: 
+**Status**::  #paper/status/read
+**Priority**:: 
 **Importance**:: 🏛️
 **Tags**:: #ml, #ml/autoencoders, #ml/diffusion, #ml/generative
 **Zotero**:: [Rombach2022-High-Resolution Image Synthesis with Latent Diffusion Models.pdf](zotero://select/library/items/VJIMEWFA)
-
 
 ## Abstract
 
@@ -80,4 +81,4 @@ By decomposing the image formation process into a sequential application of deno
 	
 
 
-%% Import Date: 2023-02-05T01:41:12.409-07:00 %%
+%% Import Date: 2023-02-25T23:25:47.929-07:00 %%

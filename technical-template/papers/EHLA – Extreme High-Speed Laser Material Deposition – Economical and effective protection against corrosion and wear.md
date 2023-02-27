@@ -4,19 +4,20 @@ tag: [paperitem]
 alias: schopphovenEHLAExtremeHighSpeed2017
 ---
 
-[[Papers MOC]]
+[[Papers Management Centre]]
 
 **Authors**:: Thomas Schopphoven, Andres Gasser, Gerhard Backes
 **Year**:: 2017
+**Date_Added**:: 2022-12-20
+**Date_Read**:: 2023-02-01
 **Link**:: https://onlinelibrary.wiley.com/doi/abs/10.1002/latj.201700020
 **DOI**:: 10.1002/latj.201700020
-**Ref-Links**:: 
+**Ref_Links**:: 
 **Status**::  #paper/status/read
-**Priority**:: 🔵
+**Priority**:: 
 **Importance**:: 📚
 **Tags**:: #materials/wear, #additive/cladding, #materials/corrosion, #additive/process/DED, #additive/process/EHLA
 **Zotero**:: [Schopphoven et al. - 2017 - EHLA Extreme High-Speed Laser Material Deposition.pdf](zotero://select/library/items/XX4J8NAF)
-
 
 ## Abstract
 
@@ -68,4 +69,4 @@ Special coatings protect components against corrosion and wear. However, standar
 	
 
 
-%% Import Date: 2023-02-05T01:40:12.874-07:00 %%
+%% Import Date: 2023-02-25T23:25:48.614-07:00 %%
