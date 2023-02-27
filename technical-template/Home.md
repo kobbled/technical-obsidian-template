@@ -40,3 +40,23 @@ action Periodic Notes: Open weekly note
 class button-weekly-note
 ```
 
+## Tasks
+
+> [!multi-column]
+> 
+>>[!info|wide-2]+
+>> ![[Task Progress#^1]]
+>> ![[Time Progress#^1]]
+> [!multi-column]
+> 
+>>[!todo]+ Next Weeks Todo List
+>> ![[Next Weeks Tasks#^1]]
+>
+>>[!todo]+ Next Months Todo List
+>> ![[Next Months Tasks#^1]]
+
+> [!multi-column]
+>
+>>[!warning|wide-2]+ Past Due Tasks
+>> ![[Past Due Tasks]]
+
