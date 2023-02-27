@@ -32,5 +32,8 @@
   "modular-css-layout-gc@@img-max-width-list": "300px",
   "modular-css-layout-gc@@image-zoom": true,
   "modular-css-layout-gc@@img-max-height": "400px",
-  "minimal-style@@max-col-width": "30em"
+  "minimal-style@@max-col-width": "30em",
+  "background-settings@@background-settings-workplace-background-image": true,
+  "background-settings@@background-settings-workplace-theme-dark": "background-settings-workplace-theme-dark-star-wars",
+  "minimal-style@@embed-strict": true
 }

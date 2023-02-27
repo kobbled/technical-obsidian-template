@@ -1,0 +1,13 @@
+.DPDC{
+    padding:0 !important;
+    margin:0 !important;
+    border:none !important;
+    background:none !important;
+    background:transparent !important;
+}
+
+iframe[name="Digiclock1"] {
+    position: absolute;
+    top: 10em;
+    left: 2em;
+    opacity: 0.85; } 
