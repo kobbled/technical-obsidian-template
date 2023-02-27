@@ -9,7 +9,20 @@ as well as examples for Temaples, and dataviews:
 * Open the **technical-template** folder in obsidian as a new vault.
 * Enable Community plugins
 
+## Homepage
+
+![](img/homepage.PNG)
+
 ## Features
+
+### Periodic Task Tracking
+
+![](img/tasks.PNG)
+
+### Heatmap Tracking
+
+![](img/papers-dashboard.PNG)
+
 ### Image Grids
 
 ![](img/image-gallery.PNG)
