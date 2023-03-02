@@ -4,21 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "6724bfc89a243036",
+        "id": "af9a81b9a9e08949",
         "type": "tabs",
         "children": [
           {
-            "id": "d4a949d5bddda4f9",
+            "id": "3503f01209dc4472",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Productivity/Postit Board.canvas",
-                "viewState": {
-                  "x": 20,
-                  "y": 80,
-                  "zoom": 0
-                }
+                "file": "Home.md",
+                "mode": "source",
+                "source": true
               }
             }
           }
@@ -90,7 +87,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Productivity/Postit Board.canvas",
+                "file": "Home.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -133,7 +130,7 @@
       {
         "id": "5f0ece000c571db6",
         "type": "tabs",
-        "dimension": 30.555555555555557,
+        "dimension": 31.14909781576448,
         "children": [
           {
             "id": "da6126be9d5cf3f4",
@@ -149,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Productivity/Postit Board.canvas"
+                "file": "Home.md"
               }
             }
           },
@@ -172,12 +169,12 @@
         ]
       },
       {
-        "id": "ef3a214a8db2dda7",
+        "id": "77c8f763907daa99",
         "type": "tabs",
-        "dimension": 33.88888888888889,
+        "dimension": 32.763532763532766,
         "children": [
           {
-            "id": "83e2f3795784be41",
+            "id": "09a07e0ad0c4a792",
             "type": "leaf",
             "pinned": true,
             "state": {
@@ -189,27 +186,13 @@
               },
               "pinned": true
             }
-          },
-          {
-            "id": "55a5b9a6fb873f4f",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Widgets/Youtube Player.md",
-                "mode": "preview",
-                "source": true
-              },
-              "pinned": true
-            }
           }
         ]
       },
       {
         "id": "21e3badd15c18f5d",
         "type": "tabs",
-        "dimension": 35.55555555555556,
+        "dimension": 36.08736942070275,
         "children": [
           {
             "id": "9294aae2ac2aa350",
@@ -217,7 +200,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Productivity/Postit Board.canvas",
+                "file": "Home.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -234,7 +217,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Productivity/Postit Board.canvas",
+                "file": "Home.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -256,7 +239,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 327.5
+    "width": 364.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -267,44 +250,45 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
       "open-vscode:VSCode": false,
       "templater-obsidian:Templater": false,
       "mathpad:Open Mathpad": false,
       "homepage:Open homepage": false,
-      "periodic-notes:Open today": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false
+      "periodic-notes:Open today": false
     }
   },
-  "active": "d4a949d5bddda4f9",
+  "active": "3503f01209dc4472",
   "lastOpenFiles": [
-    "Home.md",
-    "examples/Multi Column Callout.md",
-    "Widgets/Past Due Tasks.md",
-    "papers/High-Resolution Image Synthesis with Latent Diffusion Models.md",
-    "papers/EHLA – Extreme High-Speed Laser Material Deposition – Economical and effective protection against corrosion and wear.md",
-    "Widgets/Papers Read Heatmap.md",
-    "Widgets/Youtube Player.md",
     "mocs/Dashboard.md",
-    "Widgets/Next Weeks Tasks.md",
-    "Widgets/Next Months Tasks.md",
-    "Widgets/Newly Added Papers.md",
-    "Widgets/Task Progress.md",
-    "Widgets/Time Progress.md",
-    "Widgets/Clock.md",
-    "Widgets/Time of Day.md",
-    "Productivity/Postit Board.canvas",
-    "Productivity/Daily Notes/2023-02-26.md",
-    "Productivity/Weekly Notes/2023-W09.md",
-    "Productivity/Postit Notes/Work Todos.md",
-    "Productivity/Postit Notes/Personal Todos.md",
-    "Productivity/Postit Notes",
-    "_templates/Weekly Note.md",
-    "_templates/Generic Template.md",
+    "Home.md",
+    "_templates/Weekly Note Template.md",
     "_templates/Daily Template.md",
-    "2023-02-28.md",
-    "_templates/Paper Template.md",
+    "Productivity/Daily Notes/2023-02-26.md",
+    "Productivity/Monthly Notes/2023-03.md",
+    "Productivity/Weekly Notes/2023-W09.md",
+    "_templates/Monthly Note Template.md",
+    "Productivity/Untitled.md",
+    "Productivity/Monthly Notes",
+    "_templates/Movie Template.md",
+    "Widgets/Newly Added Papers.md",
+    "Widgets/Next Months Tasks.md",
+    "Widgets/Next Weeks Tasks.md",
+    "Widgets/Papers Read Heatmap.md",
+    "Widgets/Past Due Tasks.md",
+    "Widgets/Task Progress.md",
+    "Widgets/Time of Day.md",
+    "Widgets/Time Progress.md",
+    "Widgets/Youtube Player.md",
+    "examples/Text Justify.md",
+    "examples/Multi Column Callout.md",
+    "examples/List Cards.md",
     "Dataview Tests/Cards Example/Movie Database.md",
-    "mocs/Papers MOC.md",
+    "Productivity/Postit Board.canvas",
+    "examples/Image Gallery.md",
+    "examples/Image Slideshow.md",
+    "papers/High-Resolution Image Synthesis with Latent Diffusion Models.md",
+    "Productivity/Postit Notes",
     "img/tenn_graneet_head.jpg",
     "img/tenn_graneet.jpg",
     "tenn_graneet.jpg",
