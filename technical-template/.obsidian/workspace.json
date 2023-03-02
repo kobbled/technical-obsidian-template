@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "af9a81b9a9e08949",
+        "id": "e9c7d7446eab993a",
         "type": "tabs",
         "children": [
           {
-            "id": "3503f01209dc4472",
+            "id": "2f81b0943a1959f9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Home.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": true
               }
             }
@@ -130,7 +130,7 @@
       {
         "id": "5f0ece000c571db6",
         "type": "tabs",
-        "dimension": 31.14909781576448,
+        "dimension": 46.32768361581921,
         "children": [
           {
             "id": "da6126be9d5cf3f4",
@@ -169,30 +169,9 @@
         ]
       },
       {
-        "id": "77c8f763907daa99",
-        "type": "tabs",
-        "dimension": 32.763532763532766,
-        "children": [
-          {
-            "id": "09a07e0ad0c4a792",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "mocs/Dashboard.md",
-                "mode": "preview",
-                "source": true
-              },
-              "pinned": true
-            }
-          }
-        ]
-      },
-      {
         "id": "21e3badd15c18f5d",
         "type": "tabs",
-        "dimension": 36.08736942070275,
+        "dimension": 53.672316384180796,
         "children": [
           {
             "id": "9294aae2ac2aa350",
@@ -258,16 +237,17 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "3503f01209dc4472",
+  "active": "2f81b0943a1959f9",
   "lastOpenFiles": [
-    "mocs/Dashboard.md",
     "Home.md",
-    "_templates/Weekly Note Template.md",
-    "_templates/Daily Template.md",
+    "Productivity/Postit Board.canvas",
     "Productivity/Daily Notes/2023-02-26.md",
     "Productivity/Monthly Notes/2023-03.md",
-    "Productivity/Weekly Notes/2023-W09.md",
     "_templates/Monthly Note Template.md",
+    "mocs/Dashboard.md",
+    "_templates/Weekly Note Template.md",
+    "_templates/Daily Template.md",
+    "Productivity/Weekly Notes/2023-W09.md",
     "Productivity/Untitled.md",
     "Productivity/Monthly Notes",
     "_templates/Movie Template.md",
@@ -284,10 +264,8 @@
     "examples/Multi Column Callout.md",
     "examples/List Cards.md",
     "Dataview Tests/Cards Example/Movie Database.md",
-    "Productivity/Postit Board.canvas",
     "examples/Image Gallery.md",
     "examples/Image Slideshow.md",
-    "papers/High-Resolution Image Synthesis with Latent Diffusion Models.md",
     "Productivity/Postit Notes",
     "img/tenn_graneet_head.jpg",
     "img/tenn_graneet.jpg",
