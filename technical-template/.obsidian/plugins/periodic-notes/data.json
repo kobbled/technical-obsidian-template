@@ -10,14 +10,15 @@
   },
   "weekly": {
     "format": "",
-    "template": "_templates/Weekly Note.md",
+    "template": "_templates/Weekly Note Template.md",
     "folder": "Productivity/Weekly Notes",
     "enabled": true
   },
   "monthly": {
     "format": "",
-    "template": "",
-    "folder": ""
+    "template": "_templates/Monthly Note Template.md",
+    "folder": "Productivity/Monthly Notes",
+    "enabled": true
   },
   "quarterly": {
     "format": "",
