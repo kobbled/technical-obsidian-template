@@ -2,6 +2,7 @@
 type: daily
 date: <%tp.date.now("YYYY-MM-DD")%>
 week: <% tp.date.now("YYYY-WW") %>
+month: <% tp.date.now("YYYY-MM") %>
 banner: "https://assets-prd.ignimgs.com/2022/05/26/9-1653608710354.png"
 banner_y: 0.55
 ---
