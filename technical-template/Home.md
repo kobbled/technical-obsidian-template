@@ -40,6 +40,13 @@ action Periodic Notes: Open weekly note
 class button-weekly-note
 ```
 
+```button
+name New Monthly Note
+type command
+action Periodic Notes: Open monthly note
+class button-monthly-note
+```
+
 # <center>Categories</center> 
 ---
 
@@ -64,7 +71,7 @@ class button-weekly-note
 
 > [!multi-column]
 > 
->>[!info|wide-2]+
+>>[!info|wide-2]+ Progress
 >> ![[Task Progress#^1]]
 >> ![[Time Progress#^1]]
 >

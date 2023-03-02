@@ -1,3 +1,7 @@
 .dashboard .inline-title {
     display: none;
   }
+
+.hide-h3 .markdown-embed .el-h3 {
+    display: none !important;
+}

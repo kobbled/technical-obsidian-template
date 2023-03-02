@@ -1,3 +1,4 @@
+/* DAILY NOTE BUTTON*/
 .button-new-daily-note {
     font-family: Rubik, sans-serif;
     font-weight: bold;
@@ -7,45 +8,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width:110px;
-    height:100px;
-    display:block;
-    background-color:#323953 !important;
-    color:#E8DDB5;
-    position:absolute;
-    top: 17vh;
-    right: 9.5vh;
-    opacity: 0.7;
-    animation: pulse 5s infinite; /* add pulse animation */
-    white-space: normal;
-    border: 2px solid #131312; 
-    border-radius: 10px;
-    transform: rotateZ(0deg);
-    margin-right: 8em;
-  }
-  .button-new-daily-note::before {
-    content:'✎';
-    color:#E8DDB5;
-    font-size:2.5rem;
-    display:block;
-    margin-bottom:5px;
-    transition:all .2s ease-in-out !important;
-  }
-  .button-new-daily-note:hover::before {
-    color:#F7F0F3;
-  }
-  
-  
-  .button-weekly-note {
-    font-family: Rubik, sans-serif;
-    font-weight: bold;
-    font-size: 14px;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width:110px;
+    width:115px;
     height:100px;
     display:block;
     background-color:#323953 !important;
@@ -59,7 +22,45 @@
     border: 2px solid #131312; 
     border-radius: 10px;
     transform: rotateZ(0deg);
-    margin-right: 3em;
+    margin-right: 24em;
+  }
+  .button-new-daily-note::before {
+    content:'✎';
+    color:#E8DDB5;
+    font-size:2.5rem;
+    display:block;
+    margin-bottom:5px;
+    transition:all .2s ease-in-out !important;
+  }
+  .button-new-daily-note:hover::before {
+    color:#F7F0F3;
+  }
+  
+  /* WEEKLY NOTE BUTTON*/
+  .button-weekly-note {
+    font-family: Rubik, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:115px;
+    height:100px;
+    display:block;
+    background-color:#323953 !important;
+    color:#E8DDB5;
+    position:absolute;
+    top: 17vh;
+    right: 1.8vh;
+    opacity: 0.7;
+    animation: pulse 5s infinite; /* add pulse animation */
+    white-space: normal;
+    border: 2px solid #131312; 
+    border-radius: 10px;
+    transform: rotateZ(0deg);
+    margin-right: 13.5em;
   }
   .button-weekly-note::before {
     content:'✉';
@@ -72,3 +73,41 @@
   .button-weekly-note:hover::before {
     color:#F7F0F3;
   }
+
+ /* MONTHLY NOTE BUTTON*/
+ .button-monthly-note {
+  font-family: Rubik, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width:115px;
+  height:100px;
+  display:block;
+  background-color:#323953 !important;
+  color:#E8DDB5;
+  position:absolute;
+  top: 17vh;
+  right: 1.8vh;
+  opacity: 0.7;
+  animation: pulse 5s infinite; /* add pulse animation */
+  white-space: normal;
+  border: 2px solid #131312; 
+  border-radius: 10px;
+  transform: rotateZ(0deg);
+  margin-right: 3em;
+}
+.button-monthly-note::before {
+  content:'✔️';
+  color:#E8DDB5;
+  font-size:2.5rem;
+  display:block;
+  margin-bottom:5px;
+  transition:all .2s ease-in-out !important;
+}
+.button-monthly-note:hover::before {
+  color:#F7F0F3;
+}
