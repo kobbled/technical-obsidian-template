@@ -1,0 +1,282 @@
+{
+  "workspaces": {
+    "main-workspace": {
+      "main": {
+        "id": "1cad0f3d5d0a11af",
+        "type": "split",
+        "children": [
+          {
+            "id": "6361ba3db16cbd73",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "183f8ef84b04df01",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Home.md",
+                    "mode": "preview",
+                    "source": true
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "222b3843c4d89961",
+        "type": "split",
+        "children": [
+          {
+            "id": "7508fae49b66c26e",
+            "type": "tabs",
+            "dimension": 64.9074074074074,
+            "children": [
+              {
+                "id": "1fc61cbd175b1b3d",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "808d70c9dbc43f19",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "",
+                    "matchingCase": true,
+                    "explainSearch": true,
+                    "collapseAll": true,
+                    "extraContext": true,
+                    "sortOrder": "alphabetical"
+                  }
+                }
+              },
+              {
+                "id": "c50f495850ff587b",
+                "type": "leaf",
+                "state": {
+                  "type": "starred",
+                  "state": {}
+                }
+              }
+            ]
+          },
+          {
+            "id": "dbcc5e7003c57857",
+            "type": "tabs",
+            "dimension": 35.092592592592595,
+            "children": [
+              {
+                "id": "ecacad78c8488837",
+                "type": "leaf",
+                "state": {
+                  "type": "graph",
+                  "state": {}
+                }
+              },
+              {
+                "id": "9b78e651690b4c80",
+                "type": "leaf",
+                "state": {
+                  "type": "localgraph",
+                  "state": {
+                    "file": "Dashboard.md",
+                    "options": {
+                      "collapse-filter": true,
+                      "search": "",
+                      "localJumps": 1,
+                      "localBacklinks": true,
+                      "localForelinks": true,
+                      "localInterlinks": false,
+                      "showTags": false,
+                      "showAttachments": false,
+                      "hideUnresolved": false,
+                      "collapse-color-groups": true,
+                      "colorGroups": [],
+                      "collapse-display": true,
+                      "showArrow": false,
+                      "textFadeMultiplier": 0,
+                      "nodeSizeMultiplier": 1,
+                      "lineSizeMultiplier": 1,
+                      "collapse-forces": true,
+                      "centerStrength": 0.518713248970312,
+                      "repelStrength": 10,
+                      "linkStrength": 1,
+                      "linkDistance": 250,
+                      "scale": 0.258838656218163,
+                      "close": true
+                    }
+                  }
+                }
+              }
+            ],
+            "currentTab": 1
+          }
+        ],
+        "direction": "horizontal",
+        "width": 318.5
+      },
+      "right": {
+        "id": "52277dd380415613",
+        "type": "split",
+        "children": [
+          {
+            "id": "5f0ece000c571db6",
+            "type": "tabs",
+            "dimension": 30.74074074074074,
+            "children": [
+              {
+                "id": "da6126be9d5cf3f4",
+                "type": "leaf",
+                "state": {
+                  "type": "calendar",
+                  "state": {}
+                }
+              },
+              {
+                "id": "54796c9dda29e255",
+                "type": "leaf",
+                "state": {
+                  "type": "mathpad-view",
+                  "state": {}
+                }
+              },
+              {
+                "id": "34f11553111861bb",
+                "type": "leaf",
+                "state": {
+                  "type": "advanced-tables-toolbar",
+                  "state": {}
+                }
+              }
+            ]
+          },
+          {
+            "id": "f9ce4406a84fa2ea",
+            "type": "tabs",
+            "dimension": 33.88888888888889,
+            "children": [
+              {
+                "id": "fc57df094a1bb0f3",
+                "type": "leaf",
+                "pinned": true,
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Dashboard.md",
+                    "mode": "preview",
+                    "source": true
+                  },
+                  "pinned": true
+                }
+              },
+              {
+                "id": "4bf800d1ea986400",
+                "type": "leaf",
+                "pinned": true,
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "Widgets/Youtube Player.md",
+                    "mode": "preview",
+                    "source": true
+                  },
+                  "pinned": true
+                }
+              }
+            ]
+          },
+          {
+            "id": "21e3badd15c18f5d",
+            "type": "tabs",
+            "dimension": 35.37037037037037,
+            "children": [
+              {
+                "id": "9294aae2ac2aa350",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "file": "Dashboard.md",
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              },
+              {
+                "id": "4a90c4a9156cf933",
+                "type": "leaf",
+                "state": {
+                  "type": "outgoing-link",
+                  "state": {
+                    "file": "Dashboard.md",
+                    "linksCollapsed": false,
+                    "unlinkedCollapsed": true
+                  }
+                }
+              },
+              {
+                "id": "bbe36f83e3f21889",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": true
+                  }
+                }
+              },
+              {
+                "id": "1f0344501fa99825",
+                "type": "leaf",
+                "state": {
+                  "type": "outline",
+                  "state": {
+                    "file": "Dashboard.md"
+                  }
+                }
+              }
+            ],
+            "currentTab": 2
+          }
+        ],
+        "direction": "horizontal",
+        "width": 364.5
+      },
+      "left-ribbon": {
+        "hiddenItems": {
+          "switcher:Open quick switcher": false,
+          "graph:Open graph view": false,
+          "canvas:Create new canvas": false,
+          "daily-notes:Open today's daily note": false,
+          "templates:Insert template": false,
+          "command-palette:Open command palette": false,
+          "table-editor-obsidian:Advanced Tables Toolbar": false,
+          "obsidian-excalidraw-plugin:Create new drawing": false,
+          "open-vscode:VSCode": false,
+          "templater-obsidian:Templater": false,
+          "mathpad:Open Mathpad": false,
+          "homepage:Open homepage": false,
+          "periodic-notes:Open today": false,
+          "workspaces:Manage workspace layouts": false
+        }
+      },
+      "active": "fc57df094a1bb0f3"
+    }
+  },
+  "active": "main-workspace"
+}
