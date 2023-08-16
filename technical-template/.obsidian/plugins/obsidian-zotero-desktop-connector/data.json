@@ -20,6 +20,10 @@
       "templatePath": "_templates/Paper Template.md"
     }
   ],
+  "citeSuggestTemplate": "[[{{citekey}}]]",
+  "openNoteAfterImport": false,
+  "whichNotesToOpenAfterImport": "first-imported-note",
   "shouldConcat": true,
-  "exeVersion": "1.0.15"
+  "exeVersion": "1.0.15",
+  "_exeInternalVersion": 1
 }
