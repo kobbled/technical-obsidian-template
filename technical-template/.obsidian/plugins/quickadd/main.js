@@ -9,9 +9,6 @@ var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
-var __commonJS = (cb, mod) => function __require() {
-  return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
-};
 var __export = (target, all) => {
   for (var name in all)
     __defProp(target, name, { get: all[name], enumerable: true });
@@ -25,517 +22,14 @@ var __copyProps = (to, from, except, desc) => {
   return to;
 };
 var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
+  // If the importer is in node compatibility mode or this is not an ESM
+  // file that has been converted to a CommonJS file using a Babel-
+  // compatible transform (i.e. "__esModule" has not been set), then set
+  // "default" to the CommonJS "module.exports" for node compatibility.
   isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
   mod
 ));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
-
-// node_modules/.pnpm/tslib@2.5.0/node_modules/tslib/tslib.js
-var require_tslib = __commonJS({
-  "node_modules/.pnpm/tslib@2.5.0/node_modules/tslib/tslib.js"(exports, module2) {
-    var __extends2;
-    var __assign2;
-    var __rest2;
-    var __decorate2;
-    var __param2;
-    var __esDecorate2;
-    var __runInitializers2;
-    var __propKey2;
-    var __setFunctionName2;
-    var __metadata2;
-    var __awaiter2;
-    var __generator2;
-    var __exportStar2;
-    var __values2;
-    var __read2;
-    var __spread2;
-    var __spreadArrays2;
-    var __spreadArray2;
-    var __await2;
-    var __asyncGenerator2;
-    var __asyncDelegator2;
-    var __asyncValues2;
-    var __makeTemplateObject2;
-    var __importStar2;
-    var __importDefault2;
-    var __classPrivateFieldGet2;
-    var __classPrivateFieldSet2;
-    var __classPrivateFieldIn2;
-    var __createBinding2;
-    (function(factory) {
-      var root = typeof global === "object" ? global : typeof self === "object" ? self : typeof this === "object" ? this : {};
-      if (typeof define === "function" && define.amd) {
-        define("tslib", ["exports"], function(exports2) {
-          factory(createExporter(root, createExporter(exports2)));
-        });
-      } else if (typeof module2 === "object" && typeof module2.exports === "object") {
-        factory(createExporter(root, createExporter(module2.exports)));
-      } else {
-        factory(createExporter(root));
-      }
-      function createExporter(exports2, previous) {
-        if (exports2 !== root) {
-          if (typeof Object.create === "function") {
-            Object.defineProperty(exports2, "__esModule", { value: true });
-          } else {
-            exports2.__esModule = true;
-          }
-        }
-        return function(id, v) {
-          return exports2[id] = previous ? previous(id, v) : v;
-        };
-      }
-    })(function(exporter) {
-      var extendStatics = Object.setPrototypeOf || { __proto__: [] } instanceof Array && function(d, b) {
-        d.__proto__ = b;
-      } || function(d, b) {
-        for (var p in b)
-          if (Object.prototype.hasOwnProperty.call(b, p))
-            d[p] = b[p];
-      };
-      __extends2 = function(d, b) {
-        if (typeof b !== "function" && b !== null)
-          throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() {
-          this.constructor = d;
-        }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-      };
-      __assign2 = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-          s = arguments[i];
-          for (var p in s)
-            if (Object.prototype.hasOwnProperty.call(s, p))
-              t[p] = s[p];
-        }
-        return t;
-      };
-      __rest2 = function(s, e) {
-        var t = {};
-        for (var p in s)
-          if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-            t[p] = s[p];
-        if (s != null && typeof Object.getOwnPropertySymbols === "function")
-          for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
-              t[p[i]] = s[p[i]];
-          }
-        return t;
-      };
-      __decorate2 = function(decorators, target, key, desc) {
-        var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-        if (typeof Reflect === "object" && typeof Reflect.decorate === "function")
-          r = Reflect.decorate(decorators, target, key, desc);
-        else
-          for (var i = decorators.length - 1; i >= 0; i--)
-            if (d = decorators[i])
-              r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-        return c > 3 && r && Object.defineProperty(target, key, r), r;
-      };
-      __param2 = function(paramIndex, decorator) {
-        return function(target, key) {
-          decorator(target, key, paramIndex);
-        };
-      };
-      __esDecorate2 = function(ctor, descriptorIn, decorators, contextIn, initializers, extraInitializers) {
-        function accept(f) {
-          if (f !== void 0 && typeof f !== "function")
-            throw new TypeError("Function expected");
-          return f;
-        }
-        var kind = contextIn.kind, key = kind === "getter" ? "get" : kind === "setter" ? "set" : "value";
-        var target = !descriptorIn && ctor ? contextIn["static"] ? ctor : ctor.prototype : null;
-        var descriptor = descriptorIn || (target ? Object.getOwnPropertyDescriptor(target, contextIn.name) : {});
-        var _, done = false;
-        for (var i = decorators.length - 1; i >= 0; i--) {
-          var context = {};
-          for (var p in contextIn)
-            context[p] = p === "access" ? {} : contextIn[p];
-          for (var p in contextIn.access)
-            context.access[p] = contextIn.access[p];
-          context.addInitializer = function(f) {
-            if (done)
-              throw new TypeError("Cannot add initializers after decoration has completed");
-            extraInitializers.push(accept(f || null));
-          };
-          var result = (0, decorators[i])(kind === "accessor" ? { get: descriptor.get, set: descriptor.set } : descriptor[key], context);
-          if (kind === "accessor") {
-            if (result === void 0)
-              continue;
-            if (result === null || typeof result !== "object")
-              throw new TypeError("Object expected");
-            if (_ = accept(result.get))
-              descriptor.get = _;
-            if (_ = accept(result.set))
-              descriptor.set = _;
-            if (_ = accept(result.init))
-              initializers.push(_);
-          } else if (_ = accept(result)) {
-            if (kind === "field")
-              initializers.push(_);
-            else
-              descriptor[key] = _;
-          }
-        }
-        if (target)
-          Object.defineProperty(target, contextIn.name, descriptor);
-        done = true;
-      };
-      __runInitializers2 = function(thisArg, initializers, value) {
-        var useValue = arguments.length > 2;
-        for (var i = 0; i < initializers.length; i++) {
-          value = useValue ? initializers[i].call(thisArg, value) : initializers[i].call(thisArg);
-        }
-        return useValue ? value : void 0;
-      };
-      __propKey2 = function(x) {
-        return typeof x === "symbol" ? x : "".concat(x);
-      };
-      __setFunctionName2 = function(f, name, prefix) {
-        if (typeof name === "symbol")
-          name = name.description ? "[".concat(name.description, "]") : "";
-        return Object.defineProperty(f, "name", { configurable: true, value: prefix ? "".concat(prefix, " ", name) : name });
-      };
-      __metadata2 = function(metadataKey, metadataValue) {
-        if (typeof Reflect === "object" && typeof Reflect.metadata === "function")
-          return Reflect.metadata(metadataKey, metadataValue);
-      };
-      __awaiter2 = function(thisArg, _arguments, P, generator) {
-        function adopt(value) {
-          return value instanceof P ? value : new P(function(resolve) {
-            resolve(value);
-          });
-        }
-        return new (P || (P = Promise))(function(resolve, reject) {
-          function fulfilled(value) {
-            try {
-              step(generator.next(value));
-            } catch (e) {
-              reject(e);
-            }
-          }
-          function rejected(value) {
-            try {
-              step(generator["throw"](value));
-            } catch (e) {
-              reject(e);
-            }
-          }
-          function step(result) {
-            result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
-          }
-          step((generator = generator.apply(thisArg, _arguments || [])).next());
-        });
-      };
-      __generator2 = function(thisArg, body) {
-        var _ = { label: 0, sent: function() {
-          if (t[0] & 1)
-            throw t[1];
-          return t[1];
-        }, trys: [], ops: [] }, f, y, t, g;
-        return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() {
-          return this;
-        }), g;
-        function verb(n) {
-          return function(v) {
-            return step([n, v]);
-          };
-        }
-        function step(op) {
-          if (f)
-            throw new TypeError("Generator is already executing.");
-          while (g && (g = 0, op[0] && (_ = 0)), _)
-            try {
-              if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done)
-                return t;
-              if (y = 0, t)
-                op = [op[0] & 2, t.value];
-              switch (op[0]) {
-                case 0:
-                case 1:
-                  t = op;
-                  break;
-                case 4:
-                  _.label++;
-                  return { value: op[1], done: false };
-                case 5:
-                  _.label++;
-                  y = op[1];
-                  op = [0];
-                  continue;
-                case 7:
-                  op = _.ops.pop();
-                  _.trys.pop();
-                  continue;
-                default:
-                  if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
-                    _ = 0;
-                    continue;
-                  }
-                  if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
-                    _.label = op[1];
-                    break;
-                  }
-                  if (op[0] === 6 && _.label < t[1]) {
-                    _.label = t[1];
-                    t = op;
-                    break;
-                  }
-                  if (t && _.label < t[2]) {
-                    _.label = t[2];
-                    _.ops.push(op);
-                    break;
-                  }
-                  if (t[2])
-                    _.ops.pop();
-                  _.trys.pop();
-                  continue;
-              }
-              op = body.call(thisArg, _);
-            } catch (e) {
-              op = [6, e];
-              y = 0;
-            } finally {
-              f = t = 0;
-            }
-          if (op[0] & 5)
-            throw op[1];
-          return { value: op[0] ? op[1] : void 0, done: true };
-        }
-      };
-      __exportStar2 = function(m, o) {
-        for (var p in m)
-          if (p !== "default" && !Object.prototype.hasOwnProperty.call(o, p))
-            __createBinding2(o, m, p);
-      };
-      __createBinding2 = Object.create ? function(o, m, k, k2) {
-        if (k2 === void 0)
-          k2 = k;
-        var desc = Object.getOwnPropertyDescriptor(m, k);
-        if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-          desc = { enumerable: true, get: function() {
-            return m[k];
-          } };
-        }
-        Object.defineProperty(o, k2, desc);
-      } : function(o, m, k, k2) {
-        if (k2 === void 0)
-          k2 = k;
-        o[k2] = m[k];
-      };
-      __values2 = function(o) {
-        var s = typeof Symbol === "function" && Symbol.iterator, m = s && o[s], i = 0;
-        if (m)
-          return m.call(o);
-        if (o && typeof o.length === "number")
-          return {
-            next: function() {
-              if (o && i >= o.length)
-                o = void 0;
-              return { value: o && o[i++], done: !o };
-            }
-          };
-        throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
-      };
-      __read2 = function(o, n) {
-        var m = typeof Symbol === "function" && o[Symbol.iterator];
-        if (!m)
-          return o;
-        var i = m.call(o), r, ar = [], e;
-        try {
-          while ((n === void 0 || n-- > 0) && !(r = i.next()).done)
-            ar.push(r.value);
-        } catch (error) {
-          e = { error };
-        } finally {
-          try {
-            if (r && !r.done && (m = i["return"]))
-              m.call(i);
-          } finally {
-            if (e)
-              throw e.error;
-          }
-        }
-        return ar;
-      };
-      __spread2 = function() {
-        for (var ar = [], i = 0; i < arguments.length; i++)
-          ar = ar.concat(__read2(arguments[i]));
-        return ar;
-      };
-      __spreadArrays2 = function() {
-        for (var s = 0, i = 0, il = arguments.length; i < il; i++)
-          s += arguments[i].length;
-        for (var r = Array(s), k = 0, i = 0; i < il; i++)
-          for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++)
-            r[k] = a[j];
-        return r;
-      };
-      __spreadArray2 = function(to, from, pack) {
-        if (pack || arguments.length === 2)
-          for (var i = 0, l = from.length, ar; i < l; i++) {
-            if (ar || !(i in from)) {
-              if (!ar)
-                ar = Array.prototype.slice.call(from, 0, i);
-              ar[i] = from[i];
-            }
-          }
-        return to.concat(ar || Array.prototype.slice.call(from));
-      };
-      __await2 = function(v) {
-        return this instanceof __await2 ? (this.v = v, this) : new __await2(v);
-      };
-      __asyncGenerator2 = function(thisArg, _arguments, generator) {
-        if (!Symbol.asyncIterator)
-          throw new TypeError("Symbol.asyncIterator is not defined.");
-        var g = generator.apply(thisArg, _arguments || []), i, q = [];
-        return i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function() {
-          return this;
-        }, i;
-        function verb(n) {
-          if (g[n])
-            i[n] = function(v) {
-              return new Promise(function(a, b) {
-                q.push([n, v, a, b]) > 1 || resume(n, v);
-              });
-            };
-        }
-        function resume(n, v) {
-          try {
-            step(g[n](v));
-          } catch (e) {
-            settle(q[0][3], e);
-          }
-        }
-        function step(r) {
-          r.value instanceof __await2 ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r);
-        }
-        function fulfill(value) {
-          resume("next", value);
-        }
-        function reject(value) {
-          resume("throw", value);
-        }
-        function settle(f, v) {
-          if (f(v), q.shift(), q.length)
-            resume(q[0][0], q[0][1]);
-        }
-      };
-      __asyncDelegator2 = function(o) {
-        var i, p;
-        return i = {}, verb("next"), verb("throw", function(e) {
-          throw e;
-        }), verb("return"), i[Symbol.iterator] = function() {
-          return this;
-        }, i;
-        function verb(n, f) {
-          i[n] = o[n] ? function(v) {
-            return (p = !p) ? { value: __await2(o[n](v)), done: false } : f ? f(v) : v;
-          } : f;
-        }
-      };
-      __asyncValues2 = function(o) {
-        if (!Symbol.asyncIterator)
-          throw new TypeError("Symbol.asyncIterator is not defined.");
-        var m = o[Symbol.asyncIterator], i;
-        return m ? m.call(o) : (o = typeof __values2 === "function" ? __values2(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function() {
-          return this;
-        }, i);
-        function verb(n) {
-          i[n] = o[n] && function(v) {
-            return new Promise(function(resolve, reject) {
-              v = o[n](v), settle(resolve, reject, v.done, v.value);
-            });
-          };
-        }
-        function settle(resolve, reject, d, v) {
-          Promise.resolve(v).then(function(v2) {
-            resolve({ value: v2, done: d });
-          }, reject);
-        }
-      };
-      __makeTemplateObject2 = function(cooked, raw) {
-        if (Object.defineProperty) {
-          Object.defineProperty(cooked, "raw", { value: raw });
-        } else {
-          cooked.raw = raw;
-        }
-        return cooked;
-      };
-      var __setModuleDefault = Object.create ? function(o, v) {
-        Object.defineProperty(o, "default", { enumerable: true, value: v });
-      } : function(o, v) {
-        o["default"] = v;
-      };
-      __importStar2 = function(mod) {
-        if (mod && mod.__esModule)
-          return mod;
-        var result = {};
-        if (mod != null) {
-          for (var k in mod)
-            if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k))
-              __createBinding2(result, mod, k);
-        }
-        __setModuleDefault(result, mod);
-        return result;
-      };
-      __importDefault2 = function(mod) {
-        return mod && mod.__esModule ? mod : { "default": mod };
-      };
-      __classPrivateFieldGet2 = function(receiver, state, kind, f) {
-        if (kind === "a" && !f)
-          throw new TypeError("Private accessor was defined without a getter");
-        if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver))
-          throw new TypeError("Cannot read private member from an object whose class did not declare it");
-        return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
-      };
-      __classPrivateFieldSet2 = function(receiver, state, value, kind, f) {
-        if (kind === "m")
-          throw new TypeError("Private method is not writable");
-        if (kind === "a" && !f)
-          throw new TypeError("Private accessor was defined without a setter");
-        if (typeof state === "function" ? receiver !== state || !f : !state.has(receiver))
-          throw new TypeError("Cannot write private member to an object whose class did not declare it");
-        return kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value), value;
-      };
-      __classPrivateFieldIn2 = function(state, receiver) {
-        if (receiver === null || typeof receiver !== "object" && typeof receiver !== "function")
-          throw new TypeError("Cannot use 'in' operator on non-object");
-        return typeof state === "function" ? receiver === state : state.has(receiver);
-      };
-      exporter("__extends", __extends2);
-      exporter("__assign", __assign2);
-      exporter("__rest", __rest2);
-      exporter("__decorate", __decorate2);
-      exporter("__param", __param2);
-      exporter("__esDecorate", __esDecorate2);
-      exporter("__runInitializers", __runInitializers2);
-      exporter("__propKey", __propKey2);
-      exporter("__setFunctionName", __setFunctionName2);
-      exporter("__metadata", __metadata2);
-      exporter("__awaiter", __awaiter2);
-      exporter("__generator", __generator2);
-      exporter("__exportStar", __exportStar2);
-      exporter("__createBinding", __createBinding2);
-      exporter("__values", __values2);
-      exporter("__read", __read2);
-      exporter("__spread", __spread2);
-      exporter("__spreadArrays", __spreadArrays2);
-      exporter("__spreadArray", __spreadArray2);
-      exporter("__await", __await2);
-      exporter("__asyncGenerator", __asyncGenerator2);
-      exporter("__asyncDelegator", __asyncDelegator2);
-      exporter("__asyncValues", __asyncValues2);
-      exporter("__makeTemplateObject", __makeTemplateObject2);
-      exporter("__importStar", __importStar2);
-      exporter("__importDefault", __importDefault2);
-      exporter("__classPrivateFieldGet", __classPrivateFieldGet2);
-      exporter("__classPrivateFieldSet", __classPrivateFieldSet2);
-      exporter("__classPrivateFieldIn", __classPrivateFieldIn2);
-    });
-  }
-});
 
 // src/main.ts
 var main_exports = {};
@@ -543,12 +37,12 @@ __export(main_exports, {
   default: () => QuickAdd
 });
 module.exports = __toCommonJS(main_exports);
-var import_obsidian29 = require("obsidian");
+var import_obsidian37 = require("obsidian");
 
 // src/quickAddSettingsTab.ts
-var import_obsidian25 = require("obsidian");
+var import_obsidian31 = require("obsidian");
 
-// node_modules/.pnpm/svelte@3.55.1/node_modules/svelte/internal/index.mjs
+// node_modules/.pnpm/svelte@3.59.1/node_modules/svelte/internal/index.mjs
 function noop() {
 }
 function assign(tar, src) {
@@ -618,9 +112,50 @@ function get_all_dirty_from_scope($$scope) {
   }
   return -1;
 }
+function exclude_internal_props(props) {
+  const result = {};
+  for (const k in props)
+    if (k[0] !== "$")
+      result[k] = props[k];
+  return result;
+}
+function compute_rest_props(props, keys) {
+  const rest = {};
+  keys = new Set(keys);
+  for (const k in props)
+    if (!keys.has(k) && k[0] !== "$")
+      rest[k] = props[k];
+  return rest;
+}
 function action_destroyer(action_result) {
   return action_result && is_function(action_result.destroy) ? action_result.destroy : noop;
 }
+var globals = typeof window !== "undefined" ? window : typeof globalThis !== "undefined" ? globalThis : global;
+var ResizeObserverSingleton = class {
+  constructor(options) {
+    this.options = options;
+    this._listeners = "WeakMap" in globals ? /* @__PURE__ */ new WeakMap() : void 0;
+  }
+  observe(element2, listener) {
+    this._listeners.set(element2, listener);
+    this._getObserver().observe(element2, this.options);
+    return () => {
+      this._listeners.delete(element2);
+      this._observer.unobserve(element2);
+    };
+  }
+  _getObserver() {
+    var _a;
+    return (_a = this._observer) !== null && _a !== void 0 ? _a : this._observer = new ResizeObserver((entries) => {
+      var _a2;
+      for (const entry of entries) {
+        ResizeObserverSingleton.entries.set(entry.target, entry);
+        (_a2 = this._listeners.get(entry.target)) === null || _a2 === void 0 ? void 0 : _a2(entry);
+      }
+    });
+  }
+};
+ResizeObserverSingleton.entries = "WeakMap" in globals ? /* @__PURE__ */ new WeakMap() : void 0;
 var is_hydrating = false;
 function start_hydrating() {
   is_hydrating = true;
@@ -705,13 +240,21 @@ function children(element2) {
 }
 function set_data(text2, data) {
   data = "" + data;
-  if (text2.wholeText !== data)
-    text2.data = data;
+  if (text2.data === data)
+    return;
+  text2.data = data;
 }
 function set_input_value(input, value) {
   input.value = value == null ? "" : value;
 }
-function select_option(select, value) {
+function set_style(node, key, value, important) {
+  if (value == null) {
+    node.style.removeProperty(key);
+  } else {
+    node.style.setProperty(key, value, important ? "important" : "");
+  }
+}
+function select_option(select, value, mounting) {
   for (let i = 0; i < select.options.length; i += 1) {
     const option = select.options[i];
     if (option.__value === value) {
@@ -719,10 +262,12 @@ function select_option(select, value) {
       return;
     }
   }
-  select.selectedIndex = -1;
+  if (!mounting || value !== void 0) {
+    select.selectedIndex = -1;
+  }
 }
 function select_value(select) {
-  const selected_option = select.querySelector(":checked") || select.options[0];
+  const selected_option = select.querySelector(":checked");
   return selected_option && selected_option.__value;
 }
 function toggle_class(element2, name, toggle) {
@@ -769,7 +314,7 @@ var dirty_components = [];
 var binding_callbacks = [];
 var render_callbacks = [];
 var flush_callbacks = [];
-var resolved_promise = Promise.resolve();
+var resolved_promise = /* @__PURE__ */ Promise.resolve();
 var update_scheduled = false;
 function schedule_update() {
   if (!update_scheduled) {
@@ -834,6 +379,13 @@ function update($$) {
     $$.after_update.forEach(add_render_callback);
   }
 }
+function flush_render_callbacks(fns) {
+  const filtered = [];
+  const targets = [];
+  render_callbacks.forEach((c) => fns.indexOf(c) === -1 ? filtered.push(c) : targets.push(c));
+  targets.forEach((c) => c());
+  render_callbacks = filtered;
+}
 var outroing = /* @__PURE__ */ new Set();
 var outros;
 function group_outros() {
@@ -841,6 +393,7 @@ function group_outros() {
     r: 0,
     c: [],
     p: outros
+    // parent group
   };
 }
 function check_outros() {
@@ -873,7 +426,6 @@ function transition_out(block, local, detach2, callback) {
     callback();
   }
 }
-var globals = typeof window !== "undefined" ? window : typeof globalThis !== "undefined" ? globalThis : global;
 function outro_and_destroy_block(block, lookup) {
   transition_out(block, 1, 1, () => {
     lookup.delete(block.key);
@@ -889,6 +441,7 @@ function update_keyed_each(old_blocks, dirty, get_key, dynamic, ctx, list, looku
   const new_blocks = [];
   const new_lookup = /* @__PURE__ */ new Map();
   const deltas = /* @__PURE__ */ new Map();
+  const updates = [];
   i = n;
   while (i--) {
     const child_ctx = get_context(ctx, list, i);
@@ -898,7 +451,7 @@ function update_keyed_each(old_blocks, dirty, get_key, dynamic, ctx, list, looku
       block = create_each_block5(key, child_ctx);
       block.c();
     } else if (dynamic) {
-      block.p(child_ctx, dirty);
+      updates.push(() => block.p(child_ctx, dirty));
     }
     new_lookup.set(key, new_blocks[i] = block);
     if (key in old_indexes)
@@ -944,6 +497,7 @@ function update_keyed_each(old_blocks, dirty, get_key, dynamic, ctx, list, looku
   }
   while (n)
     insert2(new_blocks[n - 1]);
+  run_all(updates);
   return new_blocks;
 }
 function get_spread_update(levels, updates) {
@@ -978,6 +532,37 @@ function get_spread_update(levels, updates) {
   }
   return update2;
 }
+function get_spread_object(spread_props) {
+  return typeof spread_props === "object" && spread_props !== null ? spread_props : {};
+}
+var _boolean_attributes = [
+  "allowfullscreen",
+  "allowpaymentrequest",
+  "async",
+  "autofocus",
+  "autoplay",
+  "checked",
+  "controls",
+  "default",
+  "defer",
+  "disabled",
+  "formnovalidate",
+  "hidden",
+  "inert",
+  "ismap",
+  "loop",
+  "multiple",
+  "muted",
+  "nomodule",
+  "novalidate",
+  "open",
+  "playsinline",
+  "readonly",
+  "required",
+  "reversed",
+  "selected"
+];
+var boolean_attributes = /* @__PURE__ */ new Set([..._boolean_attributes]);
 function bind(component, name, callback) {
   const index = component.$$.props[name];
   if (index !== void 0) {
@@ -1007,6 +592,7 @@ function mount_component(component, target, anchor, customElement) {
 function destroy_component(component, detaching) {
   const $$ = component.$$;
   if ($$.fragment !== null) {
+    flush_render_callbacks($$.after_update);
     run_all($$.on_destroy);
     $$.fragment && $$.fragment.d(detaching);
     $$.on_destroy = $$.fragment = null;
@@ -1021,22 +607,25 @@ function make_dirty(component, i) {
   }
   component.$$.dirty[i / 31 | 0] |= 1 << i % 31;
 }
-function init(component, options, instance18, create_fragment18, not_equal, props, append_styles2, dirty = [-1]) {
+function init(component, options, instance17, create_fragment17, not_equal, props, append_styles2, dirty = [-1]) {
   const parent_component = current_component;
   set_current_component(component);
   const $$ = component.$$ = {
     fragment: null,
     ctx: [],
+    // state
     props,
     update: noop,
     not_equal,
     bound: blank_object(),
+    // lifecycle
     on_mount: [],
     on_destroy: [],
     on_disconnect: [],
     before_update: [],
     after_update: [],
     context: new Map(options.context || (parent_component ? parent_component.$$.context : [])),
+    // everything else
     callbacks: blank_object(),
     dirty,
     skip_bound: false,
@@ -1044,7 +633,7 @@ function init(component, options, instance18, create_fragment18, not_equal, prop
   };
   append_styles2 && append_styles2($$.root);
   let ready = false;
-  $$.ctx = instance18 ? instance18(component, options.props || {}, (i, ret, ...rest) => {
+  $$.ctx = instance17 ? instance17(component, options.props || {}, (i, ret, ...rest) => {
     const value = rest.length ? rest[0] : ret;
     if ($$.ctx && not_equal($$.ctx[i], $$.ctx[i] = value)) {
       if (!$$.skip_bound && $$.bound[i])
@@ -1057,7 +646,7 @@ function init(component, options, instance18, create_fragment18, not_equal, prop
   $$.update();
   ready = true;
   run_all($$.before_update);
-  $$.fragment = create_fragment18 ? create_fragment18($$.ctx) : false;
+  $$.fragment = create_fragment17 ? create_fragment17($$.ctx) : false;
   if (options.target) {
     if (options.hydrate) {
       start_hydrating();
@@ -1146,41 +735,7 @@ var SvelteComponent = class {
   }
 };
 
-// node_modules/.pnpm/tslib@2.5.0/node_modules/tslib/modules/index.js
-var import_tslib = __toESM(require_tslib(), 1);
-var {
-  __extends,
-  __assign,
-  __rest,
-  __decorate,
-  __param,
-  __esDecorate,
-  __runInitializers,
-  __propKey,
-  __setFunctionName,
-  __metadata,
-  __awaiter,
-  __generator,
-  __exportStar,
-  __createBinding,
-  __values,
-  __read,
-  __spread,
-  __spreadArrays,
-  __spreadArray,
-  __await,
-  __asyncGenerator,
-  __asyncDelegator,
-  __asyncValues,
-  __makeTemplateObject,
-  __importStar,
-  __importDefault,
-  __classPrivateFieldGet,
-  __classPrivateFieldSet,
-  __classPrivateFieldIn
-} = import_tslib.default;
-
-// node_modules/.pnpm/@fortawesome+free-solid-svg-icons@6.2.1/node_modules/@fortawesome/free-solid-svg-icons/index.mjs
+// node_modules/.pnpm/@fortawesome+free-solid-svg-icons@6.4.0/node_modules/@fortawesome/free-solid-svg-icons/index.mjs
 var faBars = {
   prefix: "fas",
   iconName: "bars",
@@ -1194,7 +749,7 @@ var faTrash = {
 var faGear = {
   prefix: "fas",
   iconName: "gear",
-  icon: [512, 512, [9881, "cog"], "f013", "M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336c44.2 0 80-35.8 80-80s-35.8-80-80-80s-80 35.8-80 80s35.8 80 80 80z"]
+  icon: [512, 512, [9881, "cog"], "f013", "M495.9 166.6c3.2 8.7 .5 18.4-6.4 24.6l-43.3 39.4c1.1 8.3 1.7 16.8 1.7 25.4s-.6 17.1-1.7 25.4l43.3 39.4c6.9 6.2 9.6 15.9 6.4 24.6c-4.4 11.9-9.7 23.3-15.8 34.3l-4.7 8.1c-6.6 11-14 21.4-22.1 31.2c-5.9 7.2-15.7 9.6-24.5 6.8l-55.7-17.7c-13.4 10.3-28.2 18.9-44 25.4l-12.5 57.1c-2 9.1-9 16.3-18.2 17.8c-13.8 2.3-28 3.5-42.5 3.5s-28.7-1.2-42.5-3.5c-9.2-1.5-16.2-8.7-18.2-17.8l-12.5-57.1c-15.8-6.5-30.6-15.1-44-25.4L83.1 425.9c-8.8 2.8-18.6 .3-24.5-6.8c-8.1-9.8-15.5-20.2-22.1-31.2l-4.7-8.1c-6.1-11-11.4-22.4-15.8-34.3c-3.2-8.7-.5-18.4 6.4-24.6l43.3-39.4C64.6 273.1 64 264.6 64 256s.6-17.1 1.7-25.4L22.4 191.2c-6.9-6.2-9.6-15.9-6.4-24.6c4.4-11.9 9.7-23.3 15.8-34.3l4.7-8.1c6.6-11 14-21.4 22.1-31.2c5.9-7.2 15.7-9.6 24.5-6.8l55.7 17.7c13.4-10.3 28.2-18.9 44-25.4l12.5-57.1c2-9.1 9-16.3 18.2-17.8C227.3 1.2 241.5 0 256 0s28.7 1.2 42.5 3.5c9.2 1.5 16.2 8.7 18.2 17.8l12.5 57.1c15.8 6.5 30.6 15.1 44 25.4l55.7-17.7c8.8-2.8 18.6-.3 24.5 6.8c8.1 9.8 15.5 20.2 22.1 31.2l4.7 8.1c6.1 11 11.4 22.4 15.8 34.3zM256 336a80 80 0 1 0 0-160 80 80 0 1 0 0 160z"]
 };
 var faCog = faGear;
 var faBolt = {
@@ -1210,121 +765,11 @@ var faChevronDown = {
 var faClone = {
   prefix: "fas",
   iconName: "clone",
-  icon: [512, 512, [], "f24d", "M0 448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V384H224c-53 0-96-43-96-96V160H64c-35.3 0-64 28.7-64 64V448zm224-96H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224c-35.3 0-64 28.7-64 64V288c0 35.3 28.7 64 64 64z"]
+  icon: [512, 512, [], "f24d", "M288 448H64V224h64V160H64c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V384H288v64zm-64-96H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224c-35.3 0-64 28.7-64 64V288c0 35.3 28.7 64 64 64z"]
 };
 
-// node_modules/.pnpm/svelte-awesome@3.0.0_svelte@3.55.1/node_modules/svelte-awesome/components/svg/Path.svelte
+// node_modules/.pnpm/svelte-awesome@3.2.0_svelte@3.59.1/node_modules/svelte-awesome/components/svg/Raw.svelte
 function create_fragment(ctx) {
-  let path;
-  let path_id_value;
-  let path_levels = [
-    {
-      id: path_id_value = "path-" + ctx[0]
-    },
-    ctx[1]
-  ];
-  let path_data = {};
-  for (let i = 0; i < path_levels.length; i += 1) {
-    path_data = assign(path_data, path_levels[i]);
-  }
-  return {
-    c() {
-      path = svg_element("path");
-      set_svg_attributes(path, path_data);
-    },
-    m(target, anchor) {
-      insert(target, path, anchor);
-    },
-    p(ctx2, [dirty]) {
-      set_svg_attributes(path, path_data = get_spread_update(path_levels, [
-        dirty & 1 && path_id_value !== (path_id_value = "path-" + ctx2[0]) && { id: path_id_value },
-        dirty & 2 && ctx2[1]
-      ]));
-    },
-    i: noop,
-    o: noop,
-    d(detaching) {
-      if (detaching)
-        detach(path);
-    }
-  };
-}
-function instance($$self, $$props, $$invalidate) {
-  let { id } = $$props;
-  let { data = {} } = $$props;
-  $$self.$$set = ($$props2) => {
-    if ("id" in $$props2)
-      $$invalidate(0, id = $$props2.id);
-    if ("data" in $$props2)
-      $$invalidate(1, data = $$props2.data);
-  };
-  return [id, data];
-}
-var Path = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, instance, create_fragment, safe_not_equal, { id: 0, data: 1 });
-  }
-};
-var Path_default = Path;
-
-// node_modules/.pnpm/svelte-awesome@3.0.0_svelte@3.55.1/node_modules/svelte-awesome/components/svg/Polygon.svelte
-function create_fragment2(ctx) {
-  let polygon;
-  let polygon_id_value;
-  let polygon_levels = [
-    {
-      id: polygon_id_value = "polygon-" + ctx[0]
-    },
-    ctx[1]
-  ];
-  let polygon_data = {};
-  for (let i = 0; i < polygon_levels.length; i += 1) {
-    polygon_data = assign(polygon_data, polygon_levels[i]);
-  }
-  return {
-    c() {
-      polygon = svg_element("polygon");
-      set_svg_attributes(polygon, polygon_data);
-    },
-    m(target, anchor) {
-      insert(target, polygon, anchor);
-    },
-    p(ctx2, [dirty]) {
-      set_svg_attributes(polygon, polygon_data = get_spread_update(polygon_levels, [
-        dirty & 1 && polygon_id_value !== (polygon_id_value = "polygon-" + ctx2[0]) && { id: polygon_id_value },
-        dirty & 2 && ctx2[1]
-      ]));
-    },
-    i: noop,
-    o: noop,
-    d(detaching) {
-      if (detaching)
-        detach(polygon);
-    }
-  };
-}
-function instance2($$self, $$props, $$invalidate) {
-  let { id } = $$props;
-  let { data = {} } = $$props;
-  $$self.$$set = ($$props2) => {
-    if ("id" in $$props2)
-      $$invalidate(0, id = $$props2.id);
-    if ("data" in $$props2)
-      $$invalidate(1, data = $$props2.data);
-  };
-  return [id, data];
-}
-var Polygon = class extends SvelteComponent {
-  constructor(options) {
-    super();
-    init(this, options, instance2, create_fragment2, safe_not_equal, { id: 0, data: 1 });
-  }
-};
-var Polygon_default = Polygon;
-
-// node_modules/.pnpm/svelte-awesome@3.0.0_svelte@3.55.1/node_modules/svelte-awesome/components/svg/Raw.svelte
-function create_fragment3(ctx) {
   let g;
   return {
     c() {
@@ -1332,11 +777,14 @@ function create_fragment3(ctx) {
     },
     m(target, anchor) {
       insert(target, g, anchor);
-      g.innerHTML = ctx[0];
+      g.innerHTML = /*raw*/
+      ctx[0];
     },
     p(ctx2, [dirty]) {
-      if (dirty & 1)
-        g.innerHTML = ctx2[0];
+      if (dirty & /*raw*/
+      1)
+        g.innerHTML = /*raw*/
+        ctx2[0];
       ;
     },
     i: noop,
@@ -1347,17 +795,17 @@ function create_fragment3(ctx) {
     }
   };
 }
-function instance3($$self, $$props, $$invalidate) {
+function instance($$self, $$props, $$invalidate) {
   let cursor = 870711;
   function getId() {
     cursor += 1;
     return `fa-${cursor.toString(16)}`;
   }
-  let raw;
+  let raw = "";
   let { data } = $$props;
   function getRaw(data2) {
     if (!data2 || !data2.raw) {
-      return null;
+      return "";
     }
     let rawData = data2.raw;
     const ids = {};
@@ -1380,7 +828,8 @@ function instance3($$self, $$props, $$invalidate) {
       $$invalidate(1, data = $$props2.data);
   };
   $$self.$$.update = () => {
-    if ($$self.$$.dirty & 2) {
+    if ($$self.$$.dirty & /*data*/
+    2) {
       $:
         $$invalidate(0, raw = getRaw(data));
     }
@@ -1390,42 +839,105 @@ function instance3($$self, $$props, $$invalidate) {
 var Raw = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance3, create_fragment3, safe_not_equal, { data: 1 });
+    init(this, options, instance, create_fragment, safe_not_equal, { data: 1 });
   }
 };
 var Raw_default = Raw;
 
-// node_modules/.pnpm/svelte-awesome@3.0.0_svelte@3.55.1/node_modules/svelte-awesome/components/svg/Svg.svelte
+// node_modules/.pnpm/svelte-awesome@3.2.0_svelte@3.59.1/node_modules/svelte-awesome/components/svg/Svg.svelte
 function add_css(target) {
-  append_styles(target, "svelte-1dof0an", ".fa-icon.svelte-1dof0an{display:inline-block;fill:currentColor}.fa-flip-horizontal.svelte-1dof0an{transform:scale(-1, 1)}.fa-flip-vertical.svelte-1dof0an{transform:scale(1, -1)}.fa-spin.svelte-1dof0an{animation:svelte-1dof0an-fa-spin 1s 0s infinite linear}.fa-inverse.svelte-1dof0an{color:#fff}.fa-pulse.svelte-1dof0an{animation:svelte-1dof0an-fa-spin 1s infinite steps(8)}@keyframes svelte-1dof0an-fa-spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}");
+  append_styles(target, "svelte-1mc5hvj", ".fa-icon.svelte-1mc5hvj{display:inline-block;fill:currentColor}.fa-flip-horizontal.svelte-1mc5hvj{transform:scale(-1, 1)}.fa-flip-vertical.svelte-1mc5hvj{transform:scale(1, -1)}.fa-spin.svelte-1mc5hvj{animation:svelte-1mc5hvj-fa-spin 1s 0s infinite linear}.fa-inverse.svelte-1mc5hvj{color:#fff}.fa-pulse.svelte-1mc5hvj{animation:svelte-1mc5hvj-fa-spin 1s infinite steps(8)}@keyframes svelte-1mc5hvj-fa-spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}");
 }
-function create_fragment4(ctx) {
+function create_fragment2(ctx) {
   let svg;
   let svg_class_value;
   let svg_role_value;
   let current;
-  const default_slot_template = ctx[13].default;
-  const default_slot = create_slot(default_slot_template, ctx, ctx[12], null);
+  const default_slot_template = (
+    /*#slots*/
+    ctx[12].default
+  );
+  const default_slot = create_slot(
+    default_slot_template,
+    ctx,
+    /*$$scope*/
+    ctx[11],
+    null
+  );
+  let svg_levels = [
+    { version: "1.1" },
+    {
+      class: svg_class_value = "fa-icon " + /*className*/
+      ctx[0]
+    },
+    { width: (
+      /*width*/
+      ctx[1]
+    ) },
+    { height: (
+      /*height*/
+      ctx[2]
+    ) },
+    { "aria-label": (
+      /*label*/
+      ctx[9]
+    ) },
+    {
+      role: svg_role_value = /*label*/
+      ctx[9] ? "img" : "presentation"
+    },
+    { viewBox: (
+      /*box*/
+      ctx[3]
+    ) },
+    { style: (
+      /*style*/
+      ctx[8]
+    ) },
+    /*$$restProps*/
+    ctx[10]
+  ];
+  let svg_data = {};
+  for (let i = 0; i < svg_levels.length; i += 1) {
+    svg_data = assign(svg_data, svg_levels[i]);
+  }
   return {
     c() {
       svg = svg_element("svg");
       if (default_slot)
         default_slot.c();
-      attr(svg, "version", "1.1");
-      attr(svg, "class", svg_class_value = "fa-icon " + ctx[0] + " svelte-1dof0an");
-      attr(svg, "x", ctx[8]);
-      attr(svg, "y", ctx[9]);
-      attr(svg, "width", ctx[1]);
-      attr(svg, "height", ctx[2]);
-      attr(svg, "aria-label", ctx[11]);
-      attr(svg, "role", svg_role_value = ctx[11] ? "img" : "presentation");
-      attr(svg, "viewBox", ctx[3]);
-      attr(svg, "style", ctx[10]);
-      toggle_class(svg, "fa-spin", ctx[4]);
-      toggle_class(svg, "fa-pulse", ctx[6]);
-      toggle_class(svg, "fa-inverse", ctx[5]);
-      toggle_class(svg, "fa-flip-horizontal", ctx[7] === "horizontal");
-      toggle_class(svg, "fa-flip-vertical", ctx[7] === "vertical");
+      set_svg_attributes(svg, svg_data);
+      toggle_class(
+        svg,
+        "fa-spin",
+        /*spin*/
+        ctx[4]
+      );
+      toggle_class(
+        svg,
+        "fa-pulse",
+        /*pulse*/
+        ctx[6]
+      );
+      toggle_class(
+        svg,
+        "fa-inverse",
+        /*inverse*/
+        ctx[5]
+      );
+      toggle_class(
+        svg,
+        "fa-flip-horizontal",
+        /*flip*/
+        ctx[7] === "horizontal"
+      );
+      toggle_class(
+        svg,
+        "fa-flip-vertical",
+        /*flip*/
+        ctx[7] === "vertical"
+      );
+      toggle_class(svg, "svelte-1mc5hvj", true);
     },
     m(target, anchor) {
       insert(target, svg, anchor);
@@ -1436,59 +948,96 @@ function create_fragment4(ctx) {
     },
     p(ctx2, [dirty]) {
       if (default_slot) {
-        if (default_slot.p && (!current || dirty & 4096)) {
+        if (default_slot.p && (!current || dirty & /*$$scope*/
+        2048)) {
           update_slot_base(
             default_slot,
             default_slot_template,
             ctx2,
-            ctx2[12],
-            !current ? get_all_dirty_from_scope(ctx2[12]) : get_slot_changes(default_slot_template, ctx2[12], dirty, null),
+            /*$$scope*/
+            ctx2[11],
+            !current ? get_all_dirty_from_scope(
+              /*$$scope*/
+              ctx2[11]
+            ) : get_slot_changes(
+              default_slot_template,
+              /*$$scope*/
+              ctx2[11],
+              dirty,
+              null
+            ),
             null
           );
         }
       }
-      if (!current || dirty & 1 && svg_class_value !== (svg_class_value = "fa-icon " + ctx2[0] + " svelte-1dof0an")) {
-        attr(svg, "class", svg_class_value);
-      }
-      if (!current || dirty & 256) {
-        attr(svg, "x", ctx2[8]);
-      }
-      if (!current || dirty & 512) {
-        attr(svg, "y", ctx2[9]);
-      }
-      if (!current || dirty & 2) {
-        attr(svg, "width", ctx2[1]);
-      }
-      if (!current || dirty & 4) {
-        attr(svg, "height", ctx2[2]);
-      }
-      if (!current || dirty & 2048) {
-        attr(svg, "aria-label", ctx2[11]);
-      }
-      if (!current || dirty & 2048 && svg_role_value !== (svg_role_value = ctx2[11] ? "img" : "presentation")) {
-        attr(svg, "role", svg_role_value);
-      }
-      if (!current || dirty & 8) {
-        attr(svg, "viewBox", ctx2[3]);
-      }
-      if (!current || dirty & 1024) {
-        attr(svg, "style", ctx2[10]);
-      }
-      if (!current || dirty & 17) {
-        toggle_class(svg, "fa-spin", ctx2[4]);
-      }
-      if (!current || dirty & 65) {
-        toggle_class(svg, "fa-pulse", ctx2[6]);
-      }
-      if (!current || dirty & 33) {
-        toggle_class(svg, "fa-inverse", ctx2[5]);
-      }
-      if (!current || dirty & 129) {
-        toggle_class(svg, "fa-flip-horizontal", ctx2[7] === "horizontal");
-      }
-      if (!current || dirty & 129) {
-        toggle_class(svg, "fa-flip-vertical", ctx2[7] === "vertical");
-      }
+      set_svg_attributes(svg, svg_data = get_spread_update(svg_levels, [
+        { version: "1.1" },
+        (!current || dirty & /*className*/
+        1 && svg_class_value !== (svg_class_value = "fa-icon " + /*className*/
+        ctx2[0])) && { class: svg_class_value },
+        (!current || dirty & /*width*/
+        2) && { width: (
+          /*width*/
+          ctx2[1]
+        ) },
+        (!current || dirty & /*height*/
+        4) && { height: (
+          /*height*/
+          ctx2[2]
+        ) },
+        (!current || dirty & /*label*/
+        512) && { "aria-label": (
+          /*label*/
+          ctx2[9]
+        ) },
+        (!current || dirty & /*label*/
+        512 && svg_role_value !== (svg_role_value = /*label*/
+        ctx2[9] ? "img" : "presentation")) && { role: svg_role_value },
+        (!current || dirty & /*box*/
+        8) && { viewBox: (
+          /*box*/
+          ctx2[3]
+        ) },
+        (!current || dirty & /*style*/
+        256) && { style: (
+          /*style*/
+          ctx2[8]
+        ) },
+        dirty & /*$$restProps*/
+        1024 && /*$$restProps*/
+        ctx2[10]
+      ]));
+      toggle_class(
+        svg,
+        "fa-spin",
+        /*spin*/
+        ctx2[4]
+      );
+      toggle_class(
+        svg,
+        "fa-pulse",
+        /*pulse*/
+        ctx2[6]
+      );
+      toggle_class(
+        svg,
+        "fa-inverse",
+        /*inverse*/
+        ctx2[5]
+      );
+      toggle_class(
+        svg,
+        "fa-flip-horizontal",
+        /*flip*/
+        ctx2[7] === "horizontal"
+      );
+      toggle_class(
+        svg,
+        "fa-flip-vertical",
+        /*flip*/
+        ctx2[7] === "vertical"
+      );
+      toggle_class(svg, "svelte-1mc5hvj", true);
     },
     i(local) {
       if (current)
@@ -1508,47 +1057,45 @@ function create_fragment4(ctx) {
     }
   };
 }
-function instance4($$self, $$props, $$invalidate) {
+function instance2($$self, $$props, $$invalidate) {
+  const omit_props_names = ["class", "width", "height", "box", "spin", "inverse", "pulse", "flip", "style", "label"];
+  let $$restProps = compute_rest_props($$props, omit_props_names);
   let { $$slots: slots = {}, $$scope } = $$props;
-  let { class: className } = $$props;
+  let { class: className = "" } = $$props;
   let { width } = $$props;
   let { height } = $$props;
-  let { box } = $$props;
+  let { box = "0 0 0 0" } = $$props;
   let { spin = false } = $$props;
   let { inverse = false } = $$props;
   let { pulse = false } = $$props;
-  let { flip: flip2 = null } = $$props;
-  let { x = void 0 } = $$props;
-  let { y = void 0 } = $$props;
-  let { style = void 0 } = $$props;
-  let { label = void 0 } = $$props;
-  $$self.$$set = ($$props2) => {
-    if ("class" in $$props2)
-      $$invalidate(0, className = $$props2.class);
-    if ("width" in $$props2)
-      $$invalidate(1, width = $$props2.width);
-    if ("height" in $$props2)
-      $$invalidate(2, height = $$props2.height);
-    if ("box" in $$props2)
-      $$invalidate(3, box = $$props2.box);
-    if ("spin" in $$props2)
-      $$invalidate(4, spin = $$props2.spin);
-    if ("inverse" in $$props2)
-      $$invalidate(5, inverse = $$props2.inverse);
-    if ("pulse" in $$props2)
-      $$invalidate(6, pulse = $$props2.pulse);
-    if ("flip" in $$props2)
-      $$invalidate(7, flip2 = $$props2.flip);
-    if ("x" in $$props2)
-      $$invalidate(8, x = $$props2.x);
-    if ("y" in $$props2)
-      $$invalidate(9, y = $$props2.y);
-    if ("style" in $$props2)
-      $$invalidate(10, style = $$props2.style);
-    if ("label" in $$props2)
-      $$invalidate(11, label = $$props2.label);
-    if ("$$scope" in $$props2)
-      $$invalidate(12, $$scope = $$props2.$$scope);
+  let { flip: flip2 = "none" } = $$props;
+  let { style = "" } = $$props;
+  let { label = "" } = $$props;
+  $$self.$$set = ($$new_props) => {
+    $$props = assign(assign({}, $$props), exclude_internal_props($$new_props));
+    $$invalidate(10, $$restProps = compute_rest_props($$props, omit_props_names));
+    if ("class" in $$new_props)
+      $$invalidate(0, className = $$new_props.class);
+    if ("width" in $$new_props)
+      $$invalidate(1, width = $$new_props.width);
+    if ("height" in $$new_props)
+      $$invalidate(2, height = $$new_props.height);
+    if ("box" in $$new_props)
+      $$invalidate(3, box = $$new_props.box);
+    if ("spin" in $$new_props)
+      $$invalidate(4, spin = $$new_props.spin);
+    if ("inverse" in $$new_props)
+      $$invalidate(5, inverse = $$new_props.inverse);
+    if ("pulse" in $$new_props)
+      $$invalidate(6, pulse = $$new_props.pulse);
+    if ("flip" in $$new_props)
+      $$invalidate(7, flip2 = $$new_props.flip);
+    if ("style" in $$new_props)
+      $$invalidate(8, style = $$new_props.style);
+    if ("label" in $$new_props)
+      $$invalidate(9, label = $$new_props.label);
+    if ("$$scope" in $$new_props)
+      $$invalidate(11, $$scope = $$new_props.$$scope);
   };
   return [
     className,
@@ -1559,10 +1106,9 @@ function instance4($$self, $$props, $$invalidate) {
     inverse,
     pulse,
     flip2,
-    x,
-    y,
     style,
     label,
+    $$restProps,
     $$scope,
     slots
   ];
@@ -1573,8 +1119,8 @@ var Svg = class extends SvelteComponent {
     init(
       this,
       options,
-      instance4,
-      create_fragment4,
+      instance2,
+      create_fragment2,
       safe_not_equal,
       {
         class: 0,
@@ -1585,10 +1131,8 @@ var Svg = class extends SvelteComponent {
         inverse: 5,
         pulse: 6,
         flip: 7,
-        x: 8,
-        y: 9,
-        style: 10,
-        label: 11
+        style: 8,
+        label: 9
       },
       add_css
     );
@@ -1596,17 +1140,15 @@ var Svg = class extends SvelteComponent {
 };
 var Svg_default = Svg;
 
-// node_modules/.pnpm/svelte-awesome@3.0.0_svelte@3.55.1/node_modules/svelte-awesome/components/Icon.svelte
+// node_modules/.pnpm/svelte-awesome@3.2.0_svelte@3.59.1/node_modules/svelte-awesome/components/Icon.svelte
 function get_each_context(ctx, list, i) {
   const child_ctx = ctx.slice();
   child_ctx[24] = list[i];
-  child_ctx[26] = i;
   return child_ctx;
 }
 function get_each_context_1(ctx, list, i) {
   const child_ctx = ctx.slice();
   child_ctx[27] = list[i];
-  child_ctx[26] = i;
   return child_ctx;
 }
 function create_if_block(ctx) {
@@ -1614,9 +1156,18 @@ function create_if_block(ctx) {
   let t1;
   let if_block2_anchor;
   let current;
-  let if_block0 = ctx[6].paths && create_if_block_3(ctx);
-  let if_block1 = ctx[6].polygons && create_if_block_2(ctx);
-  let if_block2 = ctx[6].raw && create_if_block_1(ctx);
+  let if_block0 = (
+    /*iconData*/
+    ctx[6].paths && create_if_block_3(ctx)
+  );
+  let if_block1 = (
+    /*iconData*/
+    ctx[6].polygons && create_if_block_2(ctx)
+  );
+  let if_block2 = (
+    /*iconData*/
+    ctx[6].raw && create_if_block_1(ctx)
+  );
   return {
     c() {
       if (if_block0)
@@ -1642,48 +1193,44 @@ function create_if_block(ctx) {
       current = true;
     },
     p(ctx2, dirty) {
-      if (ctx2[6].paths) {
+      if (
+        /*iconData*/
+        ctx2[6].paths
+      ) {
         if (if_block0) {
           if_block0.p(ctx2, dirty);
-          if (dirty & 64) {
-            transition_in(if_block0, 1);
-          }
         } else {
           if_block0 = create_if_block_3(ctx2);
           if_block0.c();
-          transition_in(if_block0, 1);
           if_block0.m(t0.parentNode, t0);
         }
       } else if (if_block0) {
-        group_outros();
-        transition_out(if_block0, 1, 1, () => {
-          if_block0 = null;
-        });
-        check_outros();
+        if_block0.d(1);
+        if_block0 = null;
       }
-      if (ctx2[6].polygons) {
+      if (
+        /*iconData*/
+        ctx2[6].polygons
+      ) {
         if (if_block1) {
           if_block1.p(ctx2, dirty);
-          if (dirty & 64) {
-            transition_in(if_block1, 1);
-          }
         } else {
           if_block1 = create_if_block_2(ctx2);
           if_block1.c();
-          transition_in(if_block1, 1);
           if_block1.m(t1.parentNode, t1);
         }
       } else if (if_block1) {
-        group_outros();
-        transition_out(if_block1, 1, 1, () => {
-          if_block1 = null;
-        });
-        check_outros();
+        if_block1.d(1);
+        if_block1 = null;
       }
-      if (ctx2[6].raw) {
+      if (
+        /*iconData*/
+        ctx2[6].raw
+      ) {
         if (if_block2) {
           if_block2.p(ctx2, dirty);
-          if (dirty & 64) {
+          if (dirty & /*iconData*/
+          64) {
             transition_in(if_block2, 1);
           }
         } else {
@@ -1703,14 +1250,10 @@ function create_if_block(ctx) {
     i(local) {
       if (current)
         return;
-      transition_in(if_block0);
-      transition_in(if_block1);
       transition_in(if_block2);
       current = true;
     },
     o(local) {
-      transition_out(if_block0);
-      transition_out(if_block1);
       transition_out(if_block2);
       current = false;
     },
@@ -1732,15 +1275,14 @@ function create_if_block(ctx) {
 }
 function create_if_block_3(ctx) {
   let each_1_anchor;
-  let current;
-  let each_value_1 = ctx[6].paths;
+  let each_value_1 = (
+    /*iconData*/
+    ctx[6].paths
+  );
   let each_blocks = [];
   for (let i = 0; i < each_value_1.length; i += 1) {
     each_blocks[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
   }
-  const out = (i) => transition_out(each_blocks[i], 1, 1, () => {
-    each_blocks[i] = null;
-  });
   return {
     c() {
       for (let i = 0; i < each_blocks.length; i += 1) {
@@ -1750,48 +1292,33 @@ function create_if_block_3(ctx) {
     },
     m(target, anchor) {
       for (let i = 0; i < each_blocks.length; i += 1) {
-        each_blocks[i].m(target, anchor);
+        if (each_blocks[i]) {
+          each_blocks[i].m(target, anchor);
+        }
       }
       insert(target, each_1_anchor, anchor);
-      current = true;
     },
     p(ctx2, dirty) {
-      if (dirty & 64) {
-        each_value_1 = ctx2[6].paths;
+      if (dirty & /*iconData*/
+      64) {
+        each_value_1 = /*iconData*/
+        ctx2[6].paths;
         let i;
         for (i = 0; i < each_value_1.length; i += 1) {
           const child_ctx = get_each_context_1(ctx2, each_value_1, i);
           if (each_blocks[i]) {
             each_blocks[i].p(child_ctx, dirty);
-            transition_in(each_blocks[i], 1);
           } else {
             each_blocks[i] = create_each_block_1(child_ctx);
             each_blocks[i].c();
-            transition_in(each_blocks[i], 1);
             each_blocks[i].m(each_1_anchor.parentNode, each_1_anchor);
           }
         }
-        group_outros();
-        for (i = each_value_1.length; i < each_blocks.length; i += 1) {
-          out(i);
+        for (; i < each_blocks.length; i += 1) {
+          each_blocks[i].d(1);
         }
-        check_outros();
+        each_blocks.length = each_value_1.length;
       }
-    },
-    i(local) {
-      if (current)
-        return;
-      for (let i = 0; i < each_value_1.length; i += 1) {
-        transition_in(each_blocks[i]);
-      }
-      current = true;
-    },
-    o(local) {
-      each_blocks = each_blocks.filter(Boolean);
-      for (let i = 0; i < each_blocks.length; i += 1) {
-        transition_out(each_blocks[i]);
-      }
-      current = false;
     },
     d(detaching) {
       destroy_each(each_blocks, detaching);
@@ -1802,53 +1329,43 @@ function create_if_block_3(ctx) {
 }
 function create_each_block_1(ctx) {
   let path;
-  let current;
-  path = new Path_default({
-    props: {
-      id: ctx[26],
-      data: ctx[27]
-    }
-  });
+  let path_levels = [
+    /*path*/
+    ctx[27]
+  ];
+  let path_data = {};
+  for (let i = 0; i < path_levels.length; i += 1) {
+    path_data = assign(path_data, path_levels[i]);
+  }
   return {
     c() {
-      create_component(path.$$.fragment);
+      path = svg_element("path");
+      set_svg_attributes(path, path_data);
     },
     m(target, anchor) {
-      mount_component(path, target, anchor);
-      current = true;
+      insert(target, path, anchor);
     },
     p(ctx2, dirty) {
-      const path_changes = {};
-      if (dirty & 64)
-        path_changes.data = ctx2[27];
-      path.$set(path_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(path.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(path.$$.fragment, local);
-      current = false;
+      set_svg_attributes(path, path_data = get_spread_update(path_levels, [dirty & /*iconData*/
+      64 && /*path*/
+      ctx2[27]]));
     },
     d(detaching) {
-      destroy_component(path, detaching);
+      if (detaching)
+        detach(path);
     }
   };
 }
 function create_if_block_2(ctx) {
   let each_1_anchor;
-  let current;
-  let each_value = ctx[6].polygons;
+  let each_value = (
+    /*iconData*/
+    ctx[6].polygons
+  );
   let each_blocks = [];
   for (let i = 0; i < each_value.length; i += 1) {
     each_blocks[i] = create_each_block(get_each_context(ctx, each_value, i));
   }
-  const out = (i) => transition_out(each_blocks[i], 1, 1, () => {
-    each_blocks[i] = null;
-  });
   return {
     c() {
       for (let i = 0; i < each_blocks.length; i += 1) {
@@ -1858,48 +1375,33 @@ function create_if_block_2(ctx) {
     },
     m(target, anchor) {
       for (let i = 0; i < each_blocks.length; i += 1) {
-        each_blocks[i].m(target, anchor);
+        if (each_blocks[i]) {
+          each_blocks[i].m(target, anchor);
+        }
       }
       insert(target, each_1_anchor, anchor);
-      current = true;
     },
     p(ctx2, dirty) {
-      if (dirty & 64) {
-        each_value = ctx2[6].polygons;
+      if (dirty & /*iconData*/
+      64) {
+        each_value = /*iconData*/
+        ctx2[6].polygons;
         let i;
         for (i = 0; i < each_value.length; i += 1) {
           const child_ctx = get_each_context(ctx2, each_value, i);
           if (each_blocks[i]) {
             each_blocks[i].p(child_ctx, dirty);
-            transition_in(each_blocks[i], 1);
           } else {
             each_blocks[i] = create_each_block(child_ctx);
             each_blocks[i].c();
-            transition_in(each_blocks[i], 1);
             each_blocks[i].m(each_1_anchor.parentNode, each_1_anchor);
           }
         }
-        group_outros();
-        for (i = each_value.length; i < each_blocks.length; i += 1) {
-          out(i);
+        for (; i < each_blocks.length; i += 1) {
+          each_blocks[i].d(1);
         }
-        check_outros();
+        each_blocks.length = each_value.length;
       }
-    },
-    i(local) {
-      if (current)
-        return;
-      for (let i = 0; i < each_value.length; i += 1) {
-        transition_in(each_blocks[i]);
-      }
-      current = true;
-    },
-    o(local) {
-      each_blocks = each_blocks.filter(Boolean);
-      for (let i = 0; i < each_blocks.length; i += 1) {
-        transition_out(each_blocks[i]);
-      }
-      current = false;
     },
     d(detaching) {
       destroy_each(each_blocks, detaching);
@@ -1910,39 +1412,30 @@ function create_if_block_2(ctx) {
 }
 function create_each_block(ctx) {
   let polygon;
-  let current;
-  polygon = new Polygon_default({
-    props: {
-      id: ctx[26],
-      data: ctx[24]
-    }
-  });
+  let polygon_levels = [
+    /*polygon*/
+    ctx[24]
+  ];
+  let polygon_data = {};
+  for (let i = 0; i < polygon_levels.length; i += 1) {
+    polygon_data = assign(polygon_data, polygon_levels[i]);
+  }
   return {
     c() {
-      create_component(polygon.$$.fragment);
+      polygon = svg_element("polygon");
+      set_svg_attributes(polygon, polygon_data);
     },
     m(target, anchor) {
-      mount_component(polygon, target, anchor);
-      current = true;
+      insert(target, polygon, anchor);
     },
     p(ctx2, dirty) {
-      const polygon_changes = {};
-      if (dirty & 64)
-        polygon_changes.data = ctx2[24];
-      polygon.$set(polygon_changes);
-    },
-    i(local) {
-      if (current)
-        return;
-      transition_in(polygon.$$.fragment, local);
-      current = true;
-    },
-    o(local) {
-      transition_out(polygon.$$.fragment, local);
-      current = false;
+      set_svg_attributes(polygon, polygon_data = get_spread_update(polygon_levels, [dirty & /*iconData*/
+      64 && /*polygon*/
+      ctx2[24]]));
     },
     d(detaching) {
-      destroy_component(polygon, detaching);
+      if (detaching)
+        detach(polygon);
     }
   };
 }
@@ -1951,11 +1444,15 @@ function create_if_block_1(ctx) {
   let updating_data;
   let current;
   function raw_data_binding(value) {
-    ctx[15](value);
+    ctx[16](value);
   }
   let raw_props = {};
-  if (ctx[6] !== void 0) {
-    raw_props.data = ctx[6];
+  if (
+    /*iconData*/
+    ctx[6] !== void 0
+  ) {
+    raw_props.data = /*iconData*/
+    ctx[6];
   }
   raw = new Raw_default({ props: raw_props });
   binding_callbacks.push(() => bind(raw, "data", raw_data_binding));
@@ -1969,9 +1466,11 @@ function create_if_block_1(ctx) {
     },
     p(ctx2, dirty) {
       const raw_changes = {};
-      if (!updating_data && dirty & 64) {
+      if (!updating_data && dirty & /*iconData*/
+      64) {
         updating_data = true;
-        raw_changes.data = ctx2[6];
+        raw_changes.data = /*iconData*/
+        ctx2[6];
         add_flush_callback(() => updating_data = false);
       }
       raw.$set(raw_changes);
@@ -1994,7 +1493,10 @@ function create_if_block_1(ctx) {
 function fallback_block(ctx) {
   let if_block_anchor;
   let current;
-  let if_block = ctx[6] && create_if_block(ctx);
+  let if_block = (
+    /*iconData*/
+    ctx[6] && create_if_block(ctx)
+  );
   return {
     c() {
       if (if_block)
@@ -2008,10 +1510,14 @@ function fallback_block(ctx) {
       current = true;
     },
     p(ctx2, dirty) {
-      if (ctx2[6]) {
+      if (
+        /*iconData*/
+        ctx2[6]
+      ) {
         if (if_block) {
           if_block.p(ctx2, dirty);
-          if (dirty & 64) {
+          if (dirty & /*iconData*/
+          64) {
             transition_in(if_block, 1);
           }
         } else {
@@ -2048,8 +1554,17 @@ function fallback_block(ctx) {
 }
 function create_default_slot(ctx) {
   let current;
-  const default_slot_template = ctx[14].default;
-  const default_slot = create_slot(default_slot_template, ctx, ctx[16], null);
+  const default_slot_template = (
+    /*#slots*/
+    ctx[15].default
+  );
+  const default_slot = create_slot(
+    default_slot_template,
+    ctx,
+    /*$$scope*/
+    ctx[17],
+    null
+  );
   const default_slot_or_fallback = default_slot || fallback_block(ctx);
   return {
     c() {
@@ -2064,18 +1579,30 @@ function create_default_slot(ctx) {
     },
     p(ctx2, dirty) {
       if (default_slot) {
-        if (default_slot.p && (!current || dirty & 65536)) {
+        if (default_slot.p && (!current || dirty & /*$$scope*/
+        131072)) {
           update_slot_base(
             default_slot,
             default_slot_template,
             ctx2,
-            ctx2[16],
-            !current ? get_all_dirty_from_scope(ctx2[16]) : get_slot_changes(default_slot_template, ctx2[16], dirty, null),
+            /*$$scope*/
+            ctx2[17],
+            !current ? get_all_dirty_from_scope(
+              /*$$scope*/
+              ctx2[17]
+            ) : get_slot_changes(
+              default_slot_template,
+              /*$$scope*/
+              ctx2[17],
+              dirty,
+              null
+            ),
             null
           );
         }
       } else {
-        if (default_slot_or_fallback && default_slot_or_fallback.p && (!current || dirty & 64)) {
+        if (default_slot_or_fallback && default_slot_or_fallback.p && (!current || dirty & /*iconData*/
+        64)) {
           default_slot_or_fallback.p(ctx2, !current ? -1 : dirty);
         }
       }
@@ -2096,25 +1623,61 @@ function create_default_slot(ctx) {
     }
   };
 }
-function create_fragment5(ctx) {
+function create_fragment3(ctx) {
   let svg;
   let current;
-  svg = new Svg_default({
-    props: {
-      label: ctx[5],
-      width: ctx[7],
-      height: ctx[8],
-      box: ctx[10],
-      style: ctx[9],
-      spin: ctx[1],
-      flip: ctx[4],
-      inverse: ctx[2],
-      pulse: ctx[3],
-      class: ctx[0],
-      $$slots: { default: [create_default_slot] },
-      $$scope: { ctx }
-    }
-  });
+  const svg_spread_levels = [
+    { label: (
+      /*label*/
+      ctx[5]
+    ) },
+    { width: (
+      /*width*/
+      ctx[7]
+    ) },
+    { height: (
+      /*height*/
+      ctx[8]
+    ) },
+    { box: (
+      /*box*/
+      ctx[10]
+    ) },
+    { style: (
+      /*combinedStyle*/
+      ctx[9]
+    ) },
+    { spin: (
+      /*spin*/
+      ctx[1]
+    ) },
+    { flip: (
+      /*flip*/
+      ctx[4]
+    ) },
+    { inverse: (
+      /*inverse*/
+      ctx[2]
+    ) },
+    { pulse: (
+      /*pulse*/
+      ctx[3]
+    ) },
+    { class: (
+      /*className*/
+      ctx[0]
+    ) },
+    /*$$restProps*/
+    ctx[11]
+  ];
+  let svg_props = {
+    $$slots: { default: [create_default_slot] },
+    $$scope: { ctx }
+  };
+  for (let i = 0; i < svg_spread_levels.length; i += 1) {
+    svg_props = assign(svg_props, svg_spread_levels[i]);
+  }
+  svg = new Svg_default({ props: svg_props });
   return {
     c() {
       create_component(svg.$$.fragment);
@@ -2124,28 +1687,66 @@ function create_fragment5(ctx) {
       current = true;
     },
     p(ctx2, [dirty]) {
-      const svg_changes = {};
-      if (dirty & 32)
-        svg_changes.label = ctx2[5];
-      if (dirty & 128)
-        svg_changes.width = ctx2[7];
-      if (dirty & 256)
-        svg_changes.height = ctx2[8];
-      if (dirty & 1024)
-        svg_changes.box = ctx2[10];
-      if (dirty & 512)
-        svg_changes.style = ctx2[9];
-      if (dirty & 2)
-        svg_changes.spin = ctx2[1];
-      if (dirty & 16)
-        svg_changes.flip = ctx2[4];
-      if (dirty & 4)
-        svg_changes.inverse = ctx2[2];
-      if (dirty & 8)
-        svg_changes.pulse = ctx2[3];
-      if (dirty & 1)
-        svg_changes.class = ctx2[0];
-      if (dirty & 65600) {
+      const svg_changes = dirty & /*label, width, height, box, combinedStyle, spin, flip, inverse, pulse, className, $$restProps*/
+      4031 ? get_spread_update(svg_spread_levels, [
+        dirty & /*label*/
+        32 && { label: (
+          /*label*/
+          ctx2[5]
+        ) },
+        dirty & /*width*/
+        128 && { width: (
+          /*width*/
+          ctx2[7]
+        ) },
+        dirty & /*height*/
+        256 && { height: (
+          /*height*/
+          ctx2[8]
+        ) },
+        dirty & /*box*/
+        1024 && { box: (
+          /*box*/
+          ctx2[10]
+        ) },
+        dirty & /*combinedStyle*/
+        512 && { style: (
+          /*combinedStyle*/
+          ctx2[9]
+        ) },
+        dirty & /*spin*/
+        2 && { spin: (
+          /*spin*/
+          ctx2[1]
+        ) },
+        dirty & /*flip*/
+        16 && { flip: (
+          /*flip*/
+          ctx2[4]
+        ) },
+        dirty & /*inverse*/
+        4 && { inverse: (
+          /*inverse*/
+          ctx2[2]
+        ) },
+        dirty & /*pulse*/
+        8 && { pulse: (
+          /*pulse*/
+          ctx2[3]
+        ) },
+        dirty & /*className*/
+        1 && { class: (
+          /*className*/
+          ctx2[0]
+        ) },
+        dirty & /*$$restProps*/
+        2048 && get_spread_object(
+          /*$$restProps*/
+          ctx2[11]
+        )
+      ]) : {};
+      if (dirty & /*$$scope, iconData*/
+      131136) {
         svg_changes.$$scope = { dirty, ctx: ctx2 };
       }
       svg.$set(svg_changes);
@@ -2169,56 +1770,53 @@ var childrenHeight = 0;
 var childrenWidth = 0;
 var outerScale = 1;
 function normaliseData(data) {
-  if ("iconName" in data && "icon" in data) {
-    let normalisedData = {};
-    let faIcon = data.icon;
-    let name = data.iconName;
-    let width = faIcon[0];
-    let height = faIcon[1];
-    let paths = faIcon[4];
-    let iconData = { width, height, paths: [{ d: paths }] };
-    normalisedData[name] = iconData;
-    return normalisedData;
+  let name;
+  let iconData;
+  if (!data) {
+    return void 0;
+  } else if ("definition" in data) {
+    console.error("`import faIconName from '@fortawesome/package-name/faIconName` not supported - Please use `import { faIconName } from '@fortawesome/package-name/faIconName'` instead");
+    return void 0;
+  } else if ("iconName" in data && "icon" in data) {
+    name = data.iconName;
+    let paths = [];
+    const [width, height, , , path] = data.icon;
+    if (Array.isArray(path)) {
+      paths = path;
+    } else {
+      paths = [path];
+    }
+    iconData = {
+      width,
+      height,
+      paths: paths.map((path2) => {
+        return { d: path2 };
+      })
+    };
+  } else {
+    name = Object.keys(data)[0];
+    iconData = data[name];
   }
-  return data;
+  return iconData;
 }
-function instance5($$self, $$props, $$invalidate) {
+function instance3($$self, $$props, $$invalidate) {
+  const omit_props_names = ["class", "data", "scale", "spin", "inverse", "pulse", "flip", "label", "style"];
+  let $$restProps = compute_rest_props($$props, omit_props_names);
   let { $$slots: slots = {}, $$scope } = $$props;
   let { class: className = "" } = $$props;
   let { data } = $$props;
+  let iconData;
   let { scale = 1 } = $$props;
   let { spin = false } = $$props;
   let { inverse = false } = $$props;
   let { pulse = false } = $$props;
-  let { flip: flip2 = null } = $$props;
-  let { label = null } = $$props;
-  let self2 = null;
-  let { style = null } = $$props;
-  let width;
-  let height;
+  let { flip: flip2 = void 0 } = $$props;
+  let { label = "" } = $$props;
+  let { style = "" } = $$props;
+  let width = 10;
+  let height = 10;
   let combinedStyle;
   let box;
-  function init2() {
-    if (typeof data === "undefined") {
-      return;
-    }
-    const normalisedData = normaliseData(data);
-    const [name] = Object.keys(normalisedData);
-    const icon = normalisedData[name];
-    if (!icon.paths) {
-      icon.paths = [];
-    }
-    if (icon.d) {
-      icon.paths.push({ d: icon.d });
-    }
-    if (!icon.polygons) {
-      icon.polygons = [];
-    }
-    if (icon.points) {
-      icon.polygons.push({ points: icon.points });
-    }
-    $$invalidate(6, self2 = icon);
-  }
   function normalisedScale() {
     let numScale = 1;
     if (typeof scale !== "undefined") {
@@ -2231,23 +1829,23 @@ function instance5($$self, $$props, $$invalidate) {
     return numScale * outerScale;
   }
   function calculateBox() {
-    if (self2) {
-      return `0 0 ${self2.width} ${self2.height}`;
+    if (iconData) {
+      return `0 0 ${iconData.width} ${iconData.height}`;
     }
     return `0 0 ${width} ${height}`;
   }
   function calculateRatio() {
-    if (!self2) {
+    if (!iconData) {
       return 1;
     }
-    return Math.max(self2.width, self2.height) / 16;
+    return Math.max(iconData.width, iconData.height) / 16;
   }
   function calculateWidth() {
     if (childrenWidth) {
       return childrenWidth;
     }
-    if (self2) {
-      return self2.width / calculateRatio() * normalisedScale();
+    if (iconData) {
+      return iconData.width / calculateRatio() * normalisedScale();
     }
     return 0;
   }
@@ -2255,8 +1853,8 @@ function instance5($$self, $$props, $$invalidate) {
     if (childrenHeight) {
       return childrenHeight;
     }
-    if (self2) {
-      return self2.height / calculateRatio() * normalisedScale();
+    if (iconData) {
+      return iconData.height / calculateRatio() * normalisedScale();
     }
     return 0;
   }
@@ -2268,7 +1866,7 @@ function instance5($$self, $$props, $$invalidate) {
     let size = normalisedScale();
     if (size === 1) {
       if (combined.length === 0) {
-        return void 0;
+        return "";
       }
       return combined;
     }
@@ -2278,38 +1876,40 @@ function instance5($$self, $$props, $$invalidate) {
     return `${combined}font-size: ${size}em`;
   }
   function raw_data_binding(value) {
-    self2 = value;
-    $$invalidate(6, self2);
+    iconData = value;
+    $$invalidate(6, iconData), $$invalidate(12, data), $$invalidate(14, style), $$invalidate(13, scale);
   }
-  $$self.$$set = ($$props2) => {
-    if ("class" in $$props2)
-      $$invalidate(0, className = $$props2.class);
-    if ("data" in $$props2)
-      $$invalidate(11, data = $$props2.data);
-    if ("scale" in $$props2)
-      $$invalidate(12, scale = $$props2.scale);
-    if ("spin" in $$props2)
-      $$invalidate(1, spin = $$props2.spin);
-    if ("inverse" in $$props2)
-      $$invalidate(2, inverse = $$props2.inverse);
-    if ("pulse" in $$props2)
-      $$invalidate(3, pulse = $$props2.pulse);
-    if ("flip" in $$props2)
-      $$invalidate(4, flip2 = $$props2.flip);
-    if ("label" in $$props2)
-      $$invalidate(5, label = $$props2.label);
-    if ("style" in $$props2)
-      $$invalidate(13, style = $$props2.style);
-    if ("$$scope" in $$props2)
-      $$invalidate(16, $$scope = $$props2.$$scope);
+  $$self.$$set = ($$new_props) => {
+    $$props = assign(assign({}, $$props), exclude_internal_props($$new_props));
+    $$invalidate(11, $$restProps = compute_rest_props($$props, omit_props_names));
+    if ("class" in $$new_props)
+      $$invalidate(0, className = $$new_props.class);
+    if ("data" in $$new_props)
+      $$invalidate(12, data = $$new_props.data);
+    if ("scale" in $$new_props)
+      $$invalidate(13, scale = $$new_props.scale);
+    if ("spin" in $$new_props)
+      $$invalidate(1, spin = $$new_props.spin);
+    if ("inverse" in $$new_props)
+      $$invalidate(2, inverse = $$new_props.inverse);
+    if ("pulse" in $$new_props)
+      $$invalidate(3, pulse = $$new_props.pulse);
+    if ("flip" in $$new_props)
+      $$invalidate(4, flip2 = $$new_props.flip);
+    if ("label" in $$new_props)
+      $$invalidate(5, label = $$new_props.label);
+    if ("style" in $$new_props)
+      $$invalidate(14, style = $$new_props.style);
+    if ("$$scope" in $$new_props)
+      $$invalidate(17, $$scope = $$new_props.$$scope);
   };
   $$self.$$.update = () => {
-    if ($$self.$$.dirty & 14336) {
+    if ($$self.$$.dirty & /*data, style, scale*/
+    28672) {
       $: {
-        data;
+        $$invalidate(6, iconData = normaliseData(data));
         style;
         scale;
-        init2();
         $$invalidate(7, width = calculateWidth());
         $$invalidate(8, height = calculateHeight());
         $$invalidate(9, combinedStyle = calculateStyle());
@@ -2324,11 +1924,12 @@ function instance5($$self, $$props, $$invalidate) {
     pulse,
     flip2,
     label,
-    self2,
+    iconData,
     width,
     height,
     combinedStyle,
     box,
+    $$restProps,
     data,
     scale,
     style,
@@ -2340,16 +1941,16 @@ function instance5($$self, $$props, $$invalidate) {
 var Icon = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance5, create_fragment5, safe_not_equal, {
+    init(this, options, instance3, create_fragment3, safe_not_equal, {
       class: 0,
-      data: 11,
-      scale: 12,
+      data: 12,
+      scale: 13,
       spin: 1,
       inverse: 2,
       pulse: 3,
       flip: 4,
       label: 5,
-      style: 13
+      style: 14
     });
   }
 };
@@ -2372,19 +1973,29 @@ function create_if_block_12(ctx) {
       div = element("div");
       create_component(icon.$$.fragment);
       attr(div, "class", "alignIconInDivInMiddle clickable svelte-a47k80");
-      attr(div, "aria-label", div_aria_label_value = `Configure${ctx[4] ? " " + ctx[4] : ""}`);
+      attr(div, "aria-label", div_aria_label_value = `Configure${/*choiceName*/
+      ctx[4] ? " " + /*choiceName*/
+      ctx[4] : ""}`);
     },
     m(target, anchor) {
       insert(target, div, anchor);
       mount_component(icon, div, null);
       current = true;
       if (!mounted) {
-        dispose = listen(div, "click", ctx[6]);
+        dispose = listen(
+          div,
+          "click",
+          /*emitConfigureChoice*/
+          ctx[6]
+        );
         mounted = true;
       }
     },
     p(ctx2, dirty) {
-      if (!current || dirty & 16 && div_aria_label_value !== (div_aria_label_value = `Configure${ctx2[4] ? " " + ctx2[4] : ""}`)) {
+      if (!current || dirty & /*choiceName*/
+      16 && div_aria_label_value !== (div_aria_label_value = `Configure${/*choiceName*/
+      ctx2[4] ? " " + /*choiceName*/
+      ctx2[4] : ""}`)) {
         attr(div, "aria-label", div_aria_label_value);
       }
     },
@@ -2417,10 +2028,10 @@ function create_if_block2(ctx) {
   icon = new Icon_default({ props: { data: faClone } });
   return {
     c() {
-      var _a;
       div = element("div");
       create_component(icon.$$.fragment);
-      attr(div, "aria-label", div_aria_label_value = `Duplicate ${(_a = ctx[4]) != null ? _a : ""}`);
+      attr(div, "aria-label", div_aria_label_value = `Duplicate ${/*choiceName*/
+      ctx[4] ?? ""}`);
       attr(div, "class", "alignIconInDivInMiddle clickable svelte-a47k80");
     },
     m(target, anchor) {
@@ -2428,13 +2039,19 @@ function create_if_block2(ctx) {
       mount_component(icon, div, null);
       current = true;
       if (!mounted) {
-        dispose = listen(div, "click", ctx[8]);
+        dispose = listen(
+          div,
+          "click",
+          /*emitDuplicateChoice*/
+          ctx[8]
+        );
         mounted = true;
       }
     },
     p(ctx2, dirty) {
-      var _a;
-      if (!current || dirty & 16 && div_aria_label_value !== (div_aria_label_value = `Duplicate ${(_a = ctx2[4]) != null ? _a : ""}`)) {
+      if (!current || dirty & /*choiceName*/
+      16 && div_aria_label_value !== (div_aria_label_value = `Duplicate ${/*choiceName*/
+      ctx2[4] ?? ""}`)) {
         attr(div, "aria-label", div_aria_label_value);
       }
     },
@@ -2457,7 +2074,7 @@ function create_if_block2(ctx) {
     }
   };
 }
-function create_fragment6(ctx) {
+function create_fragment4(ctx) {
   let div3;
   let div0;
   let icon0;
@@ -2478,8 +2095,14 @@ function create_fragment6(ctx) {
   let mounted;
   let dispose;
   icon0 = new Icon_default({ props: { data: faBolt } });
-  let if_block0 = ctx[1] && create_if_block_12(ctx);
-  let if_block1 = ctx[2] && create_if_block2(ctx);
+  let if_block0 = (
+    /*showConfigureButton*/
+    ctx[1] && create_if_block_12(ctx)
+  );
+  let if_block1 = (
+    /*showDuplicateButton*/
+    ctx[2] && create_if_block2(ctx)
+  );
   icon1 = new Icon_default({ props: { data: faTrash } });
   icon2 = new Icon_default({ props: { data: faBars } });
   return {
@@ -2500,13 +2123,21 @@ function create_fragment6(ctx) {
       div2 = element("div");
       create_component(icon2.$$.fragment);
       attr(div0, "class", "alignIconInDivInMiddle clickable svelte-a47k80");
-      attr(div0, "aria-label", div0_aria_label_value = `${ctx[3] ? "Remove" : "Add"} command${ctx[4] ? " for " + ctx[4] : ""}`);
-      attr(div0, "style", div0_style_value = ctx[3] ? "color: #FDD023;" : "");
-      attr(div1, "aria-label", div1_aria_label_value = `Delete${ctx[4] ? " " + ctx[4] : ""}`);
+      attr(div0, "aria-label", div0_aria_label_value = `${/*commandEnabled*/
+      ctx[3] ? "Remove" : "Add"} command${/*choiceName*/
+      ctx[4] ? " for " + /*choiceName*/
+      ctx[4] : ""}`);
+      attr(div0, "style", div0_style_value = /*commandEnabled*/
+      ctx[3] ? "color: #FDD023;" : "");
+      attr(div1, "aria-label", div1_aria_label_value = `Delete${/*choiceName*/
+      ctx[4] ? " " + /*choiceName*/
+      ctx[4] : ""}`);
       attr(div1, "class", "alignIconInDivInMiddle clickable svelte-a47k80");
-      attr(div2, "tabindex", div2_tabindex_value = ctx[0] ? 0 : -1);
+      attr(div2, "tabindex", div2_tabindex_value = /*dragDisabled*/
+      ctx[0] ? 0 : -1);
       attr(div2, "aria-label", "Drag-handle");
-      attr(div2, "style", div2_style_value = (ctx[0] ? "cursor: grab" : "cursor: grabbing") + ";");
+      attr(div2, "style", div2_style_value = /*dragDisabled*/
+      (ctx[0] ? "cursor: grab" : "cursor: grabbing") + ";");
       attr(div2, "class", "alignIconInDivInMiddle svelte-a47k80");
       attr(div3, "class", "rightButtonsContainer svelte-a47k80");
     },
@@ -2529,25 +2160,55 @@ function create_fragment6(ctx) {
       current = true;
       if (!mounted) {
         dispose = [
-          listen(div0, "click", ctx[7]),
-          listen(div1, "click", ctx[5]),
-          listen(div2, "mousedown", ctx[9]),
-          listen(div2, "touchstart", ctx[10])
+          listen(
+            div0,
+            "click",
+            /*emitToggleCommand*/
+            ctx[7]
+          ),
+          listen(
+            div1,
+            "click",
+            /*emitDeleteChoice*/
+            ctx[5]
+          ),
+          listen(
+            div2,
+            "mousedown",
+            /*mousedown_handler*/
+            ctx[9]
+          ),
+          listen(
+            div2,
+            "touchstart",
+            /*touchstart_handler*/
+            ctx[10]
+          )
         ];
         mounted = true;
       }
     },
     p(ctx2, [dirty]) {
-      if (!current || dirty & 24 && div0_aria_label_value !== (div0_aria_label_value = `${ctx2[3] ? "Remove" : "Add"} command${ctx2[4] ? " for " + ctx2[4] : ""}`)) {
+      if (!current || dirty & /*commandEnabled, choiceName*/
+      24 && div0_aria_label_value !== (div0_aria_label_value = `${/*commandEnabled*/
+      ctx2[3] ? "Remove" : "Add"} command${/*choiceName*/
+      ctx2[4] ? " for " + /*choiceName*/
+      ctx2[4] : ""}`)) {
         attr(div0, "aria-label", div0_aria_label_value);
       }
-      if (!current || dirty & 8 && div0_style_value !== (div0_style_value = ctx2[3] ? "color: #FDD023;" : "")) {
+      if (!current || dirty & /*commandEnabled*/
+      8 && div0_style_value !== (div0_style_value = /*commandEnabled*/
+      ctx2[3] ? "color: #FDD023;" : "")) {
         attr(div0, "style", div0_style_value);
       }
-      if (ctx2[1]) {
+      if (
+        /*showConfigureButton*/
+        ctx2[1]
+      ) {
         if (if_block0) {
           if_block0.p(ctx2, dirty);
-          if (dirty & 2) {
+          if (dirty & /*showConfigureButton*/
+          2) {
             transition_in(if_block0, 1);
           }
         } else {
@@ -2563,10 +2224,14 @@ function create_fragment6(ctx) {
         });
         check_outros();
       }
-      if (ctx2[2]) {
+      if (
+        /*showDuplicateButton*/
+        ctx2[2]
+      ) {
         if (if_block1) {
           if_block1.p(ctx2, dirty);
-          if (dirty & 4) {
+          if (dirty & /*showDuplicateButton*/
+          4) {
             transition_in(if_block1, 1);
           }
         } else {
@@ -2582,13 +2247,20 @@ function create_fragment6(ctx) {
         });
         check_outros();
       }
-      if (!current || dirty & 16 && div1_aria_label_value !== (div1_aria_label_value = `Delete${ctx2[4] ? " " + ctx2[4] : ""}`)) {
+      if (!current || dirty & /*choiceName*/
+      16 && div1_aria_label_value !== (div1_aria_label_value = `Delete${/*choiceName*/
+      ctx2[4] ? " " + /*choiceName*/
+      ctx2[4] : ""}`)) {
         attr(div1, "aria-label", div1_aria_label_value);
       }
-      if (!current || dirty & 1 && div2_tabindex_value !== (div2_tabindex_value = ctx2[0] ? 0 : -1)) {
+      if (!current || dirty & /*dragDisabled*/
+      1 && div2_tabindex_value !== (div2_tabindex_value = /*dragDisabled*/
+      ctx2[0] ? 0 : -1)) {
         attr(div2, "tabindex", div2_tabindex_value);
       }
-      if (!current || dirty & 1 && div2_style_value !== (div2_style_value = (ctx2[0] ? "cursor: grab" : "cursor: grabbing") + ";")) {
+      if (!current || dirty & /*dragDisabled*/
+      1 && div2_style_value !== (div2_style_value = /*dragDisabled*/
+      (ctx2[0] ? "cursor: grab" : "cursor: grabbing") + ";")) {
         attr(div2, "style", div2_style_value);
       }
     },
@@ -2625,7 +2297,7 @@ function create_fragment6(ctx) {
     }
   };
 }
-function instance6($$self, $$props, $$invalidate) {
+function instance4($$self, $$props, $$invalidate) {
   let { dragDisabled } = $$props;
   let { showConfigureButton = true } = $$props;
   let { showDuplicateButton = true } = $$props;
@@ -2682,8 +2354,8 @@ var ChoiceItemRightButtons = class extends SvelteComponent {
     init(
       this,
       options,
-      instance6,
-      create_fragment6,
+      instance4,
+      create_fragment4,
       safe_not_equal,
       {
         dragDisabled: 0,
@@ -2699,15 +2371,11 @@ var ChoiceItemRightButtons = class extends SvelteComponent {
 var ChoiceItemRightButtons_default = ChoiceItemRightButtons;
 
 // src/gui/choiceList/ChoiceListItem.svelte
-function add_css3(target) {
-  append_styles(target, "svelte-1vcfikc", ".choiceListItem.svelte-1vcfikc{display:flex;font-size:16px;align-items:center;margin:12px 0 0 0;transition:1000ms ease-in-out}.choiceListItemName.svelte-1vcfikc{flex:1 0 0}");
-}
-function create_fragment7(ctx) {
+var import_obsidian = require("obsidian");
+function create_fragment5(ctx) {
   let div;
   let span;
-  let t0_value = ctx[0].name + "";
-  let t0;
-  let t1;
+  let t;
   let rightbuttons;
   let updating_choiceName;
   let updating_commandEnabled;
@@ -2715,81 +2383,126 @@ function create_fragment7(ctx) {
   let updating_dragDisabled;
   let current;
   function rightbuttons_choiceName_binding(value) {
-    ctx[7](value);
-  }
-  function rightbuttons_commandEnabled_binding(value) {
-    ctx[8](value);
-  }
-  function rightbuttons_showConfigureButton_binding(value) {
     ctx[9](value);
   }
-  function rightbuttons_dragDisabled_binding(value) {
+  function rightbuttons_commandEnabled_binding(value) {
     ctx[10](value);
   }
+  function rightbuttons_showConfigureButton_binding(value) {
+    ctx[11](value);
+  }
+  function rightbuttons_dragDisabled_binding(value) {
+    ctx[12](value);
+  }
   let rightbuttons_props = { showDuplicateButton: true };
-  if (ctx[0].name !== void 0) {
-    rightbuttons_props.choiceName = ctx[0].name;
+  if (
+    /*choice*/
+    ctx[0].name !== void 0
+  ) {
+    rightbuttons_props.choiceName = /*choice*/
+    ctx[0].name;
   }
-  if (ctx[0].command !== void 0) {
-    rightbuttons_props.commandEnabled = ctx[0].command;
+  if (
+    /*choice*/
+    ctx[0].command !== void 0
+  ) {
+    rightbuttons_props.commandEnabled = /*choice*/
+    ctx[0].command;
   }
-  if (ctx[2] !== void 0) {
-    rightbuttons_props.showConfigureButton = ctx[2];
+  if (
+    /*showConfigureButton*/
+    ctx[3] !== void 0
+  ) {
+    rightbuttons_props.showConfigureButton = /*showConfigureButton*/
+    ctx[3];
   }
-  if (ctx[1] !== void 0) {
-    rightbuttons_props.dragDisabled = ctx[1];
+  if (
+    /*dragDisabled*/
+    ctx[1] !== void 0
+  ) {
+    rightbuttons_props.dragDisabled = /*dragDisabled*/
+    ctx[1];
   }
   rightbuttons = new ChoiceItemRightButtons_default({ props: rightbuttons_props });
   binding_callbacks.push(() => bind(rightbuttons, "choiceName", rightbuttons_choiceName_binding));
   binding_callbacks.push(() => bind(rightbuttons, "commandEnabled", rightbuttons_commandEnabled_binding));
   binding_callbacks.push(() => bind(rightbuttons, "showConfigureButton", rightbuttons_showConfigureButton_binding));
   binding_callbacks.push(() => bind(rightbuttons, "dragDisabled", rightbuttons_dragDisabled_binding));
-  rightbuttons.$on("mousedown", ctx[11]);
-  rightbuttons.$on("touchstart", ctx[12]);
-  rightbuttons.$on("deleteChoice", ctx[3]);
-  rightbuttons.$on("configureChoice", ctx[4]);
-  rightbuttons.$on("toggleCommand", ctx[5]);
-  rightbuttons.$on("duplicateChoice", ctx[6]);
+  rightbuttons.$on(
+    "mousedown",
+    /*mousedown_handler*/
+    ctx[13]
+  );
+  rightbuttons.$on(
+    "touchstart",
+    /*touchstart_handler*/
+    ctx[14]
+  );
+  rightbuttons.$on(
+    "deleteChoice",
+    /*deleteChoice*/
+    ctx[4]
+  );
+  rightbuttons.$on(
+    "configureChoice",
+    /*configureChoice*/
+    ctx[5]
+  );
+  rightbuttons.$on(
+    "toggleCommand",
+    /*toggleCommandForChoice*/
+    ctx[6]
+  );
+  rightbuttons.$on(
+    "duplicateChoice",
+    /*duplicateChoice*/
+    ctx[7]
+  );
   return {
     c() {
       div = element("div");
       span = element("span");
-      t0 = text(t0_value);
-      t1 = space();
+      t = space();
       create_component(rightbuttons.$$.fragment);
-      attr(span, "class", "choiceListItemName svelte-1vcfikc");
-      attr(div, "class", "choiceListItem svelte-1vcfikc");
+      attr(span, "class", "choiceListItemName");
+      attr(div, "class", "choiceListItem");
     },
     m(target, anchor) {
       insert(target, div, anchor);
       append(div, span);
-      append(span, t0);
-      append(div, t1);
+      ctx[8](span);
+      append(div, t);
       mount_component(rightbuttons, div, null);
       current = true;
     },
     p(ctx2, [dirty]) {
-      if ((!current || dirty & 1) && t0_value !== (t0_value = ctx2[0].name + ""))
-        set_data(t0, t0_value);
       const rightbuttons_changes = {};
-      if (!updating_choiceName && dirty & 1) {
+      if (!updating_choiceName && dirty & /*choice*/
+      1) {
         updating_choiceName = true;
-        rightbuttons_changes.choiceName = ctx2[0].name;
+        rightbuttons_changes.choiceName = /*choice*/
+        ctx2[0].name;
         add_flush_callback(() => updating_choiceName = false);
       }
-      if (!updating_commandEnabled && dirty & 1) {
+      if (!updating_commandEnabled && dirty & /*choice*/
+      1) {
         updating_commandEnabled = true;
-        rightbuttons_changes.commandEnabled = ctx2[0].command;
+        rightbuttons_changes.commandEnabled = /*choice*/
+        ctx2[0].command;
         add_flush_callback(() => updating_commandEnabled = false);
       }
-      if (!updating_showConfigureButton && dirty & 4) {
+      if (!updating_showConfigureButton && dirty & /*showConfigureButton*/
+      8) {
         updating_showConfigureButton = true;
-        rightbuttons_changes.showConfigureButton = ctx2[2];
+        rightbuttons_changes.showConfigureButton = /*showConfigureButton*/
+        ctx2[3];
         add_flush_callback(() => updating_showConfigureButton = false);
       }
-      if (!updating_dragDisabled && dirty & 2) {
+      if (!updating_dragDisabled && dirty & /*dragDisabled*/
+      2) {
         updating_dragDisabled = true;
-        rightbuttons_changes.dragDisabled = ctx2[1];
+        rightbuttons_changes.dragDisabled = /*dragDisabled*/
+        ctx2[1];
         add_flush_callback(() => updating_dragDisabled = false);
       }
       rightbuttons.$set(rightbuttons_changes);
@@ -2807,11 +2520,12 @@ function create_fragment7(ctx) {
     d(detaching) {
       if (detaching)
         detach(div);
+      ctx[8](null);
       destroy_component(rightbuttons);
     }
   };
 }
-function instance7($$self, $$props, $$invalidate) {
+function instance5($$self, $$props, $$invalidate) {
   let { choice } = $$props;
   let { dragDisabled } = $$props;
   let showConfigureButton = true;
@@ -2828,6 +2542,14 @@ function instance7($$self, $$props, $$invalidate) {
   function duplicateChoice() {
     dispatcher("duplicateChoice", { choice });
   }
+  const cmp = new import_obsidian.Component();
+  let nameElement;
+  function span_binding($$value) {
+    binding_callbacks[$$value ? "unshift" : "push"](() => {
+      nameElement = $$value;
+      $$invalidate(2, nameElement), $$invalidate(0, choice);
+    });
+  }
   function rightbuttons_choiceName_binding(value) {
     if ($$self.$$.not_equal(choice.name, value)) {
       choice.name = value;
@@ -2842,7 +2564,7 @@ function instance7($$self, $$props, $$invalidate) {
   }
   function rightbuttons_showConfigureButton_binding(value) {
     showConfigureButton = value;
-    $$invalidate(2, showConfigureButton);
+    $$invalidate(3, showConfigureButton);
   }
   function rightbuttons_dragDisabled_binding(value) {
     dragDisabled = value;
@@ -2860,14 +2582,28 @@ function instance7($$self, $$props, $$invalidate) {
     if ("dragDisabled" in $$props2)
       $$invalidate(1, dragDisabled = $$props2.dragDisabled);
   };
+  $$self.$$.update = () => {
+    if ($$self.$$.dirty & /*nameElement, choice*/
+    5) {
+      $: {
+        if (nameElement) {
+          $$invalidate(2, nameElement.innerHTML = "", nameElement);
+          const nameHTML = (0, import_obsidian.htmlToMarkdown)(choice.name);
+          import_obsidian.MarkdownRenderer.renderMarkdown(nameHTML, nameElement, "/", cmp);
+        }
+      }
+    }
+  };
   return [
     choice,
     dragDisabled,
+    nameElement,
     showConfigureButton,
     deleteChoice,
     configureChoice,
     toggleCommandForChoice,
     duplicateChoice,
+    span_binding,
     rightbuttons_choiceName_binding,
     rightbuttons_commandEnabled_binding,
     rightbuttons_showConfigureButton_binding,
@@ -2879,19 +2615,21 @@ function instance7($$self, $$props, $$invalidate) {
 var ChoiceListItem = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance7, create_fragment7, safe_not_equal, { choice: 0, dragDisabled: 1 }, add_css3);
+    init(this, options, instance5, create_fragment5, safe_not_equal, { choice: 0, dragDisabled: 1 });
   }
 };
 var ChoiceListItem_default = ChoiceListItem;
 
 // src/gui/choiceList/MultiChoiceListItem.svelte
-function add_css4(target) {
+var import_obsidian2 = require("obsidian");
+function add_css3(target) {
   append_styles(target, "svelte-na99np", ".multiChoiceListItem.svelte-na99np{display:flex;font-size:16px;align-items:center;margin:12px 0 0 0}.clickable.svelte-na99np:hover{cursor:pointer}.multiChoiceListItemName.svelte-na99np{flex:1 0 0;margin-left:5px}.nestedChoiceList.svelte-na99np{padding-left:25px}");
 }
 function create_if_block3(ctx) {
   let if_block_anchor;
   let current;
-  let if_block = !ctx[0].collapsed && create_if_block_13(ctx);
+  let if_block = !/*choice*/
+  ctx[0].collapsed && create_if_block_13(ctx);
   return {
     c() {
       if (if_block)
@@ -2905,10 +2643,12 @@ function create_if_block3(ctx) {
       current = true;
     },
     p(ctx2, dirty) {
-      if (!ctx2[0].collapsed) {
+      if (!/*choice*/
+      ctx2[0].collapsed) {
         if (if_block) {
           if_block.p(ctx2, dirty);
-          if (dirty & 1) {
+          if (dirty & /*choice*/
+          1) {
             transition_in(if_block, 1);
           }
         } else {
@@ -2950,25 +2690,49 @@ function create_if_block_13(ctx) {
   let updating_choices;
   let current;
   function choicelist_multiChoice_binding(value) {
-    ctx[15](value);
+    ctx[17](value);
   }
   function choicelist_choices_binding(value) {
-    ctx[16](value);
+    ctx[18](value);
   }
   let choicelist_props = {};
-  if (ctx[0] !== void 0) {
-    choicelist_props.multiChoice = ctx[0];
+  if (
+    /*choice*/
+    ctx[0] !== void 0
+  ) {
+    choicelist_props.multiChoice = /*choice*/
+    ctx[0];
   }
-  if (ctx[0].choices !== void 0) {
-    choicelist_props.choices = ctx[0].choices;
+  if (
+    /*choice*/
+    ctx[0].choices !== void 0
+  ) {
+    choicelist_props.choices = /*choice*/
+    ctx[0].choices;
   }
   choicelist = new ChoiceList_default({ props: choicelist_props });
   binding_callbacks.push(() => bind(choicelist, "multiChoice", choicelist_multiChoice_binding));
   binding_callbacks.push(() => bind(choicelist, "choices", choicelist_choices_binding));
-  choicelist.$on("deleteChoice", ctx[17]);
-  choicelist.$on("configureChoice", ctx[18]);
-  choicelist.$on("toggleCommand", ctx[19]);
-  choicelist.$on("duplicateChoice", ctx[20]);
+  choicelist.$on(
+    "deleteChoice",
+    /*deleteChoice_handler*/
+    ctx[19]
+  );
+  choicelist.$on(
+    "configureChoice",
+    /*configureChoice_handler*/
+    ctx[20]
+  );
+  choicelist.$on(
+    "toggleCommand",
+    /*toggleCommand_handler*/
+    ctx[21]
+  );
+  choicelist.$on(
+    "duplicateChoice",
+    /*duplicateChoice_handler*/
+    ctx[22]
+  );
   return {
     c() {
       div = element("div");
@@ -2982,14 +2746,18 @@ function create_if_block_13(ctx) {
     },
     p(ctx2, dirty) {
       const choicelist_changes = {};
-      if (!updating_multiChoice && dirty & 1) {
+      if (!updating_multiChoice && dirty & /*choice*/
+      1) {
         updating_multiChoice = true;
-        choicelist_changes.multiChoice = ctx2[0];
+        choicelist_changes.multiChoice = /*choice*/
+        ctx2[0];
         add_flush_callback(() => updating_multiChoice = false);
       }
-      if (!updating_choices && dirty & 1) {
+      if (!updating_choices && dirty & /*choice*/
+      1) {
         updating_choices = true;
-        choicelist_changes.choices = ctx2[0].choices;
+        choicelist_changes.choices = /*choice*/
+        ctx2[0].choices;
         add_flush_callback(() => updating_choices = false);
       }
       choicelist.$set(choicelist_changes);
@@ -3011,68 +2779,111 @@ function create_if_block_13(ctx) {
     }
   };
 }
-function create_fragment8(ctx) {
+function create_fragment6(ctx) {
   let div2;
   let div1;
   let div0;
   let icon;
   let t0;
   let span;
-  let t1_value = ctx[0].name + "";
   let t1;
-  let t2;
   let rightbuttons;
   let updating_showConfigureButton;
   let updating_dragDisabled;
   let updating_choiceName;
   let updating_commandEnabled;
-  let t3;
+  let t2;
   let current;
   let mounted;
   let dispose;
   icon = new Icon_default({
     props: {
       data: faChevronDown,
-      style: `transform:rotate(${ctx[0].collapsed ? -180 : 0}deg)`
+      style: `transform:rotate(${/*choice*/
+      ctx[0].collapsed ? -180 : 0}deg)`
     }
   });
   function rightbuttons_showConfigureButton_binding(value) {
-    ctx[9](value);
-  }
-  function rightbuttons_dragDisabled_binding(value) {
-    ctx[10](value);
-  }
-  function rightbuttons_choiceName_binding(value) {
     ctx[11](value);
   }
-  function rightbuttons_commandEnabled_binding(value) {
+  function rightbuttons_dragDisabled_binding(value) {
     ctx[12](value);
   }
+  function rightbuttons_choiceName_binding(value) {
+    ctx[13](value);
+  }
+  function rightbuttons_commandEnabled_binding(value) {
+    ctx[14](value);
+  }
   let rightbuttons_props = { showDuplicateButton: true };
-  if (ctx[3] !== void 0) {
-    rightbuttons_props.showConfigureButton = ctx[3];
+  if (
+    /*showConfigureButton*/
+    ctx[4] !== void 0
+  ) {
+    rightbuttons_props.showConfigureButton = /*showConfigureButton*/
+    ctx[4];
   }
-  if (ctx[1] !== void 0) {
-    rightbuttons_props.dragDisabled = ctx[1];
+  if (
+    /*dragDisabled*/
+    ctx[1] !== void 0
+  ) {
+    rightbuttons_props.dragDisabled = /*dragDisabled*/
+    ctx[1];
   }
-  if (ctx[0].name !== void 0) {
-    rightbuttons_props.choiceName = ctx[0].name;
+  if (
+    /*choice*/
+    ctx[0].name !== void 0
+  ) {
+    rightbuttons_props.choiceName = /*choice*/
+    ctx[0].name;
   }
-  if (ctx[0].command !== void 0) {
-    rightbuttons_props.commandEnabled = ctx[0].command;
+  if (
+    /*choice*/
+    ctx[0].command !== void 0
+  ) {
+    rightbuttons_props.commandEnabled = /*choice*/
+    ctx[0].command;
   }
   rightbuttons = new ChoiceItemRightButtons_default({ props: rightbuttons_props });
   binding_callbacks.push(() => bind(rightbuttons, "showConfigureButton", rightbuttons_showConfigureButton_binding));
   binding_callbacks.push(() => bind(rightbuttons, "dragDisabled", rightbuttons_dragDisabled_binding));
   binding_callbacks.push(() => bind(rightbuttons, "choiceName", rightbuttons_choiceName_binding));
   binding_callbacks.push(() => bind(rightbuttons, "commandEnabled", rightbuttons_commandEnabled_binding));
-  rightbuttons.$on("mousedown", ctx[13]);
-  rightbuttons.$on("touchstart", ctx[14]);
-  rightbuttons.$on("deleteChoice", ctx[4]);
-  rightbuttons.$on("configureChoice", ctx[5]);
-  rightbuttons.$on("toggleCommand", ctx[6]);
-  rightbuttons.$on("duplicateChoice", ctx[7]);
-  let if_block = (!ctx[2] || ctx[2] && ctx[0].id !== ctx[2]) && create_if_block3(ctx);
+  rightbuttons.$on(
+    "mousedown",
+    /*mousedown_handler*/
+    ctx[15]
+  );
+  rightbuttons.$on(
+    "touchstart",
+    /*touchstart_handler*/
+    ctx[16]
+  );
+  rightbuttons.$on(
+    "deleteChoice",
+    /*deleteChoice*/
+    ctx[5]
+  );
+  rightbuttons.$on(
+    "configureChoice",
+    /*configureChoice*/
+    ctx[6]
+  );
+  rightbuttons.$on(
+    "toggleCommand",
+    /*toggleCommandForChoice*/
+    ctx[7]
+  );
+  rightbuttons.$on(
+    "duplicateChoice",
+    /*duplicateChoice*/
+    ctx[8]
+  );
+  let if_block = (!/*collapseId*/
+  ctx[2] || /*collapseId*/
+  ctx[2] && /*choice*/
+  ctx[0].id !== /*collapseId*/
+  ctx[2]) && create_if_block3(ctx);
   return {
     c() {
       div2 = element("div");
@@ -3081,12 +2892,12 @@ function create_fragment8(ctx) {
       create_component(icon.$$.fragment);
       t0 = space();
       span = element("span");
-      t1 = text(t1_value);
-      t2 = space();
+      t1 = space();
       create_component(rightbuttons.$$.fragment);
-      t3 = space();
+      t2 = space();
       if (if_block)
         if_block.c();
+      attr(span, "class", "choiceListItemName");
       attr(div0, "class", "multiChoiceListItemName clickable svelte-na99np");
       attr(div1, "class", "multiChoiceListItem svelte-na99np");
     },
@@ -3097,51 +2908,69 @@ function create_fragment8(ctx) {
       mount_component(icon, div0, null);
       append(div0, t0);
       append(div0, span);
-      append(span, t1);
-      append(div1, t2);
+      ctx[9](span);
+      append(div1, t1);
       mount_component(rightbuttons, div1, null);
-      append(div2, t3);
+      append(div2, t2);
       if (if_block)
         if_block.m(div2, null);
       current = true;
       if (!mounted) {
-        dispose = listen(div0, "click", ctx[8]);
+        dispose = listen(
+          div0,
+          "click",
+          /*click_handler*/
+          ctx[10]
+        );
         mounted = true;
       }
     },
     p(ctx2, [dirty]) {
       const icon_changes = {};
-      if (dirty & 1)
-        icon_changes.style = `transform:rotate(${ctx2[0].collapsed ? -180 : 0}deg)`;
+      if (dirty & /*choice*/
+      1)
+        icon_changes.style = `transform:rotate(${/*choice*/
+        ctx2[0].collapsed ? -180 : 0}deg)`;
       icon.$set(icon_changes);
-      if ((!current || dirty & 1) && t1_value !== (t1_value = ctx2[0].name + ""))
-        set_data(t1, t1_value);
       const rightbuttons_changes = {};
-      if (!updating_showConfigureButton && dirty & 8) {
+      if (!updating_showConfigureButton && dirty & /*showConfigureButton*/
+      16) {
         updating_showConfigureButton = true;
-        rightbuttons_changes.showConfigureButton = ctx2[3];
+        rightbuttons_changes.showConfigureButton = /*showConfigureButton*/
+        ctx2[4];
         add_flush_callback(() => updating_showConfigureButton = false);
       }
-      if (!updating_dragDisabled && dirty & 2) {
+      if (!updating_dragDisabled && dirty & /*dragDisabled*/
+      2) {
         updating_dragDisabled = true;
-        rightbuttons_changes.dragDisabled = ctx2[1];
+        rightbuttons_changes.dragDisabled = /*dragDisabled*/
+        ctx2[1];
         add_flush_callback(() => updating_dragDisabled = false);
       }
-      if (!updating_choiceName && dirty & 1) {
+      if (!updating_choiceName && dirty & /*choice*/
+      1) {
         updating_choiceName = true;
-        rightbuttons_changes.choiceName = ctx2[0].name;
+        rightbuttons_changes.choiceName = /*choice*/
+        ctx2[0].name;
         add_flush_callback(() => updating_choiceName = false);
       }
-      if (!updating_commandEnabled && dirty & 1) {
+      if (!updating_commandEnabled && dirty & /*choice*/
+      1) {
         updating_commandEnabled = true;
-        rightbuttons_changes.commandEnabled = ctx2[0].command;
+        rightbuttons_changes.commandEnabled = /*choice*/
+        ctx2[0].command;
         add_flush_callback(() => updating_commandEnabled = false);
       }
       rightbuttons.$set(rightbuttons_changes);
-      if (!ctx2[2] || ctx2[2] && ctx2[0].id !== ctx2[2]) {
+      if (!/*collapseId*/
+      ctx2[2] || /*collapseId*/
+      ctx2[2] && /*choice*/
+      ctx2[0].id !== /*collapseId*/
+      ctx2[2]) {
         if (if_block) {
           if_block.p(ctx2, dirty);
-          if (dirty & 5) {
+          if (dirty & /*collapseId, choice*/
+          5) {
             transition_in(if_block, 1);
           }
         } else {
@@ -3176,6 +3005,7 @@ function create_fragment8(ctx) {
       if (detaching)
         detach(div2);
       destroy_component(icon);
+      ctx[9](null);
       destroy_component(rightbuttons);
       if (if_block)
         if_block.d();
@@ -3184,7 +3014,7 @@ function create_fragment8(ctx) {
     }
   };
 }
-function instance8($$self, $$props, $$invalidate) {
+function instance6($$self, $$props, $$invalidate) {
   let { choice } = $$props;
   let { collapseId } = $$props;
   let { dragDisabled } = $$props;
@@ -3202,10 +3032,18 @@ function instance8($$self, $$props, $$invalidate) {
   function duplicateChoice() {
     dispatcher("duplicateChoice", { choice });
   }
+  const cmp = new import_obsidian2.Component();
+  let nameElement;
+  function span_binding($$value) {
+    binding_callbacks[$$value ? "unshift" : "push"](() => {
+      nameElement = $$value;
+      $$invalidate(3, nameElement), $$invalidate(0, choice);
+    });
+  }
   const click_handler = () => $$invalidate(0, choice.collapsed = !choice.collapsed, choice);
   function rightbuttons_showConfigureButton_binding(value) {
     showConfigureButton = value;
-    $$invalidate(3, showConfigureButton);
+    $$invalidate(4, showConfigureButton);
   }
   function rightbuttons_dragDisabled_binding(value) {
     dragDisabled = value;
@@ -3259,15 +3097,29 @@ function instance8($$self, $$props, $$invalidate) {
     if ("dragDisabled" in $$props2)
       $$invalidate(1, dragDisabled = $$props2.dragDisabled);
   };
+  $$self.$$.update = () => {
+    if ($$self.$$.dirty & /*nameElement, choice*/
+    9) {
+      $: {
+        if (nameElement) {
+          $$invalidate(3, nameElement.innerHTML = "", nameElement);
+          const nameHTML = (0, import_obsidian2.htmlToMarkdown)(choice.name);
+          import_obsidian2.MarkdownRenderer.renderMarkdown(nameHTML, nameElement, "/", cmp);
+        }
+      }
+    }
+  };
   return [
     choice,
     dragDisabled,
     collapseId,
+    nameElement,
     showConfigureButton,
     deleteChoice,
     configureChoice,
     toggleCommandForChoice,
     duplicateChoice,
+    span_binding,
     click_handler,
     rightbuttons_showConfigureButton_binding,
     rightbuttons_dragDisabled_binding,
@@ -3289,21 +3141,21 @@ var MultiChoiceListItem = class extends SvelteComponent {
     init(
       this,
       options,
-      instance8,
-      create_fragment8,
+      instance6,
+      create_fragment6,
       safe_not_equal,
       {
         choice: 0,
         collapseId: 2,
         dragDisabled: 1
       },
-      add_css4
+      add_css3
     );
   }
 };
 var MultiChoiceListItem_default = MultiChoiceListItem;
 
-// node_modules/.pnpm/svelte-dnd-action@0.9.22_svelte@3.55.1/node_modules/svelte-dnd-action/src/helpers/dispatcher.js
+// node_modules/.pnpm/svelte-dnd-action@0.9.22_svelte@3.59.1/node_modules/svelte-dnd-action/src/helpers/dispatcher.js
 var FINALIZE_EVENT_NAME = "finalize";
 var CONSIDER_EVENT_NAME = "consider";
 function dispatchFinalizeEvent(el, items, info) {
@@ -3364,7 +3216,7 @@ function dispatchDraggedLeftDocument(draggedEl2) {
   );
 }
 
-// node_modules/.pnpm/svelte-dnd-action@0.9.22_svelte@3.55.1/node_modules/svelte-dnd-action/src/constants.js
+// node_modules/.pnpm/svelte-dnd-action@0.9.22_svelte@3.59.1/node_modules/svelte-dnd-action/src/constants.js
 var TRIGGERS = {
   DRAG_STARTED: "dragStarted",
   DRAGGED_ENTERED: DRAGGED_ENTERED_EVENT_NAME,
@@ -3400,7 +3252,7 @@ var isOnServer = typeof window === "undefined";
 var printDebug = () => {
 };
 
-// node_modules/.pnpm/svelte-dnd-action@0.9.22_svelte@3.55.1/node_modules/svelte-dnd-action/src/helpers/intersection.js
+// node_modules/.pnpm/svelte-dnd-action@0.9.22_svelte@3.59.1/node_modules/svelte-dnd-action/src/helpers/intersection.js
 function getBoundingRectNoTransforms(el) {
   let ta;
   const rect = el.getBoundingClientRect();
@@ -3498,11 +3350,12 @@ function calcInnerDistancesBetweenPointAndSidesOfElement(point, el) {
     top: point.y - rect.top,
     bottom: rect.bottom - point.y,
     left: point.x - rect.left,
+    // TODO - figure out what is so special about right (why the rect is too big)
     right: Math.min(rect.right, document.documentElement.clientWidth) - point.x
   };
 }
 
-// node_modules/.pnpm/svelte-dnd-action@0.9.22_svelte@3.55.1/node_modules/svelte-dnd-action/src/helpers/listUtil.js
+// node_modules/.pnpm/svelte-dnd-action@0.9.22_svelte@3.59.1/node_modules/svelte-dnd-action/src/helpers/listUtil.js
 var dzToShadowIndexToRect;
 function resetIndexesCache() {
   printDebug(() => "resetting indexes cache");
@@ -3556,7 +3409,7 @@ function findWouldBeIndex(floatingAboveEl, collectionBelowEl) {
   return { index: indexOfMin, isProximityBased: true };
 }
 
-// node_modules/.pnpm/svelte-dnd-action@0.9.22_svelte@3.55.1/node_modules/svelte-dnd-action/src/helpers/scroller.js
+// node_modules/.pnpm/svelte-dnd-action@0.9.22_svelte@3.59.1/node_modules/svelte-dnd-action/src/helpers/scroller.js
 var SCROLL_ZONE_PX = 25;
 function makeScroller() {
   let scrollingInfo;
@@ -3624,7 +3477,7 @@ function makeScroller() {
   };
 }
 
-// node_modules/.pnpm/svelte-dnd-action@0.9.22_svelte@3.55.1/node_modules/svelte-dnd-action/src/helpers/util.js
+// node_modules/.pnpm/svelte-dnd-action@0.9.22_svelte@3.59.1/node_modules/svelte-dnd-action/src/helpers/util.js
 function toString(object) {
   return JSON.stringify(object, null, 2);
 }
@@ -3663,7 +3516,7 @@ function areArraysShallowEqualSameOrder(arrA, arrB) {
   return true;
 }
 
-// node_modules/.pnpm/svelte-dnd-action@0.9.22_svelte@3.55.1/node_modules/svelte-dnd-action/src/helpers/observer.js
+// node_modules/.pnpm/svelte-dnd-action@0.9.22_svelte@3.59.1/node_modules/svelte-dnd-action/src/helpers/observer.js
 var INTERVAL_MS = 200;
 var TOLERANCE_PX = 10;
 var { scrollIfNeeded, resetScrolling } = makeScroller();
@@ -3726,7 +3579,7 @@ function unobserve() {
   resetIndexesCache();
 }
 
-// node_modules/.pnpm/svelte-dnd-action@0.9.22_svelte@3.55.1/node_modules/svelte-dnd-action/src/helpers/windowScroller.js
+// node_modules/.pnpm/svelte-dnd-action@0.9.22_svelte@3.59.1/node_modules/svelte-dnd-action/src/helpers/windowScroller.js
 var INTERVAL_MS2 = 300;
 var mousePosition;
 function updateMousePosition(e) {
@@ -3758,7 +3611,7 @@ function disarmWindowScroller() {
   resetScrolling2();
 }
 
-// node_modules/.pnpm/svelte-dnd-action@0.9.22_svelte@3.55.1/node_modules/svelte-dnd-action/src/helpers/svelteNodeClone.js
+// node_modules/.pnpm/svelte-dnd-action@0.9.22_svelte@3.59.1/node_modules/svelte-dnd-action/src/helpers/svelteNodeClone.js
 function svelteNodeClone(el) {
   const cloned = el.cloneNode(true);
   const values = [];
@@ -3782,7 +3635,7 @@ function svelteNodeClone(el) {
   return cloned;
 }
 
-// node_modules/.pnpm/svelte-dnd-action@0.9.22_svelte@3.55.1/node_modules/svelte-dnd-action/src/helpers/styler.js
+// node_modules/.pnpm/svelte-dnd-action@0.9.22_svelte@3.59.1/node_modules/svelte-dnd-action/src/helpers/styler.js
 var TRANSITION_DURATION_SECONDS = 0.2;
 function trs(property) {
   return `${property} ${TRANSITION_DURATION_SECONDS}s ease`;
@@ -3899,7 +3752,7 @@ function preventShrinking(el) {
   };
 }
 
-// node_modules/.pnpm/svelte-dnd-action@0.9.22_svelte@3.55.1/node_modules/svelte-dnd-action/src/pointerAction.js
+// node_modules/.pnpm/svelte-dnd-action@0.9.22_svelte@3.59.1/node_modules/svelte-dnd-action/src/pointerAction.js
 var DEFAULT_DROP_ZONE_TYPE = "--any--";
 var MIN_OBSERVATION_INTERVAL_MS = 100;
 var MIN_MOVEMENT_BEFORE_DRAG_START_PX = 3;
@@ -4353,7 +4206,7 @@ function dndzone(node, options) {
   };
 }
 
-// node_modules/.pnpm/svelte-dnd-action@0.9.22_svelte@3.55.1/node_modules/svelte-dnd-action/src/helpers/aria.js
+// node_modules/.pnpm/svelte-dnd-action@0.9.22_svelte@3.59.1/node_modules/svelte-dnd-action/src/helpers/aria.js
 var INSTRUCTION_IDs = {
   DND_ZONE_ACTIVE: "dnd-zone-active",
   DND_ZONE_DRAG_DISABLED: "dnd-zone-drag-disabled"
@@ -4396,10 +4249,7 @@ function initAria() {
 function destroyAria() {
   if (isOnServer || !alertsDiv)
     return;
-  Object.keys(ID_TO_INSTRUCTION).forEach((id) => {
-    var _a;
-    return (_a = document.getElementById(id)) == null ? void 0 : _a.remove();
-  });
+  Object.keys(ID_TO_INSTRUCTION).forEach((id) => document.getElementById(id)?.remove());
   alertsDiv.remove();
   alertsDiv = void 0;
 }
@@ -4425,7 +4275,7 @@ function alertToScreenReader(txt) {
   alertsDiv.style.display = "inline";
 }
 
-// node_modules/.pnpm/svelte-dnd-action@0.9.22_svelte@3.55.1/node_modules/svelte-dnd-action/src/keyboardAction.js
+// node_modules/.pnpm/svelte-dnd-action@0.9.22_svelte@3.59.1/node_modules/svelte-dnd-action/src/keyboardAction.js
 var DEFAULT_DROP_ZONE_TYPE2 = "--any--";
 var DEFAULT_DROP_TARGET_STYLE2 = {
   outline: "rgba(255, 255, 102, 0.7) solid 2px"
@@ -4744,7 +4594,7 @@ function dndzone2(node, options) {
   return handles;
 }
 
-// node_modules/.pnpm/svelte-dnd-action@0.9.22_svelte@3.55.1/node_modules/svelte-dnd-action/src/action.js
+// node_modules/.pnpm/svelte-dnd-action@0.9.22_svelte@3.59.1/node_modules/svelte-dnd-action/src/action.js
 function dndzone3(node, options) {
   validateOptions(options);
   const pointerZone = dndzone(node, options);
@@ -4801,7 +4651,7 @@ function isInt(value) {
 }
 
 // src/gui/choiceList/ChoiceList.svelte
-function add_css5(target) {
+function add_css4(target) {
   append_styles(target, "svelte-jb273g", ".choiceList.svelte-jb273g{width:auto;border:0 solid black;overflow-y:auto;height:auto}");
 }
 function get_each_context2(ctx, list, i) {
@@ -4824,28 +4674,72 @@ function create_else_block(ctx) {
     ctx[15](value);
   }
   function multichoicelistitem_choice_binding(value) {
-    ctx[16](value, ctx[23], ctx[24], ctx[25]);
+    ctx[16](
+      value,
+      /*choice*/
+      ctx[23],
+      /*each_value*/
+      ctx[24],
+      /*choice_index*/
+      ctx[25]
+    );
   }
   let multichoicelistitem_props = {};
-  if (ctx[3] !== void 0) {
-    multichoicelistitem_props.dragDisabled = ctx[3];
+  if (
+    /*dragDisabled*/
+    ctx[3] !== void 0
+  ) {
+    multichoicelistitem_props.dragDisabled = /*dragDisabled*/
+    ctx[3];
   }
-  if (ctx[2] !== void 0) {
-    multichoicelistitem_props.collapseId = ctx[2];
+  if (
+    /*collapseId*/
+    ctx[2] !== void 0
+  ) {
+    multichoicelistitem_props.collapseId = /*collapseId*/
+    ctx[2];
   }
-  if (ctx[23] !== void 0) {
-    multichoicelistitem_props.choice = ctx[23];
+  if (
+    /*choice*/
+    ctx[23] !== void 0
+  ) {
+    multichoicelistitem_props.choice = /*choice*/
+    ctx[23];
   }
   multichoicelistitem = new MultiChoiceListItem_default({ props: multichoicelistitem_props });
   binding_callbacks.push(() => bind(multichoicelistitem, "dragDisabled", multichoicelistitem_dragDisabled_binding));
   binding_callbacks.push(() => bind(multichoicelistitem, "collapseId", multichoicelistitem_collapseId_binding));
   binding_callbacks.push(() => bind(multichoicelistitem, "choice", multichoicelistitem_choice_binding));
-  multichoicelistitem.$on("mousedown", ctx[6]);
-  multichoicelistitem.$on("touchstart", ctx[6]);
-  multichoicelistitem.$on("deleteChoice", ctx[17]);
-  multichoicelistitem.$on("configureChoice", ctx[18]);
-  multichoicelistitem.$on("toggleCommand", ctx[19]);
-  multichoicelistitem.$on("duplicateChoice", ctx[20]);
+  multichoicelistitem.$on(
+    "mousedown",
+    /*startDrag*/
+    ctx[6]
+  );
+  multichoicelistitem.$on(
+    "touchstart",
+    /*startDrag*/
+    ctx[6]
+  );
+  multichoicelistitem.$on(
+    "deleteChoice",
+    /*deleteChoice_handler_1*/
+    ctx[17]
+  );
+  multichoicelistitem.$on(
+    "configureChoice",
+    /*configureChoice_handler_1*/
+    ctx[18]
+  );
+  multichoicelistitem.$on(
+    "toggleCommand",
+    /*toggleCommand_handler_1*/
+    ctx[19]
+  );
+  multichoicelistitem.$on(
+    "duplicateChoice",
+    /*duplicateChoice_handler_1*/
+    ctx[20]
+  );
   return {
     c() {
       create_component(multichoicelistitem.$$.fragment);
@@ -4857,19 +4751,25 @@ function create_else_block(ctx) {
     p(new_ctx, dirty) {
       ctx = new_ctx;
       const multichoicelistitem_changes = {};
-      if (!updating_dragDisabled && dirty & 8) {
+      if (!updating_dragDisabled && dirty & /*dragDisabled*/
+      8) {
         updating_dragDisabled = true;
-        multichoicelistitem_changes.dragDisabled = ctx[3];
+        multichoicelistitem_changes.dragDisabled = /*dragDisabled*/
+        ctx[3];
         add_flush_callback(() => updating_dragDisabled = false);
       }
-      if (!updating_collapseId && dirty & 4) {
+      if (!updating_collapseId && dirty & /*collapseId*/
+      4) {
         updating_collapseId = true;
-        multichoicelistitem_changes.collapseId = ctx[2];
+        multichoicelistitem_changes.collapseId = /*collapseId*/
+        ctx[2];
         add_flush_callback(() => updating_collapseId = false);
       }
-      if (!updating_choice && dirty & 3) {
+      if (!updating_choice && dirty & /*choices, SHADOW_PLACEHOLDER_ITEM_ID*/
+      3) {
         updating_choice = true;
-        multichoicelistitem_changes.choice = ctx[23];
+        multichoicelistitem_changes.choice = /*choice*/
+        ctx[23];
         add_flush_callback(() => updating_choice = false);
       }
       multichoicelistitem.$set(multichoicelistitem_changes);
@@ -4898,24 +4798,64 @@ function create_if_block4(ctx) {
     ctx[8](value);
   }
   function choicelistitem_choice_binding(value) {
-    ctx[9](value, ctx[23], ctx[24], ctx[25]);
+    ctx[9](
+      value,
+      /*choice*/
+      ctx[23],
+      /*each_value*/
+      ctx[24],
+      /*choice_index*/
+      ctx[25]
+    );
   }
   let choicelistitem_props = {};
-  if (ctx[3] !== void 0) {
-    choicelistitem_props.dragDisabled = ctx[3];
+  if (
+    /*dragDisabled*/
+    ctx[3] !== void 0
+  ) {
+    choicelistitem_props.dragDisabled = /*dragDisabled*/
+    ctx[3];
   }
-  if (ctx[23] !== void 0) {
-    choicelistitem_props.choice = ctx[23];
+  if (
+    /*choice*/
+    ctx[23] !== void 0
+  ) {
+    choicelistitem_props.choice = /*choice*/
+    ctx[23];
   }
   choicelistitem = new ChoiceListItem_default({ props: choicelistitem_props });
   binding_callbacks.push(() => bind(choicelistitem, "dragDisabled", choicelistitem_dragDisabled_binding));
   binding_callbacks.push(() => bind(choicelistitem, "choice", choicelistitem_choice_binding));
-  choicelistitem.$on("mousedown", ctx[6]);
-  choicelistitem.$on("touchstart", ctx[6]);
-  choicelistitem.$on("deleteChoice", ctx[10]);
-  choicelistitem.$on("configureChoice", ctx[11]);
-  choicelistitem.$on("toggleCommand", ctx[12]);
-  choicelistitem.$on("duplicateChoice", ctx[13]);
+  choicelistitem.$on(
+    "mousedown",
+    /*startDrag*/
+    ctx[6]
+  );
+  choicelistitem.$on(
+    "touchstart",
+    /*startDrag*/
+    ctx[6]
+  );
+  choicelistitem.$on(
+    "deleteChoice",
+    /*deleteChoice_handler*/
+    ctx[10]
+  );
+  choicelistitem.$on(
+    "configureChoice",
+    /*configureChoice_handler*/
+    ctx[11]
+  );
+  choicelistitem.$on(
+    "toggleCommand",
+    /*toggleCommand_handler*/
+    ctx[12]
+  );
+  choicelistitem.$on(
+    "duplicateChoice",
+    /*duplicateChoice_handler*/
+    ctx[13]
+  );
   return {
     c() {
       create_component(choicelistitem.$$.fragment);
@@ -4927,14 +4867,18 @@ function create_if_block4(ctx) {
     p(new_ctx, dirty) {
       ctx = new_ctx;
       const choicelistitem_changes = {};
-      if (!updating_dragDisabled && dirty & 8) {
+      if (!updating_dragDisabled && dirty & /*dragDisabled*/
+      8) {
         updating_dragDisabled = true;
-        choicelistitem_changes.dragDisabled = ctx[3];
+        choicelistitem_changes.dragDisabled = /*dragDisabled*/
+        ctx[3];
         add_flush_callback(() => updating_dragDisabled = false);
       }
-      if (!updating_choice && dirty & 3) {
+      if (!updating_choice && dirty & /*choices, SHADOW_PLACEHOLDER_ITEM_ID*/
+      3) {
         updating_choice = true;
-        choicelistitem_changes.choice = ctx[23];
+        choicelistitem_changes.choice = /*choice*/
+        ctx[23];
         add_flush_callback(() => updating_choice = false);
       }
       choicelistitem.$set(choicelistitem_changes);
@@ -4963,7 +4907,10 @@ function create_each_block2(key_1, ctx) {
   const if_block_creators = [create_if_block4, create_else_block];
   const if_blocks = [];
   function select_block_type(ctx2, dirty) {
-    if (ctx2[23].type !== "Multi" /* Multi */)
+    if (
+      /*choice*/
+      ctx2[23].type !== "Multi"
+    )
       return 0;
     return 1;
   }
@@ -5026,7 +4973,7 @@ function create_each_block2(key_1, ctx) {
     }
   };
 }
-function create_fragment9(ctx) {
+function create_fragment7(ctx) {
   let div;
   let each_blocks = [];
   let each_1_lookup = /* @__PURE__ */ new Map();
@@ -5035,8 +4982,17 @@ function create_fragment9(ctx) {
   let current;
   let mounted;
   let dispose;
-  let each_value = ctx[0].filter(ctx[7]);
-  const get_key = (ctx2) => ctx2[23].id;
+  let each_value = (
+    /*choices*/
+    ctx[0].filter(
+      /*func*/
+      ctx[7]
+    )
+  );
+  const get_key = (ctx2) => (
+    /*choice*/
+    ctx2[23].id
+  );
   for (let i = 0; i < each_value.length; i += 1) {
     let child_ctx = get_each_context2(ctx, each_value, i);
     let key = get_key(child_ctx);
@@ -5049,41 +5005,74 @@ function create_fragment9(ctx) {
         each_blocks[i].c();
       }
       attr(div, "class", "choiceList svelte-jb273g");
-      attr(div, "style", div_style_value = ctx[0].length === 0 ? "padding-bottom: 0.5rem" : "");
+      attr(div, "style", div_style_value = /*choices*/
+      ctx[0].length === 0 ? "padding-bottom: 0.5rem" : "");
     },
     m(target, anchor) {
       insert(target, div, anchor);
       for (let i = 0; i < each_blocks.length; i += 1) {
-        each_blocks[i].m(div, null);
+        if (each_blocks[i]) {
+          each_blocks[i].m(div, null);
+        }
       }
       current = true;
       if (!mounted) {
         dispose = [
           action_destroyer(dndzone_action = dndzone3.call(null, div, {
-            items: ctx[0],
-            dragDisabled: ctx[3],
+            items: (
+              /*choices*/
+              ctx[0]
+            ),
+            dragDisabled: (
+              /*dragDisabled*/
+              ctx[3]
+            ),
             dropTargetStyle: {}
           })),
-          listen(div, "consider", ctx[4]),
-          listen(div, "finalize", ctx[5])
+          listen(
+            div,
+            "consider",
+            /*handleConsider*/
+            ctx[4]
+          ),
+          listen(
+            div,
+            "finalize",
+            /*handleSort*/
+            ctx[5]
+          )
         ];
         mounted = true;
       }
     },
     p(ctx2, [dirty]) {
-      if (dirty & 79) {
-        each_value = ctx2[0].filter(ctx2[7]);
+      if (dirty & /*dragDisabled, choices, SHADOW_PLACEHOLDER_ITEM_ID, startDrag, collapseId*/
+      79) {
+        each_value = /*choices*/
+        ctx2[0].filter(
+          /*func*/
+          ctx2[7]
+        );
         group_outros();
         each_blocks = update_keyed_each(each_blocks, dirty, get_key, 1, ctx2, each_value, each_1_lookup, div, outro_and_destroy_block, create_each_block2, null, get_each_context2);
         check_outros();
       }
-      if (!current || dirty & 1 && div_style_value !== (div_style_value = ctx2[0].length === 0 ? "padding-bottom: 0.5rem" : "")) {
+      if (!current || dirty & /*choices*/
+      1 && div_style_value !== (div_style_value = /*choices*/
+      ctx2[0].length === 0 ? "padding-bottom: 0.5rem" : "")) {
         attr(div, "style", div_style_value);
       }
-      if (dndzone_action && is_function(dndzone_action.update) && dirty & 9)
+      if (dndzone_action && is_function(dndzone_action.update) && dirty & /*choices, dragDisabled*/
+      9)
         dndzone_action.update.call(null, {
-          items: ctx2[0],
-          dragDisabled: ctx2[3],
+          items: (
+            /*choices*/
+            ctx2[0]
+          ),
+          dragDisabled: (
+            /*dragDisabled*/
+            ctx2[3]
+          ),
           dropTargetStyle: {}
         });
     },
@@ -5112,7 +5101,7 @@ function create_fragment9(ctx) {
     }
   };
 }
-function instance9($$self, $$props, $$invalidate) {
+function instance7($$self, $$props, $$invalidate) {
   let { choices = [] } = $$props;
   let collapseId;
   let dragDisabled = true;
@@ -5214,36 +5203,28 @@ function instance9($$self, $$props, $$invalidate) {
 var ChoiceList = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance9, create_fragment9, safe_not_equal, { choices: 0 }, add_css5);
+    init(this, options, instance7, create_fragment7, safe_not_equal, { choices: 0 }, add_css4);
   }
 };
 var ChoiceList_default = ChoiceList;
 
 // src/gui/choiceList/AddChoiceBox.svelte
-var import_obsidian = require("obsidian");
-function add_css6(target) {
+var import_obsidian3 = require("obsidian");
+function add_css5(target) {
   append_styles(target, "svelte-1newuee", ".addChoiceBox.svelte-1newuee{margin-top:1em;display:flex;flex-direction:row;align-items:center;gap:10px;justify-content:center}@media(max-width: 800px){.addChoiceBox.svelte-1newuee{flex-direction:column}}#addChoiceTypeSelector.svelte-1newuee{font-size:16px;padding:3px;border-radius:3px}");
 }
-function create_fragment10(ctx) {
+function create_fragment8(ctx) {
   let div;
   let input;
   let t0;
   let select;
   let option0;
-  let t1_value = "Template" /* Template */ + "";
-  let t1;
   let option0_value_value;
   let option1;
-  let t2_value = "Capture" /* Capture */ + "";
-  let t2;
   let option1_value_value;
   let option2;
-  let t3_value = "Macro" /* Macro */ + "";
-  let t3;
   let option2_value_value;
   let option3;
-  let t4_value = "Multi" /* Multi */ + "";
-  let t4;
   let option3_value_value;
   let t5;
   let button;
@@ -5256,65 +5237,102 @@ function create_fragment10(ctx) {
       t0 = space();
       select = element("select");
       option0 = element("option");
-      t1 = text(t1_value);
+      option0.textContent = `${"Template"}`;
       option1 = element("option");
-      t2 = text(t2_value);
+      option1.textContent = `${"Capture"}`;
       option2 = element("option");
-      t3 = text(t3_value);
+      option2.textContent = `${"Macro"}`;
       option3 = element("option");
-      t4 = text(t4_value);
+      option3.textContent = `${"Multi"}`;
       t5 = space();
       button = element("button");
       button.textContent = "Add Choice";
       attr(input, "type", "text");
       attr(input, "placeholder", "Name");
-      option0.__value = option0_value_value = "Template" /* Template */;
+      option0.__value = option0_value_value = "Template";
       option0.value = option0.__value;
-      option1.__value = option1_value_value = "Capture" /* Capture */;
+      option1.__value = option1_value_value = "Capture";
       option1.value = option1.__value;
-      option2.__value = option2_value_value = "Macro" /* Macro */;
+      option2.__value = option2_value_value = "Macro";
       option2.value = option2.__value;
-      option3.__value = option3_value_value = "Multi" /* Multi */;
+      option3.__value = option3_value_value = "Multi";
       option3.value = option3.__value;
       attr(select, "id", "addChoiceTypeSelector");
       attr(select, "class", "svelte-1newuee");
-      if (ctx[1] === void 0)
-        add_render_callback(() => ctx[4].call(select));
+      if (
+        /*type*/
+        ctx[1] === void 0
+      )
+        add_render_callback(() => (
+          /*select_change_handler*/
+          ctx[4].call(select)
+        ));
       attr(button, "class", "mod-cta");
       attr(div, "class", "addChoiceBox svelte-1newuee");
     },
     m(target, anchor) {
       insert(target, div, anchor);
       append(div, input);
-      set_input_value(input, ctx[0]);
+      set_input_value(
+        input,
+        /*name*/
+        ctx[0]
+      );
       append(div, t0);
       append(div, select);
       append(select, option0);
-      append(option0, t1);
       append(select, option1);
-      append(option1, t2);
       append(select, option2);
-      append(option2, t3);
       append(select, option3);
-      append(option3, t4);
-      select_option(select, ctx[1]);
+      select_option(
+        select,
+        /*type*/
+        ctx[1],
+        true
+      );
       append(div, t5);
       append(div, button);
       if (!mounted) {
         dispose = [
-          listen(input, "input", ctx[3]),
-          listen(select, "change", ctx[4]),
-          listen(button, "click", ctx[2])
+          listen(
+            input,
+            "input",
+            /*input_input_handler*/
+            ctx[3]
+          ),
+          listen(
+            select,
+            "change",
+            /*select_change_handler*/
+            ctx[4]
+          ),
+          listen(
+            button,
+            "click",
+            /*addChoice*/
+            ctx[2]
+          )
         ];
         mounted = true;
       }
     },
     p(ctx2, [dirty]) {
-      if (dirty & 1 && input.value !== ctx2[0]) {
-        set_input_value(input, ctx2[0]);
+      if (dirty & /*name*/
+      1 && input.value !== /*name*/
+      ctx2[0]) {
+        set_input_value(
+          input,
+          /*name*/
+          ctx2[0]
+        );
       }
-      if (dirty & 2) {
-        select_option(select, ctx2[1]);
+      if (dirty & /*type*/
+      2) {
+        select_option(
+          select,
+          /*type*/
+          ctx2[1]
+        );
       }
     },
     i: noop,
@@ -5327,13 +5345,13 @@ function create_fragment10(ctx) {
     }
   };
 }
-function instance10($$self, $$props, $$invalidate) {
+function instance8($$self, $$props, $$invalidate) {
   let name;
   let type;
   const dispatch = createEventDispatcher();
   function addChoice() {
     if (!name) {
-      new import_obsidian.Notice("Choice name is invalid.");
+      new import_obsidian3.Notice("Choice name is invalid.");
       return;
     }
     dispatch("addChoice", { name, type });
@@ -5352,7 +5370,7 @@ function instance10($$self, $$props, $$invalidate) {
 var AddChoiceBox = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance10, create_fragment10, safe_not_equal, {}, add_css6);
+    init(this, options, instance8, create_fragment8, safe_not_equal, {}, add_css5);
   }
 };
 var AddChoiceBox_default = AddChoiceBox;
@@ -5418,7 +5436,7 @@ var Choice = class {
 // src/types/choices/TemplateChoice.ts
 var TemplateChoice = class extends Choice {
   constructor(name) {
-    super(name, "Template" /* Template */);
+    super(name, "Template");
     this.templatePath = "";
     this.fileNameFormat = { enabled: false, format: "" };
     this.folder = {
@@ -5447,15 +5465,15 @@ var TemplateChoice = class extends Choice {
 // src/types/choices/MacroChoice.ts
 var MacroChoice = class extends Choice {
   constructor(name) {
-    super(name, "Macro" /* Macro */);
-    this.macroId = null;
+    super(name, "Macro");
+    this.macroId = "";
   }
 };
 
 // src/types/choices/CaptureChoice.ts
 var CaptureChoice = class extends Choice {
   constructor(name) {
-    super(name, "Capture" /* Capture */);
+    super(name, "Capture");
     this.appendLink = false;
     this.captureTo = "";
     this.captureToActiveFile = false;
@@ -5469,6 +5487,7 @@ var CaptureChoice = class extends Choice {
       enabled: false,
       after: "",
       insertAtEnd: false,
+      considerSubsections: false,
       createIfNotFound: false,
       createIfNotFoundLocation: "top"
     };
@@ -5490,7 +5509,7 @@ var CaptureChoice = class extends Choice {
 // src/types/choices/MultiChoice.ts
 var MultiChoice = class extends Choice {
   constructor(name) {
-    super(name, "Multi" /* Multi */);
+    super(name, "Multi");
     this.choices = [];
   }
   addChoice(choice) {
@@ -5504,8 +5523,8 @@ var MultiChoice = class extends Choice {
 };
 
 // src/gui/GenericYesNoPrompt/GenericYesNoPrompt.ts
-var import_obsidian2 = require("obsidian");
-var GenericYesNoPrompt = class extends import_obsidian2.Modal {
+var import_obsidian4 = require("obsidian");
+var GenericYesNoPrompt = class extends import_obsidian4.Modal {
   constructor(app2, header, text2) {
     super(app2);
     this.header = header;
@@ -5530,9 +5549,10 @@ var GenericYesNoPrompt = class extends import_obsidian2.Modal {
     const buttonsDiv = this.contentEl.createDiv({
       cls: "yesNoPromptButtonContainer"
     });
-    const noButton = new import_obsidian2.ButtonComponent(buttonsDiv).setButtonText("No").onClick(() => this.submit(false));
-    const yesButton = new import_obsidian2.ButtonComponent(buttonsDiv).setButtonText("Yes").onClick(() => this.submit(true)).setWarning();
+    const noButton = new import_obsidian4.ButtonComponent(buttonsDiv).setButtonText("No").onClick(() => this.submit(false));
+    const yesButton = new import_obsidian4.ButtonComponent(buttonsDiv).setButtonText("Yes").onClick(() => this.submit(true)).setWarning();
     yesButton.buttonEl.focus();
+    addArrowKeyNavigation([noButton.buttonEl, yesButton.buttonEl]);
   }
   submit(input) {
     this.input = input;
@@ -5547,20 +5567,29 @@ var GenericYesNoPrompt = class extends import_obsidian2.Modal {
       this.resolvePromise(this.input);
   }
 };
-
-// src/gui/choiceList/ChoiceView.svelte
-var import_obsidian24 = require("obsidian");
+function addArrowKeyNavigation(buttons) {
+  buttons.forEach((button) => {
+    button.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowRight" || event.key === "ArrowLeft") {
+        const currentIndex = buttons.indexOf(button);
+        const nextIndex = (currentIndex + (event.key === "ArrowRight" ? 1 : -1) + buttons.length) % buttons.length;
+        buttons[nextIndex].focus();
+        event.preventDefault();
+      }
+    });
+  });
+}
 
 // src/gui/ChoiceBuilder/choiceBuilder.ts
-var import_obsidian5 = require("obsidian");
+var import_obsidian7 = require("obsidian");
 
 // src/gui/GenericInputPrompt/GenericInputPrompt.ts
-var import_obsidian4 = require("obsidian");
+var import_obsidian6 = require("obsidian");
 
 // src/gui/suggesters/suggest.ts
-var import_obsidian3 = require("obsidian");
+var import_obsidian5 = require("obsidian");
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/enums.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/enums.js
 var top = "top";
 var bottom = "bottom";
 var right = "right";
@@ -5590,12 +5619,12 @@ var write = "write";
 var afterWrite = "afterWrite";
 var modifierPhases = [beforeRead, read, afterRead, beforeMain, main, afterMain, beforeWrite, write, afterWrite];
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/dom-utils/getNodeName.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/dom-utils/getNodeName.js
 function getNodeName(element2) {
   return element2 ? (element2.nodeName || "").toLowerCase() : null;
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/dom-utils/getWindow.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/dom-utils/getWindow.js
 function getWindow(node) {
   if (node == null) {
     return window;
@@ -5607,7 +5636,7 @@ function getWindow(node) {
   return node;
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/dom-utils/instanceOf.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/dom-utils/instanceOf.js
 function isElement(node) {
   var OwnElement = getWindow(node).Element;
   return node instanceof OwnElement || node instanceof Element;
@@ -5624,7 +5653,7 @@ function isShadowRoot(node) {
   return node instanceof OwnElement || node instanceof ShadowRoot;
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/modifiers/applyStyles.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/modifiers/applyStyles.js
 function applyStyles(_ref) {
   var state = _ref.state;
   Object.keys(state.elements).forEach(function(name) {
@@ -5692,20 +5721,20 @@ var applyStyles_default = {
   requires: ["computeStyles"]
 };
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/utils/getBasePlacement.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/utils/getBasePlacement.js
 function getBasePlacement(placement) {
   return placement.split("-")[0];
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/utils/math.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/utils/math.js
 var max = Math.max;
 var min = Math.min;
 var round = Math.round;
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/utils/userAgent.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/utils/userAgent.js
 function getUAString() {
   var uaData = navigator.userAgentData;
-  if (uaData != null && uaData.brands) {
+  if (uaData != null && uaData.brands && Array.isArray(uaData.brands)) {
     return uaData.brands.map(function(item) {
       return item.brand + "/" + item.version;
     }).join(" ");
@@ -5713,12 +5742,12 @@ function getUAString() {
   return navigator.userAgent;
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/dom-utils/isLayoutViewport.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/dom-utils/isLayoutViewport.js
 function isLayoutViewport() {
   return !/^((?!chrome|android).)*safari/i.test(getUAString());
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/dom-utils/getBoundingClientRect.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/dom-utils/getBoundingClientRect.js
 function getBoundingClientRect(element2, includeScale, isFixedStrategy) {
   if (includeScale === void 0) {
     includeScale = false;
@@ -5751,7 +5780,7 @@ function getBoundingClientRect(element2, includeScale, isFixedStrategy) {
   };
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/dom-utils/getLayoutRect.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/dom-utils/getLayoutRect.js
 function getLayoutRect(element2) {
   var clientRect = getBoundingClientRect(element2);
   var width = element2.offsetWidth;
@@ -5770,7 +5799,7 @@ function getLayoutRect(element2) {
   };
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/dom-utils/contains.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/dom-utils/contains.js
 function contains(parent, child) {
   var rootNode = child.getRootNode && child.getRootNode();
   if (parent.contains(child)) {
@@ -5787,32 +5816,45 @@ function contains(parent, child) {
   return false;
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/dom-utils/getComputedStyle.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/dom-utils/getComputedStyle.js
 function getComputedStyle2(element2) {
   return getWindow(element2).getComputedStyle(element2);
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/dom-utils/isTableElement.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/dom-utils/isTableElement.js
 function isTableElement(element2) {
   return ["table", "td", "th"].indexOf(getNodeName(element2)) >= 0;
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/dom-utils/getDocumentElement.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/dom-utils/getDocumentElement.js
 function getDocumentElement(element2) {
-  return ((isElement(element2) ? element2.ownerDocument : element2.document) || window.document).documentElement;
+  return ((isElement(element2) ? element2.ownerDocument : (
+    // $FlowFixMe[prop-missing]
+    element2.document
+  )) || window.document).documentElement;
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/dom-utils/getParentNode.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/dom-utils/getParentNode.js
 function getParentNode(element2) {
   if (getNodeName(element2) === "html") {
     return element2;
   }
-  return element2.assignedSlot || element2.parentNode || (isShadowRoot(element2) ? element2.host : null) || getDocumentElement(element2);
+  return (
+    // this is a quicker (but less type safe) way to save quite some bytes from the bundle
+    // $FlowFixMe[incompatible-return]
+    // $FlowFixMe[prop-missing]
+    element2.assignedSlot || // step into the shadow DOM of the parent of a slotted node
+    element2.parentNode || // DOM Element detected
+    (isShadowRoot(element2) ? element2.host : null) || // ShadowRoot detected
+    // $FlowFixMe[incompatible-call]: HTMLElement is a Node
+    getDocumentElement(element2)
+  );
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/dom-utils/getOffsetParent.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/dom-utils/getOffsetParent.js
 function getTrueOffsetParent(element2) {
-  if (!isHTMLElement(element2) || getComputedStyle2(element2).position === "fixed") {
+  if (!isHTMLElement(element2) || // https://github.com/popperjs/popper-core/issues/837
+  getComputedStyle2(element2).position === "fixed") {
     return null;
   }
   return element2.offsetParent;
@@ -5852,12 +5894,12 @@ function getOffsetParent(element2) {
   return offsetParent || getContainingBlock(element2) || window2;
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/utils/getMainAxisFromPlacement.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/utils/getMainAxisFromPlacement.js
 function getMainAxisFromPlacement(placement) {
   return ["top", "bottom"].indexOf(placement) >= 0 ? "x" : "y";
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/utils/within.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/utils/within.js
 function within(min2, value, max2) {
   return max(min2, min(value, max2));
 }
@@ -5866,7 +5908,7 @@ function withinMaxClamp(min2, value, max2) {
   return v > max2 ? max2 : v;
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/utils/getFreshSideObject.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/utils/getFreshSideObject.js
 function getFreshSideObject() {
   return {
     top: 0,
@@ -5876,12 +5918,12 @@ function getFreshSideObject() {
   };
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/utils/mergePaddingObject.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/utils/mergePaddingObject.js
 function mergePaddingObject(paddingObject) {
   return Object.assign({}, getFreshSideObject(), paddingObject);
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/utils/expandToHashMap.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/utils/expandToHashMap.js
 function expandToHashMap(value, keys) {
   return keys.reduce(function(hashMap, key) {
     hashMap[key] = value;
@@ -5889,7 +5931,7 @@ function expandToHashMap(value, keys) {
   }, {});
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/modifiers/arrow.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/modifiers/arrow.js
 var toPaddingObject = function toPaddingObject2(padding, state) {
   padding = typeof padding === "function" ? padding(Object.assign({}, state.rects, {
     placement: state.placement
@@ -5959,21 +6001,20 @@ var arrow_default = {
   requiresIfExists: ["preventOverflow"]
 };
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/utils/getVariation.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/utils/getVariation.js
 function getVariation(placement) {
   return placement.split("-")[1];
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/modifiers/computeStyles.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/modifiers/computeStyles.js
 var unsetSides = {
   top: "auto",
   right: "auto",
   bottom: "auto",
   left: "auto"
 };
-function roundOffsetsByDPR(_ref) {
+function roundOffsetsByDPR(_ref, win) {
   var x = _ref.x, y = _ref.y;
-  var win = window;
   var dpr = win.devicePixelRatio || 1;
   return {
     x: round(x * dpr) / dpr || 0,
@@ -6012,13 +6053,19 @@ function mapToStyles(_ref2) {
     offsetParent = offsetParent;
     if (placement === top || (placement === left || placement === right) && variation === end) {
       sideY = bottom;
-      var offsetY = isFixed && offsetParent === win && win.visualViewport ? win.visualViewport.height : offsetParent[heightProp];
+      var offsetY = isFixed && offsetParent === win && win.visualViewport ? win.visualViewport.height : (
+        // $FlowFixMe[prop-missing]
+        offsetParent[heightProp]
+      );
       y -= offsetY - popperRect.height;
       y *= gpuAcceleration ? 1 : -1;
     }
     if (placement === left || (placement === top || placement === bottom) && variation === end) {
       sideX = right;
-      var offsetX = isFixed && offsetParent === win && win.visualViewport ? win.visualViewport.width : offsetParent[widthProp];
+      var offsetX = isFixed && offsetParent === win && win.visualViewport ? win.visualViewport.width : (
+        // $FlowFixMe[prop-missing]
+        offsetParent[widthProp]
+      );
       x -= offsetX - popperRect.width;
       x *= gpuAcceleration ? 1 : -1;
     }
@@ -6029,7 +6076,7 @@ function mapToStyles(_ref2) {
   var _ref4 = roundOffsets === true ? roundOffsetsByDPR({
     x,
     y
-  }) : {
+  }, getWindow(popper2)) : {
     x,
     y
   };
@@ -6088,31 +6135,31 @@ var computeStyles_default = {
   data: {}
 };
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/modifiers/eventListeners.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/modifiers/eventListeners.js
 var passive = {
   passive: true
 };
 function effect3(_ref) {
-  var state = _ref.state, instance18 = _ref.instance, options = _ref.options;
+  var state = _ref.state, instance17 = _ref.instance, options = _ref.options;
   var _options$scroll = options.scroll, scroll = _options$scroll === void 0 ? true : _options$scroll, _options$resize = options.resize, resize = _options$resize === void 0 ? true : _options$resize;
   var window2 = getWindow(state.elements.popper);
   var scrollParents = [].concat(state.scrollParents.reference, state.scrollParents.popper);
   if (scroll) {
     scrollParents.forEach(function(scrollParent) {
-      scrollParent.addEventListener("scroll", instance18.update, passive);
+      scrollParent.addEventListener("scroll", instance17.update, passive);
     });
   }
   if (resize) {
-    window2.addEventListener("resize", instance18.update, passive);
+    window2.addEventListener("resize", instance17.update, passive);
   }
   return function() {
     if (scroll) {
       scrollParents.forEach(function(scrollParent) {
-        scrollParent.removeEventListener("scroll", instance18.update, passive);
+        scrollParent.removeEventListener("scroll", instance17.update, passive);
       });
     }
     if (resize) {
-      window2.removeEventListener("resize", instance18.update, passive);
+      window2.removeEventListener("resize", instance17.update, passive);
     }
   };
 }
@@ -6126,7 +6173,7 @@ var eventListeners_default = {
   data: {}
 };
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/utils/getOppositePlacement.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/utils/getOppositePlacement.js
 var hash = {
   left: "right",
   right: "left",
@@ -6139,7 +6186,7 @@ function getOppositePlacement(placement) {
   });
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/utils/getOppositeVariationPlacement.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/utils/getOppositeVariationPlacement.js
 var hash2 = {
   start: "end",
   end: "start"
@@ -6150,7 +6197,7 @@ function getOppositeVariationPlacement(placement) {
   });
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/dom-utils/getWindowScroll.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/dom-utils/getWindowScroll.js
 function getWindowScroll(node) {
   var win = getWindow(node);
   var scrollLeft = win.pageXOffset;
@@ -6161,12 +6208,12 @@ function getWindowScroll(node) {
   };
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/dom-utils/getWindowScrollBarX.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/dom-utils/getWindowScrollBarX.js
 function getWindowScrollBarX(element2) {
   return getBoundingClientRect(getDocumentElement(element2)).left + getWindowScroll(element2).scrollLeft;
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/dom-utils/getViewportRect.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/dom-utils/getViewportRect.js
 function getViewportRect(element2, strategy) {
   var win = getWindow(element2);
   var html = getDocumentElement(element2);
@@ -6192,7 +6239,7 @@ function getViewportRect(element2, strategy) {
   };
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/dom-utils/getDocumentRect.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/dom-utils/getDocumentRect.js
 function getDocumentRect(element2) {
   var _element$ownerDocumen;
   var html = getDocumentElement(element2);
@@ -6213,13 +6260,13 @@ function getDocumentRect(element2) {
   };
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/dom-utils/isScrollParent.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/dom-utils/isScrollParent.js
 function isScrollParent(element2) {
   var _getComputedStyle = getComputedStyle2(element2), overflow = _getComputedStyle.overflow, overflowX = _getComputedStyle.overflowX, overflowY = _getComputedStyle.overflowY;
   return /auto|scroll|overlay|hidden/.test(overflow + overflowY + overflowX);
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/dom-utils/getScrollParent.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/dom-utils/getScrollParent.js
 function getScrollParent(node) {
   if (["html", "body", "#document"].indexOf(getNodeName(node)) >= 0) {
     return node.ownerDocument.body;
@@ -6230,7 +6277,7 @@ function getScrollParent(node) {
   return getScrollParent(getParentNode(node));
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/dom-utils/listScrollParents.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/dom-utils/listScrollParents.js
 function listScrollParents(element2, list) {
   var _element$ownerDocumen;
   if (list === void 0) {
@@ -6241,10 +6288,13 @@ function listScrollParents(element2, list) {
   var win = getWindow(scrollParent);
   var target = isBody ? [win].concat(win.visualViewport || [], isScrollParent(scrollParent) ? scrollParent : []) : scrollParent;
   var updatedList = list.concat(target);
-  return isBody ? updatedList : updatedList.concat(listScrollParents(getParentNode(target)));
+  return isBody ? updatedList : (
+    // $FlowFixMe[incompatible-call]: isBody tells us target will be an HTMLElement here
+    updatedList.concat(listScrollParents(getParentNode(target)))
+  );
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/utils/rectToClientRect.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/utils/rectToClientRect.js
 function rectToClientRect(rect) {
   return Object.assign({}, rect, {
     left: rect.x,
@@ -6254,7 +6304,7 @@ function rectToClientRect(rect) {
   });
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/dom-utils/getClippingRect.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/dom-utils/getClippingRect.js
 function getInnerBoundingClientRect(element2, strategy) {
   var rect = getBoundingClientRect(element2, false, strategy === "fixed");
   rect.top = rect.top + element2.clientTop;
@@ -6300,7 +6350,7 @@ function getClippingRect(element2, boundary, rootBoundary, strategy) {
   return clippingRect;
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/utils/computeOffsets.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/utils/computeOffsets.js
 function computeOffsets(_ref) {
   var reference2 = _ref.reference, element2 = _ref.element, placement = _ref.placement;
   var basePlacement = placement ? getBasePlacement(placement) : null;
@@ -6355,7 +6405,7 @@ function computeOffsets(_ref) {
   return offsets;
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/utils/detectOverflow.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/utils/detectOverflow.js
 function detectOverflow(state, options) {
   if (options === void 0) {
     options = {};
@@ -6393,7 +6443,7 @@ function detectOverflow(state, options) {
   return overflowOffsets;
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/utils/computeAutoPlacement.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/utils/computeAutoPlacement.js
 function computeAutoPlacement(state, options) {
   if (options === void 0) {
     options = {};
@@ -6426,7 +6476,7 @@ function computeAutoPlacement(state, options) {
   });
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/modifiers/flip.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/modifiers/flip.js
 function getExpandedFallbackPlacements(placement) {
   if (getBasePlacement(placement) === auto) {
     return [];
@@ -6532,7 +6582,7 @@ var flip_default = {
   }
 };
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/modifiers/hide.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/modifiers/hide.js
 function getSideOffsets(overflow, rect, preventedOffsets) {
   if (preventedOffsets === void 0) {
     preventedOffsets = {
@@ -6586,7 +6636,7 @@ var hide_default = {
   fn: hide
 };
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/modifiers/offset.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/modifiers/offset.js
 function distanceAndSkiddingToXY(placement, rects, offset2) {
   var basePlacement = getBasePlacement(placement);
   var invertDistance = [left, top].indexOf(basePlacement) >= 0 ? -1 : 1;
@@ -6625,7 +6675,7 @@ var offset_default = {
   fn: offset
 };
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/modifiers/popperOffsets.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/modifiers/popperOffsets.js
 function popperOffsets(_ref) {
   var state = _ref.state, name = _ref.name;
   state.modifiersData[name] = computeOffsets({
@@ -6643,12 +6693,12 @@ var popperOffsets_default = {
   data: {}
 };
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/utils/getAltAxis.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/utils/getAltAxis.js
 function getAltAxis(axis) {
   return axis === "x" ? "y" : "x";
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/modifiers/preventOverflow.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/modifiers/preventOverflow.js
 function preventOverflow(_ref) {
   var state = _ref.state, options = _ref.options, name = _ref.name;
   var _options$mainAxis = options.mainAxis, checkMainAxis = _options$mainAxis === void 0 ? true : _options$mainAxis, _options$altAxis = options.altAxis, checkAltAxis = _options$altAxis === void 0 ? false : _options$altAxis, boundary = options.boundary, rootBoundary = options.rootBoundary, altBoundary = options.altBoundary, padding = options.padding, _options$tether = options.tether, tether = _options$tether === void 0 ? true : _options$tether, _options$tetherOffset = options.tetherOffset, tetherOffset = _options$tetherOffset === void 0 ? 0 : _options$tetherOffset;
@@ -6741,7 +6791,7 @@ var preventOverflow_default = {
   requiresIfExists: ["offset"]
 };
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/dom-utils/getHTMLElementScroll.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/dom-utils/getHTMLElementScroll.js
 function getHTMLElementScroll(element2) {
   return {
     scrollLeft: element2.scrollLeft,
@@ -6749,7 +6799,7 @@ function getHTMLElementScroll(element2) {
   };
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/dom-utils/getNodeScroll.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/dom-utils/getNodeScroll.js
 function getNodeScroll(node) {
   if (node === getWindow(node) || !isHTMLElement(node)) {
     return getWindowScroll(node);
@@ -6758,7 +6808,7 @@ function getNodeScroll(node) {
   }
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/dom-utils/getCompositeRect.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/dom-utils/getCompositeRect.js
 function isElementScaled(element2) {
   var rect = element2.getBoundingClientRect();
   var scaleX = round(rect.width) / element2.offsetWidth || 1;
@@ -6782,7 +6832,8 @@ function getCompositeRect(elementOrVirtualElement, offsetParent, isFixed) {
     y: 0
   };
   if (isOffsetParentAnElement || !isOffsetParentAnElement && !isFixed) {
-    if (getNodeName(offsetParent) !== "body" || isScrollParent(documentElement)) {
+    if (getNodeName(offsetParent) !== "body" || // https://github.com/popperjs/popper-core/issues/1078
+    isScrollParent(documentElement)) {
       scroll = getNodeScroll(offsetParent);
     }
     if (isHTMLElement(offsetParent)) {
@@ -6801,7 +6852,7 @@ function getCompositeRect(elementOrVirtualElement, offsetParent, isFixed) {
   };
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/utils/orderModifiers.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/utils/orderModifiers.js
 function order(modifiers) {
   var map = /* @__PURE__ */ new Map();
   var visited = /* @__PURE__ */ new Set();
@@ -6838,7 +6889,7 @@ function orderModifiers(modifiers) {
   }, []);
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/utils/debounce.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/utils/debounce.js
 function debounce(fn2) {
   var pending;
   return function() {
@@ -6854,7 +6905,7 @@ function debounce(fn2) {
   };
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/utils/format.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/utils/format.js
 function format(str) {
   for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
     args[_key - 1] = arguments[_key];
@@ -6864,14 +6915,14 @@ function format(str) {
   }, str);
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/utils/validateModifiers.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/utils/validateModifiers.js
 var INVALID_MODIFIER_ERROR = 'Popper: modifier "%s" provided an invalid %s property, expected %s but got %s';
 var MISSING_DEPENDENCY_ERROR = 'Popper: modifier "%s" requires "%s", but "%s" modifier is not available';
 var VALID_PROPERTIES = ["name", "enabled", "phase", "fn", "effect", "requires", "options"];
 function validateModifiers(modifiers) {
   modifiers.forEach(function(modifier) {
-    [].concat(Object.keys(modifier), VALID_PROPERTIES).filter(function(value, index, self2) {
-      return self2.indexOf(value) === index;
+    [].concat(Object.keys(modifier), VALID_PROPERTIES).filter(function(value, index, self) {
+      return self.indexOf(value) === index;
     }).forEach(function(key) {
       switch (key) {
         case "name":
@@ -6928,7 +6979,7 @@ function validateModifiers(modifiers) {
   });
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/utils/uniqueBy.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/utils/uniqueBy.js
 function uniqueBy(arr, fn2) {
   var identifiers = /* @__PURE__ */ new Set();
   return arr.filter(function(item) {
@@ -6940,7 +6991,7 @@ function uniqueBy(arr, fn2) {
   });
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/utils/mergeByName.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/utils/mergeByName.js
 function mergeByName(modifiers) {
   var merged = modifiers.reduce(function(merged2, current) {
     var existing = merged2[current.name];
@@ -6955,7 +7006,7 @@ function mergeByName(modifiers) {
   });
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/createPopper.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/createPopper.js
 var INVALID_ELEMENT_ERROR = "Popper: Invalid reference or popper argument provided. They must be either a DOM element or virtual element.";
 var INFINITE_LOOP_ERROR = "Popper: An infinite loop in the modifiers cycle has been detected! The cycle has been interrupted to prevent a browser crash.";
 var DEFAULT_OPTIONS = {
@@ -6994,7 +7045,7 @@ function popperGenerator(generatorOptions) {
     };
     var effectCleanupFns = [];
     var isDestroyed = false;
-    var instance18 = {
+    var instance17 = {
       state,
       setOptions: function setOptions(setOptionsAction) {
         var options2 = typeof setOptionsAction === "function" ? setOptionsAction(state.options) : setOptionsAction;
@@ -7031,8 +7082,13 @@ function popperGenerator(generatorOptions) {
           }
         }
         runModifierEffects();
-        return instance18.update();
+        return instance17.update();
       },
+      // Sync update – it will always be executed, even if not necessary. This
+      // is useful for low frequency updates where sync behavior simplifies the
+      // logic.
+      // For high frequency updates (e.g. `resize` and `scroll` events), always
+      // prefer the async Popper#update method
       forceUpdate: function forceUpdate() {
         if (isDestroyed) {
           return;
@@ -7073,14 +7129,16 @@ function popperGenerator(generatorOptions) {
               state,
               options: _options,
               name,
-              instance: instance18
+              instance: instance17
             }) || state;
           }
         }
       },
+      // Async and optimistically optimized update – it will not be executed if
+      // not necessary (debounced to run at most once-per-tick)
       update: debounce(function() {
         return new Promise(function(resolve) {
-          instance18.forceUpdate();
+          instance17.forceUpdate();
           resolve(state);
         });
       }),
@@ -7093,9 +7151,9 @@ function popperGenerator(generatorOptions) {
       if (true) {
         console.error(INVALID_ELEMENT_ERROR);
       }
-      return instance18;
+      return instance17;
     }
-    instance18.setOptions(options).then(function(state2) {
+    instance17.setOptions(options).then(function(state2) {
       if (!isDestroyed && options.onFirstUpdate) {
         options.onFirstUpdate(state2);
       }
@@ -7107,7 +7165,7 @@ function popperGenerator(generatorOptions) {
           var cleanupFn = effect4({
             state,
             name,
-            instance: instance18,
+            instance: instance17,
             options: options2
           });
           var noopFn = function noopFn2() {
@@ -7122,11 +7180,11 @@ function popperGenerator(generatorOptions) {
       });
       effectCleanupFns = [];
     }
-    return instance18;
+    return instance17;
   };
 }
 
-// node_modules/.pnpm/@popperjs+core@2.11.6/node_modules/@popperjs/core/lib/popper.js
+// node_modules/.pnpm/@popperjs+core@2.11.7/node_modules/@popperjs/core/lib/popper.js
 var defaultModifiers = [eventListeners_default, popperOffsets_default, computeStyles_default, applyStyles_default, offset_default, flip_default, preventOverflow_default, arrow_default, hide_default];
 var createPopper = /* @__PURE__ */ popperGenerator({
   defaultModifiers
@@ -7143,11 +7201,13 @@ var Suggest = class {
     containerEl.on(
       "click",
       ".suggestion-item",
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
       this.onSuggestionClick.bind(this)
     );
     containerEl.on(
       "mousemove",
       ".suggestion-item",
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
       this.onSuggestionMouseover.bind(this)
     );
     scope.register([], "ArrowUp", (event) => {
@@ -7204,8 +7264,8 @@ var Suggest = class {
     );
     const prevSelectedSuggestion = this.suggestions[this.selectedItem];
     const selectedSuggestion = this.suggestions[normalizedIndex];
-    prevSelectedSuggestion == null ? void 0 : prevSelectedSuggestion.removeClass("is-selected");
-    selectedSuggestion == null ? void 0 : selectedSuggestion.addClass("is-selected");
+    prevSelectedSuggestion?.removeClass("is-selected");
+    selectedSuggestion?.addClass("is-selected");
     this.selectedItem = normalizedIndex;
     if (scrollIntoView) {
       selectedSuggestion.scrollIntoView(false);
@@ -7216,7 +7276,7 @@ var TextInputSuggest = class {
   constructor(app2, inputEl) {
     this.app = app2;
     this.inputEl = inputEl;
-    this.scope = new import_obsidian3.Scope();
+    this.scope = new import_obsidian5.Scope();
     this.suggestEl = createDiv("suggestion-container");
     const suggestion = this.suggestEl.createDiv("suggestion");
     this.suggest = new Suggest(this, suggestion, this.scope);
@@ -7255,13 +7315,13 @@ var TextInputSuggest = class {
         {
           name: "sameWidth",
           enabled: true,
-          fn: ({ state, instance: instance18 }) => {
+          fn: ({ state, instance: instance17 }) => {
             const targetWidth = `${state.rects.reference.width}px`;
             if (state.styles.popper.width === targetWidth) {
               return;
             }
             state.styles.popper.width = targetWidth;
-            instance18.update();
+            void instance17.update();
           },
           phase: "beforeWrite",
           requires: ["computeStyles"]
@@ -7281,17 +7341,21 @@ var TextInputSuggest = class {
 // src/constants.ts
 var VALUE_SYNTAX = "{{value}}";
 var DATE_SYNTAX = "{{date}}";
+var TIME_SYNTAX = "{{time}}";
 var NAME_SYNTAX = "{{name}}";
 var VARIABLE_SYNTAX = "{{value:<variable name>}}";
+var FIELD_VAR_SYNTAX = "{{field:<field name>}}";
 var MATH_VALUE_SYNTAX = "{{mvalue}}";
 var LINKCURRENT_SYNTAX = "{{linkcurrent}}";
+var SELECTED_SYNTAX = "{{selected}}";
 var FILE_NAME_FORMAT_SYNTAX = [
   DATE_SYNTAX,
   "{{date:<dateformat>}}",
   "{{vdate:<variable name>, <date format>}}",
   VALUE_SYNTAX,
   NAME_SYNTAX,
-  VARIABLE_SYNTAX
+  VARIABLE_SYNTAX,
+  FIELD_VAR_SYNTAX
 ];
 var FILE_NUMBER_REGEX = new RegExp(/([0-9]*)\.md$/);
 var NUMBER_REGEX = new RegExp(/^-?[0-9]*$/);
@@ -7301,8 +7365,11 @@ var DATE_REGEX = new RegExp(/{{DATE(\+-?[0-9]+)?}}/i);
 var DATE_REGEX_FORMATTED = new RegExp(
   /{{DATE:([^}\n\r+]*)(\+-?[0-9]+)?}}/i
 );
+var TIME_REGEX = new RegExp(/{{TIME}}/i);
+var TIME_REGEX_FORMATTED = new RegExp(/{{TIME:([^}\n\r+]*)}}/i);
 var NAME_VALUE_REGEX = new RegExp(/{{NAME}}|{{VALUE}}/i);
 var VARIABLE_REGEX = new RegExp(/{{VALUE:([^\n\r}]*)}}/i);
+var FIELD_VAR_REGEX = new RegExp(/{{FIELD:([^\n\r}]*)}}/i);
 var DATE_VARIABLE_REGEX = new RegExp(
   /{{VDATE:([^\n\r},]*),\s*([^\n\r},]*)}}/i
 );
@@ -7321,6 +7388,7 @@ var INLINE_JAVASCRIPT_REGEX = new RegExp(
 );
 var MATH_VALUE_REGEX = new RegExp(/{{MVALUE}}/i);
 var TITLE_REGEX = new RegExp(/{{TITLE}}/i);
+var SELECTED_REGEX = new RegExp(/{{SELECTED}}/i);
 var FILE_LINK_REGEX = new RegExp(/\[\[([^\]]*)$/);
 var TAG_REGEX = new RegExp(/#([^ ]*)$/);
 var DATE_SYNTAX_SUGGEST_REGEX = new RegExp(
@@ -7355,6 +7423,13 @@ var MATH_VALUE_SYNTAX_SUGGEST_REGEX = new RegExp(
 );
 var TITLE_SYNTAX_SUGGEST_REGEX = new RegExp(
   /{{[T]?[I]?[T]?[L]?[E]?[}]?[}]?/i
+);
+var SELECTED_SYNTAX_SUGGEST_REGEX = new RegExp(
+  /{{[S]?[E]?[L]?[E]?[C]?[T]?[E]?[D]?[}]?[}]?/i
+);
+var TIME_SYNTAX_SUGGEST_REGEX = new RegExp(/{{[T]?[I]?[M]?[E]?[}]?[}]?/i);
+var TIME_FORMAT_SYNTAX_SUGGEST_REGEX = new RegExp(
+  /{{[T]?[I]?[M]?[E]?[:]?$|{{TIME:[^\n\r}]*}}$/i
 );
 var fileExistsIncrement = "Increment the file name";
 var fileExistsAppendToBottom = "Append to the bottom of the file";
@@ -7506,27 +7581,57 @@ function get(obj, path) {
   return arr ? list : list[0];
 }
 var MatchOptions = {
+  // Whether the matches should be included in the result set. When `true`, each record in the result
+  // set will include the indices of the matched characters.
+  // These can consequently be used for highlighting purposes.
   includeMatches: false,
+  // When `true`, the matching function will continue to the end of a search pattern even if
+  // a perfect match has already been located in the string.
   findAllMatches: false,
+  // Minimum number of characters that must be matched before a result is considered a match
   minMatchCharLength: 1
 };
 var BasicOptions = {
+  // When `true`, the algorithm continues searching to the end of the input even if a perfect
+  // match is found before the end of the same input.
   isCaseSensitive: false,
+  // When true, the matching function will continue to the end of a search pattern even if
   includeScore: false,
+  // List of properties that will be searched. This also supports nested properties.
   keys: [],
+  // Whether to sort the result list, by score
   shouldSort: true,
+  // Default sort function: sort by ascending score, ascending index
   sortFn: (a, b) => a.score === b.score ? a.idx < b.idx ? -1 : 1 : a.score < b.score ? -1 : 1
 };
 var FuzzyOptions = {
+  // Approximately where in the text is the pattern expected to be found?
   location: 0,
+  // At what point does the match algorithm give up. A threshold of '0.0' requires a perfect match
+  // (of both letters and location), a threshold of '1.0' would match anything.
   threshold: 0.6,
+  // Determines how close the match must be to the fuzzy location (specified above).
+  // An exact letter match which is 'distance' characters away from the fuzzy location
+  // would score as a complete mismatch. A distance of '0' requires the match be at
+  // the exact location specified, a threshold of '1000' would require a perfect match
+  // to be within 800 characters of the fuzzy location to be found using a 0.8 threshold.
   distance: 100
 };
 var AdvancedOptions = {
+  // When `true`, it enables the use of unix-like search commands
   useExtendedSearch: false,
+  // The get function to use when fetching an object's properties.
+  // The default will search nested paths *ie foo.bar.baz*
   getFn: get,
+  // When `true`, search will ignore `location` and `distance`, so it won't matter
+  // where in the string the pattern appears.
+  // More info: https://fusejs.io/concepts/scoring-theory.html#fuzziness-score
   ignoreLocation: false,
+  // When `true`, the calculation for the relevance score (used for sorting) will
+  // ignore the field-length norm.
+  // More info: https://fusejs.io/concepts/scoring-theory.html#field-length-norm
   ignoreFieldNorm: false,
+  // The weight to determine how much field length norm effects scoring.
   fieldNormWeight: 1
 };
 var Config = {
@@ -7594,6 +7699,7 @@ var FuseIndex = class {
     }
     this.norm.clear();
   }
+  // Adds a doc to the end of the index
   add(doc) {
     const idx = this.size();
     if (isString(doc)) {
@@ -7602,6 +7708,7 @@ var FuseIndex = class {
       this._addObject(doc, idx);
     }
   }
+  // Removes the doc at the specified index of the index
   removeAt(idx) {
     this.records.splice(idx, 1);
     for (let i = idx, len = this.size(); i < len; i += 1) {
@@ -7836,6 +7943,7 @@ function search(text2, pattern, patternAlphabet, {
   }
   const result = {
     isMatch: bestLocation >= 0,
+    // Count exact matches (those with a score of 0) to be "almost" exact
     score: Math.max(1e-3, finalScore)
   };
   if (computeMatches) {
@@ -8672,10 +8780,9 @@ function buildFileMap(files, unresolvedLinkNames) {
   return fileMap;
 }
 function getAliasesForFile(file, app2) {
-  var _a, _b, _c, _d;
   const fileMetadata = app2.metadataCache.getFileCache(file);
-  const fileMetaAlias = (_d = (_c = (_a = fileMetadata == null ? void 0 : fileMetadata.frontmatter) == null ? void 0 : _a.alias) != null ? _c : (_b = fileMetadata == null ? void 0 : fileMetadata.frontmatter) == null ? void 0 : _b.aliases) != null ? _d : "";
-  let aliases = [];
+  const fileMetaAlias = fileMetadata?.frontmatter?.alias ?? fileMetadata?.frontmatter?.aliases ?? "";
+  const aliases = [];
   if (typeof fileMetaAlias === "string" && fileMetaAlias) {
     aliases.push(fileMetaAlias);
   } else if (Array.isArray(fileMetaAlias)) {
@@ -8704,6 +8811,8 @@ var SilentFileSuggester = class extends TextInputSuggest {
     this.fileMap = fileAndAliasMap;
   }
   getSuggestions(inputStr) {
+    if (this.inputEl.selectionStart === null)
+      return [];
     const cursorPosition = this.inputEl.selectionStart;
     const inputBeforeCursor = inputStr.substr(0, cursorPosition);
     const fileLinkMatch = FILE_LINK_REGEX.exec(inputBeforeCursor);
@@ -8724,57 +8833,63 @@ var SilentFileSuggester = class extends TextInputSuggest {
     return search2;
   }
   renderSuggestion(item, el) {
-    var _a, _b, _c;
     const suggestionItem = this.fileMap.get(item);
-    switch (suggestionItem.type) {
-      case 0 /* File */:
-        el.innerHTML = `
-                    <span class="suggestion-main-text">${(_a = suggestionItem == null ? void 0 : suggestionItem.file) == null ? void 0 : _a.basename}</span>
-                    <span class="suggestion-sub-text">${(_b = suggestionItem == null ? void 0 : suggestionItem.file) == null ? void 0 : _b.path}</span>
+    if (suggestionItem === void 0) {
+      el.innerHTML = `
+				<span class="suggestion-main-text">${item}</span>
+				<span class="suggestion-sub-text">Unknown</span>
+			`;
+    } else {
+      switch (suggestionItem.type) {
+        case 0 /* File */:
+          el.innerHTML = `
+                    <span class="suggestion-main-text">${suggestionItem?.file?.basename}</span>
+                    <span class="suggestion-sub-text">${suggestionItem?.file?.path}</span>
                 `;
-        break;
-      case 1 /* Alias */:
-        el.innerHTML = `
+          break;
+        case 1 /* Alias */:
+          el.innerHTML = `
                     <span class="suggestion-main-text">${item}</span>
-                    <span class="suggestion-sub-text">${(_c = suggestionItem == null ? void 0 : suggestionItem.file) == null ? void 0 : _c.path}</span>
+                    <span class="suggestion-sub-text">${suggestionItem?.file?.path}</span>
                 `;
-        break;
-      case 2 /* Unresolved */:
-        el.innerHTML = `
+          break;
+        case 2 /* Unresolved */:
+          el.innerHTML = `
                     <span class="suggestion-main-text">${item}</span>
                     <span class="suggestion-sub-text">Unresolved link</span>
                 `;
-        break;
-      default:
-        el.innerHTML = `
-                    <span class="suggestion-main-text">${item}</span>
-                    <span class="suggestion-sub-text">Unknown</span>
-                `;
-        break;
+          break;
+        default:
+          break;
+      }
     }
     el.classList.add("qaFileSuggestionItem");
   }
   selectSuggestion(item) {
+    if (this.inputEl.selectionStart === null)
+      return;
     const cursorPosition = this.inputEl.selectionStart;
     const lastInputLength = this.lastInput.length;
     const currentInputValue = this.inputEl.value;
     let insertedEndPosition = 0;
     const suggestionItem = this.fileMap.get(item);
-    if (suggestionItem.type === 0 /* File */) {
-      insertedEndPosition = this.makeLinkObsidianMethod(
-        suggestionItem == null ? void 0 : suggestionItem.file,
-        currentInputValue,
-        cursorPosition,
-        lastInputLength
-      );
-    } else if (suggestionItem.type === 1 /* Alias */) {
-      insertedEndPosition = this.makeLinkObsidianMethod(
-        suggestionItem == null ? void 0 : suggestionItem.file,
-        currentInputValue,
-        cursorPosition,
-        lastInputLength,
-        item
-      );
+    if (suggestionItem !== void 0 && suggestionItem.file !== void 0) {
+      if (suggestionItem.type === 0 /* File */) {
+        insertedEndPosition = this.makeLinkObsidianMethod(
+          suggestionItem.file,
+          currentInputValue,
+          cursorPosition,
+          lastInputLength
+        );
+      } else if (suggestionItem.type === 1 /* Alias */) {
+        insertedEndPosition = this.makeLinkObsidianMethod(
+          suggestionItem.file,
+          currentInputValue,
+          cursorPosition,
+          lastInputLength,
+          item
+        );
+      }
     } else {
       insertedEndPosition = this.makeLinkManually(
         currentInputValue,
@@ -8798,7 +8913,7 @@ var SilentFileSuggester = class extends TextInputSuggest {
       file,
       "",
       "",
-      alias != null ? alias : ""
+      alias ?? ""
     );
     this.inputEl.value = this.getNewInputValueForFileLink(
       currentInputValue,
@@ -8851,6 +8966,9 @@ var SilentTagSuggester = class extends TextInputSuggest {
     this.tags = Object.keys(app2.metadataCache.getTags());
   }
   getSuggestions(inputStr) {
+    if (this.inputEl.selectionStart === null) {
+      return [];
+    }
     const cursorPosition = this.inputEl.selectionStart;
     const inputBeforeCursor = inputStr.substr(0, cursorPosition);
     const tagMatch = TAG_REGEX.exec(inputBeforeCursor);
@@ -8873,6 +8991,8 @@ var SilentTagSuggester = class extends TextInputSuggest {
     el.setText(item);
   }
   selectSuggestion(item) {
+    if (!this.inputEl.selectionStart)
+      return;
     const cursorPosition = this.inputEl.selectionStart;
     const lastInputLength = this.lastInput.length;
     const currentInputValue = this.inputEl.value;
@@ -8900,7 +9020,7 @@ var SilentTagSuggester = class extends TextInputSuggest {
 };
 
 // src/gui/GenericInputPrompt/GenericInputPrompt.ts
-var GenericInputPrompt = class extends import_obsidian4.Modal {
+var GenericInputPrompt = class extends import_obsidian6.Modal {
   constructor(app2, header, placeholder, value) {
     super(app2);
     this.header = header;
@@ -8913,8 +9033,8 @@ var GenericInputPrompt = class extends import_obsidian4.Modal {
         this.submit();
       }
     };
-    this.placeholder = placeholder;
-    this.input = value;
+    this.placeholder = placeholder ?? "";
+    this.input = value ?? "";
     this.waitForClose = new Promise((resolve, reject) => {
       this.resolvePromise = resolve;
       this.rejectPromise = reject;
@@ -8952,13 +9072,13 @@ var GenericInputPrompt = class extends import_obsidian4.Modal {
     this.createButtonBar(mainContentContainer);
   }
   createInputField(container, placeholder, value) {
-    const textComponent = new import_obsidian4.TextComponent(container);
+    const textComponent = new import_obsidian6.TextComponent(container);
     textComponent.inputEl.style.width = "100%";
-    textComponent.setPlaceholder(placeholder != null ? placeholder : "").setValue(value != null ? value : "").onChange((value2) => this.input = value2).inputEl.addEventListener("keydown", this.submitEnterCallback);
+    textComponent.setPlaceholder(placeholder ?? "").setValue(value ?? "").onChange((value2) => this.input = value2).inputEl.addEventListener("keydown", this.submitEnterCallback);
     return textComponent;
   }
   createButton(container, text2, callback) {
-    const btn = new import_obsidian4.ButtonComponent(container);
+    const btn = new import_obsidian6.ButtonComponent(container);
     btn.setButtonText(text2).onClick(callback);
     return btn;
   }
@@ -9032,11 +9152,12 @@ var log = new LogManager();
 
 // src/gui/suggesters/genericTextSuggester.ts
 var GenericTextSuggester = class extends TextInputSuggest {
-  constructor(app2, inputEl, items) {
+  constructor(app2, inputEl, items, maxSuggestions = Infinity) {
     super(app2, inputEl);
     this.app = app2;
     this.inputEl = inputEl;
     this.items = items;
+    this.maxSuggestions = maxSuggestions;
   }
   getSuggestions(inputStr) {
     const inputLowerCase = inputStr.toLowerCase();
@@ -9046,9 +9167,8 @@ var GenericTextSuggester = class extends TextInputSuggest {
     });
     if (!filtered)
       this.close();
-    if ((filtered == null ? void 0 : filtered.length) > 0)
-      return filtered;
-    return [];
+    const limited = filtered.slice(0, this.maxSuggestions);
+    return limited;
   }
   selectSuggestion(item) {
     this.inputEl.value = item;
@@ -9062,7 +9182,7 @@ var GenericTextSuggester = class extends TextInputSuggest {
 };
 
 // src/gui/ChoiceBuilder/choiceBuilder.ts
-var ChoiceBuilder = class extends import_obsidian5.Modal {
+var ChoiceBuilder = class extends import_obsidian7.Modal {
   constructor(app2) {
     super(app2);
     this.didSubmit = false;
@@ -9079,9 +9199,7 @@ var ChoiceBuilder = class extends import_obsidian5.Modal {
     this.display();
   }
   addFileSearchInputToSetting(setting, value, onChangeCallback) {
-    let component;
     setting.addSearch((searchComponent) => {
-      component = searchComponent;
       searchComponent.setValue(value);
       searchComponent.setPlaceholder("File path");
       const markdownFiles = this.app.vault.getMarkdownFiles().map((f) => f.path);
@@ -9092,7 +9210,7 @@ var ChoiceBuilder = class extends import_obsidian5.Modal {
       );
       searchComponent.onChange(onChangeCallback);
     });
-    return component;
+    return;
   }
   addCenteredChoiceNameHeader(choice) {
     const headerEl = this.contentEl.createEl("h2", {
@@ -9131,10 +9249,10 @@ var ChoiceBuilder = class extends import_obsidian5.Modal {
 };
 
 // src/gui/ChoiceBuilder/templateChoiceBuilder.ts
-var import_obsidian7 = require("obsidian");
+var import_obsidian9 = require("obsidian");
 
 // src/gui/ChoiceBuilder/FolderList.svelte
-function add_css7(target) {
+function add_css6(target) {
   append_styles(target, "svelte-tuapcq", ".quickAddCommandListItem.svelte-tuapcq{display:flex;align-items:center;justify-content:space-between}@media(min-width: 768px){.quickAddFolderListGrid.svelte-tuapcq{display:grid;grid-template-columns:repeat(2, 1fr);column-gap:20px}}.quickAddCommandList.svelte-tuapcq{max-width:50%;margin:12px auto}.clickable.svelte-tuapcq{cursor:pointer}");
 }
 function get_each_context3(ctx, list, i) {
@@ -9146,7 +9264,10 @@ function get_each_context3(ctx, list, i) {
 function create_each_block3(ctx) {
   let div;
   let span0;
-  let t0_value = ctx[4] + "";
+  let t0_value = (
+    /*folder*/
+    ctx[4] + ""
+  );
   let t0;
   let t1;
   let span1;
@@ -9157,7 +9278,13 @@ function create_each_block3(ctx) {
   let dispose;
   icon = new Icon_default({ props: { data: faTrash } });
   function click_handler() {
-    return ctx[3](ctx[4]);
+    return (
+      /*click_handler*/
+      ctx[3](
+        /*folder*/
+        ctx[4]
+      )
+    );
   }
   return {
     c() {
@@ -9187,7 +9314,9 @@ function create_each_block3(ctx) {
     },
     p(new_ctx, dirty) {
       ctx = new_ctx;
-      if ((!current || dirty & 1) && t0_value !== (t0_value = ctx[4] + ""))
+      if ((!current || dirty & /*folders*/
+      1) && t0_value !== (t0_value = /*folder*/
+      ctx[4] + ""))
         set_data(t0, t0_value);
     },
     i(local) {
@@ -9209,10 +9338,13 @@ function create_each_block3(ctx) {
     }
   };
 }
-function create_fragment11(ctx) {
+function create_fragment9(ctx) {
   let div;
   let current;
-  let each_value = ctx[0];
+  let each_value = (
+    /*folders*/
+    ctx[0]
+  );
   let each_blocks = [];
   for (let i = 0; i < each_value.length; i += 1) {
     each_blocks[i] = create_each_block3(get_each_context3(ctx, each_value, i));
@@ -9231,13 +9363,17 @@ function create_fragment11(ctx) {
     m(target, anchor) {
       insert(target, div, anchor);
       for (let i = 0; i < each_blocks.length; i += 1) {
-        each_blocks[i].m(div, null);
+        if (each_blocks[i]) {
+          each_blocks[i].m(div, null);
+        }
       }
       current = true;
     },
     p(ctx2, [dirty]) {
-      if (dirty & 3) {
-        each_value = ctx2[0];
+      if (dirty & /*deleteFolder, folders, faTrash*/
+      3) {
+        each_value = /*folders*/
+        ctx2[0];
         let i;
         for (i = 0; i < each_value.length; i += 1) {
           const child_ctx = get_each_context3(ctx2, each_value, i);
@@ -9280,7 +9416,7 @@ function create_fragment11(ctx) {
     }
   };
 }
-function instance11($$self, $$props, $$invalidate) {
+function instance9($$self, $$props, $$invalidate) {
   let { folders } = $$props;
   let { deleteFolder } = $$props;
   const updateFolders = (newFolders) => {
@@ -9301,15 +9437,15 @@ var FolderList = class extends SvelteComponent {
     init(
       this,
       options,
-      instance11,
-      create_fragment11,
+      instance9,
+      create_fragment9,
       safe_not_equal,
       {
         folders: 0,
         deleteFolder: 1,
         updateFolders: 2
       },
-      add_css7
+      add_css6
     );
   }
   get updateFolders() {
@@ -9318,18 +9454,17 @@ var FolderList = class extends SvelteComponent {
 };
 var FolderList_default = FolderList;
 
-// src/utility.ts
-var import_obsidian6 = require("obsidian");
+// src/utilityObsidian.ts
+var import_obsidian8 = require("obsidian");
 function getTemplater(app2) {
   return app2.plugins.plugins["templater-obsidian"];
 }
 async function replaceTemplaterTemplatesInCreatedFile(app2, file, force = false) {
-  var _a;
   const templater = getTemplater(app2);
-  if (templater && (force || !(templater == null ? void 0 : templater.settings["trigger_on_file_creation"]))) {
-    const active_file = app2.workspace.getActiveFile();
-    if ((_a = templater == null ? void 0 : templater.templater) == null ? void 0 : _a.overwrite_file_commands) {
-      await templater.templater.overwrite_file_commands(file);
+  if (templater && (force || !templater.settings["trigger_on_file_creation"])) {
+    const impl = templater?.templater;
+    if (impl?.overwrite_file_commands) {
+      await impl.overwrite_file_commands(file);
     }
   }
 }
@@ -9337,30 +9472,27 @@ async function templaterParseTemplate(app2, templateContent, targetFile) {
   const templater = getTemplater(app2);
   if (!templater)
     return templateContent;
-  return await templater.templater.parse_template(
-    { target_file: targetFile, run_mode: 4 },
-    templateContent
-  );
+  return await templater.templater.parse_template({ target_file: targetFile, run_mode: 4 }, templateContent);
 }
 function getNaturalLanguageDates(app2) {
   return app2.plugins.plugins["nldates-obsidian"];
 }
 function getDate(input) {
   let duration;
-  if ((input == null ? void 0 : input.offset) !== null && (input == null ? void 0 : input.offset) !== void 0 && typeof input.offset === "number") {
+  if (input?.offset !== null && input?.offset !== void 0 && typeof input.offset === "number") {
     duration = window.moment.duration(input.offset, "days");
   }
-  return (input == null ? void 0 : input.format) ? window.moment().add(duration).format(input.format) : window.moment().add(duration).format("YYYY-MM-DD");
+  return input?.format ? window.moment().add(duration).format(input.format) : window.moment().add(duration).format("YYYY-MM-DD");
 }
 function appendToCurrentLine(toAppend, app2) {
   try {
-    const activeView = app2.workspace.getActiveViewOfType(import_obsidian6.MarkdownView);
+    const activeView = app2.workspace.getActiveViewOfType(import_obsidian8.MarkdownView);
     if (!activeView) {
       log.logError(`unable to append '${toAppend}' to current line.`);
       return;
     }
     activeView.editor.replaceSelection(toAppend);
-  } catch (e) {
+  } catch {
     log.logError(`unable to append '${toAppend}' to current line.`);
   }
 }
@@ -9374,7 +9506,7 @@ function deleteObsidianCommand(app2, commandId) {
   }
 }
 function getAllFolderPathsInVault(app2) {
-  return app2.vault.getAllLoadedFiles().filter((f) => f instanceof import_obsidian6.TFolder).map((folder) => folder.path);
+  return app2.vault.getAllLoadedFiles().filter((f) => f instanceof import_obsidian8.TFolder).map((folder) => folder.path);
 }
 function getUserScriptMemberAccess(fullMemberPath) {
   const fullMemberArray = fullMemberPath.split("::");
@@ -9382,23 +9514,6 @@ function getUserScriptMemberAccess(fullMemberPath) {
     basename: fullMemberArray[0],
     memberAccess: fullMemberArray.slice(1)
   };
-}
-function waitFor(ms) {
-  return new Promise((res) => setTimeout(res, ms));
-}
-function getLinesInString(input) {
-  let lines = [];
-  let tempString = input;
-  while (tempString.contains("\n")) {
-    const lineEndIndex = tempString.indexOf("\n");
-    lines.push(tempString.slice(0, lineEndIndex));
-    tempString = tempString.slice(lineEndIndex + 1);
-  }
-  lines.push(tempString);
-  return lines;
-}
-function escapeRegExp(text2) {
-  return text2.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
 }
 async function openFile(app2, file, optional) {
   let leaf;
@@ -9408,13 +9523,14 @@ async function openFile(app2, file, optional) {
     leaf = app2.workspace.getLeaf("tab");
   }
   await leaf.openFile(file);
-  if (optional == null ? void 0 : optional.focus) {
+  if (optional?.focus) {
     app2.workspace.setActiveLeaf(leaf, { focus: optional.focus });
   }
-  if (optional == null ? void 0 : optional.mode) {
+  if (optional?.mode) {
     const leafViewState = leaf.getViewState();
-    leaf.setViewState({
+    await leaf.setViewState({
       ...leafViewState,
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       state: {
         ...leafViewState.state,
         mode: optional.mode
@@ -9428,10 +9544,10 @@ async function getUserScript(command, app2) {
     log.logError(`failed to load file ${command.path}.`);
     return;
   }
-  if (file instanceof import_obsidian6.TFile) {
-    let req = (s) => window.require && window.require(s);
-    let exp = {};
-    let mod = { exports: exp };
+  if (file instanceof import_obsidian8.TFile) {
+    const req = (s) => window.require && window.require(s);
+    const exp = {};
+    const mod = { exports: exp };
     const fileContent = await app2.vault.read(file);
     const fn2 = window.eval(
       `(function(require, module, exports) { ${fileContent} 
@@ -9460,11 +9576,60 @@ function excludeKeys(sourceObj, except) {
   return obj;
 }
 function getChoiceType(choice) {
-  const isTemplate = (choice2) => choice2.type === "Template" /* Template */;
-  const isMacro = (choice2) => choice2.type === "Macro" /* Macro */;
-  const isCapture = (choice2) => choice2.type === "Capture" /* Capture */;
-  const isMulti = (choice2) => choice2.type === "Multi" /* Multi */;
+  const isTemplate = (choice2) => choice2.type === "Template";
+  const isMacro = (choice2) => choice2.type === "Macro";
+  const isCapture = (choice2) => choice2.type === "Capture";
+  const isMulti = (choice2) => choice2.type === "Multi";
   return isTemplate(choice) || isMacro(choice) || isCapture(choice) || isMulti(choice);
+}
+function isFolder(path) {
+  const abstractItem = app.vault.getAbstractFileByPath(path);
+  return !!abstractItem && abstractItem instanceof import_obsidian8.TFolder;
+}
+function getMarkdownFilesInFolder(folderPath) {
+  return app.vault.getMarkdownFiles().filter((f) => f.path.startsWith(folderPath));
+}
+function getFrontmatterTags(fileCache) {
+  const frontmatter = fileCache.frontmatter;
+  if (!frontmatter)
+    return [];
+  const frontMatterValues = Object.entries(frontmatter);
+  if (!frontMatterValues.length)
+    return [];
+  const tagPairs = frontMatterValues.filter(([key, value]) => {
+    const lowercaseKey = key.toLowerCase();
+    return lowercaseKey === "tags" || lowercaseKey === "tag";
+  });
+  if (!tagPairs)
+    return [];
+  const tags = tagPairs.flatMap(([key, value]) => {
+    if (typeof value === "string") {
+      return value.split(/,|\s+/).map((v) => v.trim());
+    } else if (Array.isArray(value)) {
+      return value;
+    }
+  }).filter((v) => !!v);
+  return tags;
+}
+function getFileTags(file) {
+  const fileCache = app.metadataCache.getFileCache(file);
+  if (!fileCache)
+    return [];
+  const tagsInFile = [];
+  if (fileCache.frontmatter) {
+    tagsInFile.push(...getFrontmatterTags(fileCache));
+  }
+  if (fileCache.tags && Array.isArray(fileCache.tags)) {
+    tagsInFile.push(...fileCache.tags.map((v) => v.tag.replace(/^\#/, "")));
+  }
+  return tagsInFile;
+}
+function getMarkdownFilesWithTag(tag) {
+  const targetTag = tag.replace(/^\#/, "");
+  return app.vault.getMarkdownFiles().filter((f) => {
+    const fileTags = getFileTags(f);
+    return fileTags.includes(targetTag);
+  });
 }
 
 // src/formatters/formatter.ts
@@ -9514,6 +9679,31 @@ var Formatter = class {
     }
     return output;
   }
+  replaceTimeInString(input) {
+    let output = input;
+    while (TIME_REGEX.test(output)) {
+      const timeMatch = TIME_REGEX.exec(output);
+      if (!timeMatch)
+        throw new Error("unable to parse time");
+      output = this.replacer(
+        output,
+        TIME_REGEX,
+        getDate({ format: "HH:mm" })
+      );
+    }
+    while (TIME_REGEX_FORMATTED.test(output)) {
+      const timeMatch = TIME_REGEX_FORMATTED.exec(output);
+      if (!timeMatch)
+        throw new Error("unable to parse time");
+      const format3 = timeMatch[1];
+      output = this.replacer(
+        output,
+        TIME_REGEX_FORMATTED,
+        getDate({ format: format3 })
+      );
+    }
+    return output;
+  }
   async replaceValueInString(input) {
     let output = input;
     while (NAME_VALUE_REGEX.test(output)) {
@@ -9523,9 +9713,22 @@ var Formatter = class {
     }
     return output;
   }
+  async replaceSelectedInString(input) {
+    let output = input;
+    const selectedText = await this.getSelectedText();
+    while (SELECTED_REGEX.test(output)) {
+      output = this.replacer(output, SELECTED_REGEX, selectedText);
+    }
+    return output;
+  }
+  // eslint-disable-next-line @typescript-eslint/require-await
   async replaceLinkToCurrentFileInString(input) {
     const currentFilePathLink = this.getCurrentFileLink();
     let output = input;
+    if (!currentFilePathLink && LINK_TO_CURRENT_FILE_REGEX.test(output)) {
+      throw new Error("unable to get current file path");
+    } else if (!currentFilePathLink)
+      return output;
     while (LINK_TO_CURRENT_FILE_REGEX.test(output))
       output = this.replacer(
         output,
@@ -9566,6 +9769,31 @@ var Formatter = class {
     }
     return output;
   }
+  async replaceFieldVarInString(input) {
+    let output = input;
+    while (FIELD_VAR_REGEX.test(output)) {
+      const match = FIELD_VAR_REGEX.exec(output);
+      if (!match)
+        throw new Error("unable to parse variable");
+      const variableName = match[1];
+      if (variableName) {
+        if (!this.getVariableValue(variableName)) {
+          this.variables.set(
+            variableName,
+            await this.suggestForField(variableName)
+          );
+        }
+        output = this.replacer(
+          output,
+          FIELD_VAR_REGEX,
+          this.getVariableValue(variableName)
+        );
+      } else {
+        break;
+      }
+    }
+    return output;
+  }
   async replaceMathValueInString(input) {
     let output = input;
     while (MATH_VALUE_REGEX.test(output)) {
@@ -9577,7 +9805,10 @@ var Formatter = class {
   async replaceMacrosInString(input) {
     let output = input;
     while (MACRO_REGEX.test(output)) {
-      const macroName = MACRO_REGEX.exec(output)[1];
+      const exec = MACRO_REGEX.exec(output);
+      if (!exec || !exec[1])
+        continue;
+      const macroName = exec[1];
       const macroOutput = await this.getMacroValue(macroName);
       output = this.replacer(
         output,
@@ -9591,6 +9822,8 @@ var Formatter = class {
     let output = input;
     while (DATE_VARIABLE_REGEX.test(output)) {
       const match = DATE_VARIABLE_REGEX.exec(output);
+      if (!match || !match[1] || !match[2])
+        continue;
       const variableName = match[1];
       const dateFormat = match[2];
       if (variableName && dateFormat) {
@@ -9599,9 +9832,10 @@ var Formatter = class {
             variableName,
             await this.promptForVariable(variableName)
           );
-          const parseAttempt = this.getNaturalLanguageDates().parseDate(
-            this.variables.get(variableName)
-          );
+          const nld = this.getNaturalLanguageDates();
+          if (!nld || !nld.parseDate || typeof nld.parseDate !== "function")
+            continue;
+          const parseAttempt = nld.parseDate(this.variables.get(variableName));
           if (parseAttempt)
             this.variables.set(
               variableName,
@@ -9618,6 +9852,7 @@ var Formatter = class {
           output,
           DATE_VARIABLE_REGEX,
           this.variables.get(variableName)
+          // literally setting it above / throwing error if not set
         );
       } else {
         break;
@@ -9628,7 +9863,10 @@ var Formatter = class {
   async replaceTemplateInString(input) {
     let output = input;
     while (TEMPLATE_REGEX.test(output)) {
-      const templatePath = TEMPLATE_REGEX.exec(output)[1];
+      const exec = TEMPLATE_REGEX.exec(output);
+      if (!exec || !exec[1])
+        continue;
+      const templatePath = exec[1];
       const templateContent = await this.getTemplateContent(templatePath);
       output = this.replacer(output, TEMPLATE_REGEX, templateContent);
     }
@@ -9660,9 +9898,11 @@ var FileNameDisplayFormatter = class extends Formatter {
     let output = input;
     output = await this.replaceMacrosInString(output);
     output = this.replaceDateInString(output);
+    output = this.replaceTimeInString(output);
     output = await this.replaceValueInString(output);
     output = await this.replaceDateVariableInString(output);
     output = await this.replaceVariableInString(output);
+    output = await this.replaceFieldVarInString(output);
     return `File Name: ${output}`;
   }
   promptForValue(header) {
@@ -9672,8 +9912,7 @@ var FileNameDisplayFormatter = class extends Formatter {
     return variableName;
   }
   getCurrentFileLink() {
-    var _a, _b;
-    return (_b = (_a = this.app.workspace.getActiveFile()) == null ? void 0 : _a.path) != null ? _b : "";
+    return this.app.workspace.getActiveFile()?.path ?? "";
   }
   getNaturalLanguageDates() {
     return getNaturalLanguageDates(this.app);
@@ -9696,6 +9935,9 @@ var FileNameDisplayFormatter = class extends Formatter {
   async getSelectedText() {
     return "_selected_";
   }
+  suggestForField(variableName) {
+    return `_field: ${variableName}_`;
+  }
 };
 
 // src/gui/suggesters/formatSyntaxSuggester.ts
@@ -9713,13 +9955,15 @@ var FormatSyntaxSuggester = class extends TextInputSuggest {
     this.templatePaths = this.plugin.getTemplateFiles().map((file) => file.path);
   }
   getSuggestions(inputStr) {
+    if (this.inputEl.selectionStart === null)
+      return [];
     const cursorPosition = this.inputEl.selectionStart;
     const lookbehind = 15;
     const inputBeforeCursor = inputStr.substr(
       cursorPosition - lookbehind,
       lookbehind
     );
-    let suggestions = [];
+    const suggestions = [];
     this.processToken(
       inputBeforeCursor,
       (match, type, suggestion) => {
@@ -9745,6 +9989,8 @@ var FormatSyntaxSuggester = class extends TextInputSuggest {
     return suggestions;
   }
   selectSuggestion(item) {
+    if (this.inputEl.selectionStart === null)
+      return;
     const cursorPosition = this.inputEl.selectionStart;
     const lastInputLength = this.lastInput.length;
     const currentInputValue = this.inputEl.value;
@@ -9787,6 +10033,9 @@ var FormatSyntaxSuggester = class extends TextInputSuggest {
     const dateMatch = DATE_SYNTAX_SUGGEST_REGEX.exec(input);
     if (dateMatch)
       callback(dateMatch, 0 /* Date */, DATE_SYNTAX);
+    const timeMatch = TIME_SYNTAX_SUGGEST_REGEX.exec(input);
+    if (timeMatch)
+      callback(timeMatch, 10 /* Time */, TIME_SYNTAX);
     const nameMatch = NAME_SYNTAX_SUGGEST_REGEX.exec(input);
     if (nameMatch)
       callback(nameMatch, 4 /* Name */, NAME_SYNTAX);
@@ -9800,6 +10049,9 @@ var FormatSyntaxSuggester = class extends TextInputSuggest {
         9 /* MathValue */,
         MATH_VALUE_SYNTAX
       );
+    const selectedMatch = SELECTED_SYNTAX_SUGGEST_REGEX.exec(input);
+    if (selectedMatch)
+      callback(selectedMatch, 11 /* Selected */, SELECTED_SYNTAX);
     const variableMatch = VARIABLE_SYNTAX_SUGGEST_REGEX.exec(input);
     if (variableMatch)
       callback(variableMatch, 5 /* Variable */, "{{VALUE:}}");
@@ -9879,11 +10131,11 @@ var TemplateChoiceBuilder = class extends ChoiceBuilder {
       this.addOpenFileInNewTabSetting();
   }
   addTemplatePathSetting() {
-    const templatePathSetting = new import_obsidian7.Setting(this.contentEl).setName("Template Path").setDesc("Path to the Template.").addSearch((search2) => {
+    new import_obsidian9.Setting(this.contentEl).setName("Template Path").setDesc("Path to the Template.").addSearch((search2) => {
       const templates = this.plugin.getTemplateFiles().map((f) => f.path);
       search2.setValue(this.choice.templatePath);
       search2.setPlaceholder("Template path");
-      new GenericTextSuggester(this.app, search2.inputEl, templates);
+      new GenericTextSuggester(this.app, search2.inputEl, templates, 50);
       search2.onChange((value) => {
         this.choice.templatePath = value;
       });
@@ -9891,7 +10143,7 @@ var TemplateChoiceBuilder = class extends ChoiceBuilder {
   }
   addFileNameFormatSetting() {
     let textField;
-    const enableSetting = new import_obsidian7.Setting(this.contentEl);
+    const enableSetting = new import_obsidian9.Setting(this.contentEl);
     enableSetting.setName("File Name Format").setDesc("Set the file name format.").addToggle((toggleComponent) => {
       toggleComponent.setValue(this.choice.fileNameFormat.enabled).onChange((value) => {
         this.choice.fileNameFormat.enabled = value;
@@ -9900,10 +10152,10 @@ var TemplateChoiceBuilder = class extends ChoiceBuilder {
     });
     const formatDisplay = this.contentEl.createEl("span");
     const displayFormatter = new FileNameDisplayFormatter(this.app);
-    (async () => formatDisplay.textContent = await displayFormatter.format(
+    void (async () => formatDisplay.textContent = await displayFormatter.format(
       this.choice.fileNameFormat.format
     ))();
-    const formatInput = new import_obsidian7.TextComponent(this.contentEl);
+    const formatInput = new import_obsidian9.TextComponent(this.contentEl);
     formatInput.setPlaceholder("File name format");
     textField = formatInput;
     formatInput.inputEl.style.width = "100%";
@@ -9922,8 +10174,7 @@ var TemplateChoiceBuilder = class extends ChoiceBuilder {
     );
   }
   addFolderSetting() {
-    var _a, _b, _c, _d;
-    const folderSetting = new import_obsidian7.Setting(this.contentEl);
+    const folderSetting = new import_obsidian9.Setting(this.contentEl);
     folderSetting.setName("Create in folder").setDesc(
       "Create the file in the specified folder. If multiple folders are specified, you will be prompted for which folder to create the file in."
     ).addToggle((toggle) => {
@@ -9936,51 +10187,45 @@ var TemplateChoiceBuilder = class extends ChoiceBuilder {
     if (!this.choice.folder.enabled) {
       return;
     }
-    if (!((_a = this.choice.folder) == null ? void 0 : _a.createInSameFolderAsActiveFile)) {
+    if (!this.choice.folder?.createInSameFolderAsActiveFile) {
       const chooseFolderWhenCreatingNoteContainer = this.contentEl.createDiv(
         "chooseFolderWhenCreatingNoteContainer"
       );
       chooseFolderWhenCreatingNoteContainer.createEl("span", {
         text: "Choose folder when creating a new note"
       });
-      const chooseFolderWhenCreatingNote = new import_obsidian7.ToggleComponent(chooseFolderWhenCreatingNoteContainer);
-      chooseFolderWhenCreatingNote.setValue((_b = this.choice.folder) == null ? void 0 : _b.chooseWhenCreatingNote).onChange((value) => {
+      const chooseFolderWhenCreatingNote = new import_obsidian9.ToggleComponent(chooseFolderWhenCreatingNoteContainer);
+      chooseFolderWhenCreatingNote.setValue(this.choice.folder?.chooseWhenCreatingNote).onChange((value) => {
         this.choice.folder.chooseWhenCreatingNote = value;
         this.reload();
       });
-      if (!((_c = this.choice.folder) == null ? void 0 : _c.chooseWhenCreatingNote)) {
+      if (!this.choice.folder?.chooseWhenCreatingNote) {
         this.addFolderSelector();
       }
       const chooseFolderFromSubfolderContainer = this.contentEl.createDiv("chooseFolderFromSubfolderContainer");
-      const stn = new import_obsidian7.Setting(chooseFolderFromSubfolderContainer);
+      const stn = new import_obsidian9.Setting(chooseFolderFromSubfolderContainer);
       stn.setName("Include subfolders").setDesc(
         "Get prompted to choose from both the selected folders and their subfolders when creating the note."
       ).addToggle(
-        (toggle) => {
-          var _a2;
-          return toggle.setValue((_a2 = this.choice.folder) == null ? void 0 : _a2.chooseFromSubfolders).onChange((value) => {
-            this.choice.folder.chooseFromSubfolders = value;
-            this.reload();
-          });
-        }
+        (toggle) => toggle.setValue(this.choice.folder?.chooseFromSubfolders).onChange((value) => {
+          this.choice.folder.chooseFromSubfolders = value;
+          this.reload();
+        })
       );
     }
-    if (!((_d = this.choice.folder) == null ? void 0 : _d.chooseWhenCreatingNote)) {
-      const createInSameFolderAsActiveFileSetting = new import_obsidian7.Setting(
+    if (!this.choice.folder?.chooseWhenCreatingNote) {
+      const createInSameFolderAsActiveFileSetting = new import_obsidian9.Setting(
         this.contentEl
       );
       createInSameFolderAsActiveFileSetting.setName("Create in same folder as active file").setDesc(
         "Creates the file in the same folder as the currently active file. Will not create the file if there is no active file."
       ).addToggle(
-        (toggle) => {
-          var _a2;
-          return toggle.setValue(
-            (_a2 = this.choice.folder) == null ? void 0 : _a2.createInSameFolderAsActiveFile
-          ).onChange((value) => {
-            this.choice.folder.createInSameFolderAsActiveFile = value;
-            this.reload();
-          });
-        }
+        (toggle) => toggle.setValue(
+          this.choice.folder?.createInSameFolderAsActiveFile
+        ).onChange((value) => {
+          this.choice.folder.createInSameFolderAsActiveFile = value;
+          this.reload();
+        })
       );
     }
   }
@@ -10002,7 +10247,7 @@ var TemplateChoiceBuilder = class extends ChoiceBuilder {
     const inputContainer = folderSelectionContainer.createDiv(
       "folderInputContainer"
     );
-    const folderInput = new import_obsidian7.TextComponent(inputContainer);
+    const folderInput = new import_obsidian9.TextComponent(inputContainer);
     folderInput.inputEl.style.width = "100%";
     folderInput.setPlaceholder("Folder path");
     const allFolders = getAllFolderPathsInVault(this.app);
@@ -10028,21 +10273,23 @@ var TemplateChoiceBuilder = class extends ChoiceBuilder {
         addFolder();
       }
     });
-    const addButton = new import_obsidian7.ButtonComponent(inputContainer);
+    const addButton = new import_obsidian9.ButtonComponent(inputContainer);
     addButton.setCta().setButtonText("Add").onClick((evt) => {
       addFolder();
     });
   }
   addAppendLinkSetting() {
-    const appendLinkSetting = new import_obsidian7.Setting(this.contentEl);
+    const appendLinkSetting = new import_obsidian9.Setting(this.contentEl);
     appendLinkSetting.setName("Append link").setDesc("Append link to created file to current file.").addToggle((toggle) => {
       toggle.setValue(this.choice.appendLink);
       toggle.onChange((value) => this.choice.appendLink = value);
     });
   }
   addFileAlreadyExistsSetting() {
-    const fileAlreadyExistsSetting = new import_obsidian7.Setting(this.contentEl);
-    fileAlreadyExistsSetting.setName("Set default behavior if file already exists").setDesc("Set default behavior rather then prompting user on what to do if a file already exists.").addToggle((toggle) => {
+    const fileAlreadyExistsSetting = new import_obsidian9.Setting(this.contentEl);
+    fileAlreadyExistsSetting.setName("Set default behavior if file already exists").setDesc(
+      "Set default behavior rather then prompting user on what to do if a file already exists."
+    ).addToggle((toggle) => {
       toggle.setValue(this.choice.setFileExistsBehavior);
       toggle.onChange((value) => {
         this.choice.setFileExistsBehavior = value;
@@ -10060,7 +10307,7 @@ var TemplateChoiceBuilder = class extends ChoiceBuilder {
     });
   }
   addOpenFileSetting() {
-    const noOpenSetting = new import_obsidian7.Setting(this.contentEl);
+    const noOpenSetting = new import_obsidian9.Setting(this.contentEl);
     noOpenSetting.setName("Open").setDesc("Open the created file.").addToggle((toggle) => {
       toggle.setValue(this.choice.openFile);
       toggle.onChange((value) => {
@@ -10077,7 +10324,7 @@ var TemplateChoiceBuilder = class extends ChoiceBuilder {
     });
   }
   addOpenFileInNewTabSetting() {
-    const newTabSetting = new import_obsidian7.Setting(this.contentEl);
+    const newTabSetting = new import_obsidian9.Setting(this.contentEl);
     newTabSetting.setName("New split").setDesc("Split your editor and open file in new split.").addToggle((toggle) => {
       toggle.setValue(this.choice.openFileInNewTab.enabled);
       toggle.onChange(
@@ -10092,7 +10339,7 @@ var TemplateChoiceBuilder = class extends ChoiceBuilder {
         (value) => this.choice.openFileInNewTab.direction = value
       );
     });
-    new import_obsidian7.Setting(this.contentEl).setName("Focus new pane").setDesc("Focus the opened tab immediately after opening").addToggle(
+    new import_obsidian9.Setting(this.contentEl).setName("Focus new pane").setDesc("Focus the opened tab immediately after opening").addToggle(
       (toggle) => toggle.setValue(this.choice.openFileInNewTab.focus).onChange(
         (value) => this.choice.openFileInNewTab.focus = value
       )
@@ -10101,10 +10348,10 @@ var TemplateChoiceBuilder = class extends ChoiceBuilder {
 };
 
 // src/gui/ChoiceBuilder/captureChoiceBuilder.ts
-var import_obsidian18 = require("obsidian");
+var import_obsidian23 = require("obsidian");
 
 // src/engine/QuickAddEngine.ts
-var import_obsidian8 = require("obsidian");
+var import_obsidian10 = require("obsidian");
 var QuickAddEngine = class {
   constructor(app2) {
     this.app = app2;
@@ -10126,37 +10373,36 @@ var QuickAddEngine = class {
   async fileExists(filePath) {
     return await this.app.vault.adapter.exists(filePath);
   }
-  async getFileByPath(filePath) {
-    const file = await this.app.vault.getAbstractFileByPath(filePath);
+  getFileByPath(filePath) {
+    const file = this.app.vault.getAbstractFileByPath(filePath);
     if (!file) {
       log.logError(`${filePath} not found`);
       throw new Error(`${filePath} not found`);
     }
-    if (file instanceof import_obsidian8.TFolder) {
+    if (file instanceof import_obsidian10.TFolder) {
       log.logError(`${filePath} found but it's a folder`);
       throw new Error(`${filePath} found but it's a folder`);
     }
-    if (!(file instanceof import_obsidian8.TFile))
+    if (!(file instanceof import_obsidian10.TFile))
       throw new Error(`${filePath} is not a file`);
     return file;
   }
   async createFileWithInput(filePath, fileContent) {
-    const dirMatch = filePath.match(/(.*)[\/\\]/);
+    const dirMatch = filePath.match(/(.*)[/\\]/);
     let dirName = "";
     if (dirMatch)
       dirName = dirMatch[1];
-    if (await this.app.vault.adapter.exists(dirName)) {
-      return await this.app.vault.create(filePath, fileContent);
-    } else {
+    const dir = app.vault.getAbstractFileByPath(dirName);
+    if (!dir || !(dir instanceof import_obsidian10.TFolder)) {
       await this.createFolder(dirName);
-      return await this.app.vault.create(filePath, fileContent);
     }
+    return await this.app.vault.create(filePath, fileContent);
   }
 };
 
 // src/gui/GenericSuggester/genericSuggester.ts
-var import_obsidian9 = require("obsidian");
-var GenericSuggester = class extends import_obsidian9.FuzzySuggestModal {
+var import_obsidian11 = require("obsidian");
+var GenericSuggester = class extends import_obsidian11.FuzzySuggestModal {
   constructor(app2, displayItems, items) {
     super(app2);
     this.displayItems = displayItems;
@@ -10164,6 +10410,14 @@ var GenericSuggester = class extends import_obsidian9.FuzzySuggestModal {
     this.promise = new Promise((resolve, reject) => {
       this.resolvePromise = resolve;
       this.rejectPromise = reject;
+    });
+    this.inputEl.addEventListener("keydown", (event) => {
+      if (event.code !== "Tab" || !("chooser" in this)) {
+        return;
+      }
+      const { values, selectedItem } = this.chooser;
+      const { value } = this.inputEl;
+      this.inputEl.value = values[selectedItem].item ?? value;
     });
     this.open();
   }
@@ -10195,9 +10449,49 @@ var GenericSuggester = class extends import_obsidian9.FuzzySuggestModal {
 // src/engine/MacroChoiceEngine.ts
 var obsidian = __toESM(require("obsidian"));
 
+// src/gui/GenericInfoDialog/GenericInfoDialog.ts
+var import_obsidian12 = require("obsidian");
+var GenericInfoDialog = class extends import_obsidian12.Modal {
+  constructor(app2, header, text2) {
+    super(app2);
+    this.header = header;
+    this.text = text2;
+    this.waitForClose = new Promise((resolve) => {
+      this.resolvePromise = resolve;
+    });
+    this.open();
+    this.display();
+  }
+  static Show(app2, header, text2) {
+    const newPromptModal = new GenericInfoDialog(app2, header, text2);
+    return newPromptModal.waitForClose;
+  }
+  display() {
+    this.contentEl.empty();
+    this.titleEl.textContent = this.header;
+    if (String.isString(this.text))
+      this.contentEl.createEl("p", { text: this.text });
+    else if (Array.isArray(this.text))
+      this.text.forEach(
+        (line) => this.contentEl.createEl("p", { text: line })
+      );
+    const buttonsDiv = this.contentEl.createDiv();
+    const noButton = new import_obsidian12.ButtonComponent(buttonsDiv).setButtonText("OK").onClick(() => this.close());
+    Object.assign(buttonsDiv.style, {
+      display: "flex",
+      justifyContent: "flex-end"
+    });
+    noButton.buttonEl.focus();
+  }
+  onClose() {
+    super.onClose();
+    this.resolvePromise();
+  }
+};
+
 // src/gui/GenericCheckboxPrompt/genericCheckboxPrompt.ts
-var import_obsidian10 = require("obsidian");
-var GenericCheckboxPrompt = class extends import_obsidian10.Modal {
+var import_obsidian13 = require("obsidian");
+var GenericCheckboxPrompt = class extends import_obsidian13.Modal {
   constructor(app2, items, selectedItems = []) {
     super(app2);
     this.items = items;
@@ -10237,10 +10531,10 @@ var GenericCheckboxPrompt = class extends import_obsidian10.Modal {
   }
   addCheckboxRow(item, container) {
     const checkboxRow = container.createDiv("checkboxRow");
-    const text2 = checkboxRow.createEl("span", {
+    checkboxRow.createEl("span", {
       text: item
     });
-    const checkbox = new import_obsidian10.ToggleComponent(checkboxRow);
+    const checkbox = new import_obsidian13.ToggleComponent(checkboxRow);
     checkbox.setTooltip(`Toggle ${item}`).setValue(this._selectedItems.contains(item)).onChange((value) => {
       if (value)
         this._selectedItems.push(item);
@@ -10256,7 +10550,7 @@ var GenericCheckboxPrompt = class extends import_obsidian10.Modal {
     const submitButtonContainer = this.contentEl.createDiv(
       "submitButtonContainer"
     );
-    const submitButton = new import_obsidian10.ButtonComponent(
+    const submitButton = new import_obsidian13.ButtonComponent(
       submitButtonContainer
     );
     submitButton.setButtonText("Submit").setCta().onClick((evt) => {
@@ -10268,11 +10562,11 @@ var GenericCheckboxPrompt = class extends import_obsidian10.Modal {
 };
 
 // src/quickAddApi.ts
-var import_obsidian12 = require("obsidian");
+var import_obsidian15 = require("obsidian");
 
 // src/gui/GenericWideInputPrompt/GenericWideInputPrompt.ts
-var import_obsidian11 = require("obsidian");
-var GenericWideInputPrompt = class extends import_obsidian11.Modal {
+var import_obsidian14 = require("obsidian");
+var GenericWideInputPrompt = class extends import_obsidian14.Modal {
   constructor(app2, header, placeholder, value) {
     super(app2);
     this.header = header;
@@ -10285,8 +10579,8 @@ var GenericWideInputPrompt = class extends import_obsidian11.Modal {
         this.submit();
       }
     };
-    this.placeholder = placeholder;
-    this.input = value;
+    this.placeholder = placeholder ?? "";
+    this.input = value ?? "";
     this.waitForClose = new Promise((resolve, reject) => {
       this.resolvePromise = resolve;
       this.rejectPromise = reject;
@@ -10324,13 +10618,13 @@ var GenericWideInputPrompt = class extends import_obsidian11.Modal {
     this.createButtonBar(mainContentContainer);
   }
   createInputField(container, placeholder, value) {
-    const textComponent = new import_obsidian11.TextAreaComponent(container);
+    const textComponent = new import_obsidian14.TextAreaComponent(container);
     textComponent.inputEl.classList.add("wideInputPromptInputEl");
-    textComponent.setPlaceholder(placeholder != null ? placeholder : "").setValue(value != null ? value : "").onChange((value2) => this.input = value2).inputEl.addEventListener("keydown", this.submitEnterCallback);
+    textComponent.setPlaceholder(placeholder ?? "").setValue(value ?? "").onChange((value2) => this.input = value2).inputEl.addEventListener("keydown", this.submitEnterCallback);
     return textComponent;
   }
   createButton(container, text2, callback) {
-    const btn = new import_obsidian11.ButtonComponent(container);
+    const btn = new import_obsidian14.ButtonComponent(container);
     btn.setButtonText(text2).onClick(callback);
     return btn;
   }
@@ -10395,6 +10689,9 @@ var QuickAddApi = class {
       yesNoPrompt: (header, text2) => {
         return this.yesNoPrompt(app2, header, text2);
       },
+      infoDialog: (header, text2) => {
+        return this.infoDialog(app2, header, text2);
+      },
       suggester: (displayItems, actualItems) => {
         return this.suggester(app2, displayItems, actualItems);
       },
@@ -10413,12 +10710,21 @@ var QuickAddApi = class {
         await choiceExecutor.execute(choice);
         choiceExecutor.variables.clear();
       },
-      format: async (input) => {
-        return new CompleteFormatter(
+      format: async (input, variables, shouldClearVariables = true) => {
+        if (variables) {
+          Object.keys(variables).forEach((key) => {
+            choiceExecutor.variables.set(key, variables[key]);
+          });
+        }
+        const output = await new CompleteFormatter(
           app2,
           plugin,
           choiceExecutor
         ).formatFileContent(input);
+        if (shouldClearVariables) {
+          choiceExecutor.variables.clear();
+        }
+        return output;
       },
       utility: {
         getClipboard: async () => {
@@ -10428,7 +10734,7 @@ var QuickAddApi = class {
           return await navigator.clipboard.writeText(text2);
         },
         getSelectedText: () => {
-          const activeView = app2.workspace.getActiveViewOfType(import_obsidian12.MarkdownView);
+          const activeView = app2.workspace.getActiveViewOfType(import_obsidian15.MarkdownView);
           if (!activeView) {
             log.logError(
               "no active view - could not get selected text."
@@ -10463,7 +10769,7 @@ var QuickAddApi = class {
         placeholder,
         value
       );
-    } catch (e) {
+    } catch {
       return void 0;
     }
   }
@@ -10475,14 +10781,21 @@ var QuickAddApi = class {
         placeholder,
         value
       );
-    } catch (e) {
+    } catch {
       return void 0;
     }
   }
   static async yesNoPrompt(app2, header, text2) {
     try {
       return await GenericYesNoPrompt.Prompt(app2, header, text2);
-    } catch (e) {
+    } catch {
+      return void 0;
+    }
+  }
+  static async infoDialog(app2, header, text2) {
+    try {
+      return await GenericInfoDialog.Show(app2, header, text2);
+    } catch {
       return void 0;
     }
   }
@@ -10499,14 +10812,14 @@ var QuickAddApi = class {
         displayedItems,
         actualItems
       );
-    } catch (e) {
+    } catch {
       return void 0;
     }
   }
   static async checkboxPrompt(app2, items, selectedItems) {
     try {
       return await GenericCheckboxPrompt.Open(app2, items, selectedItems);
-    } catch (e) {
+    } catch {
       return void 0;
     }
   }
@@ -10526,7 +10839,7 @@ var Command = class {
 };
 
 // src/types/macros/EditorCommands/EditorCommand.ts
-var import_obsidian13 = require("obsidian");
+var import_obsidian16 = require("obsidian");
 var EditorCommand = class extends Command {
   constructor(type) {
     super(type, "EditorCommand" /* EditorCommand */);
@@ -10536,7 +10849,7 @@ var EditorCommand = class extends Command {
     return this.getActiveMarkdownView(app2).editor.getSelection();
   }
   static getActiveMarkdownView(app2) {
-    const activeView = app2.workspace.getActiveViewOfType(import_obsidian13.MarkdownView);
+    const activeView = app2.workspace.getActiveViewOfType(import_obsidian16.MarkdownView);
     if (!activeView) {
       log.logError("no active markdown view.");
       throw new Error("no active markdown view.");
@@ -10611,7 +10924,7 @@ var SelectLinkOnActiveLineCommand = class extends EditorCommand {
   constructor() {
     super("Select link on active line" /* SelectLinkOnActiveLine */);
   }
-  static async run(app2) {
+  static run(app2) {
     const activeView = EditorCommand.getActiveMarkdownView(app2);
     const { line: lineNumber } = activeView.editor.getCursor();
     const line = activeView.editor.getLine(lineNumber);
@@ -10629,6 +10942,280 @@ var SelectLinkOnActiveLineCommand = class extends EditorCommand {
   }
 };
 
+// src/utility.ts
+function waitFor(ms) {
+  return new Promise((res) => setTimeout(res, ms));
+}
+function getLinesInString(input) {
+  const lines = [];
+  let tempString = input;
+  while (tempString.includes("\n")) {
+    const lineEndIndex = tempString.indexOf("\n");
+    lines.push(tempString.slice(0, lineEndIndex));
+    tempString = tempString.slice(lineEndIndex + 1);
+  }
+  lines.push(tempString);
+  return lines;
+}
+function escapeRegExp(text2) {
+  return text2.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&");
+}
+
+// src/ai/AIAssistant.ts
+var import_obsidian17 = require("obsidian");
+
+// src/utils/invariant.ts
+function invariant(condition, message) {
+  if (!condition) {
+    throw new Error(typeof message === "function" ? message() : message);
+  }
+  return;
+}
+
+// node_modules/.pnpm/zustand@4.3.8/node_modules/zustand/esm/vanilla.mjs
+var import_meta = {};
+var createStoreImpl = (createState) => {
+  let state;
+  const listeners = /* @__PURE__ */ new Set();
+  const setState = (partial, replace) => {
+    const nextState = typeof partial === "function" ? partial(state) : partial;
+    if (!Object.is(nextState, state)) {
+      const previousState = state;
+      state = (replace != null ? replace : typeof nextState !== "object") ? nextState : Object.assign({}, state, nextState);
+      listeners.forEach((listener) => listener(state, previousState));
+    }
+  };
+  const getState = () => state;
+  const subscribe = (listener) => {
+    listeners.add(listener);
+    return () => listeners.delete(listener);
+  };
+  const destroy = () => {
+    if ((import_meta.env && import_meta.env.MODE) !== "production") {
+      console.warn(
+        "[DEPRECATED] The `destroy` method will be unsupported in a future version. Instead use unsubscribe function returned by subscribe. Everything will be garbage-collected if store is garbage-collected."
+      );
+    }
+    listeners.clear();
+  };
+  const api = { setState, getState, subscribe, destroy };
+  state = createState(setState, getState, api);
+  return api;
+};
+var createStore = (createState) => createState ? createStoreImpl(createState) : createStoreImpl;
+
+// src/types/macros/QuickAddMacro.ts
+var QuickAddMacro = class {
+  constructor(name) {
+    this.name = name;
+    this.id = v4_default();
+    this.commands = [];
+    this.runOnStartup = false;
+  }
+};
+
+// src/settingsStore.ts
+var settingsStore = function() {
+  const useSettingsStore = createStore((set, get2) => ({
+    ...DEFAULT_SETTINGS,
+    setSettings: (settings) => set((state) => ({ ...state, ...settings }))
+  }));
+  const { getState, setState, subscribe } = useSettingsStore;
+  return {
+    getState,
+    setState,
+    subscribe,
+    setMacro: (macroId, macro) => {
+      setState((state) => {
+        const macroIdx = state.macros.findIndex(
+          (m) => m.id === macroId
+        );
+        if (macroIdx === -1) {
+          throw new Error("Macro not found");
+        }
+        const newState = {
+          ...state,
+          macros: [...state.macros]
+        };
+        newState.macros[macroIdx] = macro;
+        return newState;
+      });
+    },
+    createMacro: (name) => {
+      if (name === "" || getState().macros.some((m) => m.name === name)) {
+        throw new Error("Invalid macro name");
+      }
+      const macro = new QuickAddMacro(name);
+      setState((state) => ({
+        ...state,
+        macros: [...state.macros, macro]
+      }));
+      return macro;
+    },
+    getMacro: (macroId) => {
+      return getState().macros.find((m) => m.id === macroId);
+    }
+  };
+}();
+
+// src/ai/AIAssistant.ts
+var noticeMsg = (task, message) => `Assistant is ${task}.${message ? `
+
+${message}` : ""}`;
+async function repeatUntilResolved(callback, promise, interval) {
+  if (typeof callback !== "function") {
+    throw new TypeError("Callback must be a function.");
+  }
+  if (!(promise instanceof Promise)) {
+    throw new TypeError("Promise must be an instance of Promise.");
+  }
+  if (typeof interval !== "number" || interval <= 0) {
+    throw new TypeError("Interval must be a positive number.");
+  }
+  let isDone = false;
+  promise.finally(() => {
+    isDone = true;
+  });
+  while (!isDone) {
+    callback();
+    await sleep(interval);
+  }
+}
+async function getTargetPromptTemplate(userDefinedPromptTemplate, promptTemplates) {
+  let targetFile;
+  if (userDefinedPromptTemplate.enable) {
+    targetFile = promptTemplates.find(
+      (item) => item.path.endsWith(userDefinedPromptTemplate.name)
+    );
+  } else {
+    const basenames = promptTemplates.map((f) => f.basename);
+    targetFile = await GenericSuggester.Suggest(
+      app,
+      basenames,
+      promptTemplates
+    );
+  }
+  invariant(targetFile, "Prompt template does not exist");
+  const targetTemplatePath = targetFile.path;
+  const file = app.vault.getAbstractFileByPath(targetTemplatePath);
+  invariant(file instanceof import_obsidian17.TFile, `${targetTemplatePath} is not a file`);
+  const targetTemplateContent = await app.vault.cachedRead(file);
+  return [targetFile.basename, targetTemplateContent];
+}
+async function runAIAssistant(settings, formatter) {
+  if (settingsStore.getState().disableOnlineFeatures) {
+    throw new Error(
+      "Blocking request to OpenAI: Online features are disabled in settings."
+    );
+  }
+  const notice = settings.showAssistantMessages ? new import_obsidian17.Notice(noticeMsg("starting", ""), 1e6) : { setMessage: () => {
+  }, hide: () => {
+  } };
+  try {
+    const {
+      apiKey,
+      model,
+      outputVariableName: outputVariable,
+      promptTemplate,
+      systemPrompt,
+      promptTemplateFolder
+    } = settings;
+    const promptTemplates = getMarkdownFilesInFolder(promptTemplateFolder);
+    const [targetKey, targetPrompt] = await getTargetPromptTemplate(
+      promptTemplate,
+      promptTemplates
+    );
+    notice.setMessage(
+      noticeMsg("waiting", "QuickAdd is formatting the prompt template.")
+    );
+    const formattedPrompt = await formatter(targetPrompt);
+    const promptingMsg = [
+      "prompting",
+      `Using prompt template "${targetKey}".`
+    ];
+    notice.setMessage(noticeMsg(promptingMsg[0], promptingMsg[1]));
+    const makeRequest = OpenAIRequest(
+      apiKey,
+      model,
+      systemPrompt,
+      settings.modelOptions
+    );
+    const res = makeRequest(formattedPrompt);
+    const time_start = Date.now();
+    await repeatUntilResolved(
+      () => {
+        notice.setMessage(
+          noticeMsg(
+            promptingMsg[0],
+            `${promptingMsg[1]} (${((Date.now() - time_start) / 1e3).toFixed(2)}s)`
+          )
+        );
+      },
+      res,
+      100
+    );
+    const result = await res;
+    const time_end = Date.now();
+    notice.setMessage(
+      noticeMsg(`finished`, `Took ${(time_end - time_start) / 1e3}s.`)
+    );
+    const output = result.choices[0].message.content;
+    const outputInMarkdownBlockQuote = ("> " + output).replace(
+      /\n/g,
+      "\n> "
+    );
+    const variables = {
+      [outputVariable]: output,
+      // For people that want the output in callouts or quote blocks.
+      [`${outputVariable}-quoted`]: outputInMarkdownBlockQuote
+    };
+    setTimeout(() => notice.hide(), 5e3);
+    return variables;
+  } catch (error) {
+    notice.setMessage(
+      noticeMsg("dead", error.message)
+    );
+    setTimeout(() => notice.hide(), 5e3);
+  }
+}
+function OpenAIRequest(apiKey, model, systemPrompt, modelParams = {}) {
+  return async function makeRequest(prompt) {
+    if (settingsStore.getState().disableOnlineFeatures) {
+      throw new Error(
+        "Blocking request to OpenAI: Online features are disabled in settings."
+      );
+    }
+    try {
+      const response = await (0, import_obsidian17.requestUrl)({
+        url: `https://api.openai.com/v1/chat/completions`,
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${apiKey}`
+        },
+        body: JSON.stringify({
+          model,
+          ...modelParams,
+          messages: [
+            { role: "system", content: systemPrompt },
+            { role: "user", content: prompt }
+          ]
+        })
+      });
+      return response.json;
+    } catch (error) {
+      console.log(error);
+      throw new Error(
+        `Error while making request to OpenAI API: ${error.message}`
+      );
+    }
+  };
+}
+
+// src/ai/models.ts
+var models = ["gpt-3.5-turbo", "gpt-4", "text-davinci-003"];
+var models_and_ask_me = [...models, "Ask me"];
+
 // src/engine/MacroChoiceEngine.ts
 var MacroChoiceEngine = class extends QuickAddChoiceEngine {
   constructor(app2, plugin, choice, macros, choiceExecutor, variables) {
@@ -10643,15 +11230,14 @@ var MacroChoiceEngine = class extends QuickAddChoiceEngine {
       variables: {},
       obsidian
     };
-    variables == null ? void 0 : variables.forEach((value, key) => {
+    variables?.forEach((value, key) => {
       this.params.variables[key] = value;
     });
   }
   async run() {
-    var _a, _b, _c;
-    const macroId = (_c = this.choice.macroId) != null ? _c : (_b = (_a = this.choice) == null ? void 0 : _a.macro) == null ? void 0 : _b.id;
+    const macroId = this.choice.macroId ?? this.choice?.macro?.id;
     const macro = this.macros.find((m) => m.id === macroId);
-    if (!macro || !(macro == null ? void 0 : macro.commands)) {
+    if (!macro || !macro?.commands) {
       log.logError(
         `No commands in the selected macro. Did you select a macro for '${this.choice.name}'?`
       );
@@ -10661,21 +11247,24 @@ var MacroChoiceEngine = class extends QuickAddChoiceEngine {
   }
   async executeCommands(commands2) {
     for (const command of commands2) {
-      if ((command == null ? void 0 : command.type) === "Obsidian" /* Obsidian */)
-        await this.executeObsidianCommand(command);
-      if ((command == null ? void 0 : command.type) === "UserScript" /* UserScript */)
+      if (command?.type === "Obsidian" /* Obsidian */)
+        this.executeObsidianCommand(command);
+      if (command?.type === "UserScript" /* UserScript */)
         await this.executeUserScript(command);
-      if ((command == null ? void 0 : command.type) === "Choice" /* Choice */)
+      if (command?.type === "Choice" /* Choice */)
         await this.executeChoice(command);
-      if ((command == null ? void 0 : command.type) === "Wait" /* Wait */) {
+      if (command?.type === "Wait" /* Wait */) {
         const waitCommand = command;
         await waitFor(waitCommand.time);
       }
-      if ((command == null ? void 0 : command.type) === "NestedChoice" /* NestedChoice */) {
+      if (command?.type === "NestedChoice" /* NestedChoice */) {
         await this.executeNestedChoice(command);
       }
-      if ((command == null ? void 0 : command.type) === "EditorCommand" /* EditorCommand */) {
+      if (command?.type === "EditorCommand" /* EditorCommand */) {
         await this.executeEditorCommand(command);
+      }
+      if (command?.type === "AIAssistant" /* AIAssistant */) {
+        await this.executeAIAssistant(command);
       }
       Object.keys(this.params.variables).forEach((key) => {
         this.choiceExecutor.variables.set(
@@ -10685,6 +11274,8 @@ var MacroChoiceEngine = class extends QuickAddChoiceEngine {
       });
     }
   }
+  // Slightly modified from Templater's user script engine:
+  // https://github.com/SilentVoid13/Templater/blob/master/src/UserTemplates/UserTemplateParser.ts
   async executeUserScript(command) {
     const userScript = await getUserScript(command, this.app);
     if (!userScript) {
@@ -10694,22 +11285,36 @@ var MacroChoiceEngine = class extends QuickAddChoiceEngine {
     if (userScript.settings) {
       this.userScriptCommand = command;
     }
-    await this.userScriptDelegator(userScript);
+    try {
+      await this.userScriptDelegator(userScript);
+    } catch (error) {
+      log.logError(
+        `failed to run user script ${command.name}. Error:
+
+${error.message}`
+      );
+    }
     if (this.userScriptCommand)
       this.userScriptCommand = null;
   }
   async runScriptWithSettings(userScript, command) {
-    if (userScript.entry) {
-      await this.onExportIsFunction(userScript.entry, command.settings);
-    } else {
-      await this.onExportIsFunction(userScript, command.settings);
+    if (typeof userScript !== "function" && userScript.entry && typeof userScript.entry === "function") {
+      return await this.onExportIsFunction(
+        userScript.entry,
+        command.settings
+      );
+    }
+    if (typeof userScript === "function") {
+      return await this.onExportIsFunction(userScript, command.settings);
     }
   }
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   async userScriptDelegator(userScript) {
     switch (typeof userScript) {
       case "function":
         if (this.userScriptCommand) {
           await this.runScriptWithSettings(
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
             userScript,
             this.userScriptCommand
           );
@@ -10733,11 +11338,19 @@ var MacroChoiceEngine = class extends QuickAddChoiceEngine {
     }
   }
   async onExportIsFunction(userScript, settings) {
-    this.output = await userScript(this.params, settings);
+    this.output = await userScript(this.params, settings || {});
   }
   async onExportIsObject(obj) {
+    if (Object.keys(obj).length === 0) {
+      throw new Error(
+        `user script in macro for '${this.choice.name}' is an empty object`
+      );
+    }
     if (this.userScriptCommand && obj.entry !== null) {
-      await this.runScriptWithSettings(obj, this.userScriptCommand);
+      await this.runScriptWithSettings(
+        obj,
+        this.userScriptCommand
+      );
       return;
     }
     try {
@@ -10785,11 +11398,44 @@ var MacroChoiceEngine = class extends QuickAddChoiceEngine {
         await PasteCommand.run(this.app);
         break;
       case "Select active line" /* SelectActiveLine */:
-        await SelectActiveLineCommand.run(this.app);
+        SelectActiveLineCommand.run(this.app);
         break;
       case "Select link on active line" /* SelectLinkOnActiveLine */:
-        await SelectLinkOnActiveLineCommand.run(this.app);
+        SelectLinkOnActiveLineCommand.run(this.app);
         break;
+    }
+  }
+  async executeAIAssistant(command) {
+    if (settingsStore.getState().disableOnlineFeatures) {
+      throw new Error(
+        "Blocking request to OpenAI: Online features are disabled in settings."
+      );
+    }
+    const aiSettings = settingsStore.getState().ai;
+    const options = [...models];
+    const model = command.model === "Ask me" ? await GenericSuggester.Suggest(app, options, options) : command.model;
+    const formatter = new CompleteFormatter(
+      app,
+      QuickAdd.instance,
+      this.choiceExecutor
+    );
+    const aiOutputVariables = await runAIAssistant(
+      {
+        apiKey: aiSettings.OpenAIApiKey,
+        model,
+        outputVariableName: command.outputVariableName,
+        promptTemplate: command.promptTemplate,
+        promptTemplateFolder: aiSettings.promptTemplatesFolderPath,
+        systemPrompt: command.systemPrompt,
+        showAssistantMessages: aiSettings.showAssistant,
+        modelOptions: command.modelParameters
+      },
+      async (input) => {
+        return formatter.formatFileContent(input);
+      }
+    );
+    for (const key in aiOutputVariables) {
+      this.choiceExecutor.variables.set(key, aiOutputVariables[key]);
     }
   }
 };
@@ -10812,6 +11458,7 @@ var SingleMacroEngine = class extends MacroChoiceEngine {
     await this.executeCommands(macro.commands);
     return this.output;
   }
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   async onExportIsObject(obj) {
     if (!this.memberAccess)
       return await super.onExportIsObject(obj);
@@ -10824,13 +11471,14 @@ var SingleMacroEngine = class extends MacroChoiceEngine {
 };
 
 // src/formatters/completeFormatter.ts
-var import_obsidian16 = require("obsidian");
+var import_obsidian21 = require("obsidian");
 
 // src/engine/SingleInlineScriptEngine.ts
 var SingleInlineScriptEngine = class extends MacroChoiceEngine {
   constructor(app2, plugin, choiceExecutor, variables) {
     super(app2, plugin, null, null, choiceExecutor, variables);
   }
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   async runAndGetOutput(code) {
     const AsyncFunction = Object.getPrototypeOf(
       async function() {
@@ -10842,7 +11490,7 @@ var SingleInlineScriptEngine = class extends MacroChoiceEngine {
 };
 
 // src/gui/MathModal.ts
-var import_obsidian15 = require("obsidian");
+var import_obsidian19 = require("obsidian");
 
 // src/LaTeXSymbols.ts
 var LATEX_CURSOR_MOVE_HERE = "\u261A";
@@ -11616,7 +12264,7 @@ ${LATEX_CURSOR_MOVE_HERE}
 var LaTeXSymbols = [...commands, ...environments.map(beginEndGen)];
 
 // src/gui/suggesters/LaTeXSuggester.ts
-var import_obsidian14 = require("obsidian");
+var import_obsidian18 = require("obsidian");
 var LATEX_REGEX = new RegExp(/\\([a-z{}A-Z0-9]*)$/);
 var LaTeXSuggester = class extends TextInputSuggest {
   constructor(inputEl) {
@@ -11626,13 +12274,16 @@ var LaTeXSuggester = class extends TextInputSuggest {
     this.symbols = Object.assign([], LaTeXSymbols);
     this.elementsRendered = this.symbols.reduce((elements, symbol) => {
       try {
-        elements[symbol.toString()] = (0, import_obsidian14.renderMath)(symbol, true);
-      } catch (e) {
+        elements[symbol.toString()] = (0, import_obsidian18.renderMath)(symbol, true);
+      } catch {
       }
       return elements;
     }, {});
   }
   getSuggestions(inputStr) {
+    if (this.inputEl.selectionStart === null) {
+      return [];
+    }
     const cursorPosition = this.inputEl.selectionStart;
     const inputBeforeCursor = inputStr.substr(0, cursorPosition);
     const lastBackslashPos = inputBeforeCursor.lastIndexOf("\\");
@@ -11642,7 +12293,11 @@ var LaTeXSuggester = class extends TextInputSuggest {
     if (match) {
       this.lastInput = match[1];
       suggestions = this.symbols.filter(
-        (val) => val.toLowerCase().contains(this.lastInput)
+        (val) => (
+          //@ts-ignore
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
+          val.toLowerCase().contains(this.lastInput)
+        )
       );
     }
     const fuse = new Fuse(suggestions, {
@@ -11659,6 +12314,8 @@ var LaTeXSuggester = class extends TextInputSuggest {
     }
   }
   selectSuggestion(item) {
+    if (this.inputEl.selectionStart === null)
+      return;
     const cursorPosition = this.inputEl.selectionStart;
     const lastInputLength = this.lastInput.length;
     const currentInputValue = this.inputEl.value;
@@ -11690,7 +12347,7 @@ var LaTeXSuggester = class extends TextInputSuggest {
 };
 
 // src/gui/MathModal.ts
-var MathModal = class extends import_obsidian15.Modal {
+var MathModal = class extends import_obsidian19.Modal {
   constructor() {
     super(QuickAdd.instance.app);
     this.didSubmit = false;
@@ -11723,12 +12380,12 @@ var MathModal = class extends import_obsidian15.Modal {
     this.contentEl.empty();
     const mathDiv = this.contentEl.createDiv();
     mathDiv.className = "math math-block is-loaded";
-    const tc = new import_obsidian15.TextAreaComponent(this.contentEl);
+    const tc = new import_obsidian19.TextAreaComponent(this.contentEl);
     tc.inputEl.style.width = "100%";
     tc.inputEl.style.height = "10rem";
     this.inputEl = tc.inputEl;
     tc.onChange(
-      (0, import_obsidian15.debounce)(
+      (0, import_obsidian19.debounce)(
         async (value) => await this.mathjaxLoop(mathDiv, value),
         50
       )
@@ -11738,11 +12395,11 @@ var MathModal = class extends import_obsidian15.Modal {
   }
   async onOpen() {
     super.onOpen();
-    await (0, import_obsidian15.loadMathJax)();
+    await (0, import_obsidian19.loadMathJax)();
   }
   async mathjaxLoop(container, value) {
-    const html = (0, import_obsidian15.renderMath)(value, true);
-    await (0, import_obsidian15.finishRenderMath)();
+    const html = (0, import_obsidian19.renderMath)(value, true);
+    await (0, import_obsidian19.finishRenderMath)();
     container.empty();
     container.append(html);
   }
@@ -11759,7 +12416,7 @@ var MathModal = class extends import_obsidian15.Modal {
     }
   }
   createButton(container, text2, callback) {
-    const btn = new import_obsidian15.ButtonComponent(container);
+    const btn = new import_obsidian19.ButtonComponent(container);
     btn.setButtonText(text2).onClick(callback);
     return btn;
   }
@@ -11815,6 +12472,67 @@ var InputPrompt = class {
   }
 };
 
+// src/gui/InputSuggester/inputSuggester.ts
+var import_obsidian20 = require("obsidian");
+var InputSuggester = class extends import_obsidian20.FuzzySuggestModal {
+  constructor(app2, displayItems, items, options = {}) {
+    super(app2);
+    this.displayItems = displayItems;
+    this.items = items;
+    this.promise = new Promise((resolve, reject) => {
+      this.resolvePromise = resolve;
+      this.rejectPromise = reject;
+    });
+    this.inputEl.addEventListener("keydown", (event) => {
+      if (event.code !== "Tab" || !("chooser" in this)) {
+        return;
+      }
+      const { values, selectedItem } = this.chooser;
+      const { value } = this.inputEl;
+      this.inputEl.value = values[selectedItem].item ?? value;
+    });
+    if (options.placeholder)
+      this.setPlaceholder(options.placeholder);
+    if (options.limit)
+      this.limit = options.limit;
+    if (options.emptyStateText)
+      this.emptyStateText = options.emptyStateText;
+    this.open();
+  }
+  static Suggest(app2, displayItems, items, options = {}) {
+    const newSuggester = new InputSuggester(
+      app2,
+      displayItems,
+      items,
+      options
+    );
+    return newSuggester.promise;
+  }
+  getItemText(item) {
+    if (item === this.inputEl.value)
+      return item;
+    return this.displayItems[this.items.indexOf(item)];
+  }
+  getItems() {
+    if (this.inputEl.value === "")
+      return this.items;
+    return [this.inputEl.value, ...this.items];
+  }
+  selectSuggestion(value, evt) {
+    this.resolved = true;
+    super.selectSuggestion(value, evt);
+  }
+  onChooseItem(item, evt) {
+    this.resolved = true;
+    this.resolvePromise(item);
+  }
+  onClose() {
+    super.onClose();
+    if (!this.resolved)
+      this.rejectPromise("no input given.");
+  }
+};
+
 // src/formatters/completeFormatter.ts
 var CompleteFormatter = class extends Formatter {
   constructor(app2, plugin, choiceExecutor) {
@@ -11822,7 +12540,9 @@ var CompleteFormatter = class extends Formatter {
     this.app = app2;
     this.plugin = plugin;
     this.choiceExecutor = choiceExecutor;
-    this.variables = choiceExecutor == null ? void 0 : choiceExecutor.variables;
+    if (choiceExecutor) {
+      this.variables = choiceExecutor?.variables;
+    }
   }
   async format(input) {
     let output = input;
@@ -11830,9 +12550,12 @@ var CompleteFormatter = class extends Formatter {
     output = await this.replaceMacrosInString(output);
     output = await this.replaceTemplateInString(output);
     output = this.replaceDateInString(output);
+    output = this.replaceTimeInString(output);
     output = await this.replaceValueInString(output);
+    output = await this.replaceSelectedInString(output);
     output = await this.replaceDateVariableInString(output);
     output = await this.replaceVariableInString(output);
+    output = await this.replaceFieldVarInString(output);
     output = await this.replaceMathValueInString(output);
     return output;
   }
@@ -11862,10 +12585,9 @@ var CompleteFormatter = class extends Formatter {
     return this.variables.get(variableName);
   }
   async promptForValue(header) {
-    var _a;
     if (!this.value) {
       const selectedText = await this.getSelectedText();
-      this.value = selectedText ? selectedText : await new InputPrompt().factory().Prompt(this.app, (_a = this.valueHeader) != null ? _a : `Enter value`);
+      this.value = selectedText ? selectedText : await new InputPrompt().factory().Prompt(this.app, this.valueHeader ?? `Enter value`);
     }
     return this.value;
   }
@@ -11882,16 +12604,42 @@ var CompleteFormatter = class extends Formatter {
       suggestedValues
     );
   }
+  async suggestForField(variableName) {
+    const suggestedValues = /* @__PURE__ */ new Set();
+    for (const file of this.app.vault.getMarkdownFiles()) {
+      const cache = this.app.metadataCache.getFileCache(file);
+      const value = cache?.frontmatter?.[variableName];
+      if (!value || typeof value == "object")
+        continue;
+      suggestedValues.add(value.toString());
+    }
+    if (suggestedValues.size === 0) {
+      return await GenericInputPrompt.Prompt(
+        app,
+        `Enter value for ${variableName}`,
+        `No existing values were found in your vault.`
+      );
+    }
+    const suggestedValuesArr = Array.from(suggestedValues);
+    return await InputSuggester.Suggest(
+      this.app,
+      suggestedValuesArr,
+      suggestedValuesArr,
+      {
+        placeholder: `Enter value for ${variableName}`
+      }
+    );
+  }
   async getMacroValue(macroName) {
-    var _a;
     const macroEngine = new SingleMacroEngine(
       this.app,
       this.plugin,
       this.plugin.settings.macros,
+      //@ts-ignore
       this.choiceExecutor,
       this.variables
     );
-    const macroOutput = (_a = await macroEngine.runAndGetOutput(macroName)) != null ? _a : "";
+    const macroOutput = await macroEngine.runAndGetOutput(macroName) ?? "";
     Object.keys(macroEngine.params.variables).forEach((key) => {
       this.variables.set(key, macroEngine.params.variables[key]);
     });
@@ -11905,27 +12653,28 @@ var CompleteFormatter = class extends Formatter {
       this.choiceExecutor
     ).run();
   }
+  // eslint-disable-next-line @typescript-eslint/require-await
   async getSelectedText() {
-    const activeView = this.app.workspace.getActiveViewOfType(import_obsidian16.MarkdownView);
+    const activeView = this.app.workspace.getActiveViewOfType(import_obsidian21.MarkdownView);
     if (!activeView)
       return "";
     return activeView.editor.getSelection();
   }
   async replaceInlineJavascriptInString(input) {
-    var _a;
     let output = input;
     while (INLINE_JAVASCRIPT_REGEX.test(output)) {
       const match = INLINE_JAVASCRIPT_REGEX.exec(output);
-      const code = (_a = match[1]) == null ? void 0 : _a.trim();
+      const code = match?.at(1)?.trim();
       if (code) {
         const executor = new SingleInlineScriptEngine(
           this.app,
           this.plugin,
+          //@ts-ignore
           this.choiceExecutor,
           this.variables
         );
         const outVal = await executor.runAndGetOutput(code);
-        for (let key in executor.params.variables) {
+        for (const key in executor.params.variables) {
           this.variables.set(key, executor.params.variables[key]);
         }
         output = typeof outVal === "string" ? this.replacer(output, INLINE_JAVASCRIPT_REGEX, outVal) : this.replacer(output, INLINE_JAVASCRIPT_REGEX, "");
@@ -11936,7 +12685,7 @@ var CompleteFormatter = class extends Formatter {
 };
 
 // src/engine/TemplateEngine.ts
-var import_obsidian17 = require("obsidian");
+var import_obsidian22 = require("obsidian");
 var TemplateEngine = class extends QuickAddEngine {
   constructor(app2, plugin, choiceFormatter) {
     super(app2);
@@ -11971,7 +12720,8 @@ var TemplateEngine = class extends QuickAddEngine {
     return this.normalizeMarkdownFilePath(folderPath, formattedName);
   }
   async incrementFileName(fileName) {
-    const numStr = FILE_NUMBER_REGEX.exec(fileName)[1];
+    const exec = FILE_NUMBER_REGEX.exec(fileName);
+    const numStr = exec && typeof exec.at === "function" ? exec?.at(1) : void 0;
     const fileExists = await this.app.vault.adapter.exists(fileName);
     let newFileName = fileName;
     if (fileExists && numStr) {
@@ -12048,7 +12798,7 @@ ${formattedTemplateContent}`;
     if (!MARKDOWN_FILE_EXTENSION_REGEX.test(templatePath))
       correctTemplatePath += ".md";
     const templateFile = this.app.vault.getAbstractFileByPath(correctTemplatePath);
-    if (!(templateFile instanceof import_obsidian17.TFile))
+    if (!(templateFile instanceof import_obsidian22.TFile))
       throw new Error(
         `Template file not found at path "${correctTemplatePath}".`
       );
@@ -12086,12 +12836,14 @@ var FormatDisplayFormatter = class extends Formatter {
   async format(input) {
     let output = input;
     output = this.replaceDateInString(output);
+    output = this.replaceTimeInString(output);
     output = await this.replaceValueInString(output);
     output = await this.replaceDateVariableInString(output);
     output = await this.replaceVariableInString(output);
     output = await this.replaceLinkToCurrentFileInString(output);
     output = await this.replaceMacrosInString(output);
     output = await this.replaceTemplateInString(output);
+    output = await this.replaceFieldVarInString(output);
     output = this.replaceLinebreakInString(output);
     return output;
   }
@@ -12102,8 +12854,7 @@ var FormatDisplayFormatter = class extends Formatter {
     return variableName;
   }
   getCurrentFileLink() {
-    var _a, _b;
-    return (_b = (_a = this.app.workspace.getActiveFile()) == null ? void 0 : _a.path) != null ? _b : "_noPageOpen_";
+    return this.app.workspace.getActiveFile()?.path ?? "_noPageOpen_";
   }
   getNaturalLanguageDates() {
     return getNaturalLanguageDates(this.app);
@@ -12126,14 +12877,18 @@ var FormatDisplayFormatter = class extends Formatter {
         this.app,
         this.plugin,
         templatePath,
-        null
+        void 0
       ).run();
     } catch (e) {
       return `Template (not found): ${templatePath}`;
     }
   }
+  // eslint-disable-next-line @typescript-eslint/require-await
   async getSelectedText() {
     return "_selected_";
+  }
+  async suggestForField(variableName) {
+    return Promise.resolve(`_field: ${variableName}_`);
   }
 };
 
@@ -12146,56 +12901,55 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
     this.display();
   }
   display() {
-    var _a, _b, _c;
     this.containerEl.addClass("captureChoiceBuilder");
     this.contentEl.empty();
     this.addCenteredChoiceNameHeader(this.choice);
     this.addCapturedToSetting();
-    if (!((_a = this.choice) == null ? void 0 : _a.captureToActiveFile)) {
+    if (!this.choice?.captureToActiveFile) {
       this.addCreateIfNotExistsSetting();
-      if ((_c = (_b = this.choice) == null ? void 0 : _b.createFileIfItDoesntExist) == null ? void 0 : _c.enabled)
+      if (this.choice?.createFileIfItDoesntExist?.enabled)
         this.addCreateWithTemplateSetting();
     }
     this.addTaskSetting();
     this.addPrependSetting();
+    this.addAppendLinkSetting();
+    this.addInsertAfterSetting();
     if (!this.choice.captureToActiveFile) {
-      this.addAppendLinkSetting();
-      this.addInsertAfterSetting();
       this.addOpenFileSetting();
-      if (this.choice.openFile)
+      if (this.choice.openFile) {
         this.addOpenFileInNewTabSetting();
+      }
     }
     this.addFormatSetting();
   }
   addCapturedToSetting() {
-    var _a, _b, _c;
     let textField;
-    const captureToSetting = new import_obsidian18.Setting(this.contentEl).setName("Capture To").setDesc("File to capture to. Supports some format syntax.");
+    new import_obsidian23.Setting(this.contentEl).setName("Capture To").setDesc("File to capture to. Supports some format syntax.");
     const captureToContainer = this.contentEl.createDiv("captureToContainer");
     const captureToActiveFileContainer = captureToContainer.createDiv("captureToActiveFileContainer");
     const captureToActiveFileText = captureToActiveFileContainer.createEl("span");
     captureToActiveFileText.textContent = "Capture to active file";
-    const captureToActiveFileToggle = new import_obsidian18.ToggleComponent(
+    const captureToActiveFileToggle = new import_obsidian23.ToggleComponent(
       captureToActiveFileContainer
     );
-    captureToActiveFileToggle.setValue((_a = this.choice) == null ? void 0 : _a.captureToActiveFile);
+    captureToActiveFileToggle.setValue(this.choice?.captureToActiveFile);
     captureToActiveFileToggle.onChange((value) => {
       this.choice.captureToActiveFile = value;
       this.reload();
     });
-    if (!((_b = this.choice) == null ? void 0 : _b.captureToActiveFile)) {
+    if (!this.choice?.captureToActiveFile) {
       const captureToFileContainer = captureToContainer.createDiv("captureToFileContainer");
       const formatDisplay = captureToFileContainer.createEl("span");
       const displayFormatter = new FileNameDisplayFormatter(this.app);
-      (async () => formatDisplay.textContent = await displayFormatter.format(
+      void (async () => formatDisplay.textContent = await displayFormatter.format(
         this.choice.captureTo
       ))();
-      const formatInput = new import_obsidian18.TextComponent(captureToFileContainer);
+      const formatInput = new import_obsidian23.TextComponent(captureToFileContainer);
       formatInput.setPlaceholder("File name format");
       textField = formatInput;
       formatInput.inputEl.style.width = "100%";
       formatInput.inputEl.style.marginBottom = "8px";
-      formatInput.setValue(this.choice.captureTo).setDisabled((_c = this.choice) == null ? void 0 : _c.captureToActiveFile).onChange(async (value) => {
+      formatInput.setValue(this.choice.captureTo).setDisabled(this.choice?.captureToActiveFile).onChange(async (value) => {
         this.choice.captureTo = value;
         formatDisplay.textContent = await displayFormatter.format(
           value
@@ -12208,15 +12962,15 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
       new GenericTextSuggester(
         this.app,
         textField.inputEl,
-        markdownFilesAndFormatSyntax
+        markdownFilesAndFormatSyntax,
+        50
       );
     }
   }
   addPrependSetting() {
-    var _a;
-    const prependSetting = new import_obsidian18.Setting(this.contentEl);
+    const prependSetting = new import_obsidian23.Setting(this.contentEl);
     prependSetting.setName("Write to bottom of file").setDesc(
-      `Put value at the bottom of the file - otherwise at the ${((_a = this.choice) == null ? void 0 : _a.captureToActiveFile) ? "active cursor location" : "top"}.`
+      `Put value at the bottom of the file - otherwise at the ${this.choice?.captureToActiveFile ? "active cursor location" : "top"}.`
     ).addToggle((toggle) => {
       toggle.setValue(this.choice.prepend);
       toggle.onChange((value) => {
@@ -12229,14 +12983,14 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
     });
   }
   addTaskSetting() {
-    const taskSetting = new import_obsidian18.Setting(this.contentEl);
+    const taskSetting = new import_obsidian23.Setting(this.contentEl);
     taskSetting.setName("Task").setDesc("Formats the value as a task.").addToggle((toggle) => {
       toggle.setValue(this.choice.task);
       toggle.onChange((value) => this.choice.task = value);
     });
   }
   addAppendLinkSetting() {
-    const appendLinkSetting = new import_obsidian18.Setting(this.contentEl);
+    const appendLinkSetting = new import_obsidian23.Setting(this.contentEl);
     appendLinkSetting.setName("Append link").setDesc(
       "Add a link on your current cursor position, linking to the file you're capturing to."
     ).addToggle((toggle) => {
@@ -12246,7 +13000,7 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
   }
   addInsertAfterSetting() {
     let insertAfterInput;
-    const insertAfterSetting = new import_obsidian18.Setting(this.contentEl);
+    const insertAfterSetting = new import_obsidian23.Setting(this.contentEl);
     insertAfterSetting.setName("Insert after").setDesc(
       "Insert capture after specified line. Accepts format syntax."
     ).addToggle((toggle) => {
@@ -12262,10 +13016,10 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
     });
     const insertAfterFormatDisplay = this.contentEl.createEl("span");
     const displayFormatter = new FormatDisplayFormatter(this.app, this.plugin);
-    (async () => insertAfterFormatDisplay.innerText = await displayFormatter.format(
+    void (async () => insertAfterFormatDisplay.innerText = await displayFormatter.format(
       this.choice.insertAfter.after
     ))();
-    insertAfterInput = new import_obsidian18.TextComponent(this.contentEl);
+    insertAfterInput = new import_obsidian23.TextComponent(this.contentEl);
     insertAfterInput.setPlaceholder("Insert after");
     insertAfterInput.inputEl.style.width = "100%";
     insertAfterInput.inputEl.style.marginBottom = "8px";
@@ -12279,31 +13033,49 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
       this.plugin
     );
     if (this.choice.insertAfter.enabled) {
-      const insertAtEndSetting = new import_obsidian18.Setting(this.contentEl);
+      const insertAtEndSetting = new import_obsidian23.Setting(this.contentEl);
       insertAtEndSetting.setName("Insert at end of section").setDesc(
         "Insert the text at the end of the section, rather than at the top."
       ).addToggle(
-        (toggle) => {
-          var _a;
-          return toggle.setValue((_a = this.choice.insertAfter) == null ? void 0 : _a.insertAtEnd).onChange(
-            (value) => this.choice.insertAfter.insertAtEnd = value
-          );
-        }
+        (toggle) => toggle.setValue(this.choice.insertAfter?.insertAtEnd).onChange(
+          (value) => this.choice.insertAfter.insertAtEnd = value
+        )
       );
-      const createLineIfNotFound = new import_obsidian18.Setting(this.contentEl);
+      const considerSubsectionsSetting = new import_obsidian23.Setting(
+        this.contentEl
+      );
+      considerSubsectionsSetting.setName("Consider subsections").setDesc(
+        "Enabling this will insert the text at the end of the section & its subsections, rather than just at the end of the target section.A section is defined by a heading, and its subsections are all the headings inside that section."
+      ).addToggle(
+        (toggle) => toggle.setValue(this.choice.insertAfter?.considerSubsections).onChange((value) => {
+          if (!value) {
+            this.choice.insertAfter.considerSubsections = false;
+            return;
+          }
+          const targetIsHeading = this.choice.insertAfter.after.startsWith("#");
+          if (targetIsHeading) {
+            this.choice.insertAfter.considerSubsections = value;
+          } else {
+            this.choice.insertAfter.considerSubsections = false;
+            log.logError(
+              "'Consider subsections' can only be enabled if the insert after line starts with a # (heading)."
+            );
+            this.display();
+          }
+        })
+      );
+      const createLineIfNotFound = new import_obsidian23.Setting(this.contentEl);
       createLineIfNotFound.setName("Create line if not found").setDesc("Creates the 'insert after' line if it is not found.").addToggle((toggle) => {
-        var _a, _b;
-        if (!((_a = this.choice.insertAfter) == null ? void 0 : _a.createIfNotFound))
+        if (!this.choice.insertAfter?.createIfNotFound)
           this.choice.insertAfter.createIfNotFound = false;
-        toggle.setValue((_b = this.choice.insertAfter) == null ? void 0 : _b.createIfNotFound).onChange(
+        toggle.setValue(this.choice.insertAfter?.createIfNotFound).onChange(
           (value) => this.choice.insertAfter.createIfNotFound = value
         ).toggleEl.style.marginRight = "1em";
       }).addDropdown((dropdown) => {
-        var _a, _b;
-        if (!((_a = this.choice.insertAfter) == null ? void 0 : _a.createIfNotFoundLocation))
+        if (!this.choice.insertAfter?.createIfNotFoundLocation)
           this.choice.insertAfter.createIfNotFoundLocation = CREATE_IF_NOT_FOUND_TOP;
         dropdown.addOption(CREATE_IF_NOT_FOUND_TOP, "Top").addOption(CREATE_IF_NOT_FOUND_BOTTOM, "Bottom").setValue(
-          (_b = this.choice.insertAfter) == null ? void 0 : _b.createIfNotFoundLocation
+          this.choice.insertAfter?.createIfNotFoundLocation
         ).onChange(
           (value) => this.choice.insertAfter.createIfNotFoundLocation = value
         );
@@ -12312,19 +13084,20 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
   }
   addFormatSetting() {
     let textField;
-    const enableSetting = new import_obsidian18.Setting(this.contentEl);
+    const enableSetting = new import_obsidian23.Setting(this.contentEl);
     enableSetting.setName("Capture format").setDesc("Set the format of the capture.").addToggle((toggleComponent) => {
       toggleComponent.setValue(this.choice.format.enabled).onChange((value) => {
         this.choice.format.enabled = value;
         textField.setDisabled(!value);
       });
     });
-    const formatInput = new import_obsidian18.TextAreaComponent(this.contentEl);
+    const formatInput = new import_obsidian23.TextAreaComponent(this.contentEl);
     formatInput.setPlaceholder("Format");
     textField = formatInput;
     formatInput.inputEl.style.width = "100%";
     formatInput.inputEl.style.marginBottom = "8px";
     formatInput.inputEl.style.height = "10rem";
+    formatInput.inputEl.style.minHeight = "10rem";
     formatInput.setValue(this.choice.format.format).setDisabled(!this.choice.format.enabled).onChange(async (value) => {
       this.choice.format.format = value;
       formatDisplay.innerText = await displayFormatter.format(value);
@@ -12332,7 +13105,7 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
     new FormatSyntaxSuggester(this.app, textField.inputEl, this.plugin);
     const formatDisplay = this.contentEl.createEl("span");
     const displayFormatter = new FormatDisplayFormatter(this.app, this.plugin);
-    (async () => formatDisplay.innerText = await displayFormatter.format(
+    void (async () => formatDisplay.innerText = await displayFormatter.format(
       this.choice.format.format
     ))();
   }
@@ -12343,35 +13116,28 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
         createWithTemplate: false,
         template: ""
       };
-    const createFileIfItDoesntExist = new import_obsidian18.Setting(this.contentEl);
+    const createFileIfItDoesntExist = new import_obsidian23.Setting(this.contentEl);
     createFileIfItDoesntExist.setName("Create file if it doesn't exist").addToggle(
-      (toggle) => {
-        var _a, _b;
-        return toggle.setValue((_b = (_a = this.choice) == null ? void 0 : _a.createFileIfItDoesntExist) == null ? void 0 : _b.enabled).setTooltip("Create file if it doesn't exist").onChange((value) => {
-          this.choice.createFileIfItDoesntExist.enabled = value;
-          this.reload();
-        });
-      }
+      (toggle) => toggle.setValue(this.choice?.createFileIfItDoesntExist?.enabled).setTooltip("Create file if it doesn't exist").onChange((value) => {
+        this.choice.createFileIfItDoesntExist.enabled = value;
+        this.reload();
+      })
     );
   }
   addCreateWithTemplateSetting() {
-    var _a, _b, _c, _d, _e;
     let templateSelector;
-    const createWithTemplateSetting = new import_obsidian18.Setting(this.contentEl);
+    const createWithTemplateSetting = new import_obsidian23.Setting(this.contentEl);
     createWithTemplateSetting.setName("Create file with given template.").addToggle(
-      (toggle) => {
-        var _a2;
-        return toggle.setValue(
-          (_a2 = this.choice.createFileIfItDoesntExist) == null ? void 0 : _a2.createWithTemplate
-        ).onChange((value) => {
-          this.choice.createFileIfItDoesntExist.createWithTemplate = value;
-          templateSelector.setDisabled(!value);
-        });
-      }
+      (toggle) => toggle.setValue(
+        this.choice.createFileIfItDoesntExist?.createWithTemplate
+      ).onChange((value) => {
+        this.choice.createFileIfItDoesntExist.createWithTemplate = value;
+        templateSelector.setDisabled(!value);
+      })
     );
-    templateSelector = new import_obsidian18.TextComponent(this.contentEl);
-    templateSelector.setValue((_c = (_b = (_a = this.choice) == null ? void 0 : _a.createFileIfItDoesntExist) == null ? void 0 : _b.template) != null ? _c : "").setPlaceholder("Template path").setDisabled(
-      !((_e = (_d = this.choice) == null ? void 0 : _d.createFileIfItDoesntExist) == null ? void 0 : _e.createWithTemplate)
+    templateSelector = new import_obsidian23.TextComponent(this.contentEl);
+    templateSelector.setValue(this.choice?.createFileIfItDoesntExist?.template ?? "").setPlaceholder("Template path").setDisabled(
+      !this.choice?.createFileIfItDoesntExist?.createWithTemplate
     );
     templateSelector.inputEl.style.width = "100%";
     templateSelector.inputEl.style.marginBottom = "8px";
@@ -12379,14 +13145,15 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
     new GenericTextSuggester(
       this.app,
       templateSelector.inputEl,
-      templateFilePaths
+      templateFilePaths,
+      50
     );
     templateSelector.onChange((value) => {
       this.choice.createFileIfItDoesntExist.template = value;
     });
   }
   addOpenFileSetting() {
-    const noOpenSetting = new import_obsidian18.Setting(this.contentEl);
+    const noOpenSetting = new import_obsidian23.Setting(this.contentEl);
     noOpenSetting.setName("Open").setDesc("Open the file that is captured to.").addToggle((toggle) => {
       toggle.setValue(this.choice.openFile);
       toggle.onChange((value) => {
@@ -12403,16 +13170,14 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
     });
   }
   addOpenFileInNewTabSetting() {
-    const newTabSetting = new import_obsidian18.Setting(this.contentEl);
+    const newTabSetting = new import_obsidian23.Setting(this.contentEl);
     newTabSetting.setName("New Tab").setDesc("Open the file that is captured to in a new tab.").addToggle((toggle) => {
-      var _a, _b;
-      toggle.setValue((_b = (_a = this.choice) == null ? void 0 : _a.openFileInNewTab) == null ? void 0 : _b.enabled);
+      toggle.setValue(this.choice?.openFileInNewTab?.enabled);
       toggle.onChange(
         (value) => this.choice.openFileInNewTab.enabled = value
       );
     }).addDropdown((dropdown) => {
-      var _a, _b, _c;
-      if (!((_a = this.choice) == null ? void 0 : _a.openFileInNewTab)) {
+      if (!this.choice?.openFileInNewTab) {
         this.choice.openFileInNewTab = {
           enabled: false,
           direction: "vertical" /* vertical */,
@@ -12422,12 +13187,12 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
       dropdown.selectEl.style.marginLeft = "10px";
       dropdown.addOption("vertical" /* vertical */, "Vertical");
       dropdown.addOption("horizontal" /* horizontal */, "Horizontal");
-      dropdown.setValue((_c = (_b = this.choice) == null ? void 0 : _b.openFileInNewTab) == null ? void 0 : _c.direction);
+      dropdown.setValue(this.choice?.openFileInNewTab?.direction);
       dropdown.onChange(
         (value) => this.choice.openFileInNewTab.direction = value
       );
     });
-    new import_obsidian18.Setting(this.contentEl).setName("Focus new pane").setDesc("Focus the opened tab immediately").addToggle(
+    new import_obsidian23.Setting(this.contentEl).setName("Focus new pane").setDesc("Focus the opened tab immediately").addToggle(
       (toggle) => toggle.setValue(this.choice.openFileInNewTab.focus).onChange(
         (value) => this.choice.openFileInNewTab.focus = value
       )
@@ -12436,57 +13201,11 @@ var CaptureChoiceBuilder = class extends ChoiceBuilder {
 };
 
 // src/gui/ChoiceBuilder/macroChoiceBuilder.ts
-var import_obsidian19 = require("obsidian");
-var MacroChoiceBuilder = class extends ChoiceBuilder {
-  constructor(app2, choice, macros) {
-    super(app2);
-    this.macros = macros;
-    this.choice = choice;
-    this.display();
-  }
-  display() {
-    this.containerEl.addClass("macroChoiceBuilder");
-    this.addCenteredChoiceNameHeader(this.choice);
-    this.addSelectMacroSearch();
-  }
-  addSelectMacroSearch() {
-    const selectMacroDropdownContainer = this.contentEl.createDiv("selectMacroDropdownContainer");
-    const dropdown = new import_obsidian19.DropdownComponent(
-      selectMacroDropdownContainer
-    );
-    let macroOptions = {};
-    this.macros.forEach((macro) => {
-      macroOptions[macro.name] = macro.name;
-    });
-    dropdown.addOptions(macroOptions);
-    dropdown.onChange((value) => {
-      this.selectMacro(value);
-    });
-    const selectedMacro = this.macros.find(
-      (m) => m.id === this.choice.macroId
-    );
-    if (selectedMacro) {
-      dropdown.setValue(selectedMacro.name);
-    } else {
-      const value = dropdown.getValue();
-      if (value) {
-        this.selectMacro(value);
-      }
-    }
-  }
-  selectMacro(value) {
-    const targetMacro = this.macros.find((m) => m.name === value);
-    if (!targetMacro)
-      return;
-    this.choice.macroId = targetMacro.id;
-  }
-};
-
-// src/MacrosManager.ts
-var import_obsidian23 = require("obsidian");
+var import_obsidian27 = require("obsidian");
+var import_obsidian28 = require("obsidian");
 
 // src/gui/MacroGUIs/MacroBuilder.ts
-var import_obsidian22 = require("obsidian");
+var import_obsidian26 = require("obsidian");
 
 // src/types/macros/UserScript.ts
 var UserScript = class extends Command {
@@ -12507,10 +13226,13 @@ var ObsidianCommand = class extends Command {
 };
 
 // src/gui/MacroGUIs/Components/StandardCommand.svelte
-function create_fragment12(ctx) {
+function create_fragment10(ctx) {
   let div1;
   let li;
-  let t0_value = ctx[0].name + "";
+  let t0_value = (
+    /*command*/
+    ctx[0].name + ""
+  );
   let t0;
   let t1;
   let div0;
@@ -12540,8 +13262,10 @@ function create_fragment12(ctx) {
       create_component(icon1.$$.fragment);
       attr(span0, "class", "clickable");
       attr(span1, "aria-label", "Drag-handle");
-      attr(span1, "style", span1_style_value = (ctx[2] ? "cursor: grab" : "cursor: grabbing") + ";");
-      attr(span1, "tabindex", span1_tabindex_value = ctx[2] ? 0 : -1);
+      attr(span1, "style", span1_style_value = /*dragDisabled*/
+      (ctx[2] ? "cursor: grab" : "cursor: grabbing") + ";");
+      attr(span1, "tabindex", span1_tabindex_value = /*dragDisabled*/
+      ctx[2] ? 0 : -1);
       attr(div1, "class", "quickAddCommandListItem");
     },
     m(target, anchor) {
@@ -12558,13 +13282,24 @@ function create_fragment12(ctx) {
       current = true;
       if (!mounted) {
         dispose = [
-          listen(span0, "click", ctx[4]),
+          listen(
+            span0,
+            "click",
+            /*click_handler*/
+            ctx[4]
+          ),
           listen(span1, "mousedown", function() {
-            if (is_function(ctx[1]))
+            if (is_function(
+              /*startDrag*/
+              ctx[1]
+            ))
               ctx[1].apply(this, arguments);
           }),
           listen(span1, "touchstart", function() {
-            if (is_function(ctx[1]))
+            if (is_function(
+              /*startDrag*/
+              ctx[1]
+            ))
               ctx[1].apply(this, arguments);
           })
         ];
@@ -12573,12 +13308,18 @@ function create_fragment12(ctx) {
     },
     p(new_ctx, [dirty]) {
       ctx = new_ctx;
-      if ((!current || dirty & 1) && t0_value !== (t0_value = ctx[0].name + ""))
+      if ((!current || dirty & /*command*/
+      1) && t0_value !== (t0_value = /*command*/
+      ctx[0].name + ""))
         set_data(t0, t0_value);
-      if (!current || dirty & 4 && span1_style_value !== (span1_style_value = (ctx[2] ? "cursor: grab" : "cursor: grabbing") + ";")) {
+      if (!current || dirty & /*dragDisabled*/
+      4 && span1_style_value !== (span1_style_value = /*dragDisabled*/
+      (ctx[2] ? "cursor: grab" : "cursor: grabbing") + ";")) {
         attr(span1, "style", span1_style_value);
       }
-      if (!current || dirty & 4 && span1_tabindex_value !== (span1_tabindex_value = ctx[2] ? 0 : -1)) {
+      if (!current || dirty & /*dragDisabled*/
+      4 && span1_tabindex_value !== (span1_tabindex_value = /*dragDisabled*/
+      ctx[2] ? 0 : -1)) {
         attr(span1, "tabindex", span1_tabindex_value);
       }
     },
@@ -12604,7 +13345,7 @@ function create_fragment12(ctx) {
     }
   };
 }
-function instance12($$self, $$props, $$invalidate) {
+function instance10($$self, $$props, $$invalidate) {
   let { command } = $$props;
   let { startDrag } = $$props;
   let { dragDisabled } = $$props;
@@ -12626,7 +13367,7 @@ function instance12($$self, $$props, $$invalidate) {
 var StandardCommand = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance12, create_fragment12, safe_not_equal, {
+    init(this, options, instance10, create_fragment10, safe_not_equal, {
       command: 0,
       startDrag: 1,
       dragDisabled: 2
@@ -12636,13 +13377,16 @@ var StandardCommand = class extends SvelteComponent {
 var StandardCommand_default = StandardCommand;
 
 // src/gui/MacroGUIs/Components/WaitCommand.svelte
-function add_css8(target) {
+function add_css7(target) {
   append_styles(target, "svelte-1196d9p", ".dotInput.svelte-1196d9p{border:none;display:inline;font-family:inherit;font-size:inherit;padding:0;width:0;text-decoration:underline dotted;background-color:transparent}.dotInput.svelte-1196d9p:hover{background-color:transparent}");
 }
-function create_fragment13(ctx) {
+function create_fragment11(ctx) {
   let div1;
   let li;
-  let t0_value = ctx[0].name + "";
+  let t0_value = (
+    /*command*/
+    ctx[0].name + ""
+  );
   let t0;
   let t1;
   let input;
@@ -12681,8 +13425,10 @@ function create_fragment13(ctx) {
       attr(input, "class", "dotInput svelte-1196d9p");
       attr(span0, "class", "clickable");
       attr(span1, "aria-label", "Drag-handle");
-      attr(span1, "style", span1_style_value = (ctx[2] ? "cursor: grab" : "cursor: grabbing") + ";");
-      attr(span1, "tabindex", span1_tabindex_value = ctx[2] ? 0 : -1);
+      attr(span1, "style", span1_style_value = /*dragDisabled*/
+      (ctx[2] ? "cursor: grab" : "cursor: grabbing") + ";");
+      attr(span1, "tabindex", span1_tabindex_value = /*dragDisabled*/
+      ctx[2] ? 0 : -1);
       attr(div1, "class", "quickAddCommandListItem");
     },
     m(target, anchor) {
@@ -12692,7 +13438,11 @@ function create_fragment13(ctx) {
       append(li, t1);
       append(li, input);
       ctx[6](input);
-      set_input_value(input, ctx[0].time);
+      set_input_value(
+        input,
+        /*command*/
+        ctx[0].time
+      );
       append(li, t2);
       append(div1, t3);
       append(div1, div0);
@@ -12704,15 +13454,36 @@ function create_fragment13(ctx) {
       current = true;
       if (!mounted) {
         dispose = [
-          listen(input, "keyup", ctx[5]),
-          listen(input, "input", ctx[7]),
-          listen(span0, "click", ctx[8]),
+          listen(
+            input,
+            "keyup",
+            /*resizeInput*/
+            ctx[5]
+          ),
+          listen(
+            input,
+            "input",
+            /*input_input_handler*/
+            ctx[7]
+          ),
+          listen(
+            span0,
+            "click",
+            /*click_handler*/
+            ctx[8]
+          ),
           listen(span1, "mousedown", function() {
-            if (is_function(ctx[1]))
+            if (is_function(
+              /*startDrag*/
+              ctx[1]
+            ))
               ctx[1].apply(this, arguments);
           }),
           listen(span1, "touchstart", function() {
-            if (is_function(ctx[1]))
+            if (is_function(
+              /*startDrag*/
+              ctx[1]
+            ))
               ctx[1].apply(this, arguments);
           })
         ];
@@ -12721,15 +13492,27 @@ function create_fragment13(ctx) {
     },
     p(new_ctx, [dirty]) {
       ctx = new_ctx;
-      if ((!current || dirty & 1) && t0_value !== (t0_value = ctx[0].name + ""))
+      if ((!current || dirty & /*command*/
+      1) && t0_value !== (t0_value = /*command*/
+      ctx[0].name + ""))
         set_data(t0, t0_value);
-      if (dirty & 1 && to_number(input.value) !== ctx[0].time) {
-        set_input_value(input, ctx[0].time);
+      if (dirty & /*command*/
+      1 && to_number(input.value) !== /*command*/
+      ctx[0].time) {
+        set_input_value(
+          input,
+          /*command*/
+          ctx[0].time
+        );
       }
-      if (!current || dirty & 4 && span1_style_value !== (span1_style_value = (ctx[2] ? "cursor: grab" : "cursor: grabbing") + ";")) {
+      if (!current || dirty & /*dragDisabled*/
+      4 && span1_style_value !== (span1_style_value = /*dragDisabled*/
+      (ctx[2] ? "cursor: grab" : "cursor: grabbing") + ";")) {
         attr(span1, "style", span1_style_value);
       }
-      if (!current || dirty & 4 && span1_tabindex_value !== (span1_tabindex_value = ctx[2] ? 0 : -1)) {
+      if (!current || dirty & /*dragDisabled*/
+      4 && span1_tabindex_value !== (span1_tabindex_value = /*dragDisabled*/
+      ctx[2] ? 0 : -1)) {
         attr(span1, "tabindex", span1_tabindex_value);
       }
     },
@@ -12756,7 +13539,7 @@ function create_fragment13(ctx) {
     }
   };
 }
-function instance13($$self, $$props, $$invalidate) {
+function instance11($$self, $$props, $$invalidate) {
   let { command } = $$props;
   let { startDrag } = $$props;
   let { dragDisabled } = $$props;
@@ -12807,25 +13590,28 @@ var WaitCommand = class extends SvelteComponent {
     init(
       this,
       options,
-      instance13,
-      create_fragment13,
+      instance11,
+      create_fragment11,
       safe_not_equal,
       {
         command: 0,
         startDrag: 1,
         dragDisabled: 2
       },
-      add_css8
+      add_css7
     );
   }
 };
 var WaitCommand_default = WaitCommand;
 
 // src/gui/MacroGUIs/Components/NestedChoiceCommand.svelte
-function create_fragment14(ctx) {
+function create_fragment12(ctx) {
   let div1;
   let li;
-  let t0_value = ctx[0].name + "";
+  let t0_value = (
+    /*command*/
+    ctx[0].name + ""
+  );
   let t0;
   let t1;
   let div0;
@@ -12863,8 +13649,10 @@ function create_fragment14(ctx) {
       attr(span0, "class", "clickable");
       attr(span1, "class", "clickable");
       attr(span2, "aria-label", "Drag-handle");
-      attr(span2, "style", span2_style_value = (ctx[2] ? "cursor: grab" : "cursor: grabbing") + ";");
-      attr(span2, "tabindex", span2_tabindex_value = ctx[2] ? 0 : -1);
+      attr(span2, "style", span2_style_value = /*dragDisabled*/
+      (ctx[2] ? "cursor: grab" : "cursor: grabbing") + ";");
+      attr(span2, "tabindex", span2_tabindex_value = /*dragDisabled*/
+      ctx[2] ? 0 : -1);
       attr(div1, "class", "quickAddCommandListItem");
     },
     m(target, anchor) {
@@ -12884,14 +13672,30 @@ function create_fragment14(ctx) {
       current = true;
       if (!mounted) {
         dispose = [
-          listen(span0, "click", ctx[5]),
-          listen(span1, "click", ctx[6]),
+          listen(
+            span0,
+            "click",
+            /*click_handler*/
+            ctx[5]
+          ),
+          listen(
+            span1,
+            "click",
+            /*click_handler_1*/
+            ctx[6]
+          ),
           listen(span2, "mousedown", function() {
-            if (is_function(ctx[1]))
+            if (is_function(
+              /*startDrag*/
+              ctx[1]
+            ))
               ctx[1].apply(this, arguments);
           }),
           listen(span2, "touchstart", function() {
-            if (is_function(ctx[1]))
+            if (is_function(
+              /*startDrag*/
+              ctx[1]
+            ))
               ctx[1].apply(this, arguments);
           })
         ];
@@ -12900,12 +13704,18 @@ function create_fragment14(ctx) {
     },
     p(new_ctx, [dirty]) {
       ctx = new_ctx;
-      if ((!current || dirty & 1) && t0_value !== (t0_value = ctx[0].name + ""))
+      if ((!current || dirty & /*command*/
+      1) && t0_value !== (t0_value = /*command*/
+      ctx[0].name + ""))
         set_data(t0, t0_value);
-      if (!current || dirty & 4 && span2_style_value !== (span2_style_value = (ctx[2] ? "cursor: grab" : "cursor: grabbing") + ";")) {
+      if (!current || dirty & /*dragDisabled*/
+      4 && span2_style_value !== (span2_style_value = /*dragDisabled*/
+      (ctx[2] ? "cursor: grab" : "cursor: grabbing") + ";")) {
         attr(span2, "style", span2_style_value);
       }
-      if (!current || dirty & 4 && span2_tabindex_value !== (span2_tabindex_value = ctx[2] ? 0 : -1)) {
+      if (!current || dirty & /*dragDisabled*/
+      4 && span2_tabindex_value !== (span2_tabindex_value = /*dragDisabled*/
+      ctx[2] ? 0 : -1)) {
         attr(span2, "tabindex", span2_tabindex_value);
       }
     },
@@ -12934,7 +13744,7 @@ function create_fragment14(ctx) {
     }
   };
 }
-function instance14($$self, $$props, $$invalidate) {
+function instance12($$self, $$props, $$invalidate) {
   let { command } = $$props;
   let { startDrag } = $$props;
   let { dragDisabled } = $$props;
@@ -12968,7 +13778,7 @@ function instance14($$self, $$props, $$invalidate) {
 var NestedChoiceCommand = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance14, create_fragment14, safe_not_equal, {
+    init(this, options, instance12, create_fragment12, safe_not_equal, {
       command: 0,
       startDrag: 1,
       dragDisabled: 2
@@ -12977,14 +13787,14 @@ var NestedChoiceCommand = class extends SvelteComponent {
 };
 var NestedChoiceCommand_default = NestedChoiceCommand;
 
-// src/gui/MacroGUIs/CommandList.svelte
-var import_obsidian21 = require("obsidian");
-
 // src/gui/MacroGUIs/Components/UserScriptCommand.svelte
-function create_fragment15(ctx) {
+function create_fragment13(ctx) {
   let div1;
   let li;
-  let t0_value = ctx[0].name + "";
+  let t0_value = (
+    /*command*/
+    ctx[0].name + ""
+  );
   let t0;
   let t1;
   let div0;
@@ -13022,8 +13832,10 @@ function create_fragment15(ctx) {
       attr(span0, "class", "clickable");
       attr(span1, "class", "clickable");
       attr(span2, "aria-label", "Drag-handle");
-      attr(span2, "style", span2_style_value = (ctx[2] ? "cursor: grab" : "cursor: grabbing") + ";");
-      attr(span2, "tabindex", span2_tabindex_value = ctx[2] ? 0 : -1);
+      attr(span2, "style", span2_style_value = /*dragDisabled*/
+      (ctx[2] ? "cursor: grab" : "cursor: grabbing") + ";");
+      attr(span2, "tabindex", span2_tabindex_value = /*dragDisabled*/
+      ctx[2] ? 0 : -1);
       attr(div1, "class", "quickAddCommandListItem");
     },
     m(target, anchor) {
@@ -13043,16 +13855,42 @@ function create_fragment15(ctx) {
       current = true;
       if (!mounted) {
         dispose = [
-          listen(span0, "click", ctx[5]),
-          listen(span0, "keypress", ctx[6]),
-          listen(span1, "click", ctx[7]),
-          listen(span1, "keypress", ctx[8]),
+          listen(
+            span0,
+            "click",
+            /*click_handler*/
+            ctx[5]
+          ),
+          listen(
+            span0,
+            "keypress",
+            /*keypress_handler*/
+            ctx[6]
+          ),
+          listen(
+            span1,
+            "click",
+            /*click_handler_1*/
+            ctx[7]
+          ),
+          listen(
+            span1,
+            "keypress",
+            /*keypress_handler_1*/
+            ctx[8]
+          ),
           listen(span2, "mousedown", function() {
-            if (is_function(ctx[1]))
+            if (is_function(
+              /*startDrag*/
+              ctx[1]
+            ))
               ctx[1].apply(this, arguments);
           }),
           listen(span2, "touchstart", function() {
-            if (is_function(ctx[1]))
+            if (is_function(
+              /*startDrag*/
+              ctx[1]
+            ))
               ctx[1].apply(this, arguments);
           })
         ];
@@ -13061,12 +13899,18 @@ function create_fragment15(ctx) {
     },
     p(new_ctx, [dirty]) {
       ctx = new_ctx;
-      if ((!current || dirty & 1) && t0_value !== (t0_value = ctx[0].name + ""))
+      if ((!current || dirty & /*command*/
+      1) && t0_value !== (t0_value = /*command*/
+      ctx[0].name + ""))
         set_data(t0, t0_value);
-      if (!current || dirty & 4 && span2_style_value !== (span2_style_value = (ctx[2] ? "cursor: grab" : "cursor: grabbing") + ";")) {
+      if (!current || dirty & /*dragDisabled*/
+      4 && span2_style_value !== (span2_style_value = /*dragDisabled*/
+      (ctx[2] ? "cursor: grab" : "cursor: grabbing") + ";")) {
         attr(span2, "style", span2_style_value);
       }
-      if (!current || dirty & 4 && span2_tabindex_value !== (span2_tabindex_value = ctx[2] ? 0 : -1)) {
+      if (!current || dirty & /*dragDisabled*/
+      4 && span2_tabindex_value !== (span2_tabindex_value = /*dragDisabled*/
+      ctx[2] ? 0 : -1)) {
         attr(span2, "tabindex", span2_tabindex_value);
       }
     },
@@ -13095,7 +13939,7 @@ function create_fragment15(ctx) {
     }
   };
 }
-function instance15($$self, $$props, $$invalidate) {
+function instance13($$self, $$props, $$invalidate) {
   let { command } = $$props;
   let { startDrag } = $$props;
   let { dragDisabled } = $$props;
@@ -13133,7 +13977,7 @@ function instance15($$self, $$props, $$invalidate) {
 var UserScriptCommand = class extends SvelteComponent {
   constructor(options) {
     super();
-    init(this, options, instance15, create_fragment15, safe_not_equal, {
+    init(this, options, instance13, create_fragment13, safe_not_equal, {
       command: 0,
       startDrag: 1,
       dragDisabled: 2
@@ -13143,8 +13987,21 @@ var UserScriptCommand = class extends SvelteComponent {
 var UserScriptCommand_default = UserScriptCommand;
 
 // src/gui/MacroGUIs/UserScriptSettingsModal.ts
-var import_obsidian20 = require("obsidian");
-var UserScriptSettingsModal = class extends import_obsidian20.Modal {
+var import_obsidian24 = require("obsidian");
+
+// src/utils/setPasswordOnBlur.ts
+function setPasswordOnBlur(el) {
+  el.addEventListener("focus", () => {
+    el.type = "text";
+  });
+  el.addEventListener("blur", () => {
+    el.type = "password";
+  });
+  el.type = "password";
+}
+
+// src/gui/MacroGUIs/UserScriptSettingsModal.ts
+var UserScriptSettingsModal = class extends import_obsidian24.Modal {
   constructor(app2, command, settings) {
     super(app2);
     this.command = command;
@@ -13152,85 +14009,74 @@ var UserScriptSettingsModal = class extends import_obsidian20.Modal {
     this.display();
     if (!this.command.settings)
       this.command.settings = {};
-    Object.keys(this.settings.options).forEach((setting) => {
-      var _a;
-      if (this.command.settings[setting] === void 0) {
-        this.command.settings[setting] = (_a = this.settings.options[setting]) == null ? void 0 : _a.defaultValue;
+    if (this.settings.options) {
+      for (const setting in this.settings.options) {
+        const valueIsNotSetAlready = this.command.settings[setting] === void 0;
+        const defaultValueAvailable = "defaultValue" in this.settings.options[setting] && this.settings.options[setting].defaultValue !== void 0;
+        if (valueIsNotSetAlready && // Checking that the setting is an object & getting the default value...
+        defaultValueAvailable) {
+          this.command.settings[setting] = this.settings.options[setting].defaultValue;
+        }
       }
-    });
+    }
   }
   display() {
-    var _a, _b, _c;
     this.containerEl.addClass("quickAddModal", "userScriptSettingsModal");
     this.contentEl.empty();
-    this.titleEl.innerText = `${(_a = this.settings) == null ? void 0 : _a.name}${((_b = this.settings) == null ? void 0 : _b.author) ? " by " + ((_c = this.settings) == null ? void 0 : _c.author) : ""}`;
+    this.titleEl.innerText = `${this.settings?.name}${this.settings?.author ? " by " + this.settings?.author : ""}`;
     const options = this.settings.options;
-    Object.keys(options).forEach((option) => {
-      var _a2, _b2;
+    if (!options) {
+      return;
+    }
+    for (const option in options) {
+      if (!options.hasOwnProperty(option))
+        continue;
       const entry = options[option];
       let value = entry.defaultValue;
       if (this.command.settings[option] !== void 0) {
         value = this.command.settings[option];
       }
-      switch ((_b2 = (_a2 = options[option]) == null ? void 0 : _a2.type) == null ? void 0 : _b2.toLowerCase()) {
-        case "text":
-        case "input":
-          this.addInputBox(
-            option,
-            value,
-            entry == null ? void 0 : entry.placeholder,
-            entry == null ? void 0 : entry.secret
-          );
-          break;
-        case "checkbox":
-        case "toggle":
-          this.addToggle(option, value);
-          break;
-        case "dropdown":
-        case "select":
-          this.addDropdown(option, entry.options, value);
-          break;
-        case "format":
-          this.addFormatInput(option, value, entry == null ? void 0 : entry.placeholder);
-          break;
-        default:
-          break;
+      const type = entry.type;
+      if (type === "text" || type === "input") {
+        this.addInputBox(
+          option,
+          value,
+          entry?.placeholder,
+          entry.secret
+        );
+      } else if (type === "checkbox" || type === "toggle") {
+        this.addToggle(option, value);
+      } else if (type === "dropdown" || type === "select") {
+        this.addDropdown(option, entry.options, value);
+      } else if (type === "format") {
+        this.addFormatInput(option, value, entry.placeholder);
       }
-    });
-  }
-  setPasswordOnBlur(el) {
-    el.addEventListener("focus", () => {
-      el.type = "text";
-    });
-    el.addEventListener("blur", () => {
-      el.type = "password";
-    });
-    el.type = "password";
+    }
   }
   addInputBox(name, value, placeholder, passwordOnBlur) {
-    new import_obsidian20.Setting(this.contentEl).setName(name).addText((input) => {
-      input.setValue(value).onChange((value2) => this.command.settings[name] = value2).setPlaceholder(placeholder != null ? placeholder : "");
+    new import_obsidian24.Setting(this.contentEl).setName(name).addText((input) => {
+      input.setValue(value).onChange((value2) => this.command.settings[name] = value2).setPlaceholder(placeholder ?? "");
       if (passwordOnBlur) {
-        this.setPasswordOnBlur(input.inputEl);
+        setPasswordOnBlur(input.inputEl);
       }
     });
   }
   addToggle(name, value) {
-    new import_obsidian20.Setting(this.contentEl).setName(name).addToggle(
+    new import_obsidian24.Setting(this.contentEl).setName(name).addToggle(
       (toggle) => toggle.setValue(value).onChange((value2) => this.command.settings[name] = value2)
     );
   }
   addDropdown(name, options, value) {
-    new import_obsidian20.Setting(this.contentEl).setName(name).addDropdown((dropdown) => {
-      options.forEach((item) => dropdown.addOption(item, item));
+    new import_obsidian24.Setting(this.contentEl).setName(name).addDropdown((dropdown) => {
+      options.forEach((item) => void dropdown.addOption(item, item));
       dropdown.setValue(value);
       dropdown.onChange((value2) => this.command.settings[name] = value2);
     });
   }
   addFormatInput(name, value, placeholder) {
-    new import_obsidian20.Setting(this.contentEl).setName(name);
+    new import_obsidian24.Setting(this.contentEl).setName(name);
     const formatDisplay = this.contentEl.createEl("span");
-    const input = new import_obsidian20.TextComponent(this.contentEl);
+    const input = new import_obsidian24.TextAreaComponent(this.contentEl);
     new FormatSyntaxSuggester(this.app, input.inputEl, QuickAdd.instance);
     const displayFormatter = new FormatDisplayFormatter(
       this.app,
@@ -13239,22 +14085,415 @@ var UserScriptSettingsModal = class extends import_obsidian20.Modal {
     input.setValue(value).onChange(async (value2) => {
       this.command.settings[name] = value2;
       formatDisplay.innerText = await displayFormatter.format(value2);
-    }).setPlaceholder(placeholder != null ? placeholder : "");
+    }).setPlaceholder(placeholder ?? "");
     input.inputEl.style.width = "100%";
+    input.inputEl.style.height = "100px";
     input.inputEl.style.marginBottom = "1em";
-    (async () => formatDisplay.innerText = await displayFormatter.format(value))();
+    void (async () => formatDisplay.innerText = await displayFormatter.format(value))();
+  }
+};
+
+// src/gui/MacroGUIs/Components/AIAssistantCommand.svelte
+function create_fragment14(ctx) {
+  let div1;
+  let li;
+  let t0_value = (
+    /*command*/
+    ctx[0].name + ""
+  );
+  let t0;
+  let t1;
+  let div0;
+  let span0;
+  let icon0;
+  let t2;
+  let span1;
+  let icon1;
+  let t3;
+  let span2;
+  let icon2;
+  let span2_style_value;
+  let span2_tabindex_value;
+  let current;
+  let mounted;
+  let dispose;
+  icon0 = new Icon_default({ props: { data: faCog } });
+  icon1 = new Icon_default({ props: { data: faTrash } });
+  icon2 = new Icon_default({ props: { data: faBars } });
+  return {
+    c() {
+      div1 = element("div");
+      li = element("li");
+      t0 = text(t0_value);
+      t1 = space();
+      div0 = element("div");
+      span0 = element("span");
+      create_component(icon0.$$.fragment);
+      t2 = space();
+      span1 = element("span");
+      create_component(icon1.$$.fragment);
+      t3 = space();
+      span2 = element("span");
+      create_component(icon2.$$.fragment);
+      attr(span0, "class", "clickable");
+      attr(span1, "class", "clickable");
+      attr(span2, "aria-label", "Drag-handle");
+      attr(span2, "style", span2_style_value = /*dragDisabled*/
+      (ctx[2] ? "cursor: grab" : "cursor: grabbing") + ";");
+      attr(span2, "tabindex", span2_tabindex_value = /*dragDisabled*/
+      ctx[2] ? 0 : -1);
+      attr(div1, "class", "quickAddCommandListItem");
+    },
+    m(target, anchor) {
+      insert(target, div1, anchor);
+      append(div1, li);
+      append(li, t0);
+      append(div1, t1);
+      append(div1, div0);
+      append(div0, span0);
+      mount_component(icon0, span0, null);
+      append(div0, t2);
+      append(div0, span1);
+      mount_component(icon1, span1, null);
+      append(div0, t3);
+      append(div0, span2);
+      mount_component(icon2, span2, null);
+      current = true;
+      if (!mounted) {
+        dispose = [
+          listen(
+            span0,
+            "click",
+            /*click_handler*/
+            ctx[5]
+          ),
+          listen(
+            span1,
+            "click",
+            /*click_handler_1*/
+            ctx[6]
+          ),
+          listen(span2, "mousedown", function() {
+            if (is_function(
+              /*startDrag*/
+              ctx[1]
+            ))
+              ctx[1].apply(this, arguments);
+          }),
+          listen(span2, "touchstart", function() {
+            if (is_function(
+              /*startDrag*/
+              ctx[1]
+            ))
+              ctx[1].apply(this, arguments);
+          })
+        ];
+        mounted = true;
+      }
+    },
+    p(new_ctx, [dirty]) {
+      ctx = new_ctx;
+      if ((!current || dirty & /*command*/
+      1) && t0_value !== (t0_value = /*command*/
+      ctx[0].name + ""))
+        set_data(t0, t0_value);
+      if (!current || dirty & /*dragDisabled*/
+      4 && span2_style_value !== (span2_style_value = /*dragDisabled*/
+      (ctx[2] ? "cursor: grab" : "cursor: grabbing") + ";")) {
+        attr(span2, "style", span2_style_value);
+      }
+      if (!current || dirty & /*dragDisabled*/
+      4 && span2_tabindex_value !== (span2_tabindex_value = /*dragDisabled*/
+      ctx[2] ? 0 : -1)) {
+        attr(span2, "tabindex", span2_tabindex_value);
+      }
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(icon0.$$.fragment, local);
+      transition_in(icon1.$$.fragment, local);
+      transition_in(icon2.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(icon0.$$.fragment, local);
+      transition_out(icon1.$$.fragment, local);
+      transition_out(icon2.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      if (detaching)
+        detach(div1);
+      destroy_component(icon0);
+      destroy_component(icon1);
+      destroy_component(icon2);
+      mounted = false;
+      run_all(dispose);
+    }
+  };
+}
+function instance14($$self, $$props, $$invalidate) {
+  let { command } = $$props;
+  let { startDrag } = $$props;
+  let { dragDisabled } = $$props;
+  const dispatch = createEventDispatcher();
+  function deleteCommand() {
+    dispatch("deleteCommand", command.id);
+  }
+  function configureAssistant() {
+    dispatch("configureAssistant", command);
+  }
+  const click_handler = () => configureAssistant();
+  const click_handler_1 = () => deleteCommand();
+  $$self.$$set = ($$props2) => {
+    if ("command" in $$props2)
+      $$invalidate(0, command = $$props2.command);
+    if ("startDrag" in $$props2)
+      $$invalidate(1, startDrag = $$props2.startDrag);
+    if ("dragDisabled" in $$props2)
+      $$invalidate(2, dragDisabled = $$props2.dragDisabled);
+  };
+  return [
+    command,
+    startDrag,
+    dragDisabled,
+    deleteCommand,
+    configureAssistant,
+    click_handler,
+    click_handler_1
+  ];
+}
+var AIAssistantCommand = class extends SvelteComponent {
+  constructor(options) {
+    super();
+    init(this, options, instance14, create_fragment14, safe_not_equal, {
+      command: 0,
+      startDrag: 1,
+      dragDisabled: 2
+    });
+  }
+};
+var AIAssistantCommand_default = AIAssistantCommand;
+
+// src/gui/MacroGUIs/AIAssistantCommandSettingsModal.ts
+var import_obsidian25 = require("obsidian");
+
+// src/ai/OpenAIModelParameters.ts
+var DEFAULT_TOP_P = 1;
+var DEFAULT_TEMPERATURE = 1;
+var DEFAULT_FREQUENCY_PENALTY = 0;
+var DEFAULT_PRESENCE_PENALTY = 0;
+
+// src/gui/MacroGUIs/AIAssistantCommandSettingsModal.ts
+var AIAssistantCommandSettingsModal = class extends import_obsidian25.Modal {
+  constructor(settings) {
+    super(app);
+    this.showAdvancedSettings = false;
+    this.settings = settings;
+    this.waitForClose = new Promise(
+      (resolve, reject) => {
+        this.rejectPromise = reject;
+        this.resolvePromise = resolve;
+      }
+    );
+    this.open();
+    this.display();
+  }
+  display() {
+    const header = this.contentEl.createEl("h2", {
+      text: `${this.settings.name} Settings`
+    });
+    header.style.textAlign = "center";
+    header.style.cursor = "pointer";
+    header.style.userSelect = "none";
+    header.addEventListener("click", async () => {
+      try {
+        const newName = await GenericInputPrompt.Prompt(
+          app,
+          "New name",
+          this.settings.name,
+          this.settings.name
+        );
+        if (newName && newName !== this.settings.name) {
+          this.settings.name = newName;
+          this.reload();
+        }
+      } catch (error) {
+      }
+    });
+    this.addPromptTemplateSetting(this.contentEl);
+    this.addModelSetting(this.contentEl);
+    this.addOutputVariableNameSetting(this.contentEl);
+    this.addShowAdvancedSettingsToggle(this.contentEl);
+    if (this.showAdvancedSettings) {
+      if (!this.settings.modelParameters)
+        this.settings.modelParameters = {};
+      this.addTemperatureSetting(this.contentEl);
+      this.addTopPSetting(this.contentEl);
+      this.addFrequencyPenaltySetting(this.contentEl);
+      this.addPresencePenaltySetting(this.contentEl);
+    }
+    this.addSystemPromptSetting(this.contentEl);
+  }
+  reload() {
+    this.contentEl.empty();
+    this.display();
+  }
+  addPromptTemplateSetting(container) {
+    const promptTemplatesFolder = settingsStore.getState().ai.promptTemplatesFolderPath;
+    const promptTemplateFiles = getMarkdownFilesInFolder(
+      promptTemplatesFolder
+    ).map((f) => f.name);
+    new import_obsidian25.Setting(container).setName("Prompt Template").setDesc(
+      "Enabling this will have the assistant use the prompt template you specify. If disable, the assistant will ask you for a prompt template to use."
+    ).addToggle((toggle) => {
+      toggle.setValue(this.settings.promptTemplate.enable);
+      toggle.onChange((value) => {
+        this.settings.promptTemplate.enable = value;
+      });
+    }).addText((text2) => {
+      text2.setValue(this.settings.promptTemplate.name).onChange(
+        (value) => {
+          this.settings.promptTemplate.name = value;
+        }
+      );
+      new GenericTextSuggester(
+        app,
+        text2.inputEl,
+        promptTemplateFiles
+      );
+    });
+  }
+  addModelSetting(container) {
+    new import_obsidian25.Setting(container).setName("Model").setDesc("The model the AI Assistant will use").addDropdown((dropdown) => {
+      for (const model of models_and_ask_me) {
+        dropdown.addOption(model, model);
+      }
+      dropdown.setValue(this.settings.model);
+      dropdown.onChange((value) => {
+        this.settings.model = value;
+      });
+    });
+  }
+  addOutputVariableNameSetting(container) {
+    new import_obsidian25.Setting(container).setName("Output variable name").setDesc(
+      "The name of the variable used to store the AI Assistant output, i.e. {{value:output}}."
+    ).addText((text2) => {
+      text2.setValue(this.settings.outputVariableName).onChange(
+        (value) => {
+          this.settings.outputVariableName = value;
+        }
+      );
+    });
+  }
+  addSystemPromptSetting(contentEl) {
+    new import_obsidian25.Setting(contentEl).setName("System Prompt").setDesc("The system prompt for the AI Assistant");
+    const textAreaComponent = new import_obsidian25.TextAreaComponent(contentEl);
+    textAreaComponent.setValue(this.settings.systemPrompt).onChange(async (value) => {
+      this.settings.systemPrompt = value;
+      formatDisplay.innerText = await displayFormatter.format(value);
+    });
+    new FormatSyntaxSuggester(
+      this.app,
+      textAreaComponent.inputEl,
+      QuickAdd.instance
+    );
+    const displayFormatter = new FormatDisplayFormatter(
+      this.app,
+      QuickAdd.instance
+    );
+    textAreaComponent.inputEl.style.width = "100%";
+    textAreaComponent.inputEl.style.height = "100px";
+    textAreaComponent.inputEl.style.minHeight = "100px";
+    textAreaComponent.inputEl.style.marginBottom = "1em";
+    const formatDisplay = this.contentEl.createEl("span");
+    void (async () => formatDisplay.innerText = await displayFormatter.format(
+      this.settings.systemPrompt ?? ""
+    ))();
+  }
+  addShowAdvancedSettingsToggle(container) {
+    new import_obsidian25.Setting(container).setName("Show advanced settings").setDesc(
+      "Show advanced settings such as temperature, top p, and frequency penalty."
+    ).addToggle((toggle) => {
+      toggle.setValue(this.showAdvancedSettings);
+      toggle.onChange((value) => {
+        this.showAdvancedSettings = value;
+        this.reload();
+      });
+    });
+  }
+  addTemperatureSetting(container) {
+    new import_obsidian25.Setting(container).setName("Temperature").setDesc(
+      "Sampling temperature. Higher values like 0.8 makes the output more random, whereas lower values like 0.2 will make it more focused and deterministic. The default is 1."
+    ).addSlider((slider) => {
+      slider.setLimits(0, 1, 0.1);
+      slider.setDynamicTooltip();
+      slider.setValue(
+        this.settings.modelParameters.temperature ?? DEFAULT_TEMPERATURE
+      );
+      slider.onChange((value) => {
+        this.settings.modelParameters.temperature = value;
+      });
+    });
+  }
+  addTopPSetting(container) {
+    new import_obsidian25.Setting(container).setName("Top P").setDesc(
+      "Nucleus sampling - consider this an alternative to temperature. The model considers the results of the tokens with top_p probability mass. 0.1 means only tokens compromising the top 10% probability mass are considered. The default is 1."
+    ).addSlider((slider) => {
+      slider.setLimits(0, 1, 0.1);
+      slider.setDynamicTooltip();
+      slider.setValue(
+        this.settings.modelParameters.top_p ?? DEFAULT_TOP_P
+      );
+      slider.onChange((value) => {
+        this.settings.modelParameters.top_p = value;
+      });
+    });
+  }
+  addFrequencyPenaltySetting(container) {
+    new import_obsidian25.Setting(container).setName("Frequency Penalty").setDesc(
+      "Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim. The default is 0."
+    ).addSlider((slider) => {
+      slider.setLimits(0, 2, 0.1);
+      slider.setDynamicTooltip();
+      slider.setValue(
+        this.settings.modelParameters.frequency_penalty ?? DEFAULT_FREQUENCY_PENALTY
+      );
+      slider.onChange((value) => {
+        this.settings.modelParameters.frequency_penalty = value;
+      });
+    });
+  }
+  addPresencePenaltySetting(container) {
+    new import_obsidian25.Setting(container).setName("Presence Penalty").setDesc(
+      "Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics. The default is 0."
+    ).addSlider((slider) => {
+      slider.setLimits(0, 2, 0.1);
+      slider.setDynamicTooltip();
+      slider.setValue(
+        this.settings.modelParameters.presence_penalty ?? DEFAULT_PRESENCE_PENALTY
+      );
+      slider.onChange((value) => {
+        this.settings.modelParameters.presence_penalty = value;
+      });
+    });
+  }
+  onClose() {
+    this.resolvePromise(this.settings);
+    super.onClose();
   }
 };
 
 // src/gui/MacroGUIs/CommandList.svelte
-function add_css9(target) {
-  append_styles(target, "svelte-1ukgrgp", ".quickAddCommandList.svelte-1ukgrgp{display:grid;grid-template-columns:auto;width:auto;border:0 solid black;overflow-y:auto;height:auto;margin-bottom:8px;padding:20px}");
+function add_css8(target) {
+  append_styles(target, "svelte-1ngraqt", ".quickAddCommandList.svelte-1ngraqt{display:grid;grid-template-columns:auto;width:auto;border:0 solid black;overflow-y:auto;height:auto;margin-bottom:8px;padding:20px}");
 }
 function get_each_context4(ctx, list, i) {
   const child_ctx = ctx.slice();
-  child_ctx[33] = list[i];
-  child_ctx[34] = list;
-  child_ctx[35] = i;
+  child_ctx[38] = list[i];
+  child_ctx[39] = list;
+  child_ctx[40] = i;
   return child_ctx;
 }
 function create_else_block2(ctx) {
@@ -13264,30 +14503,58 @@ function create_else_block2(ctx) {
   let updating_startDrag;
   let current;
   function standardcommand_command_binding(value) {
-    ctx[27](value, ctx[33], ctx[34], ctx[35]);
+    ctx[32](
+      value,
+      /*command*/
+      ctx[38],
+      /*each_value*/
+      ctx[39],
+      /*command_index*/
+      ctx[40]
+    );
   }
   function standardcommand_dragDisabled_binding(value) {
-    ctx[28](value);
+    ctx[33](value);
   }
   function standardcommand_startDrag_binding(value) {
-    ctx[29](value);
+    ctx[34](value);
   }
   let standardcommand_props = {};
-  if (ctx[33] !== void 0) {
-    standardcommand_props.command = ctx[33];
+  if (
+    /*command*/
+    ctx[38] !== void 0
+  ) {
+    standardcommand_props.command = /*command*/
+    ctx[38];
   }
-  if (ctx[3] !== void 0) {
-    standardcommand_props.dragDisabled = ctx[3];
+  if (
+    /*dragDisabled*/
+    ctx[3] !== void 0
+  ) {
+    standardcommand_props.dragDisabled = /*dragDisabled*/
+    ctx[3];
   }
-  if (ctx[4] !== void 0) {
-    standardcommand_props.startDrag = ctx[4];
+  if (
+    /*startDrag*/
+    ctx[4] !== void 0
+  ) {
+    standardcommand_props.startDrag = /*startDrag*/
+    ctx[4];
   }
   standardcommand = new StandardCommand_default({ props: standardcommand_props });
   binding_callbacks.push(() => bind(standardcommand, "command", standardcommand_command_binding));
   binding_callbacks.push(() => bind(standardcommand, "dragDisabled", standardcommand_dragDisabled_binding));
   binding_callbacks.push(() => bind(standardcommand, "startDrag", standardcommand_startDrag_binding));
-  standardcommand.$on("deleteCommand", ctx[30]);
-  standardcommand.$on("updateCommand", ctx[7]);
+  standardcommand.$on(
+    "deleteCommand",
+    /*deleteCommand_handler_4*/
+    ctx[35]
+  );
+  standardcommand.$on(
+    "updateCommand",
+    /*updateCommandFromEvent*/
+    ctx[7]
+  );
   return {
     c() {
       create_component(standardcommand.$$.fragment);
@@ -13299,19 +14566,25 @@ function create_else_block2(ctx) {
     p(new_ctx, dirty) {
       ctx = new_ctx;
       const standardcommand_changes = {};
-      if (!updating_command && dirty[0] & 5) {
+      if (!updating_command && dirty[0] & /*commands, SHADOW_PLACEHOLDER_ITEM_ID*/
+      5) {
         updating_command = true;
-        standardcommand_changes.command = ctx[33];
+        standardcommand_changes.command = /*command*/
+        ctx[38];
         add_flush_callback(() => updating_command = false);
       }
-      if (!updating_dragDisabled && dirty[0] & 8) {
+      if (!updating_dragDisabled && dirty[0] & /*dragDisabled*/
+      8) {
         updating_dragDisabled = true;
-        standardcommand_changes.dragDisabled = ctx[3];
+        standardcommand_changes.dragDisabled = /*dragDisabled*/
+        ctx[3];
         add_flush_callback(() => updating_dragDisabled = false);
       }
-      if (!updating_startDrag && dirty[0] & 16) {
+      if (!updating_startDrag && dirty[0] & /*startDrag*/
+      16) {
         updating_startDrag = true;
-        standardcommand_changes.startDrag = ctx[4];
+        standardcommand_changes.startDrag = /*startDrag*/
+        ctx[4];
         add_flush_callback(() => updating_startDrag = false);
       }
       standardcommand.$set(standardcommand_changes);
@@ -13331,6 +14604,119 @@ function create_else_block2(ctx) {
     }
   };
 }
+function create_if_block_32(ctx) {
+  let aiassistantcommand;
+  let updating_command;
+  let updating_dragDisabled;
+  let updating_startDrag;
+  let current;
+  function aiassistantcommand_command_binding(value) {
+    ctx[28](
+      value,
+      /*command*/
+      ctx[38],
+      /*each_value*/
+      ctx[39],
+      /*command_index*/
+      ctx[40]
+    );
+  }
+  function aiassistantcommand_dragDisabled_binding(value) {
+    ctx[29](value);
+  }
+  function aiassistantcommand_startDrag_binding(value) {
+    ctx[30](value);
+  }
+  let aiassistantcommand_props = {};
+  if (
+    /*command*/
+    ctx[38] !== void 0
+  ) {
+    aiassistantcommand_props.command = /*command*/
+    ctx[38];
+  }
+  if (
+    /*dragDisabled*/
+    ctx[3] !== void 0
+  ) {
+    aiassistantcommand_props.dragDisabled = /*dragDisabled*/
+    ctx[3];
+  }
+  if (
+    /*startDrag*/
+    ctx[4] !== void 0
+  ) {
+    aiassistantcommand_props.startDrag = /*startDrag*/
+    ctx[4];
+  }
+  aiassistantcommand = new AIAssistantCommand_default({ props: aiassistantcommand_props });
+  binding_callbacks.push(() => bind(aiassistantcommand, "command", aiassistantcommand_command_binding));
+  binding_callbacks.push(() => bind(aiassistantcommand, "dragDisabled", aiassistantcommand_dragDisabled_binding));
+  binding_callbacks.push(() => bind(aiassistantcommand, "startDrag", aiassistantcommand_startDrag_binding));
+  aiassistantcommand.$on(
+    "deleteCommand",
+    /*deleteCommand_handler_3*/
+    ctx[31]
+  );
+  aiassistantcommand.$on(
+    "updateCommand",
+    /*updateCommandFromEvent*/
+    ctx[7]
+  );
+  aiassistantcommand.$on(
+    "configureAssistant",
+    /*configureAssistant*/
+    ctx[10]
+  );
+  return {
+    c() {
+      create_component(aiassistantcommand.$$.fragment);
+    },
+    m(target, anchor) {
+      mount_component(aiassistantcommand, target, anchor);
+      current = true;
+    },
+    p(new_ctx, dirty) {
+      ctx = new_ctx;
+      const aiassistantcommand_changes = {};
+      if (!updating_command && dirty[0] & /*commands, SHADOW_PLACEHOLDER_ITEM_ID*/
+      5) {
+        updating_command = true;
+        aiassistantcommand_changes.command = /*command*/
+        ctx[38];
+        add_flush_callback(() => updating_command = false);
+      }
+      if (!updating_dragDisabled && dirty[0] & /*dragDisabled*/
+      8) {
+        updating_dragDisabled = true;
+        aiassistantcommand_changes.dragDisabled = /*dragDisabled*/
+        ctx[3];
+        add_flush_callback(() => updating_dragDisabled = false);
+      }
+      if (!updating_startDrag && dirty[0] & /*startDrag*/
+      16) {
+        updating_startDrag = true;
+        aiassistantcommand_changes.startDrag = /*startDrag*/
+        ctx[4];
+        add_flush_callback(() => updating_startDrag = false);
+      }
+      aiassistantcommand.$set(aiassistantcommand_changes);
+    },
+    i(local) {
+      if (current)
+        return;
+      transition_in(aiassistantcommand.$$.fragment, local);
+      current = true;
+    },
+    o(local) {
+      transition_out(aiassistantcommand.$$.fragment, local);
+      current = false;
+    },
+    d(detaching) {
+      destroy_component(aiassistantcommand, detaching);
+    }
+  };
+}
 function create_if_block_22(ctx) {
   let userscriptcommand;
   let updating_command;
@@ -13338,31 +14724,63 @@ function create_if_block_22(ctx) {
   let updating_startDrag;
   let current;
   function userscriptcommand_command_binding(value) {
-    ctx[23](value, ctx[33], ctx[34], ctx[35]);
+    ctx[24](
+      value,
+      /*command*/
+      ctx[38],
+      /*each_value*/
+      ctx[39],
+      /*command_index*/
+      ctx[40]
+    );
   }
   function userscriptcommand_dragDisabled_binding(value) {
-    ctx[24](value);
-  }
-  function userscriptcommand_startDrag_binding(value) {
     ctx[25](value);
   }
+  function userscriptcommand_startDrag_binding(value) {
+    ctx[26](value);
+  }
   let userscriptcommand_props = {};
-  if (ctx[33] !== void 0) {
-    userscriptcommand_props.command = ctx[33];
+  if (
+    /*command*/
+    ctx[38] !== void 0
+  ) {
+    userscriptcommand_props.command = /*command*/
+    ctx[38];
   }
-  if (ctx[3] !== void 0) {
-    userscriptcommand_props.dragDisabled = ctx[3];
+  if (
+    /*dragDisabled*/
+    ctx[3] !== void 0
+  ) {
+    userscriptcommand_props.dragDisabled = /*dragDisabled*/
+    ctx[3];
   }
-  if (ctx[4] !== void 0) {
-    userscriptcommand_props.startDrag = ctx[4];
+  if (
+    /*startDrag*/
+    ctx[4] !== void 0
+  ) {
+    userscriptcommand_props.startDrag = /*startDrag*/
+    ctx[4];
   }
   userscriptcommand = new UserScriptCommand_default({ props: userscriptcommand_props });
   binding_callbacks.push(() => bind(userscriptcommand, "command", userscriptcommand_command_binding));
   binding_callbacks.push(() => bind(userscriptcommand, "dragDisabled", userscriptcommand_dragDisabled_binding));
   binding_callbacks.push(() => bind(userscriptcommand, "startDrag", userscriptcommand_startDrag_binding));
-  userscriptcommand.$on("deleteCommand", ctx[26]);
-  userscriptcommand.$on("updateCommand", ctx[7]);
-  userscriptcommand.$on("configureScript", ctx[9]);
+  userscriptcommand.$on(
+    "deleteCommand",
+    /*deleteCommand_handler_2*/
+    ctx[27]
+  );
+  userscriptcommand.$on(
+    "updateCommand",
+    /*updateCommandFromEvent*/
+    ctx[7]
+  );
+  userscriptcommand.$on(
+    "configureScript",
+    /*configureScript*/
+    ctx[9]
+  );
   return {
     c() {
       create_component(userscriptcommand.$$.fragment);
@@ -13374,19 +14792,25 @@ function create_if_block_22(ctx) {
     p(new_ctx, dirty) {
       ctx = new_ctx;
       const userscriptcommand_changes = {};
-      if (!updating_command && dirty[0] & 5) {
+      if (!updating_command && dirty[0] & /*commands, SHADOW_PLACEHOLDER_ITEM_ID*/
+      5) {
         updating_command = true;
-        userscriptcommand_changes.command = ctx[33];
+        userscriptcommand_changes.command = /*command*/
+        ctx[38];
         add_flush_callback(() => updating_command = false);
       }
-      if (!updating_dragDisabled && dirty[0] & 8) {
+      if (!updating_dragDisabled && dirty[0] & /*dragDisabled*/
+      8) {
         updating_dragDisabled = true;
-        userscriptcommand_changes.dragDisabled = ctx[3];
+        userscriptcommand_changes.dragDisabled = /*dragDisabled*/
+        ctx[3];
         add_flush_callback(() => updating_dragDisabled = false);
       }
-      if (!updating_startDrag && dirty[0] & 16) {
+      if (!updating_startDrag && dirty[0] & /*startDrag*/
+      16) {
         updating_startDrag = true;
-        userscriptcommand_changes.startDrag = ctx[4];
+        userscriptcommand_changes.startDrag = /*startDrag*/
+        ctx[4];
         add_flush_callback(() => updating_startDrag = false);
       }
       userscriptcommand.$set(userscriptcommand_changes);
@@ -13413,31 +14837,63 @@ function create_if_block_14(ctx) {
   let updating_startDrag;
   let current;
   function nestedchoicecommand_command_binding(value) {
-    ctx[19](value, ctx[33], ctx[34], ctx[35]);
+    ctx[20](
+      value,
+      /*command*/
+      ctx[38],
+      /*each_value*/
+      ctx[39],
+      /*command_index*/
+      ctx[40]
+    );
   }
   function nestedchoicecommand_dragDisabled_binding(value) {
-    ctx[20](value);
-  }
-  function nestedchoicecommand_startDrag_binding(value) {
     ctx[21](value);
   }
+  function nestedchoicecommand_startDrag_binding(value) {
+    ctx[22](value);
+  }
   let nestedchoicecommand_props = {};
-  if (ctx[33] !== void 0) {
-    nestedchoicecommand_props.command = ctx[33];
+  if (
+    /*command*/
+    ctx[38] !== void 0
+  ) {
+    nestedchoicecommand_props.command = /*command*/
+    ctx[38];
   }
-  if (ctx[3] !== void 0) {
-    nestedchoicecommand_props.dragDisabled = ctx[3];
+  if (
+    /*dragDisabled*/
+    ctx[3] !== void 0
+  ) {
+    nestedchoicecommand_props.dragDisabled = /*dragDisabled*/
+    ctx[3];
   }
-  if (ctx[4] !== void 0) {
-    nestedchoicecommand_props.startDrag = ctx[4];
+  if (
+    /*startDrag*/
+    ctx[4] !== void 0
+  ) {
+    nestedchoicecommand_props.startDrag = /*startDrag*/
+    ctx[4];
   }
   nestedchoicecommand = new NestedChoiceCommand_default({ props: nestedchoicecommand_props });
   binding_callbacks.push(() => bind(nestedchoicecommand, "command", nestedchoicecommand_command_binding));
   binding_callbacks.push(() => bind(nestedchoicecommand, "dragDisabled", nestedchoicecommand_dragDisabled_binding));
   binding_callbacks.push(() => bind(nestedchoicecommand, "startDrag", nestedchoicecommand_startDrag_binding));
-  nestedchoicecommand.$on("deleteCommand", ctx[22]);
-  nestedchoicecommand.$on("updateCommand", ctx[7]);
-  nestedchoicecommand.$on("configureChoice", ctx[8]);
+  nestedchoicecommand.$on(
+    "deleteCommand",
+    /*deleteCommand_handler_1*/
+    ctx[23]
+  );
+  nestedchoicecommand.$on(
+    "updateCommand",
+    /*updateCommandFromEvent*/
+    ctx[7]
+  );
+  nestedchoicecommand.$on(
+    "configureChoice",
+    /*configureChoice*/
+    ctx[8]
+  );
   return {
     c() {
       create_component(nestedchoicecommand.$$.fragment);
@@ -13449,19 +14905,25 @@ function create_if_block_14(ctx) {
     p(new_ctx, dirty) {
       ctx = new_ctx;
       const nestedchoicecommand_changes = {};
-      if (!updating_command && dirty[0] & 5) {
+      if (!updating_command && dirty[0] & /*commands, SHADOW_PLACEHOLDER_ITEM_ID*/
+      5) {
         updating_command = true;
-        nestedchoicecommand_changes.command = ctx[33];
+        nestedchoicecommand_changes.command = /*command*/
+        ctx[38];
         add_flush_callback(() => updating_command = false);
       }
-      if (!updating_dragDisabled && dirty[0] & 8) {
+      if (!updating_dragDisabled && dirty[0] & /*dragDisabled*/
+      8) {
         updating_dragDisabled = true;
-        nestedchoicecommand_changes.dragDisabled = ctx[3];
+        nestedchoicecommand_changes.dragDisabled = /*dragDisabled*/
+        ctx[3];
         add_flush_callback(() => updating_dragDisabled = false);
       }
-      if (!updating_startDrag && dirty[0] & 16) {
+      if (!updating_startDrag && dirty[0] & /*startDrag*/
+      16) {
         updating_startDrag = true;
-        nestedchoicecommand_changes.startDrag = ctx[4];
+        nestedchoicecommand_changes.startDrag = /*startDrag*/
+        ctx[4];
         add_flush_callback(() => updating_startDrag = false);
       }
       nestedchoicecommand.$set(nestedchoicecommand_changes);
@@ -13488,30 +14950,58 @@ function create_if_block5(ctx) {
   let updating_startDrag;
   let current;
   function waitcommand_command_binding(value) {
-    ctx[15](value, ctx[33], ctx[34], ctx[35]);
+    ctx[16](
+      value,
+      /*command*/
+      ctx[38],
+      /*each_value*/
+      ctx[39],
+      /*command_index*/
+      ctx[40]
+    );
   }
   function waitcommand_dragDisabled_binding(value) {
-    ctx[16](value);
-  }
-  function waitcommand_startDrag_binding(value) {
     ctx[17](value);
   }
+  function waitcommand_startDrag_binding(value) {
+    ctx[18](value);
+  }
   let waitcommand_props = {};
-  if (ctx[33] !== void 0) {
-    waitcommand_props.command = ctx[33];
+  if (
+    /*command*/
+    ctx[38] !== void 0
+  ) {
+    waitcommand_props.command = /*command*/
+    ctx[38];
   }
-  if (ctx[3] !== void 0) {
-    waitcommand_props.dragDisabled = ctx[3];
+  if (
+    /*dragDisabled*/
+    ctx[3] !== void 0
+  ) {
+    waitcommand_props.dragDisabled = /*dragDisabled*/
+    ctx[3];
   }
-  if (ctx[4] !== void 0) {
-    waitcommand_props.startDrag = ctx[4];
+  if (
+    /*startDrag*/
+    ctx[4] !== void 0
+  ) {
+    waitcommand_props.startDrag = /*startDrag*/
+    ctx[4];
   }
   waitcommand = new WaitCommand_default({ props: waitcommand_props });
   binding_callbacks.push(() => bind(waitcommand, "command", waitcommand_command_binding));
   binding_callbacks.push(() => bind(waitcommand, "dragDisabled", waitcommand_dragDisabled_binding));
   binding_callbacks.push(() => bind(waitcommand, "startDrag", waitcommand_startDrag_binding));
-  waitcommand.$on("deleteCommand", ctx[18]);
-  waitcommand.$on("updateCommand", ctx[7]);
+  waitcommand.$on(
+    "deleteCommand",
+    /*deleteCommand_handler*/
+    ctx[19]
+  );
+  waitcommand.$on(
+    "updateCommand",
+    /*updateCommandFromEvent*/
+    ctx[7]
+  );
   return {
     c() {
       create_component(waitcommand.$$.fragment);
@@ -13523,19 +15013,25 @@ function create_if_block5(ctx) {
     p(new_ctx, dirty) {
       ctx = new_ctx;
       const waitcommand_changes = {};
-      if (!updating_command && dirty[0] & 5) {
+      if (!updating_command && dirty[0] & /*commands, SHADOW_PLACEHOLDER_ITEM_ID*/
+      5) {
         updating_command = true;
-        waitcommand_changes.command = ctx[33];
+        waitcommand_changes.command = /*command*/
+        ctx[38];
         add_flush_callback(() => updating_command = false);
       }
-      if (!updating_dragDisabled && dirty[0] & 8) {
+      if (!updating_dragDisabled && dirty[0] & /*dragDisabled*/
+      8) {
         updating_dragDisabled = true;
-        waitcommand_changes.dragDisabled = ctx[3];
+        waitcommand_changes.dragDisabled = /*dragDisabled*/
+        ctx[3];
         add_flush_callback(() => updating_dragDisabled = false);
       }
-      if (!updating_startDrag && dirty[0] & 16) {
+      if (!updating_startDrag && dirty[0] & /*startDrag*/
+      16) {
         updating_startDrag = true;
-        waitcommand_changes.startDrag = ctx[4];
+        waitcommand_changes.startDrag = /*startDrag*/
+        ctx[4];
         add_flush_callback(() => updating_startDrag = false);
       }
       waitcommand.$set(waitcommand_changes);
@@ -13561,16 +15057,36 @@ function create_each_block4(key_1, ctx) {
   let if_block;
   let if_block_anchor;
   let current;
-  const if_block_creators = [create_if_block5, create_if_block_14, create_if_block_22, create_else_block2];
+  const if_block_creators = [
+    create_if_block5,
+    create_if_block_14,
+    create_if_block_22,
+    create_if_block_32,
+    create_else_block2
+  ];
   const if_blocks = [];
   function select_block_type(ctx2, dirty) {
-    if (ctx2[33].type === "Wait" /* Wait */)
+    if (
+      /*command*/
+      ctx2[38].type === "Wait" /* Wait */
+    )
       return 0;
-    if (ctx2[33].type === "NestedChoice" /* NestedChoice */)
+    if (
+      /*command*/
+      ctx2[38].type === "NestedChoice" /* NestedChoice */
+    )
       return 1;
-    if (ctx2[33].type === "UserScript" /* UserScript */)
+    if (
+      /*command*/
+      ctx2[38].type === "UserScript" /* UserScript */
+    )
       return 2;
-    return 3;
+    if (
+      /*command*/
+      ctx2[38].type === "AIAssistant" /* AIAssistant */
+    )
+      return 3;
+    return 4;
   }
   current_block_type_index = select_block_type(ctx, [-1, -1]);
   if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
@@ -13631,7 +15147,7 @@ function create_each_block4(key_1, ctx) {
     }
   };
 }
-function create_fragment16(ctx) {
+function create_fragment15(ctx) {
   let ol;
   let each_blocks = [];
   let each_1_lookup = /* @__PURE__ */ new Map();
@@ -13639,8 +15155,17 @@ function create_fragment16(ctx) {
   let current;
   let mounted;
   let dispose;
-  let each_value = ctx[0].filter(ctx[14]);
-  const get_key = (ctx2) => ctx2[33].id;
+  let each_value = (
+    /*commands*/
+    ctx[0].filter(
+      /*func*/
+      ctx[15]
+    )
+  );
+  const get_key = (ctx2) => (
+    /*command*/
+    ctx2[38].id
+  );
   for (let i = 0; i < each_value.length; i += 1) {
     let child_ctx = get_each_context4(ctx, each_value, i);
     let key = get_key(child_ctx);
@@ -13652,39 +15177,69 @@ function create_fragment16(ctx) {
       for (let i = 0; i < each_blocks.length; i += 1) {
         each_blocks[i].c();
       }
-      attr(ol, "class", "quickAddCommandList svelte-1ukgrgp");
+      attr(ol, "class", "quickAddCommandList svelte-1ngraqt");
     },
     m(target, anchor) {
       insert(target, ol, anchor);
       for (let i = 0; i < each_blocks.length; i += 1) {
-        each_blocks[i].m(ol, null);
+        if (each_blocks[i]) {
+          each_blocks[i].m(ol, null);
+        }
       }
       current = true;
       if (!mounted) {
         dispose = [
           action_destroyer(dndzone_action = dndzone3.call(null, ol, {
-            items: ctx[0],
-            dragDisabled: ctx[3],
+            items: (
+              /*commands*/
+              ctx[0]
+            ),
+            dragDisabled: (
+              /*dragDisabled*/
+              ctx[3]
+            ),
             dropTargetStyle: {},
             type: "command"
           })),
-          listen(ol, "consider", ctx[5]),
-          listen(ol, "finalize", ctx[6])
+          listen(
+            ol,
+            "consider",
+            /*handleConsider*/
+            ctx[5]
+          ),
+          listen(
+            ol,
+            "finalize",
+            /*handleSort*/
+            ctx[6]
+          )
         ];
         mounted = true;
       }
     },
     p(ctx2, dirty) {
-      if (dirty[0] & 927) {
-        each_value = ctx2[0].filter(ctx2[14]);
+      if (dirty[0] & /*commands, SHADOW_PLACEHOLDER_ITEM_ID, dragDisabled, startDrag, deleteCommand, updateCommandFromEvent, configureChoice, configureScript, configureAssistant*/
+      1951) {
+        each_value = /*commands*/
+        ctx2[0].filter(
+          /*func*/
+          ctx2[15]
+        );
         group_outros();
         each_blocks = update_keyed_each(each_blocks, dirty, get_key, 1, ctx2, each_value, each_1_lookup, ol, outro_and_destroy_block, create_each_block4, null, get_each_context4);
         check_outros();
       }
-      if (dndzone_action && is_function(dndzone_action.update) && dirty[0] & 9)
+      if (dndzone_action && is_function(dndzone_action.update) && dirty[0] & /*commands, dragDisabled*/
+      9)
         dndzone_action.update.call(null, {
-          items: ctx2[0],
-          dragDisabled: ctx2[3],
+          items: (
+            /*commands*/
+            ctx2[0]
+          ),
+          dragDisabled: (
+            /*dragDisabled*/
+            ctx2[3]
+          ),
           dropTargetStyle: {},
           type: "command"
         });
@@ -13714,7 +15269,7 @@ function create_fragment16(ctx) {
     }
   };
 }
-function instance16($$self, $$props, $$invalidate) {
+function instance15($$self, $$props, $$invalidate) {
   let { commands: commands2 } = $$props;
   let { deleteCommand } = $$props;
   let { saveCommands } = $$props;
@@ -13749,40 +15304,42 @@ function instance16($$self, $$props, $$invalidate) {
     $$invalidate(0, commands2[index] = command, commands2);
     saveCommands(commands2);
   }
-  function configureChoice(e) {
-    var _a;
-    return __awaiter(this, void 0, void 0, function* () {
-      const command = e.detail;
-      const newChoice = yield (_a = getChoiceBuilder(command.choice)) === null || _a === void 0 ? void 0 : _a.waitForClose;
-      if (!newChoice)
-        return;
-      command.choice = newChoice;
-      command.name = newChoice.name;
-      updateCommand(command);
-    });
+  async function configureChoice(e) {
+    const command = e.detail;
+    const newChoice = await getChoiceBuilder(command.choice)?.waitForClose;
+    if (!newChoice)
+      return;
+    command.choice = newChoice;
+    command.name = newChoice.name;
+    updateCommand(command);
   }
   function getChoiceBuilder(choice) {
     switch (choice.type) {
-      case "Template" /* Template */:
+      case "Template":
         return new TemplateChoiceBuilder(app2, choice, plugin);
-      case "Capture" /* Capture */:
+      case "Capture":
         return new CaptureChoiceBuilder(app2, choice, plugin);
-      case "Macro" /* Macro */:
-      case "Multi" /* Multi */:
+      case "Macro":
+      case "Multi":
       default:
         break;
     }
   }
-  function configureScript(e) {
-    return __awaiter(this, void 0, void 0, function* () {
-      const command = e.detail;
-      const userScript = yield getUserScript(command, app2);
-      if (!(userScript === null || userScript === void 0 ? void 0 : userScript.settings)) {
-        log.logWarning(`${command.name} has no settings.`);
-        return;
-      }
-      new UserScriptSettingsModal(app2, command, userScript.settings).open();
-    });
+  async function configureScript(e) {
+    const command = e.detail;
+    const userScript = await getUserScript(command, app2);
+    if (!userScript?.settings) {
+      log.logWarning(`${command.name} has no settings.`);
+      return;
+    }
+    new UserScriptSettingsModal(app2, command, userScript.settings).open();
+  }
+  async function configureAssistant(e) {
+    const command = e.detail;
+    const newSetings = await new AIAssistantCommandSettingsModal(command).waitForClose;
+    if (newSetings) {
+      updateCommand(command);
+    }
   }
   const func = (c) => c.id !== SHADOW_PLACEHOLDER_ITEM_ID;
   function waitcommand_command_binding(value, command, each_value, command_index) {
@@ -13824,6 +15381,19 @@ function instance16($$self, $$props, $$invalidate) {
     $$invalidate(4, startDrag);
   }
   const deleteCommand_handler_2 = async (e) => await deleteCommand(e.detail);
+  function aiassistantcommand_command_binding(value, command, each_value, command_index) {
+    each_value[command_index] = value;
+    $$invalidate(0, commands2);
+  }
+  function aiassistantcommand_dragDisabled_binding(value) {
+    dragDisabled = value;
+    $$invalidate(3, dragDisabled);
+  }
+  function aiassistantcommand_startDrag_binding(value) {
+    startDrag = value;
+    $$invalidate(4, startDrag);
+  }
+  const deleteCommand_handler_3 = async (e) => await deleteCommand(e.detail);
   function standardcommand_command_binding(value, command, each_value, command_index) {
     each_value[command_index] = value;
     $$invalidate(0, commands2);
@@ -13836,18 +15406,18 @@ function instance16($$self, $$props, $$invalidate) {
     startDrag = value;
     $$invalidate(4, startDrag);
   }
-  const deleteCommand_handler_3 = async (e) => await deleteCommand(e.detail);
+  const deleteCommand_handler_4 = async (e) => await deleteCommand(e.detail);
   $$self.$$set = ($$props2) => {
     if ("commands" in $$props2)
       $$invalidate(0, commands2 = $$props2.commands);
     if ("deleteCommand" in $$props2)
       $$invalidate(1, deleteCommand = $$props2.deleteCommand);
     if ("saveCommands" in $$props2)
-      $$invalidate(10, saveCommands = $$props2.saveCommands);
+      $$invalidate(11, saveCommands = $$props2.saveCommands);
     if ("app" in $$props2)
-      $$invalidate(11, app2 = $$props2.app);
+      $$invalidate(12, app2 = $$props2.app);
     if ("plugin" in $$props2)
-      $$invalidate(12, plugin = $$props2.plugin);
+      $$invalidate(13, plugin = $$props2.plugin);
   };
   return [
     commands2,
@@ -13860,6 +15430,7 @@ function instance16($$self, $$props, $$invalidate) {
     updateCommandFromEvent,
     configureChoice,
     configureScript,
+    configureAssistant,
     saveCommands,
     app2,
     plugin,
@@ -13877,10 +15448,14 @@ function instance16($$self, $$props, $$invalidate) {
     userscriptcommand_dragDisabled_binding,
     userscriptcommand_startDrag_binding,
     deleteCommand_handler_2,
+    aiassistantcommand_command_binding,
+    aiassistantcommand_dragDisabled_binding,
+    aiassistantcommand_startDrag_binding,
+    deleteCommand_handler_3,
     standardcommand_command_binding,
     standardcommand_dragDisabled_binding,
     standardcommand_startDrag_binding,
-    deleteCommand_handler_3
+    deleteCommand_handler_4
   ];
 }
 var CommandList = class extends SvelteComponent {
@@ -13889,23 +15464,23 @@ var CommandList = class extends SvelteComponent {
     init(
       this,
       options,
-      instance16,
-      create_fragment16,
+      instance15,
+      create_fragment15,
       safe_not_equal,
       {
         commands: 0,
         deleteCommand: 1,
-        saveCommands: 10,
-        app: 11,
-        plugin: 12,
-        updateCommandList: 13
+        saveCommands: 11,
+        app: 12,
+        plugin: 13,
+        updateCommandList: 14
       },
-      add_css9,
+      add_css8,
       [-1, -1]
     );
   }
   get updateCommandList() {
-    return this.$$.ctx[13];
+    return this.$$.ctx[14];
   }
 };
 var CommandList_default = CommandList;
@@ -13934,8 +15509,40 @@ var NestedChoiceCommand2 = class extends Command {
   }
 };
 
+// src/types/macros/QuickCommands/AIAssistantCommand.ts
+var AIAssistantCommand2 = class extends Command {
+  constructor() {
+    super("AI Assistant", "AIAssistant" /* AIAssistant */);
+    const defaults = settingsStore.getState().ai;
+    this.model = defaults.defaultModel;
+    this.systemPrompt = defaults.defaultSystemPrompt;
+    this.outputVariableName = "output";
+    this.promptTemplate = { enable: false, name: "" };
+    this.modelParameters = {
+      temperature: DEFAULT_TEMPERATURE,
+      top_p: DEFAULT_TOP_P,
+      frequency_penalty: DEFAULT_FREQUENCY_PENALTY,
+      presence_penalty: DEFAULT_PRESENCE_PENALTY
+    };
+  }
+};
+
 // src/gui/MacroGUIs/MacroBuilder.ts
-var MacroBuilder = class extends import_obsidian22.Modal {
+function getChoicesAsList(nestedChoices) {
+  const arr = [];
+  const recursive = (choices) => {
+    choices.forEach((choice) => {
+      if (choice.type === "Multi") {
+        recursive(choice.choices);
+      } else {
+        arr.push(choice);
+      }
+    });
+  };
+  recursive(nestedChoices);
+  return arr;
+}
+var MacroBuilder = class extends import_obsidian26.Modal {
   constructor(app2, plugin, macro, choices) {
     super(app2);
     this.commands = [];
@@ -13943,7 +15550,7 @@ var MacroBuilder = class extends import_obsidian22.Modal {
     this.choices = [];
     this.macro = macro;
     this.svelteElements = [];
-    this.choices = choices;
+    this.choices = getChoicesAsList(choices);
     this.plugin = plugin;
     this.waitForClose = new Promise(
       (resolve) => this.resolvePromise = resolve
@@ -13996,9 +15603,13 @@ var MacroBuilder = class extends import_obsidian22.Modal {
     let input;
     const addObsidianCommandFromInput = () => {
       const value = input.getValue();
-      const obsidianCommand = this.commands.find(
-        (v) => v.name === value
-      );
+      const obsidianCommand = this.commands.find((v) => v.name === value);
+      if (!obsidianCommand) {
+        log.logError(
+          `Could not find Obsidian command with name "${value}"`
+        );
+        return;
+      }
       const command = new ObsidianCommand(
         obsidianCommand.name,
         obsidianCommand.commandId
@@ -14007,7 +15618,7 @@ var MacroBuilder = class extends import_obsidian22.Modal {
       this.addCommandToMacro(command);
       input.setValue("");
     };
-    new import_obsidian22.Setting(this.contentEl).setName("Obsidian command").setDesc("Add an Obsidian command").addText((textComponent) => {
+    new import_obsidian26.Setting(this.contentEl).setName("Obsidian command").setDesc("Add an Obsidian command").addText((textComponent) => {
       input = textComponent;
       textComponent.inputEl.style.marginRight = "1em";
       textComponent.setPlaceholder("Obsidian command");
@@ -14051,10 +15662,11 @@ var MacroBuilder = class extends import_obsidian22.Modal {
           break;
         default:
           log.logError("invalid editor command type");
+          throw new Error("invalid editor command type");
       }
       this.addCommandToMacro(command);
     };
-    new import_obsidian22.Setting(this.contentEl).setName("Editor commands").setDesc("Add editor command").addDropdown((dropdown) => {
+    new import_obsidian26.Setting(this.contentEl).setName("Editor commands").setDesc("Add editor command").addDropdown((dropdown) => {
       dropdownComponent = dropdown;
       dropdown.selectEl.style.marginRight = "1em";
       dropdown.addOption("Copy" /* Copy */, "Copy" /* Copy */).addOption("Cut" /* Cut */, "Cut" /* Cut */).addOption("Paste" /* Paste */, "Paste" /* Paste */).addOption(
@@ -14081,7 +15693,7 @@ var MacroBuilder = class extends import_obsidian22.Modal {
       this.addCommandToMacro(new UserScript(value, file.path));
       input.setValue("");
     };
-    new import_obsidian22.Setting(this.contentEl).setName("User Scripts").setDesc("Add user script").addText((textComponent) => {
+    new import_obsidian26.Setting(this.contentEl).setName("User Scripts").setDesc("Add user script").addText((textComponent) => {
       input = textComponent;
       textComponent.inputEl.style.marginRight = "1em";
       textComponent.setPlaceholder("User script");
@@ -14112,7 +15724,7 @@ var MacroBuilder = class extends import_obsidian22.Modal {
       this.addCommandToMacro(new ChoiceCommand(choice.name, choice.id));
       input.setValue("");
     };
-    new import_obsidian22.Setting(this.contentEl).setName("Choices").setDesc("Add existing choice").addText((textComponent) => {
+    new import_obsidian26.Setting(this.contentEl).setName("Choices").setDesc("Add existing choice").addText((textComponent) => {
       input = textComponent;
       textComponent.inputEl.style.marginRight = "1em";
       textComponent.setPlaceholder("Choice");
@@ -14154,6 +15766,10 @@ var MacroBuilder = class extends import_obsidian22.Modal {
           const command = this.macro.commands.find(
             (c) => c.id === commandId
           );
+          if (!command) {
+            log.logError("command not found");
+            throw new Error("command not found");
+          }
           const promptAnswer = await GenericYesNoPrompt.Prompt(
             this.app,
             "Are you sure you wish to delete this command?",
@@ -14180,9 +15796,20 @@ var MacroBuilder = class extends import_obsidian22.Modal {
     this.newChoiceButton(quickCommandContainer, "Capture", CaptureChoice);
     this.newChoiceButton(quickCommandContainer, "Template", TemplateChoice);
     this.addAddWaitCommandButton(quickCommandContainer);
+    if (!settingsStore.getState().disableOnlineFeatures) {
+      this.addAIAssistantCommandButton(quickCommandContainer);
+    }
+  }
+  addAIAssistantCommandButton(quickCommandContainer) {
+    const button = new import_obsidian26.ButtonComponent(
+      quickCommandContainer
+    );
+    button.setIcon("bot").setTooltip("Add AI Assistant command").onClick(() => {
+      this.addCommandToMacro(new AIAssistantCommand2());
+    });
   }
   addAddWaitCommandButton(quickCommandContainer) {
-    const button = new import_obsidian22.ButtonComponent(
+    const button = new import_obsidian26.ButtonComponent(
       quickCommandContainer
     );
     button.setIcon("clock").setTooltip("Add wait command").onClick(() => {
@@ -14190,7 +15817,7 @@ var MacroBuilder = class extends import_obsidian22.Modal {
     });
   }
   newChoiceButton(container, typeName, type) {
-    const button = new import_obsidian22.ButtonComponent(container);
+    const button = new import_obsidian26.ButtonComponent(container);
     button.setButtonText(typeName).setTooltip(`Add ${typeName} Choice`).onClick(() => {
       const captureChoice = new type(
         `Untitled ${typeName} Choice`
@@ -14204,18 +15831,110 @@ var MacroBuilder = class extends import_obsidian22.Modal {
   }
 };
 
-// src/types/macros/QuickAddMacro.ts
-var QuickAddMacro = class {
-  constructor(name) {
-    this.name = name;
-    this.id = v4_default();
-    this.commands = [];
-    this.runOnStartup = false;
+// src/gui/ChoiceBuilder/macroChoiceBuilder.ts
+var MacroChoiceBuilder = class extends ChoiceBuilder {
+  constructor(app2, choice, macros, choices) {
+    super(app2);
+    this.choice = choice;
+    this.macros = macros;
+    this.choices = choices;
+    this.unsubscribe = settingsStore.subscribe((newSettings) => {
+      this.macros = newSettings.macros;
+      this.choices = newSettings.choices;
+      this.reload();
+    });
+    this.display();
+  }
+  onClose() {
+    this.unsubscribe();
+  }
+  display() {
+    this.containerEl.addClass("macroChoiceBuilder");
+    this.addCenteredChoiceNameHeader(this.choice);
+    const macroDropdownContainer = this.contentEl.createDiv();
+    macroDropdownContainer.addClass("macroDropdownContainer");
+    this.addSelectMacroSearch(macroDropdownContainer);
+    const buttonsContainer = macroDropdownContainer.createDiv();
+    buttonsContainer.addClass("macro-choice-buttonsContainer");
+    this.addConfigureMacroButton(buttonsContainer);
+    this.addCreateMacroButton(buttonsContainer);
+  }
+  addCreateMacroButton(container) {
+    const hasOwnMacro = settingsStore.getMacro(this.choice.macroId)?.name === this.choice.name;
+    if (hasOwnMacro)
+      return;
+    const createMacroButtonContainer = container.createDiv();
+    const createMacroButton = new import_obsidian27.ButtonComponent(
+      createMacroButtonContainer
+    );
+    createMacroButton.setIcon("plus").setCta().setTooltip("Create Macro").onClick(() => {
+      try {
+        const macro = settingsStore.createMacro(this.choice.name);
+        this.choice.macroId = macro.id;
+        this.reload();
+      } catch (error) {
+        log.logError(error);
+      }
+    });
+  }
+  addConfigureMacroButton(container) {
+    const configureMacroButtonContainer = container.createDiv();
+    const configureMacroButton = new import_obsidian27.ButtonComponent(
+      configureMacroButtonContainer
+    );
+    configureMacroButton.setIcon("cog").setTooltip("Configure Macro").onClick(async () => {
+      const macro = this.macros.find(
+        (m) => m.id === this.choice.macroId
+      );
+      if (!macro)
+        return log.logError("Could not find macro to configure");
+      const builder = new MacroBuilder(
+        app,
+        QuickAdd.instance,
+        macro,
+        this.choices
+      );
+      const newMacro = await builder.waitForClose;
+      settingsStore.setMacro(this.choice.macroId, newMacro);
+    });
+  }
+  addSelectMacroSearch(container) {
+    const selectMacroDropdownContainer = container.createDiv("selectMacroDropdownContainer");
+    const dropdown = new import_obsidian28.DropdownComponent(
+      selectMacroDropdownContainer
+    );
+    const macroOptions = {};
+    this.macros.forEach((macro) => {
+      macroOptions[macro.name] = macro.name;
+    });
+    dropdown.addOptions(macroOptions);
+    dropdown.onChange((value) => {
+      this.selectMacro(value);
+    });
+    const selectedMacro = this.macros.find(
+      (m) => m.id === this.choice.macroId
+    );
+    if (selectedMacro) {
+      dropdown.setValue(selectedMacro.name);
+    } else {
+      const value = dropdown.getValue();
+      if (value) {
+        this.selectMacro(value);
+      }
+    }
+  }
+  selectMacro(value) {
+    const targetMacro = this.macros.find((m) => m.name === value);
+    if (!targetMacro)
+      return;
+    this.choice.macroId = targetMacro.id;
+    settingsStore.setMacro(targetMacro.id, targetMacro);
   }
 };
 
 // src/MacrosManager.ts
-var MacrosManager = class extends import_obsidian23.Modal {
+var import_obsidian29 = require("obsidian");
+var MacrosManager = class extends import_obsidian29.Modal {
   constructor(app2, plugin, macros, choices) {
     super(app2);
     this.app = app2;
@@ -14225,6 +15944,11 @@ var MacrosManager = class extends import_obsidian23.Modal {
     this.waitForClose = new Promise((resolve, reject) => {
       this.rejectPromise = reject;
       this.resolvePromise = resolve;
+    });
+    this.unsubscribe = settingsStore.subscribe((newSettings) => {
+      this.macros = newSettings.macros;
+      this.choices = newSettings.choices;
+      this.reload();
     });
     this.open();
     this.display();
@@ -14253,14 +15977,14 @@ var MacrosManager = class extends import_obsidian23.Modal {
   }
   addMacroSetting(macro, container) {
     const configureMacroContainer = container.createDiv();
-    const macroSetting = new import_obsidian23.Setting(configureMacroContainer);
+    const macroSetting = new import_obsidian29.Setting(configureMacroContainer);
     macroSetting.setName(macro.name);
     macroSetting.infoEl.style.fontWeight = "bold";
     this.addMacroConfigurationItem(
       configureMacroContainer,
       (itemContainerEl) => {
         this.addSpanWithText(itemContainerEl, "Run on plugin load");
-        const toggle = new import_obsidian23.ToggleComponent(
+        const toggle = new import_obsidian29.ToggleComponent(
           itemContainerEl
         );
         toggle.setValue(macro.runOnStartup);
@@ -14274,7 +15998,7 @@ var MacrosManager = class extends import_obsidian23.Modal {
     this.addMacroConfigurationItem(
       configureMacroContainer,
       (itemContainerEl) => {
-        const deleteButton = new import_obsidian23.ButtonComponent(
+        const deleteButton = new import_obsidian29.ButtonComponent(
           itemContainerEl
         );
         deleteButton.setClass("mod-warning");
@@ -14285,34 +16009,17 @@ var MacrosManager = class extends import_obsidian23.Modal {
           this.reload();
           this.macroContainer.scrollTop = scroll;
         });
-        const configureButton = new import_obsidian23.ButtonComponent(
+        const configureButton = new import_obsidian29.ButtonComponent(
           itemContainerEl
         );
         configureButton.setClass("mod-cta");
         configureButton.buttonEl.style.marginRight = "0";
         configureButton.setButtonText("Configure").onClick(async (evt) => {
-          const getReachableChoices = (choices) => {
-            let reachableChoices2 = [];
-            choices.forEach((choice) => {
-              if (choice.type === "Multi" /* Multi */)
-                reachableChoices2.push(
-                  ...getReachableChoices(
-                    choice.choices
-                  )
-                );
-              if (choice.type !== "Multi" /* Multi */)
-                reachableChoices2.push(choice);
-            });
-            return reachableChoices2;
-          };
-          const reachableChoices = getReachableChoices(
-            this.choices
-          );
           const newMacro = await new MacroBuilder(
             this.app,
             this.plugin,
             macro,
-            reachableChoices
+            this.choices
           ).waitForClose;
           if (newMacro) {
             this.updateMacro(newMacro);
@@ -14345,103 +16052,280 @@ var MacrosManager = class extends import_obsidian23.Modal {
   addAddMacroBar() {
     const addMacroBarContainer = this.contentEl.createDiv();
     addMacroBarContainer.addClass("addMacroBarContainer");
-    const nameInput = new import_obsidian23.TextComponent(
+    const nameInput = new import_obsidian29.TextComponent(
       addMacroBarContainer
     );
     nameInput.setPlaceholder("Macro name");
-    const addMacroButton = new import_obsidian23.ButtonComponent(
+    const addMacroButton = new import_obsidian29.ButtonComponent(
       addMacroBarContainer
     );
     addMacroButton.setButtonText("Add macro").setClass("mod-cta").onClick(() => {
       const inputValue = nameInput.getValue();
-      if (inputValue !== "" && !this.macros.find((m) => m.name === inputValue)) {
-        const macro = new QuickAddMacro(inputValue);
-        if (!macro) {
-          log.logError("macro invalid - will not be added");
-          return;
-        }
-        this.macros.push(macro);
+      try {
+        settingsStore.createMacro(inputValue);
         this.reload();
         this.macroContainer.scrollTo(
           0,
           this.macroContainer.scrollHeight
         );
+      } catch (error) {
+        log.logError(error);
       }
     });
   }
   onClose() {
     super.onClose();
+    this.unsubscribe();
     this.resolvePromise(this.macros);
   }
 };
 
+// src/gui/AIAssistantSettingsModal.ts
+var import_obsidian30 = require("obsidian");
+var AIAssistantSettingsModal = class extends import_obsidian30.Modal {
+  constructor(settings) {
+    super(app);
+    this.settings = settings;
+    this.waitForClose = new Promise(
+      (resolve, reject) => {
+        this.rejectPromise = reject;
+        this.resolvePromise = resolve;
+      }
+    );
+    this.open();
+    this.display();
+  }
+  display() {
+    this.contentEl.createEl("h2", {
+      text: "AI Assistant Settings"
+    }).style.textAlign = "center";
+    this.addApiKeySetting(this.contentEl);
+    this.addDefaultModelSetting(this.contentEl);
+    this.addPromptTemplateFolderPathSetting(this.contentEl);
+    this.addShowAssistantSetting(this.contentEl);
+    this.addDefaultSystemPromptSetting(this.contentEl);
+  }
+  reload() {
+    this.contentEl.empty();
+    this.display();
+  }
+  addApiKeySetting(container) {
+    new import_obsidian30.Setting(container).setName("API Key").setDesc("The API Key for the AI Assistant").addText((text2) => {
+      setPasswordOnBlur(text2.inputEl);
+      text2.setValue(this.settings.OpenAIApiKey).onChange((value) => {
+        this.settings.OpenAIApiKey = value;
+      });
+      text2.inputEl.placeholder = "sk-...";
+    });
+  }
+  addDefaultModelSetting(container) {
+    new import_obsidian30.Setting(container).setName("Default Model").setDesc("The default model for the AI Assistant").addDropdown((dropdown) => {
+      for (const model of models_and_ask_me) {
+        dropdown.addOption(model, model);
+      }
+      dropdown.setValue(this.settings.defaultModel);
+      dropdown.onChange((value) => {
+        this.settings.defaultModel = value;
+      });
+    });
+  }
+  addPromptTemplateFolderPathSetting(container) {
+    new import_obsidian30.Setting(container).setName("Prompt Template Folder Path").setDesc("Path to your folder with prompt templates").addText((text2) => {
+      text2.setValue(this.settings.promptTemplatesFolderPath).onChange(
+        (value) => {
+          this.settings.promptTemplatesFolderPath = value;
+        }
+      );
+    });
+  }
+  addShowAssistantSetting(container) {
+    new import_obsidian30.Setting(container).setName("Show Assistant").setDesc("Show status messages from the AI Assistant").addToggle((toggle) => {
+      toggle.setValue(this.settings.showAssistant);
+      toggle.onChange((value) => {
+        this.settings.showAssistant = value;
+      });
+    });
+  }
+  addDefaultSystemPromptSetting(contentEl) {
+    new import_obsidian30.Setting(contentEl).setName("Default System Prompt").setDesc("The default system prompt for the AI Assistant");
+    const textAreaComponent = new import_obsidian30.TextAreaComponent(contentEl);
+    textAreaComponent.setValue(this.settings.defaultSystemPrompt).onChange(async (value) => {
+      this.settings.defaultSystemPrompt = value;
+      formatDisplay.innerText = await displayFormatter.format(value);
+    });
+    new FormatSyntaxSuggester(
+      this.app,
+      textAreaComponent.inputEl,
+      QuickAdd.instance
+    );
+    const displayFormatter = new FormatDisplayFormatter(
+      this.app,
+      QuickAdd.instance
+    );
+    textAreaComponent.inputEl.style.width = "100%";
+    textAreaComponent.inputEl.style.height = "100px";
+    textAreaComponent.inputEl.style.minHeight = "100px";
+    textAreaComponent.inputEl.style.marginBottom = "1em";
+    const formatDisplay = this.contentEl.createEl("span");
+    void (async () => formatDisplay.innerText = await displayFormatter.format(
+      this.settings.defaultSystemPrompt ?? ""
+    ))();
+  }
+  onClose() {
+    this.resolvePromise(this.settings);
+    super.onClose();
+  }
+};
+
 // src/gui/choiceList/ChoiceView.svelte
-function add_css10(target) {
-  append_styles(target, "svelte-wcmtyt", ".choiceViewBottomBar.svelte-wcmtyt{display:flex;flex-direction:row;align-items:center;justify-content:space-between;margin-top:1rem}@media(max-width: 800px){.choiceViewBottomBar.svelte-wcmtyt{flex-direction:column}}");
+function add_css9(target) {
+  append_styles(target, "svelte-1ikpkxq", ".choiceViewBottomBar.svelte-1ikpkxq{display:flex;flex-direction:row;align-items:center;justify-content:space-between;margin-top:1rem}@media(max-width: 800px){.choiceViewBottomBar.svelte-1ikpkxq{flex-direction:column}}");
 }
-function create_fragment17(ctx) {
-  let div1;
+function create_if_block6(ctx) {
+  let button;
+  let mounted;
+  let dispose;
+  return {
+    c() {
+      button = element("button");
+      button.textContent = "AI Assistant";
+      attr(button, "class", "mod-cta");
+    },
+    m(target, anchor) {
+      insert(target, button, anchor);
+      if (!mounted) {
+        dispose = listen(
+          button,
+          "click",
+          /*openAISettings*/
+          ctx[8]
+        );
+        mounted = true;
+      }
+    },
+    p: noop,
+    d(detaching) {
+      if (detaching)
+        detach(button);
+      mounted = false;
+      dispose();
+    }
+  };
+}
+function create_fragment16(ctx) {
+  let div2;
   let choicelist;
   let updating_choices;
   let t0;
+  let div1;
   let div0;
   let button;
   let t2;
+  let show_if = !settingsStore.getState().disableOnlineFeatures;
+  let t3;
   let addchoicebox;
   let current;
   let mounted;
   let dispose;
   function choicelist_choices_binding(value) {
-    ctx[12](value);
+    ctx[13](value);
   }
   let choicelist_props = { type: "main" };
-  if (ctx[0] !== void 0) {
-    choicelist_props.choices = ctx[0];
+  if (
+    /*choices*/
+    ctx[0] !== void 0
+  ) {
+    choicelist_props.choices = /*choices*/
+    ctx[0];
   }
   choicelist = new ChoiceList_default({ props: choicelist_props });
   binding_callbacks.push(() => bind(choicelist, "choices", choicelist_choices_binding));
-  choicelist.$on("deleteChoice", ctx[3]);
-  choicelist.$on("configureChoice", ctx[4]);
-  choicelist.$on("toggleCommand", ctx[5]);
-  choicelist.$on("duplicateChoice", ctx[6]);
-  choicelist.$on("reorderChoices", ctx[13]);
+  choicelist.$on(
+    "deleteChoice",
+    /*deleteChoice*/
+    ctx[3]
+  );
+  choicelist.$on(
+    "configureChoice",
+    /*configureChoice*/
+    ctx[4]
+  );
+  choicelist.$on(
+    "toggleCommand",
+    /*toggleCommandForChoice*/
+    ctx[5]
+  );
+  choicelist.$on(
+    "duplicateChoice",
+    /*handleDuplicateChoice*/
+    ctx[6]
+  );
+  choicelist.$on(
+    "reorderChoices",
+    /*reorderChoices_handler*/
+    ctx[14]
+  );
+  let if_block = show_if && create_if_block6(ctx);
   addchoicebox = new AddChoiceBox_default({});
-  addchoicebox.$on("addChoice", ctx[2]);
+  addchoicebox.$on(
+    "addChoice",
+    /*addChoiceToList*/
+    ctx[2]
+  );
   return {
     c() {
-      div1 = element("div");
+      div2 = element("div");
       create_component(choicelist.$$.fragment);
       t0 = space();
+      div1 = element("div");
       div0 = element("div");
       button = element("button");
       button.textContent = "Manage Macros";
       t2 = space();
+      if (if_block)
+        if_block.c();
+      t3 = space();
       create_component(addchoicebox.$$.fragment);
       attr(button, "class", "mod-cta");
-      attr(div0, "class", "choiceViewBottomBar svelte-wcmtyt");
+      set_style(div0, "display", "flex");
+      set_style(div0, "gap", "4px");
+      attr(div1, "class", "choiceViewBottomBar svelte-1ikpkxq");
     },
     m(target, anchor) {
-      insert(target, div1, anchor);
-      mount_component(choicelist, div1, null);
-      append(div1, t0);
+      insert(target, div2, anchor);
+      mount_component(choicelist, div2, null);
+      append(div2, t0);
+      append(div2, div1);
       append(div1, div0);
       append(div0, button);
       append(div0, t2);
-      mount_component(addchoicebox, div0, null);
+      if (if_block)
+        if_block.m(div0, null);
+      append(div1, t3);
+      mount_component(addchoicebox, div1, null);
       current = true;
       if (!mounted) {
-        dispose = listen(button, "click", ctx[7]);
+        dispose = listen(
+          button,
+          "click",
+          /*openMacroManager*/
+          ctx[7]
+        );
         mounted = true;
       }
     },
     p(ctx2, [dirty]) {
       const choicelist_changes = {};
-      if (!updating_choices && dirty & 1) {
+      if (!updating_choices && dirty & /*choices*/
+      1) {
         updating_choices = true;
-        choicelist_changes.choices = ctx2[0];
+        choicelist_changes.choices = /*choices*/
+        ctx2[0];
         add_flush_callback(() => updating_choices = false);
       }
       choicelist.$set(choicelist_changes);
+      if (show_if)
+        if_block.p(ctx2, dirty);
     },
     i(local) {
       if (current)
@@ -14457,158 +16341,182 @@ function create_fragment17(ctx) {
     },
     d(detaching) {
       if (detaching)
-        detach(div1);
+        detach(div2);
       destroy_component(choicelist);
+      if (if_block)
+        if_block.d();
       destroy_component(addchoicebox);
       mounted = false;
       dispose();
     }
   };
 }
-function instance17($$self, $$props, $$invalidate) {
+function deleteChoiceHelper(id, value) {
+  if (value.type === "Multi") {
+    value.choices = value.choices.filter((v) => deleteChoiceHelper(id, v));
+  }
+  return value.id !== id;
+}
+function updateChoiceHelper(oldChoice, newChoice) {
+  if (oldChoice.id === newChoice.id) {
+    oldChoice = { ...oldChoice, ...newChoice };
+    return oldChoice;
+  }
+  if (oldChoice.type === "Multi") {
+    const multiChoice = oldChoice;
+    const multiChoiceChoices = multiChoice.choices.map((c) => updateChoiceHelper(c, newChoice));
+    return {
+      ...multiChoice,
+      choices: multiChoiceChoices
+    };
+  }
+  return oldChoice;
+}
+function instance16($$self, $$props, $$invalidate) {
   let { choices = [] } = $$props;
   let { macros = [] } = $$props;
   let { saveChoices } = $$props;
   let { saveMacros } = $$props;
   let { app: app2 } = $$props;
   let { plugin } = $$props;
+  onMount(() => {
+    const unsubSettingsStore = settingsStore.subscribe((settings) => {
+      $$invalidate(0, choices = settings.choices);
+      $$invalidate(9, macros = settings.macros);
+    });
+    return () => {
+      unsubSettingsStore();
+    };
+  });
   function addChoiceToList(event) {
     const { name, type } = event.detail;
     switch (type) {
-      case "Template" /* Template */:
+      case "Template":
         const templateChoice = new TemplateChoice(name);
         $$invalidate(0, choices = [...choices, templateChoice]);
         break;
-      case "Capture" /* Capture */:
+      case "Capture":
         const captureChoice = new CaptureChoice(name);
         $$invalidate(0, choices = [...choices, captureChoice]);
         break;
-      case "Macro" /* Macro */:
+      case "Macro":
         const macroChoice = new MacroChoice(name);
         $$invalidate(0, choices = [...choices, macroChoice]);
         break;
-      case "Multi" /* Multi */:
+      case "Multi":
         const multiChoice = new MultiChoice(name);
         $$invalidate(0, choices = [...choices, multiChoice]);
         break;
     }
     saveChoices(choices);
   }
-  function deleteChoice(e) {
-    return __awaiter(this, void 0, void 0, function* () {
-      const choice = e.detail.choice;
-      const userConfirmed = yield GenericYesNoPrompt.Prompt(app2, `Confirm deletion of choice`, `Please confirm that you wish to delete '${choice.name}'.
-            ${choice.type === "Multi" /* Multi */ ? "Deleting this choice will delete all (" + choice.choices.length + ") choices inside it!" : ""}
+  async function deleteChoice(e) {
+    const choice = e.detail.choice;
+    const hasOwnMacro = choice.type === "Macro" && macros.some((macro) => macro.name === choice.name);
+    const isMulti = choice.type === "Multi";
+    const userConfirmed = await GenericYesNoPrompt.Prompt(app2, `Confirm deletion of choice`, `Please confirm that you wish to delete '${choice.name}'.
+            ${isMulti ? "Deleting this choice will delete all (" + choice.choices.length + ") choices inside it!" : ""}
+            ${hasOwnMacro ? "Deleting this choice will delete the macro associated with it!" : ""}
             `);
-      if (userConfirmed) {
-        $$invalidate(0, choices = choices.filter((value) => deleteChoiceHelper(choice.id, value)));
-        plugin.removeCommandForChoice(choice);
-        saveChoices(choices);
-      }
-    });
-  }
-  function deleteChoiceHelper(id, value) {
-    if (value.type === "Multi" /* Multi */) {
-      value.choices = value.choices.filter((v) => deleteChoiceHelper(id, v));
+    if (!userConfirmed)
+      return;
+    if (hasOwnMacro) {
+      $$invalidate(9, macros = macros.filter((macro) => macro.id !== choice.macroId));
+      saveMacros(macros);
     }
-    return value.id !== id;
+    $$invalidate(0, choices = choices.filter((value) => deleteChoiceHelper(choice.id, value)));
+    plugin.removeCommandForChoice(choice);
+    saveChoices(choices);
   }
-  function configureChoice(e) {
-    return __awaiter(this, void 0, void 0, function* () {
-      const { choice: oldChoice } = e.detail;
-      let updatedChoice;
-      if (oldChoice.type === "Multi" /* Multi */) {
-        updatedChoice = oldChoice;
-        const name = yield GenericInputPrompt.Prompt(app2, `Rename ${oldChoice.name}`, "", oldChoice.name);
-        if (!name)
-          return;
-        updatedChoice.name = name;
-      } else {
-        updatedChoice = yield getChoiceBuilder(oldChoice).waitForClose;
-      }
-      if (!updatedChoice)
+  async function configureChoice(e) {
+    const { choice: oldChoice } = e.detail;
+    let updatedChoice;
+    if (oldChoice.type === "Multi") {
+      updatedChoice = oldChoice;
+      const name = await GenericInputPrompt.Prompt(app2, `Rename ${oldChoice.name}`, "", oldChoice.name);
+      if (!name)
         return;
-      $$invalidate(0, choices = choices.map((choice) => updateChoiceHelper(choice, updatedChoice)));
-      plugin.removeCommandForChoice(oldChoice);
-      plugin.addCommandForChoice(updatedChoice);
-      saveChoices(choices);
-    });
+      updatedChoice.name = name;
+    } else {
+      const builder = getChoiceBuilder(oldChoice);
+      if (!builder) {
+        throw new Error("Invalid choice type");
+      }
+      updatedChoice = await builder.waitForClose;
+    }
+    if (!updatedChoice)
+      return;
+    $$invalidate(0, choices = choices.map((choice) => updateChoiceHelper(choice, updatedChoice)));
+    plugin.removeCommandForChoice(oldChoice);
+    plugin.addCommandForChoice(updatedChoice);
+    saveChoices(choices);
   }
-  function toggleCommandForChoice(e) {
-    return __awaiter(this, void 0, void 0, function* () {
-      const { choice: oldChoice } = e.detail;
-      const updatedChoice = Object.assign(Object.assign({}, oldChoice), { command: !oldChoice.command });
-      updatedChoice.command ? plugin.addCommandForChoice(updatedChoice) : plugin.removeCommandForChoice(updatedChoice);
-      $$invalidate(0, choices = choices.map((choice) => updateChoiceHelper(choice, updatedChoice)));
-      saveChoices(choices);
-    });
+  async function toggleCommandForChoice(e) {
+    const { choice: oldChoice } = e.detail;
+    const updatedChoice = {
+      ...oldChoice,
+      command: !oldChoice.command
+    };
+    updatedChoice.command ? plugin.addCommandForChoice(updatedChoice) : plugin.removeCommandForChoice(updatedChoice);
+    $$invalidate(0, choices = choices.map((choice) => updateChoiceHelper(choice, updatedChoice)));
+    saveChoices(choices);
   }
-  function handleDuplicateChoice(e) {
-    return __awaiter(this, void 0, void 0, function* () {
-      const { choice: sourceChoice } = e.detail;
-      const newChoice = duplicateChoice(sourceChoice);
-      $$invalidate(0, choices = [...choices, newChoice]);
-      saveChoices(choices);
-    });
+  async function handleDuplicateChoice(e) {
+    const { choice: sourceChoice } = e.detail;
+    const newChoice = duplicateChoice(sourceChoice);
+    $$invalidate(0, choices = [...choices, newChoice]);
+    saveChoices(choices);
   }
   function duplicateChoice(choice) {
     if (!getChoiceType(choice))
       throw new Error("Invalid choice type");
     let newChoice;
     switch (choice.type) {
-      case "Template" /* Template */:
+      case "Template":
         newChoice = new TemplateChoice(`${choice.name} (copy)`);
         break;
-      case "Capture" /* Capture */:
+      case "Capture":
         newChoice = new CaptureChoice(`${choice.name} (copy)`);
         break;
-      case "Macro" /* Macro */:
+      case "Macro":
         newChoice = new MacroChoice(`${choice.name} (copy)`);
         break;
-      case "Multi" /* Multi */:
+      case "Multi":
         newChoice = new MultiChoice(`${choice.name} (copy)`);
         break;
     }
-    if (choice.type !== "Multi" /* Multi */) {
+    if (choice.type !== "Multi") {
       Object.assign(newChoice, excludeKeys(choice, ["id", "name"]));
     } else {
       newChoice.choices = choice.choices.map((c) => duplicateChoice(c));
     }
     return newChoice;
   }
-  function updateChoiceHelper(oldChoice, newChoice) {
-    if (oldChoice.id === newChoice.id) {
-      oldChoice = Object.assign(Object.assign({}, oldChoice), newChoice);
-      return oldChoice;
-    }
-    if (oldChoice.type === "Multi" /* Multi */) {
-      const multiChoice = oldChoice;
-      const multiChoiceChoices = multiChoice.choices.map((c) => updateChoiceHelper(c, newChoice));
-      return Object.assign(Object.assign({}, multiChoice), { choices: multiChoiceChoices });
-    }
-    return oldChoice;
-  }
   function getChoiceBuilder(choice) {
     switch (choice.type) {
-      case "Template" /* Template */:
+      case "Template":
         return new TemplateChoiceBuilder(app2, choice, plugin);
-      case "Capture" /* Capture */:
+      case "Capture":
         return new CaptureChoiceBuilder(app2, choice, plugin);
-      case "Macro" /* Macro */:
-        return new MacroChoiceBuilder(app2, choice, macros);
-      case "Multi" /* Multi */:
+      case "Macro":
+        return new MacroChoiceBuilder(app2, choice, macros, settingsStore.getState().choices);
+      case "Multi":
       default:
         break;
     }
   }
-  function openMacroManager() {
-    return __awaiter(this, void 0, void 0, function* () {
-      const newMacros = yield new MacrosManager(app2, plugin, macros, choices).waitForClose;
-      if (newMacros) {
-        saveMacros(newMacros);
-        $$invalidate(8, macros = newMacros);
-      }
-    });
+  async function openMacroManager() {
+    const newMacros = await new MacrosManager(app2, plugin, macros, choices).waitForClose;
+    if (newMacros) {
+      saveMacros(newMacros);
+      $$invalidate(9, macros = newMacros);
+    }
+  }
+  async function openAISettings() {
+    const newSettings = await new AIAssistantSettingsModal(settingsStore.getState().ai).waitForClose;
+    if (newSettings) {
+      settingsStore.setState((state) => ({ ...state, ai: newSettings }));
+    }
   }
   function choicelist_choices_binding(value) {
     choices = value;
@@ -14619,15 +16527,15 @@ function instance17($$self, $$props, $$invalidate) {
     if ("choices" in $$props2)
       $$invalidate(0, choices = $$props2.choices);
     if ("macros" in $$props2)
-      $$invalidate(8, macros = $$props2.macros);
+      $$invalidate(9, macros = $$props2.macros);
     if ("saveChoices" in $$props2)
       $$invalidate(1, saveChoices = $$props2.saveChoices);
     if ("saveMacros" in $$props2)
-      $$invalidate(9, saveMacros = $$props2.saveMacros);
+      $$invalidate(10, saveMacros = $$props2.saveMacros);
     if ("app" in $$props2)
-      $$invalidate(10, app2 = $$props2.app);
+      $$invalidate(11, app2 = $$props2.app);
     if ("plugin" in $$props2)
-      $$invalidate(11, plugin = $$props2.plugin);
+      $$invalidate(12, plugin = $$props2.plugin);
   };
   return [
     choices,
@@ -14638,6 +16546,7 @@ function instance17($$self, $$props, $$invalidate) {
     toggleCommandForChoice,
     handleDuplicateChoice,
     openMacroManager,
+    openAISettings,
     macros,
     saveMacros,
     app2,
@@ -14652,18 +16561,18 @@ var ChoiceView = class extends SvelteComponent {
     init(
       this,
       options,
-      instance17,
-      create_fragment17,
+      instance16,
+      create_fragment16,
       safe_not_equal,
       {
         choices: 0,
-        macros: 8,
+        macros: 9,
         saveChoices: 1,
-        saveMacros: 9,
-        app: 10,
-        plugin: 11
+        saveMacros: 10,
+        app: 11,
+        plugin: 12
       },
-      add_css10
+      add_css9
     );
   }
 };
@@ -14676,32 +16585,58 @@ var DEFAULT_SETTINGS = {
   inputPrompt: "single-line",
   devMode: false,
   templateFolderPath: "",
+  announceUpdates: true,
+  version: "0.0.0",
+  disableOnlineFeatures: true,
+  ai: {
+    OpenAIApiKey: "",
+    defaultModel: "Ask me",
+    defaultSystemPrompt: `As an AI assistant within Obsidian, your primary goal is to help users manage their ideas and knowledge more effectively. Format your responses using Markdown syntax. Please use the [[Obsidian]] link format. You can write aliases for the links by writing [[Obsidian|the alias after the pipe symbol]]. To use mathematical notation, use LaTeX syntax. LaTeX syntax for larger equations should be on separate lines, surrounded with double dollar signs ($$). You can also inline math expressions by wrapping it in $ symbols. For example, use $$w_{ij}^{	ext{new}}:=w_{ij}^{	ext{current}}+etacdotdelta_jcdot x_{ij}$$ on a separate line, but you can write "($eta$ = learning rate, $delta_j$ = error term, $x_{ij}$ = input)" inline.`,
+    promptTemplatesFolderPath: "",
+    showAssistant: true
+  },
   migrations: {
     migrateToMacroIDFromEmbeddedMacro: false,
     useQuickAddTemplateFolder: false,
     incrementFileNameSettingMoveToDefaultBehavior: false,
-    mutualExclusionInsertAfterAndWriteToBottomOfFile: false
+    mutualExclusionInsertAfterAndWriteToBottomOfFile: false,
+    setVersionAfterUpdateModalRelease: false
   }
 };
-var QuickAddSettingsTab = class extends import_obsidian25.PluginSettingTab {
+var QuickAddSettingsTab = class extends import_obsidian31.PluginSettingTab {
   constructor(app2, plugin) {
     super(app2, plugin);
     this.plugin = plugin;
   }
   display() {
-    let { containerEl } = this;
+    const { containerEl } = this;
     containerEl.empty();
     containerEl.createEl("h2", { text: "QuickAdd Settings" });
     this.addChoicesSetting();
     this.addUseMultiLineInputPromptSetting();
     this.addTemplateFolderPathSetting();
+    this.addAnnounceUpdatesSetting();
+    this.addDisableOnlineFeaturesSetting();
+  }
+  addAnnounceUpdatesSetting() {
+    const setting = new import_obsidian31.Setting(this.containerEl);
+    setting.setName("Announce Updates");
+    setting.setDesc(
+      "Display release notes when a new version is installed. This includes new features, demo videos, and bug fixes."
+    );
+    setting.addToggle((toggle) => {
+      toggle.setValue(settingsStore.getState().announceUpdates);
+      toggle.onChange((value) => {
+        settingsStore.setState({ announceUpdates: value });
+      });
+    });
   }
   hide() {
     if (this.choiceView)
       this.choiceView.$destroy();
   }
   addChoicesSetting() {
-    const setting = new import_obsidian25.Setting(this.containerEl);
+    const setting = new import_obsidian31.Setting(this.containerEl);
     setting.infoEl.remove();
     setting.settingEl.style.display = "block";
     this.choiceView = new ChoiceView_default({
@@ -14709,52 +16644,62 @@ var QuickAddSettingsTab = class extends import_obsidian25.PluginSettingTab {
       props: {
         app: this.app,
         plugin: this.plugin,
-        choices: this.plugin.settings.choices,
-        saveChoices: async (choices) => {
-          this.plugin.settings.choices = choices;
-          await this.plugin.saveSettings();
+        choices: settingsStore.getState().choices,
+        saveChoices: (choices) => {
+          settingsStore.setState({ choices });
         },
-        macros: this.plugin.settings.macros,
-        saveMacros: async (macros) => {
-          this.plugin.settings.macros = macros;
-          await this.plugin.saveSettings();
+        macros: settingsStore.getState().macros,
+        saveMacros: (macros) => {
+          settingsStore.setState({ macros });
         }
       }
     });
   }
   addUseMultiLineInputPromptSetting() {
-    new import_obsidian25.Setting(this.containerEl).setName("Use Multi-line Input Prompt").setDesc(
+    new import_obsidian31.Setting(this.containerEl).setName("Use Multi-line Input Prompt").setDesc(
       "Use multi-line input prompt instead of single-line input prompt"
     ).addToggle(
       (toggle) => toggle.setValue(this.plugin.settings.inputPrompt === "multi-line").setTooltip("Use multi-line input prompt").onChange((value) => {
         if (value) {
-          this.plugin.settings.inputPrompt = "multi-line";
+          settingsStore.setState({
+            inputPrompt: "multi-line"
+          });
         } else {
-          this.plugin.settings.inputPrompt = "single-line";
+          settingsStore.setState({
+            inputPrompt: "single-line"
+          });
         }
-        this.plugin.saveSettings();
       })
     );
   }
   addTemplateFolderPathSetting() {
-    const setting = new import_obsidian25.Setting(this.containerEl);
+    const setting = new import_obsidian31.Setting(this.containerEl);
     setting.setName("Template Folder Path");
     setting.setDesc(
       "Path to the folder where templates are stored. Used to suggest template files when configuring QuickAdd."
     );
     setting.addText((text2) => {
-      text2.setPlaceholder(
-        "templates/"
-      ).setValue(this.plugin.settings.templateFolderPath).onChange(async (value) => {
-        this.plugin.settings.templateFolderPath = value;
-        await this.plugin.saveSettings();
+      text2.setPlaceholder("templates/").setValue(settingsStore.getState().templateFolderPath).onChange((value) => {
+        settingsStore.setState({ templateFolderPath: value });
       });
       new GenericTextSuggester(
         app,
         text2.inputEl,
-        app.vault.getAllLoadedFiles().filter((f) => f instanceof import_obsidian25.TFolder && f.path !== "/").map((f) => f.path)
+        app.vault.getAllLoadedFiles().filter((f) => f instanceof import_obsidian31.TFolder && f.path !== "/").map((f) => f.path)
       );
     });
+  }
+  addDisableOnlineFeaturesSetting() {
+    new import_obsidian31.Setting(this.containerEl).setName("Disable AI & Online features").setDesc(
+      "This prevents the plugin from making requests to external providers like OpenAI. You can still use User Scripts to execute arbitrary code, inclulding contacting external providers. However, this setting disables plugin features like the AI Assistant from doing so. You need to disable this setting to use the AI Assistant."
+    ).addToggle(
+      (toggle) => toggle.setValue(settingsStore.getState().disableOnlineFeatures).onChange((value) => {
+        settingsStore.setState({
+          disableOnlineFeatures: value
+        });
+        this.display();
+      })
+    );
   }
 };
 
@@ -14795,7 +16740,7 @@ var ConsoleErrorLogger = class extends QuickAddLogger {
 };
 
 // src/logger/guiLogger.ts
-var import_obsidian26 = require("obsidian");
+var import_obsidian32 = require("obsidian");
 var GuiLogger = class extends QuickAddLogger {
   constructor(plugin) {
     super();
@@ -14803,11 +16748,11 @@ var GuiLogger = class extends QuickAddLogger {
   }
   logError(msg) {
     const error = this.getQuickAddError(msg, "ERROR" /* Error */);
-    new import_obsidian26.Notice(this.formatOutputString(error), 15e3);
+    new import_obsidian32.Notice(this.formatOutputString(error), 15e3);
   }
   logWarning(msg) {
     const warning = this.getQuickAddError(msg, "WARNING" /* Warning */);
-    new import_obsidian26.Notice(this.formatOutputString(warning));
+    new import_obsidian32.Notice(this.formatOutputString(warning));
   }
   logMessage(msg) {
   }
@@ -14818,27 +16763,18 @@ var StartupMacroEngine = class extends MacroChoiceEngine {
   constructor(app2, plugin, macros, choiceExecutor) {
     super(app2, plugin, null, macros, choiceExecutor, null);
   }
+  // eslint-disable-next-line @typescript-eslint/require-await
   async run() {
     this.macros.forEach((macro) => {
       if (macro.runOnStartup) {
-        this.executeCommands(macro.commands);
+        void this.executeCommands(macro.commands);
       }
     });
   }
 };
 
 // src/engine/TemplateChoiceEngine.ts
-var import_obsidian27 = require("obsidian");
-
-// src/utils/invariant.ts
-function invariant(condition, message) {
-  if (!condition) {
-    throw new Error(typeof message === "function" ? message() : message);
-  }
-  return;
-}
-
-// src/engine/TemplateChoiceEngine.ts
+var import_obsidian33 = require("obsidian");
 var TemplateChoiceEngine = class extends TemplateEngine {
   constructor(app2, plugin, choice, choiceExecutor) {
     super(app2, plugin, choiceExecutor);
@@ -14872,13 +16808,12 @@ var TemplateChoiceEngine = class extends TemplateEngine {
       let createdFile;
       if (await this.app.vault.adapter.exists(filePath)) {
         const file = this.app.vault.getAbstractFileByPath(filePath);
-        if (!(file instanceof import_obsidian27.TFile) || file.extension !== "md") {
+        if (!(file instanceof import_obsidian33.TFile) || file.extension !== "md") {
           log.logError(
             `'${filePath}' already exists and is not a valid markdown file.`
           );
           return;
         }
-        await this.app.workspace.getLeaf("tab").openFile(file);
         let userChoice = this.choice.fileExistsMode;
         if (!this.choice.setFileExistsBehavior) {
           userChoice = await GenericSuggester.Suggest(
@@ -14909,6 +16844,18 @@ var TemplateChoiceEngine = class extends TemplateEngine {
             );
             break;
           case fileExistsDoNothing:
+            createdFile = file;
+            break;
+          case fileExistsIncrement: {
+            const incrementFileName = await this.incrementFileName(
+              filePath
+            );
+            createdFile = await this.createFileWithTemplate(
+              incrementFileName,
+              this.choice.templatePath
+            );
+            break;
+          }
           default:
             log.logWarning("File not written to.");
             return;
@@ -14923,13 +16870,13 @@ var TemplateChoiceEngine = class extends TemplateEngine {
           return;
         }
       }
-      if (this.choice.appendLink) {
+      if (this.choice.appendLink && createdFile) {
         appendToCurrentLine(
           this.app.fileManager.generateMarkdownLink(createdFile, ""),
           this.app
         );
       }
-      if (this.choice.openFile) {
+      if (this.choice.openFile && createdFile) {
         await openFile(this.app, createdFile, {
           openInNewTab: this.choice.openFileInNewTab.enabled,
           direction: this.choice.openFileInNewTab.direction,
@@ -14950,11 +16897,10 @@ var TemplateChoiceEngine = class extends TemplateEngine {
     return folderPaths;
   }
   async getFolderPath() {
-    var _a, _b, _c, _d, _e;
-    let folders = await this.formatFolderPaths([
+    const folders = await this.formatFolderPaths([
       ...this.choice.folder.folders
     ]);
-    if (((_a = this.choice.folder) == null ? void 0 : _a.chooseFromSubfolders) && !(((_b = this.choice.folder) == null ? void 0 : _b.chooseWhenCreatingNote) || ((_c = this.choice.folder) == null ? void 0 : _c.createInSameFolderAsActiveFile))) {
+    if (this.choice.folder?.chooseFromSubfolders && !(this.choice.folder?.chooseWhenCreatingNote || this.choice.folder?.createInSameFolderAsActiveFile)) {
       const allFoldersInVault = getAllFolderPathsInVault(
         this.app
       );
@@ -14963,17 +16909,17 @@ var TemplateChoiceEngine = class extends TemplateEngine {
       });
       return await this.getOrCreateFolder(subfolders);
     }
-    if ((_d = this.choice.folder) == null ? void 0 : _d.chooseWhenCreatingNote) {
+    if (this.choice.folder?.chooseWhenCreatingNote) {
       const allFoldersInVault = getAllFolderPathsInVault(
         this.app
       );
       return await this.getOrCreateFolder(allFoldersInVault);
     }
-    if ((_e = this.choice.folder) == null ? void 0 : _e.createInSameFolderAsActiveFile) {
+    if (this.choice.folder?.createInSameFolderAsActiveFile) {
       const activeFile = this.app.workspace.getActiveFile();
-      if (!activeFile) {
+      if (!activeFile || !activeFile.parent) {
         log.logWarning(
-          "No active file. Cannot create file in same folder as active file. Creating in root folder."
+          "No active file or active file has no parent. Cannot create file in same folder as active file. Creating in root folder."
         );
         return "";
       }
@@ -14982,6 +16928,140 @@ var TemplateChoiceEngine = class extends TemplateEngine {
     return await this.getOrCreateFolder(folders);
   }
 };
+
+// src/formatters/helpers/getEndOfSection.ts
+function isSameHeading(heading1, heading2) {
+  return heading1.line === heading2.line;
+}
+function getMarkdownHeadings(bodyLines) {
+  const headers = [];
+  bodyLines.forEach((line, index) => {
+    const match = line.match(/^(#+)[\s]?(.*)$/);
+    if (!match)
+      return;
+    headers.push({
+      level: match[1].length,
+      text: match[2],
+      line: index
+    });
+  });
+  return headers;
+}
+function getEndOfSection(lines, targetLine, shouldConsiderSubsections = false) {
+  const headings = getMarkdownHeadings(lines);
+  const targetHeading = headings.find(
+    (heading) => heading.line === targetLine
+  );
+  const targetIsHeading = !!targetHeading;
+  if (!targetIsHeading && shouldConsiderSubsections) {
+    throw new Error(
+      `Target line ${targetLine} is not a heading, but we are trying to find the end of its section.`
+    );
+  }
+  if (!targetIsHeading && !shouldConsiderSubsections) {
+    const nextEmptyStringIdx = findNextIdx(
+      lines,
+      targetLine,
+      (str) => str.trim() === ""
+    );
+    if (nextEmptyStringIdx !== null && nextEmptyStringIdx > targetLine) {
+      return nextEmptyStringIdx - 1;
+    }
+    return targetLine;
+  }
+  const lastLineInBodyIdx = lines.length - 1;
+  const endOfSectionLineIdx = getEndOfSectionLineByHeadings(
+    targetHeading,
+    headings,
+    lines,
+    shouldConsiderSubsections
+  );
+  const lastNonEmptyLineInSectionIdx = findPriorIdx(
+    lines,
+    endOfSectionLineIdx,
+    (str) => str.trim() !== ""
+  );
+  if (lastNonEmptyLineInSectionIdx !== null) {
+    if (lastNonEmptyLineInSectionIdx < targetLine) {
+      return targetLine;
+    }
+    const lineIsEmpty = lines[lastNonEmptyLineInSectionIdx + 1].trim() === "";
+    if (lastNonEmptyLineInSectionIdx + 1 === lastLineInBodyIdx && !lineIsEmpty) {
+      return endOfSectionLineIdx;
+    }
+    if (lastNonEmptyLineInSectionIdx === 0) {
+      return lastNonEmptyLineInSectionIdx + 1;
+    }
+    return lastNonEmptyLineInSectionIdx;
+  }
+  return endOfSectionLineIdx;
+}
+function getEndOfSectionLineByHeadings(targetHeading, headings, lines, shouldConsiderSubsections) {
+  const targetHeadingIdx = headings.findIndex(
+    (heading) => isSameHeading(heading, targetHeading)
+  );
+  const targetHeadingIsLastHeading = targetHeadingIdx === headings.length - 1;
+  const lastLineInBodyIdx = lines.length - 1;
+  if (targetHeadingIsLastHeading) {
+    return lastLineInBodyIdx;
+  }
+  const [nextHigherOrSameLevelHeadingIndex, foundHigherOrSameLevelHeading] = findNextHigherOrSameLevelHeading(targetHeading, headings);
+  const higherLevelSectionIsLastHeading = foundHigherOrSameLevelHeading && nextHigherOrSameLevelHeadingIndex === headings.length;
+  if (higherLevelSectionIsLastHeading) {
+    return lastLineInBodyIdx;
+  }
+  if (foundHigherOrSameLevelHeading && shouldConsiderSubsections) {
+    const nextHigherLevelHeadingLineIdx = headings[nextHigherOrSameLevelHeadingIndex].line;
+    return nextHigherLevelHeadingLineIdx - 1;
+  }
+  if (foundHigherOrSameLevelHeading && !shouldConsiderSubsections) {
+    return headings[targetHeadingIdx + 1].line;
+  }
+  if (!shouldConsiderSubsections && !foundHigherOrSameLevelHeading) {
+    const nextHeading = findNextHeading(targetHeading.line, headings);
+    if (nextHeading === null) {
+      return lastLineInBodyIdx;
+    }
+    return nextHeading;
+  }
+  return lastLineInBodyIdx;
+}
+function findNextHigherOrSameLevelHeading(targetHeading, headings) {
+  const targetHeadingIdx = headings.findIndex(
+    (heading) => isSameHeading(heading, targetHeading)
+  );
+  const nextSameOrHigherLevelHeadingIdx = findNextIdx(
+    headings,
+    targetHeadingIdx,
+    (heading) => heading.level <= targetHeading.level
+  );
+  if (nextSameOrHigherLevelHeadingIdx === null) {
+    return [-1, false];
+  }
+  return [nextSameOrHigherLevelHeadingIdx, true];
+}
+function findNextHeading(fromIdxInBody, headings) {
+  const nextheading = headings.findIndex(
+    (heading) => heading.line > fromIdxInBody
+  );
+  return nextheading === -1 ? null : nextheading;
+}
+function findPriorIdx(items, fromIdx, condition) {
+  for (let i = fromIdx - 1; i >= 0; i--) {
+    if (condition(items[i])) {
+      return i;
+    }
+  }
+  return null;
+}
+function findNextIdx(items, fromIdx, condition) {
+  for (let i = fromIdx + 1; i < items.length; i++) {
+    if (condition(items[i])) {
+      return i;
+    }
+  }
+  return null;
+}
 
 // src/formatters/captureChoiceFormatter.ts
 var CaptureChoiceFormatter = class extends CompleteFormatter {
@@ -15002,7 +17082,7 @@ var CaptureChoiceFormatter = class extends CompleteFormatter {
       formatted,
       this.file
     );
-    if (!templaterFormatted)
+    if (!await templaterFormatted)
       return formatted;
     return templaterFormatted;
   }
@@ -15025,7 +17105,7 @@ var CaptureChoiceFormatter = class extends CompleteFormatter {
     if (this.choice.insertAfter.enabled) {
       return await this.insertAfterHandler(formatted);
     }
-    const frontmatterEndPosition = this.file ? await this.getFrontmatterEndPosition(this.file) : null;
+    const frontmatterEndPosition = this.file ? this.getFrontmatterEndPosition(this.file) : null;
     if (!frontmatterEndPosition)
       return `${formatted}${this.fileContent}`;
     return this.insertTextAfterPositionInBody(
@@ -15043,52 +17123,32 @@ var CaptureChoiceFormatter = class extends CompleteFormatter {
     return formatted;
   }
   async insertAfterHandler(formatted) {
-    var _a, _b;
     const targetString = await this.format(
       this.choice.insertAfter.after
     );
     const targetRegex = new RegExp(
-      `s*${escapeRegExp(targetString.replace("\\n", ""))}s*`
+      `\\s*${escapeRegExp(targetString.replace("\\n", ""))}\\s*`
     );
-    let fileContentLines = getLinesInString(this.fileContent);
-    const targetPosition = fileContentLines.findIndex(
+    const fileContentLines = getLinesInString(this.fileContent);
+    let targetPosition = fileContentLines.findIndex(
       (line) => targetRegex.test(line)
     );
     const targetNotFound = targetPosition === -1;
     if (targetNotFound) {
-      if ((_a = this.choice.insertAfter) == null ? void 0 : _a.createIfNotFound) {
+      if (this.choice.insertAfter?.createIfNotFound) {
         return await this.createInsertAfterIfNotFound(formatted);
       }
       log.logError("unable to find insert after line in file.");
     }
-    if ((_b = this.choice.insertAfter) == null ? void 0 : _b.insertAtEnd) {
-      const nextHeaderPositionAfterTargetPosition = fileContentLines.slice(targetPosition + 1).findIndex((line) => /^#+ |---/.test(line));
-      const foundNextHeader = nextHeaderPositionAfterTargetPosition !== -1;
-      if (foundNextHeader) {
-        let endOfSectionIndex;
-        for (let i = nextHeaderPositionAfterTargetPosition + targetPosition; i > targetPosition; i--) {
-          const lineIsNewline = /^[\s\n ]*$/.test(
-            fileContentLines[i]
-          );
-          if (!lineIsNewline) {
-            endOfSectionIndex = i;
-            break;
-          }
-        }
-        if (!endOfSectionIndex)
-          endOfSectionIndex = targetPosition;
-        return this.insertTextAfterPositionInBody(
-          formatted,
-          this.fileContent,
-          endOfSectionIndex
-        );
-      } else {
-        return this.insertTextAfterPositionInBody(
-          formatted,
-          this.fileContent,
-          fileContentLines.length - 1
-        );
-      }
+    if (this.choice.insertAfter?.insertAtEnd) {
+      if (!this.file)
+        throw new Error("Tried to get sections without file.");
+      const endOfSectionIndex = getEndOfSection(
+        fileContentLines,
+        targetPosition,
+        !!this.choice.insertAfter.considerSubsections
+      );
+      targetPosition = endOfSectionIndex ?? fileContentLines.length - 1;
     }
     return this.insertTextAfterPositionInBody(
       formatted,
@@ -15097,27 +17157,26 @@ var CaptureChoiceFormatter = class extends CompleteFormatter {
     );
   }
   async createInsertAfterIfNotFound(formatted) {
-    var _a, _b;
     const insertAfterLine = this.replaceLinebreakInString(
       await this.format(this.choice.insertAfter.after)
     );
     const insertAfterLineAndFormatted = `${insertAfterLine}
 ${formatted}`;
-    if (((_a = this.choice.insertAfter) == null ? void 0 : _a.createIfNotFoundLocation) === CREATE_IF_NOT_FOUND_TOP) {
-      const frontmatterEndPosition = this.file ? await this.getFrontmatterEndPosition(this.file) : -1;
+    if (this.choice.insertAfter?.createIfNotFoundLocation === CREATE_IF_NOT_FOUND_TOP) {
+      const frontmatterEndPosition = this.file ? this.getFrontmatterEndPosition(this.file) : -1;
       return this.insertTextAfterPositionInBody(
         insertAfterLineAndFormatted,
         this.fileContent,
         frontmatterEndPosition
       );
     }
-    if (((_b = this.choice.insertAfter) == null ? void 0 : _b.createIfNotFoundLocation) === CREATE_IF_NOT_FOUND_BOTTOM) {
+    if (this.choice.insertAfter?.createIfNotFoundLocation === CREATE_IF_NOT_FOUND_BOTTOM) {
       return `${this.fileContent}
 ${insertAfterLineAndFormatted}`;
     }
   }
-  async getFrontmatterEndPosition(file) {
-    const fileCache = await this.app.metadataCache.getFileCache(file);
+  getFrontmatterEndPosition(file) {
+    const fileCache = this.app.metadataCache.getFileCache(file);
     if (!fileCache || !fileCache.frontmatter) {
       log.logMessage("could not get frontmatter. Maybe there isn't any.");
       return -1;
@@ -15156,6 +17215,8 @@ var Conflicted = class extends Outcome {
     this.right = right2;
     this.hasConflicts = true;
   }
+  // Special constructor because left/base/right positional params
+  // are confusing
   static create(opts) {
     return new Conflicted(opts.left, opts.base, opts.right);
   }
@@ -15276,6 +17337,8 @@ var HeckelDiff = class {
     }
     return uniques;
   }
+  // given the calculated bounds of the 2 way diff, create the proper
+  // change type and add it to the queue.
   appendChangeRange(changesRanges, leftLo, leftHi, rightLo, rightHi) {
     if (leftLo <= leftHi && rightLo <= rightHi) {
       changesRanges.push(new ChangeRange(Action.change, leftLo + 1, leftHi + 1, rightLo + 1, rightHi + 1));
@@ -15790,31 +17853,37 @@ var CaptureChoiceEngine = class extends QuickAddChoiceEngine {
     );
   }
   async run() {
-    var _a, _b, _c, _d;
     try {
-      if ((_a = this.choice) == null ? void 0 : _a.captureToActiveFile) {
-        await this.captureToActiveFile();
-        return;
-      }
-      const captureTo = this.choice.captureTo;
-      invariant(captureTo, () => {
-        return `Invalid capture to for ${this.choice.name}. ${captureTo.length === 0 ? "Capture path is empty." : `Capture path is not valid: ${captureTo}`}`;
-      });
-      const filePath = await this.formatFilePath(captureTo);
-      const content = await this.getCaptureContent();
+      const filePath = await this.getFormattedPathToCaptureTo(
+        this.choice.captureToActiveFile
+      );
+      const content = this.getCaptureContent();
       let getFileAndAddContentFn;
       if (await this.fileExists(filePath)) {
-        getFileAndAddContentFn = this.onFileExists;
-      } else if ((_c = (_b = this.choice) == null ? void 0 : _b.createFileIfItDoesntExist) == null ? void 0 : _c.enabled) {
-        getFileAndAddContentFn = this.onCreateFileIfItDoesntExist;
+        getFileAndAddContentFn = this.onFileExists.bind(
+          this
+        );
+      } else if (this.choice?.createFileIfItDoesntExist?.enabled) {
+        getFileAndAddContentFn = this.onCreateFileIfItDoesntExist.bind(
+          this
+        );
       } else {
         log.logWarning(
           `The file ${filePath} does not exist and "Create file if it doesn't exist" is disabled.`
         );
         return;
       }
-      const { file, content: newFileContent } = await getFileAndAddContentFn.bind(this)(filePath, content);
-      await this.app.vault.modify(file, newFileContent);
+      const { file, newFileContent, captureContent } = await getFileAndAddContentFn(filePath, content);
+      if (this.choice.captureToActiveFile && !this.choice.prepend && !this.choice.insertAfter.enabled) {
+        const content2 = await templaterParseTemplate(
+          app,
+          captureContent,
+          file
+        );
+        appendToCurrentLine(content2, this.app);
+      } else {
+        await this.app.vault.modify(file, newFileContent);
+      }
       if (this.choice.appendLink) {
         const markdownLink = this.app.fileManager.generateMarkdownLink(
           file,
@@ -15822,7 +17891,7 @@ var CaptureChoiceEngine = class extends QuickAddChoiceEngine {
         );
         appendToCurrentLine(markdownLink, this.app);
       }
-      if ((_d = this.choice) == null ? void 0 : _d.openFile) {
+      if (this.choice?.openFile) {
         await openFile(this.app, file, {
           openInNewTab: this.choice.openFileInNewTab.enabled,
           direction: this.choice.openFileInNewTab.direction,
@@ -15834,7 +17903,7 @@ var CaptureChoiceEngine = class extends QuickAddChoiceEngine {
       log.logError(e);
     }
   }
-  async getCaptureContent() {
+  getCaptureContent() {
     let content;
     if (!this.choice.format.enabled)
       content = VALUE_SYNTAX;
@@ -15845,8 +17914,81 @@ var CaptureChoiceEngine = class extends QuickAddChoiceEngine {
 `;
     return content;
   }
+  /**
+   * Gets a formatted file path to capture content to, either the active file or a specified location.
+   * If capturing to a folder, suggests a file within the folder to capture the content to.
+   *
+   * @param {boolean} shouldCaptureToActiveFile - Determines if the content should be captured to the active file.
+   * @returns {Promise<string>} A promise that resolves to the formatted file path where the content should be captured.
+   *
+   * @throws {Error} Throws an error if there's no active file when trying to capture to active file,
+   *                 if the capture path is invalid, or if the target folder is empty.
+   */
+  async getFormattedPathToCaptureTo(shouldCaptureToActiveFile) {
+    if (shouldCaptureToActiveFile) {
+      const activeFile = this.app.workspace.getActiveFile();
+      invariant(
+        activeFile,
+        `Cannot capture to active file - no active file.`
+      );
+      return activeFile.path;
+    }
+    const captureTo = this.choice.captureTo;
+    const formattedCaptureTo = await this.formatFilePath(captureTo);
+    const folderPath = formattedCaptureTo.replace(
+      /^\/$|\/\.md$|^\.md$/,
+      ""
+    );
+    const captureAnywhereInVault = folderPath === "";
+    const shouldCaptureToFolder = captureAnywhereInVault || isFolder(folderPath);
+    const shouldCaptureWithTag = formattedCaptureTo.startsWith("#");
+    if (shouldCaptureToFolder) {
+      return this.selectFileInFolder(folderPath, captureAnywhereInVault);
+    }
+    if (shouldCaptureWithTag) {
+      const tag = formattedCaptureTo.replace(/\.md$/, "");
+      return this.selectFileWithTag(tag);
+    }
+    return formattedCaptureTo;
+  }
+  async selectFileInFolder(folderPath, captureAnywhereInVault) {
+    const folderPathSlash = folderPath.endsWith("/") || captureAnywhereInVault ? folderPath : `${folderPath}/`;
+    const filesInFolder = getMarkdownFilesInFolder(folderPathSlash);
+    invariant(
+      filesInFolder.length > 0,
+      `Folder ${folderPathSlash} is empty.`
+    );
+    const filePaths = filesInFolder.map((f) => f.path);
+    const targetFilePath = await InputSuggester.Suggest(
+      app,
+      filePaths.map((item) => item.replace(folderPathSlash, "")),
+      filePaths
+    );
+    invariant(
+      !!targetFilePath && targetFilePath.length > 0,
+      `No file selected for capture.`
+    );
+    const filePath = targetFilePath.startsWith(`${folderPathSlash}`) ? targetFilePath : `${folderPathSlash}/${targetFilePath}`;
+    return await this.formatFilePath(filePath);
+  }
+  async selectFileWithTag(tag) {
+    const tagWithHash = tag.startsWith("#") ? tag : `#${tag}`;
+    const filesWithTag = getMarkdownFilesWithTag(tagWithHash);
+    invariant(filesWithTag.length > 0, `No files with tag ${tag}.`);
+    const filePaths = filesWithTag.map((f) => f.path);
+    const targetFilePath = await InputSuggester.Suggest(
+      app,
+      filePaths,
+      filePaths
+    );
+    invariant(
+      !!targetFilePath && targetFilePath.length > 0,
+      `No file selected for capture.`
+    );
+    return await this.formatFilePath(targetFilePath);
+  }
   async onFileExists(filePath, content) {
-    const file = await this.getFileByPath(filePath);
+    const file = this.getFileByPath(filePath);
     if (!file)
       throw new Error("File not found");
     const formatted = await this.formatter.formatContentOnly(content);
@@ -15873,9 +18015,9 @@ This is in order to prevent data loss.`
       );
       newFileContent = res.joinedResults();
     }
-    return { file, content: newFileContent };
+    return { file, newFileContent, captureContent: formatted };
   }
-  async onCreateFileIfItDoesntExist(filePath, content) {
+  async onCreateFileIfItDoesntExist(filePath, captureContent) {
     let fileContent = "";
     if (this.choice.createFileIfItDoesntExist.createWithTemplate) {
       const singleTemplateEngine = new SingleTemplateEngine(
@@ -15895,12 +18037,12 @@ This is in order to prevent data loss.`
       file
     );
     const newFileContent = await this.formatter.formatContentWithFile(
-      content,
+      captureContent,
       this.choice,
       updatedFileContent,
       file
     );
-    return { file, content: newFileContent };
+    return { file, newFileContent, captureContent };
   }
   async formatFilePath(captureTo) {
     const formattedCaptureTo = await this.formatter.formatFileName(
@@ -15909,38 +18051,11 @@ This is in order to prevent data loss.`
     );
     return this.normalizeMarkdownFilePath("", formattedCaptureTo);
   }
-  async captureToActiveFile() {
-    const activeFile = this.app.workspace.getActiveFile();
-    if (!activeFile) {
-      log.logError("Cannot capture to active file - no active file.");
-      return;
-    }
-    let content = await this.getCaptureContent();
-    content = await this.formatter.formatContent(content, this.choice);
-    if (this.choice.format.enabled) {
-      content = await templaterParseTemplate(
-        this.app,
-        content,
-        activeFile
-      );
-    }
-    if (!content)
-      return;
-    if (this.choice.prepend) {
-      const fileContent = await this.app.vault.cachedRead(
-        activeFile
-      );
-      const newFileContent = `${fileContent}${content}`;
-      await this.app.vault.modify(activeFile, newFileContent);
-    } else {
-      appendToCurrentLine(content, this.app);
-    }
-  }
 };
 
 // src/gui/suggesters/choiceSuggester.ts
-var import_obsidian28 = require("obsidian");
-var ChoiceSuggester = class extends import_obsidian28.FuzzySuggestModal {
+var import_obsidian34 = require("obsidian");
+var ChoiceSuggester = class extends import_obsidian34.FuzzySuggestModal {
   constructor(plugin, choices, choiceExecutor) {
     super(plugin.app);
     this.plugin = plugin;
@@ -15955,6 +18070,11 @@ var ChoiceSuggester = class extends import_obsidian28.FuzzySuggestModal {
   static Open(plugin, choices, choiceExecutor) {
     new ChoiceSuggester(plugin, choices, choiceExecutor).open();
   }
+  renderSuggestion(item, el) {
+    el.empty();
+    void import_obsidian34.MarkdownRenderer.renderMarkdown(item.item.name, el, "", this.plugin);
+    el.classList.add("quickadd-choice-suggestion");
+  }
   getItemText(item) {
     return item.name;
   }
@@ -15962,7 +18082,7 @@ var ChoiceSuggester = class extends import_obsidian28.FuzzySuggestModal {
     return this.choices;
   }
   async onChooseItem(item, evt) {
-    if (item.type === "Multi" /* Multi */)
+    if (item.type === "Multi")
       this.onChooseMultiType(item);
     else
       await this.choiceExecutor.execute(item);
@@ -15984,22 +18104,26 @@ var ChoiceExecutor = class {
   }
   async execute(choice) {
     switch (choice.type) {
-      case "Template" /* Template */:
+      case "Template": {
         const templateChoice = choice;
         await this.onChooseTemplateType(templateChoice);
         break;
-      case "Capture" /* Capture */:
+      }
+      case "Capture": {
         const captureChoice = choice;
         await this.onChooseCaptureType(captureChoice);
         break;
-      case "Macro" /* Macro */:
+      }
+      case "Macro": {
         const macroChoice = choice;
         await this.onChooseMacroType(macroChoice);
         break;
-      case "Multi" /* Multi */:
+      }
+      case "Multi": {
         const multiChoice = choice;
-        await this.onChooseMultiType(multiChoice);
+        this.onChooseMultiType(multiChoice);
         break;
+      }
       default:
         break;
     }
@@ -16021,7 +18145,7 @@ var ChoiceExecutor = class {
     ).run();
   }
   async onChooseMacroType(macroChoice) {
-    const macroEngine = await new MacroChoiceEngine(
+    const macroEngine = new MacroChoiceEngine(
       this.app,
       this.plugin,
       macroChoice,
@@ -16034,7 +18158,7 @@ var ChoiceExecutor = class {
       this.variables.set(key, value);
     });
   }
-  async onChooseMultiType(multiChoice) {
+  onChooseMultiType(multiChoice) {
     ChoiceSuggester.Open(this.plugin, multiChoice.choices, this);
   }
 };
@@ -16044,7 +18168,7 @@ var migrateToMacroIDFromEmbeddedMacro_default = {
   description: "Migrate to macro ID from embedded macro in macro choices.",
   migrate: async (plugin) => {
     function convertMacroChoiceMacroToIdHelper(choice) {
-      if (choice.type === "Multi" /* Multi */) {
+      if (choice.type === "Multi") {
         let multiChoice = choice;
         const multiChoices = multiChoice.choices.map(
           convertMacroChoiceMacroToIdHelper
@@ -16052,7 +18176,7 @@ var migrateToMacroIDFromEmbeddedMacro_default = {
         multiChoice = { ...multiChoice, choices: multiChoices };
         return multiChoice;
       }
-      if (choice.type !== "Macro" /* Macro */)
+      if (choice.type !== "Macro")
         return choice;
       const macroChoice = choice;
       if (macroChoice.macro) {
@@ -16071,6 +18195,7 @@ var migrateToMacroIDFromEmbeddedMacro_default = {
 // src/migrations/useQuickAddTemplateFolder.ts
 var useQuickAddTemplateFolder_default = {
   description: "Use QuickAdd template folder instead of Obsidian templates plugin folder / Templater templates folder.",
+  // eslint-disable-next-line @typescript-eslint/require-await
   migrate: async (plugin) => {
     try {
       const templaterPlugin = app.plugins.plugins["templater"];
@@ -16080,17 +18205,26 @@ var useQuickAddTemplateFolder_default = {
         return;
       }
       if (obsidianTemplatesPlugin) {
-        const obsidianTemplatesSettings = obsidianTemplatesPlugin.instance.options;
+        const obsidianTemplatesSettings = (
+          //@ts-ignore
+          obsidianTemplatesPlugin.instance.options
+        );
         if (obsidianTemplatesSettings["folder"]) {
-          plugin.settings.templateFolderPath = obsidianTemplatesSettings["folder"];
-          log.logMessage("Migrated template folder path to Obsidian Templates' setting.");
+          plugin.settings.templateFolderPath = // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+          obsidianTemplatesSettings["folder"];
+          log.logMessage(
+            "Migrated template folder path to Obsidian Templates' setting."
+          );
         }
       }
       if (templaterPlugin) {
         const templaterSettings = templaterPlugin.settings;
         if (templaterSettings["template_folder"]) {
-          plugin.settings.templateFolderPath = templaterSettings["template_folder"];
-          log.logMessage("Migrated template folder path to Templaters setting.");
+          plugin.settings.templateFolderPath = //@ts-ignore
+          templaterSettings["template_folder"];
+          log.logMessage(
+            "Migrated template folder path to Templaters setting."
+          );
         }
       }
     } catch (error) {
@@ -16100,18 +18234,30 @@ var useQuickAddTemplateFolder_default = {
   }
 };
 
-// src/migrations/incrementFileNameSettingMoveToDefaultBehavior.ts
-function isOldTemplateChoice(choice) {
-  for (const key in choice) {
-    if (key === "incrementFileName") {
-      return true;
-    }
-  }
-  return false;
-}
+// src/migrations/helpers/isMultiChoice.ts
 function isMultiChoice(choice) {
-  return choice.type === "Multi" /* Multi */ && choice.choices !== void 0;
+  if (choice === null || typeof choice !== "object" || !("type" in choice) || !("choices" in choice)) {
+    return false;
+  }
+  return choice.type === "Multi" && choice.choices !== void 0;
 }
+
+// src/migrations/helpers/isNestedChoiceCommand.ts
+function isNestedChoiceCommand(command) {
+  if (command === null || typeof command !== "object" || !("choice" in command)) {
+    return false;
+  }
+  return command.choice !== void 0;
+}
+
+// src/migrations/helpers/isOldTemplateChoice.ts
+function isOldTemplateChoice(choice) {
+  if (typeof choice !== "object" || choice === null)
+    return false;
+  return "incrementFileName" in choice;
+}
+
+// src/migrations/incrementFileNameSettingMoveToDefaultBehavior.ts
 function recursiveRemoveIncrementFileName(choices) {
   for (const choice of choices) {
     if (isMultiChoice(choice)) {
@@ -16125,11 +18271,10 @@ function recursiveRemoveIncrementFileName(choices) {
   }
   return choices;
 }
-function isNestedChoiceCommand(command) {
-  return command.choice !== void 0;
-}
 function removeIncrementFileName(macros) {
   for (const macro of macros) {
+    if (!Array.isArray(macro.commands))
+      continue;
     for (const command of macro.commands) {
       if (isNestedChoiceCommand(command) && isOldTemplateChoice(command.choice)) {
         command.choice.setFileExistsBehavior = true;
@@ -16142,6 +18287,7 @@ function removeIncrementFileName(macros) {
 }
 var incrementFileNameSettingMoveToDefaultBehavior = {
   description: "'Increment file name' setting moved to 'Set default behavior if file already exists' setting",
+  // eslint-disable-next-line @typescript-eslint/require-await
   migrate: async (plugin) => {
     const choicesCopy = structuredClone(plugin.settings.choices);
     const choices = recursiveRemoveIncrementFileName(choicesCopy);
@@ -16153,16 +18299,15 @@ var incrementFileNameSettingMoveToDefaultBehavior = {
 };
 var incrementFileNameSettingMoveToDefaultBehavior_default = incrementFileNameSettingMoveToDefaultBehavior;
 
-// src/migrations/mutualExclusionInsertAfterAndWriteToBottomOfFile.ts
+// src/migrations/helpers/isCaptureChoice.ts
 function isCaptureChoice(choice) {
-  return choice.type === "Capture" /* Capture */;
+  return choice.type === "Capture";
 }
-function isMultiChoice2(choice) {
-  return choice.type === "Multi" /* Multi */ && choice.choices !== void 0;
-}
+
+// src/migrations/mutualExclusionInsertAfterAndWriteToBottomOfFile.ts
 function recursiveMigrateSettingInChoices(choices) {
   for (const choice of choices) {
-    if (isMultiChoice2(choice)) {
+    if (isMultiChoice(choice)) {
       choice.choices = recursiveMigrateSettingInChoices(choice.choices);
     }
     if (isCaptureChoice(choice)) {
@@ -16173,13 +18318,12 @@ function recursiveMigrateSettingInChoices(choices) {
   }
   return choices;
 }
-function isNestedChoiceCommand2(command) {
-  return command.choice !== void 0;
-}
 function migrateSettingsInMacros(macros) {
   for (const macro of macros) {
+    if (!Array.isArray(macro.commands))
+      continue;
     for (const command of macro.commands) {
-      if (isNestedChoiceCommand2(command) && isCaptureChoice(command.choice)) {
+      if (isNestedChoiceCommand(command) && isCaptureChoice(command.choice)) {
         if (command.choice.insertAfter.enabled && command.choice.prepend) {
           command.choice.prepend = false;
         }
@@ -16190,6 +18334,7 @@ function migrateSettingsInMacros(macros) {
 }
 var mutualExclusionInsertAfterAndWriteToBottomOfFile = {
   description: "Mutual exclusion of insertAfter and writeToBottomOfFile settings. If insertAfter is enabled, writeToBottomOfFile is disabled. To support changes in settings UI.",
+  // eslint-disable-next-line @typescript-eslint/require-await
   migrate: async (plugin) => {
     const choicesCopy = structuredClone(plugin.settings.choices);
     const choices = recursiveMigrateSettingInChoices(choicesCopy);
@@ -16201,12 +18346,23 @@ var mutualExclusionInsertAfterAndWriteToBottomOfFile = {
 };
 var mutualExclusionInsertAfterAndWriteToBottomOfFile_default = mutualExclusionInsertAfterAndWriteToBottomOfFile;
 
+// src/migrations/setVersionAfterUpdateModalRelease.ts
+var setVersionAfterUpdateModalRelease = {
+  description: "Set version to 0.14.0, which is the release version prior to the update modal release.",
+  // eslint-disable-next-line @typescript-eslint/require-await
+  migrate: async (_) => {
+    settingsStore.setState({ version: "0.14.0" });
+  }
+};
+var setVersionAfterUpdateModalRelease_default = setVersionAfterUpdateModalRelease;
+
 // src/migrations/migrate.ts
 var migrations = {
   migrateToMacroIDFromEmbeddedMacro: migrateToMacroIDFromEmbeddedMacro_default,
   useQuickAddTemplateFolder: useQuickAddTemplateFolder_default,
   incrementFileNameSettingMoveToDefaultBehavior: incrementFileNameSettingMoveToDefaultBehavior_default,
-  mutualExclusionInsertAfterAndWriteToBottomOfFile: mutualExclusionInsertAfterAndWriteToBottomOfFile_default
+  mutualExclusionInsertAfterAndWriteToBottomOfFile: mutualExclusionInsertAfterAndWriteToBottomOfFile_default,
+  setVersionAfterUpdateModalRelease: setVersionAfterUpdateModalRelease_default
 };
 async function migrate(plugin) {
   const migrationsToRun = Object.keys(migrations).filter(
@@ -16236,12 +18392,106 @@ QuickAdd will now revert to backup.`
       plugin.settings = backup;
     }
   }
-  plugin.saveSettings();
+  void plugin.saveSettings();
 }
 var migrate_default = migrate;
 
+// src/gui/UpdateModal/UpdateModal.ts
+var import_obsidian35 = require("obsidian");
+var import_obsidian36 = require("obsidian");
+async function getReleaseNotesAfter(repoOwner, repoName, releaseTagName) {
+  const response = await fetch(
+    `https://api.github.com/repos/${repoOwner}/${repoName}/releases`
+  );
+  const releases = await response.json();
+  if (!response.ok && "message" in releases || !Array.isArray(releases)) {
+    throw new Error(
+      `Failed to fetch releases: ${releases.message ?? "Unknown error"}`
+    );
+  }
+  const startReleaseIdx = releases.findIndex(
+    (release) => release.tag_name === releaseTagName
+  );
+  if (startReleaseIdx === -1) {
+    throw new Error(`Could not find release with tag ${releaseTagName}`);
+  }
+  return releases.slice(0, startReleaseIdx).filter((release) => !release.draft && !release.prerelease);
+}
+function addExtraHashToHeadings(markdownText, numHashes = 1) {
+  const lines = markdownText.split("\n");
+  for (let i = 0; i < lines.length; i++) {
+    if (lines[i].startsWith("#")) {
+      lines[i] = "#".repeat(numHashes) + lines[i];
+    }
+  }
+  return lines.join("\n");
+}
+var UpdateModal = class extends import_obsidian36.Modal {
+  constructor(previousQAVersion) {
+    super(app);
+    this.previousVersion = previousQAVersion;
+    this.releaseNotesPromise = getReleaseNotesAfter(
+      "chhoumann",
+      "quickadd",
+      previousQAVersion
+    );
+    this.releaseNotesPromise.then((releases) => {
+      this.releases = releases;
+      if (this.releases.length === 0) {
+        this.close();
+        return;
+      }
+      this.display();
+    }).catch((err) => {
+      log.logError(`Failed to fetch release notes: ${err}`);
+    });
+  }
+  onOpen() {
+    const { contentEl } = this;
+    contentEl.empty();
+    contentEl.createEl("h1", {
+      text: "Fetching release notes..."
+    });
+  }
+  onClose() {
+    const { contentEl } = this;
+    contentEl.empty();
+  }
+  display() {
+    const { contentEl } = this;
+    contentEl.empty();
+    contentEl.classList.add("quickadd-update-modal-container");
+    const header = `### New in QuickAdd v${this.releases[0].tag_name}
+`;
+    const text2 = `Thank you for using QuickAdd! If you like the plugin, please consider supporting me by buying me a coffee. With your sponsorship, I'll be able to contribute more to my existing projects, start new ones, and be more responsive to issues & feature requests.`;
+    const buymeacoffee = `<div class="quickadd-bmac-container"><a href="https://www.buymeacoffee.com/chhoumann" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 40px !important;width: 144px !important;" ></a></div>`;
+    const contentDiv = contentEl.createDiv("quickadd-update-modal");
+    const releaseNotes = this.releases.map((release) => release.body).join("\n---\n");
+    const andNow = `And now, here is everything new in QuickAdd since your last update (v${this.previousVersion}):`;
+    const feedbackForm = `I'd love to get your feedback on QuickAdd! Please fill out this <a href="https://forms.gle/WRq1ewcKK8qmkqps6">feedback form</a> to let me know what you think.`;
+    const markdownStr = `${header}
+${text2}
+${buymeacoffee}
+${feedbackForm}
+
+${andNow}
+
+---
+
+${addExtraHashToHeadings(
+      releaseNotes
+    )}`;
+    void import_obsidian36.MarkdownRenderer.renderMarkdown(
+      markdownStr,
+      contentDiv,
+      app.vault.getRoot().path,
+      new import_obsidian35.Component()
+    );
+  }
+};
+
 // src/main.ts
-var QuickAdd = class extends import_obsidian29.Plugin {
+var QuickAdd = class extends import_obsidian37.Plugin {
   get api() {
     return QuickAddApi.GetApi(app, this, new ChoiceExecutor(app, this));
   }
@@ -16249,6 +18499,11 @@ var QuickAdd = class extends import_obsidian29.Plugin {
     console.log("Loading QuickAdd");
     QuickAdd.instance = this;
     await this.loadSettings();
+    settingsStore.setState(this.settings);
+    this.unsubscribeSettingsStore = settingsStore.subscribe((settings) => {
+      this.settings = settings;
+      void this.saveSettings();
+    });
     this.addCommand({
       id: "runQuickAdd",
       name: "Run QuickAdd",
@@ -16264,7 +18519,7 @@ var QuickAdd = class extends import_obsidian29.Plugin {
           return this.settings.devMode;
         }
         const id = this.manifest.id, plugins = this.app.plugins;
-        plugins.disablePlugin(id).then(() => plugins.enablePlugin(id));
+        void plugins.disablePlugin(id).then(() => plugins.enablePlugin(id));
       }
     });
     this.addCommand({
@@ -16275,16 +18530,10 @@ var QuickAdd = class extends import_obsidian29.Plugin {
           return this.settings.devMode;
         }
         console.log(`Test QuickAdd (dev)`);
-        const fn2 = async () => {
-          const activeView = await this.app.workspace.getActiveViewOfType(
-            import_obsidian29.MarkdownView
-          );
-          if (!activeView)
-            return false;
-          const x = this.app.workspace.getLeaf("tab");
-          x.openFile(activeView.file);
+        const fn2 = () => {
+          new UpdateModal("0.12.0").open();
         };
-        fn2();
+        void fn2();
       }
     });
     log.register(new ConsoleErrorLogger()).register(new GuiLogger(this));
@@ -16298,10 +18547,12 @@ var QuickAdd = class extends import_obsidian29.Plugin {
       ).run()
     );
     this.addCommandsForChoices(this.settings.choices);
-    migrate_default(this);
+    await migrate_default(this);
+    this.announceUpdate();
   }
   onunload() {
     console.log("Unloading QuickAdd");
+    this.unsubscribeSettingsStore?.call(this);
   }
   async loadSettings() {
     this.settings = Object.assign(
@@ -16317,7 +18568,7 @@ var QuickAdd = class extends import_obsidian29.Plugin {
     choices.forEach((choice) => this.addCommandForChoice(choice));
   }
   addCommandForChoice(choice) {
-    if (choice.type === "Multi" /* Multi */) {
+    if (choice.type === "Multi") {
       this.addCommandsForChoices(choice.choices);
     }
     if (choice.command) {
@@ -16349,7 +18600,7 @@ var QuickAdd = class extends import_obsidian29.Plugin {
       if (choice[by] === targetPropertyValue) {
         return choice;
       }
-      if (choice.type === "Multi" /* Multi */) {
+      if (choice.type === "Multi") {
         const subChoice = this.getChoice(
           by,
           targetPropertyValue,
@@ -16371,5 +18622,17 @@ var QuickAdd = class extends import_obsidian29.Plugin {
     return this.app.vault.getFiles().filter(
       (file) => file.path.startsWith(this.settings.templateFolderPath)
     );
+  }
+  announceUpdate() {
+    const currentVersion = this.manifest.version;
+    const knownVersion = this.settings.version;
+    if (currentVersion === knownVersion)
+      return;
+    this.settings.version = currentVersion;
+    void this.saveSettings();
+    if (this.settings.announceUpdates === false)
+      return;
+    const updateModal = new UpdateModal(knownVersion);
+    updateModal.open();
   }
 };

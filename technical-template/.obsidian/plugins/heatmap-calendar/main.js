@@ -61,7 +61,134 @@ __export(main_exports, {
   default: () => HeatmapCalendar
 });
 module.exports = __toCommonJS(main_exports);
+var import_obsidian2 = require("obsidian");
+
+// settings.ts
 var import_obsidian = require("obsidian");
+var HeatmapCalendarSettingsTab = class extends import_obsidian.PluginSettingTab {
+  constructor(app, plugin) {
+    super(app, plugin);
+    this.plugin = plugin;
+  }
+  addColorMap(color) {
+    return __async(this, null, function* () {
+      const isValid = { key: true, value: true };
+      if (!color.key)
+        isValid.key = false;
+      const validatedArray = this.validateColorInput(color.value);
+      if (!validatedArray)
+        isValid.value = false;
+      if (isValid.key && isValid.value) {
+        this.plugin.settings.colors[color.key] = validatedArray;
+        yield this.plugin.saveSettings();
+        this.display();
+      }
+      return isValid;
+    });
+  }
+  deleteColorMap(key) {
+    return __async(this, null, function* () {
+      delete this.plugin.settings.colors[key];
+      yield this.plugin.saveSettings();
+      this.display();
+    });
+  }
+  displayColorSettings() {
+    const { containerEl } = this;
+    containerEl.createEl("h3", { text: "Colors" });
+    this.displayColorHelp(containerEl);
+    for (const [key, colors] of Object.entries(this.plugin.settings.colors)) {
+      const colorEntryContainer = containerEl.createDiv({
+        cls: "heatmap-calendar-settings-colors__container"
+      });
+      const colorDataContainer = colorEntryContainer.createDiv({
+        cls: "heatmap-calendar-settings-colors__data-container"
+      });
+      colorDataContainer.createEl("h4", { text: key });
+      const colorRow = colorDataContainer.createDiv({ cls: "heatmap-calendar-settings-colors__row" });
+      const colorsContainer = colorRow.createDiv({ cls: "heatmap-calendar-settings-colors__color-container" });
+      for (const color of colors) {
+        colorsContainer.createEl("div", {
+          cls: "heatmap-calendar-settings-colors__color-box",
+          attr: {
+            style: `background-color: ${color}`
+          }
+        });
+        colorsContainer.createEl("pre", {
+          cls: "heatmap-calendar-settings-colors__color-name",
+          text: color
+        });
+      }
+      if (key !== "default") {
+        const deleteColorButton = colorEntryContainer.createEl("button", {
+          cls: "mod-warning heatmap-calendar-settings-colors__delete"
+        });
+        (0, import_obsidian.setIcon)(deleteColorButton, "trash");
+        deleteColorButton.addEventListener("click", () => this.deleteColorMap(key));
+      }
+    }
+    this.displayColorInput(containerEl);
+  }
+  displayColorInput(parent) {
+    const inputContainer = parent.createDiv({ cls: "heatmap-calendar-settings-colors__new-color-input-container" });
+    const colorNameInput = inputContainer.createEl("input", {
+      cls: "heatmap-calendar-settings-colors__new-color-input-name",
+      attr: { placeholder: "Color name", type: "text" }
+    });
+    const colorValueInput = inputContainer.createEl("input", {
+      cls: "heatmap-calendar-settings-colors__new-color-input-value",
+      attr: { placeholder: "Colors array", type: "text" }
+    });
+    const addColorButton = inputContainer.createEl("button", {
+      cls: "mod-cta heatmap-calendar-settings-colors__new-color-button"
+    });
+    (0, import_obsidian.setIcon)(addColorButton, "plus");
+    addColorButton.addEventListener("click", () => __async(this, null, function* () {
+      const isValid = yield this.addColorMap({
+        key: colorNameInput.value,
+        value: colorValueInput.value
+      });
+      this.reportInputValidity(colorNameInput, isValid.key, "Please input a name for your color");
+      this.reportInputValidity(colorValueInput, isValid.value, "Color is not a valid JSON array of colors");
+    }));
+  }
+  displayColorHelp(parent) {
+    parent.createEl("p", {
+      text: "Add lists of colors which will be globally available on your heatmaps."
+    });
+    parent.createEl("p", {
+      text: "You can use those colors by referencing their name in your heatmap render settings."
+    });
+  }
+  reportInputValidity(input, isValid, msg) {
+    if (!isValid) {
+      input.classList.add("has-error");
+      input.setCustomValidity(msg);
+    } else
+      input.setCustomValidity("");
+    input.reportValidity();
+  }
+  validateColorInput(value) {
+    const colorRegex = /^(#[0-9a-f]{3,6}|rgba?\(\s*\d+%?\s*,\s*\d+%?\s*,\s*\d+%?\s*(,\s*\d+(\.\d+)?%?)?\s*\))$/i;
+    try {
+      const data = JSON.parse(value);
+      if (!Array.isArray(data))
+        return false;
+      return data.every((color) => colorRegex.test(color)) ? data : false;
+    } catch (e) {
+      return false;
+    }
+  }
+  display() {
+    const { containerEl } = this;
+    containerEl.empty();
+    containerEl.createEl("h2", { text: "Heatmap Calendar Settings" });
+    this.displayColorSettings();
+    console.log("settings", this.plugin.settings);
+  }
+};
+
+// main.ts
 var DEFAULT_SETTINGS = {
   year: new Date().getFullYear(),
   colors: {
@@ -73,7 +200,7 @@ var DEFAULT_SETTINGS = {
   intensityScaleStart: 1,
   intensityScaleEnd: 5
 };
-var HeatmapCalendar = class extends import_obsidian.Plugin {
+var HeatmapCalendar = class extends import_obsidian2.Plugin {
   getHowManyDaysIntoYear(date) {
     return (Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()) - Date.UTC(date.getUTCFullYear(), 0, 0)) / 24 / 60 / 60 / 1e3;
   }
@@ -95,10 +222,11 @@ var HeatmapCalendar = class extends import_obsidian.Plugin {
   onload() {
     return __async(this, null, function* () {
       yield this.loadSettings();
+      this.addSettingTab(new HeatmapCalendarSettingsTab(this.app, this));
       window.renderHeatmapCalendar = (el, calendarData) => {
         var _a, _b, _c, _d, _e, _f, _g, _h, _i, _j;
         const year = (_a = calendarData.year) != null ? _a : this.settings.year;
-        const colors = (_b = calendarData.colors) != null ? _b : this.settings.colors;
+        const colors = typeof calendarData.colors === "string" ? this.settings.colors[calendarData.colors] ? { [calendarData.colors]: this.settings.colors[calendarData.colors] } : this.settings.colors : (_b = calendarData.colors) != null ? _b : this.settings.colors;
         this.removeHtmlElementsNotInYear(calendarData.entries, year);
         const calEntries = (_c = calendarData.entries.filter((e) => new Date(e.date + "T00:00").getFullYear() === year)) != null ? _c : this.settings.entries;
         const showCurrentDayBorder = (_d = calendarData.showCurrentDayBorder) != null ? _d : this.settings.showCurrentDayBorder;
@@ -114,7 +242,7 @@ var HeatmapCalendar = class extends import_obsidian.Plugin {
           const newEntry = __spreadValues({
             intensity: defaultEntryIntensity
           }, e);
-          const colorIntensities = (_a2 = colors[e.color]) != null ? _a2 : colors[Object.keys(colors)[0]];
+          const colorIntensities = typeof colors === "string" ? this.settings.colors[colors] : (_a2 = colors[e.color]) != null ? _a2 : colors[Object.keys(colors)[0]];
           const numOfColorIntensities = Object.keys(colorIntensities).length;
           if (minimumIntensity === maximumIntensity && intensityScaleStart === intensityScaleEnd)
             newEntry.intensity = numOfColorIntensities;
@@ -191,11 +319,15 @@ var HeatmapCalendar = class extends import_obsidian.Plugin {
           parent: heatmapCalendarGraphDiv
         });
         boxes.forEach((e) => {
-          createEl("li", {
-            text: e.content,
-            attr: __spreadValues({}, e.backgroundColor && { style: `background-color: ${e.backgroundColor};` }),
+          const entry = createEl("li", {
+            attr: __spreadValues(__spreadValues({}, e.backgroundColor && { style: `background-color: ${e.backgroundColor};` }), e.date && { "data-date": e.date }),
             cls: e.classNames,
             parent: heatmapCalendarBoxesUl
+          });
+          createSpan({
+            cls: "heatmap-calendar-content",
+            parent: entry,
+            text: e.content
           });
         });
       };
@@ -205,6 +337,7 @@ var HeatmapCalendar = class extends import_obsidian.Plugin {
   }
   loadSettings() {
     return __async(this, null, function* () {
+      console.log("heyoh", yield this.loadData());
       this.settings = Object.assign({}, DEFAULT_SETTINGS, yield this.loadData());
     });
   }

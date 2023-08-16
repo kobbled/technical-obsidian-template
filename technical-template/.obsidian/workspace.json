@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "6361ba3db16cbd73",
+        "id": "21af3ffc27cf86c2",
         "type": "tabs",
         "children": [
           {
-            "id": "183f8ef84b04df01",
+            "id": "b755065d6135a543",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -31,7 +31,7 @@
       {
         "id": "7508fae49b66c26e",
         "type": "tabs",
-        "dimension": 64.9074074074074,
+        "dimension": 57.51173708920187,
         "children": [
           {
             "id": "1fc61cbd175b1b3d",
@@ -65,13 +65,21 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "8e8ef6d53fdfda9e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
           }
         ]
       },
       {
         "id": "dbcc5e7003c57857",
         "type": "tabs",
-        "dimension": 35.092592592592595,
+        "dimension": 42.48826291079813,
         "children": [
           {
             "id": "ecacad78c8488837",
@@ -121,7 +129,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 318.5
+    "width": 242.5
   },
   "right": {
     "id": "52277dd380415613",
@@ -130,7 +138,7 @@
       {
         "id": "5f0ece000c571db6",
         "type": "tabs",
-        "dimension": 30.74074074074074,
+        "dimension": 46.86940966010734,
         "children": [
           {
             "id": "da6126be9d5cf3f4",
@@ -159,44 +167,9 @@
         ]
       },
       {
-        "id": "f9ce4406a84fa2ea",
-        "type": "tabs",
-        "dimension": 33.88888888888889,
-        "children": [
-          {
-            "id": "fc57df094a1bb0f3",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Dashboard.md",
-                "mode": "preview",
-                "source": true
-              },
-              "pinned": true
-            }
-          },
-          {
-            "id": "4bf800d1ea986400",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Widgets/Youtube Player.md",
-                "mode": "preview",
-                "source": true
-              },
-              "pinned": true
-            }
-          }
-        ]
-      },
-      {
         "id": "21e3badd15c18f5d",
         "type": "tabs",
-        "dimension": 35.37037037037037,
+        "dimension": 53.13059033989266,
         "children": [
           {
             "id": "9294aae2ac2aa350",
@@ -253,7 +226,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 364.5
+    "width": 297.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -263,20 +236,51 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
+      "workspaces:Manage workspace layouts": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "obsidian-excalidraw-plugin:Create new drawing": false,
       "open-vscode:VSCode": false,
       "templater-obsidian:Templater": false,
       "mathpad:Open Mathpad": false,
       "homepage:Open homepage": false,
-      "periodic-notes:Open today": false,
-      "workspaces:Manage workspace layouts": false
+      "periodic-notes:Open today": false
     }
   },
-  "active": "183f8ef84b04df01",
+  "active": "b755065d6135a543",
   "lastOpenFiles": [
-    "Dashboard.md",
+    "Issue Tracker/example/Example Project 2/Issues.md",
+    "Issue Tracker/example/Example Project/issues/Example issue.md",
+    "Issue Tracker/example/Example Project/Issues - Example Project.md",
+    "Issue Tracker/example/Example Project 2/README.md",
+    "Issue Tracker/example/Example Project/Example Project.md",
+    "Issue Tracker/example/Example Project 2/30-39 Bugs and issues/31.01 issues/Cutout hatch in armor for easy access on the toilet.md",
+    "_templates/note.issue-tracker.issue.md",
+    "Issue Tracker/example/Example Project 2/30-39 Bugs and issues/31.01 issues/Reset reactor cores after stormtroppers fell in.md",
+    "Issue Tracker/example/Example Project 2/30-39 Bugs and issues/31.01 issues",
     "Home.md",
+    "_templates/note.issue-tracker.md",
+    "Issue Tracker/templates/note.issue-tracker.md",
+    "Issue Tracker/templates/note.issue-tracker.issue.md",
+    "Issue Tracker/templates",
+    "Issue Tracker/IssueTracker/Issue/view.js",
+    "Issue Tracker/IssueTracker/Issue/view.css",
+    "Issue Tracker/IssueTracker/view.js",
+    "Issue Tracker/IssueTracker/view.css",
+    "Issue Tracker/IssueTracker/Issue",
+    "Issue Tracker/IssueTracker",
+    "Issue Tracker/example/Example Project 2/30-39 Bugs and issues",
+    "Issue Tracker/example/Example Project 2/20-29 Development",
+    "Issue Tracker/assets/showcase.jpg",
+    "Issue Tracker/assets/example project.jpg",
+    "Issue Tracker/assets/example project 2.jpg",
+    "Issue Tracker/README.md",
+    "issues/30-39 Bugs and issues/31.01 issues/Reset Core Reactors after stormtroopers fell in.md",
+    "issues/Issues.md",
+    "_templates/Weekly Note Template.md",
+    "_templates/Paper Template.md",
+    "_templates/Daily Template.md",
+    "issues/30-39 Bugs and issues/31.01 issues/Reset Core Reactors after Stormtroppers fell in.md",
+    "Dashboard.md",
     "Widgets/Youtube Player.md",
     "mocs/Papers MOC.md",
     "Productivity/Daily Notes/2023-03-11.md",
@@ -284,32 +288,8 @@
     "Productivity/Postit Board.canvas",
     "Productivity/Daily Notes/2023-02-26.md",
     "_templates/Monthly Note Template.md",
-    "_templates/Weekly Note Template.md",
-    "_templates/Daily Template.md",
-    "Productivity/Weekly Notes/2023-W09.md",
-    "Productivity/Untitled.md",
-    "Productivity/Monthly Notes",
-    "_templates/Movie Template.md",
-    "Widgets/Newly Added Papers.md",
-    "Widgets/Next Months Tasks.md",
-    "Widgets/Next Weeks Tasks.md",
-    "Widgets/Papers Read Heatmap.md",
-    "Widgets/Past Due Tasks.md",
-    "Widgets/Task Progress.md",
-    "Widgets/Time of Day.md",
-    "Widgets/Time Progress.md",
-    "examples/Text Justify.md",
-    "examples/Multi Column Callout.md",
-    "examples/List Cards.md",
-    "Dataview Tests/Cards Example/Movie Database.md",
-    "examples/Image Gallery.md",
-    "Productivity/Postit Notes",
     "img/tenn_graneet_head.jpg",
     "img/tenn_graneet.jpg",
-    "tenn_graneet.jpg",
-    "Productivity/Weekly Notes",
-    "Productivity/Daily Notes",
-    "Productivity",
-    "Widgets"
+    "tenn_graneet.jpg"
   ]
 }
