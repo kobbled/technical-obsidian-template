@@ -1,4 +1,3 @@
-
 ---
 cssClass: image-gallery
 ---

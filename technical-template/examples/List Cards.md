@@ -1,6 +1,6 @@
-
 ---
 cssClass: minimal-float, wide-page
+
 ---
 
 **reference**: https://efemkay.github.io/obsidian-modular-css-layout/showcases/mc-callout-list-card/
