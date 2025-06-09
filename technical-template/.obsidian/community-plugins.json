@@ -25,5 +25,7 @@
   "buttons",
   "periodic-notes",
   "homepage",
-  "obsidian-tasks-plugin"
+  "obsidian-tasks-plugin",
+  "frontmatter-links",
+  "frontmatter-modified-date"
 ]

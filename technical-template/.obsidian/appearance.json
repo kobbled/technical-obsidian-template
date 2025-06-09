@@ -17,7 +17,8 @@
     "stickies",
     "time_of_day",
     "headers",
-    "view"
+    "view",
+    "properties"
   ],
   "translucency": false,
   "interfaceFontFamily": "Inter",

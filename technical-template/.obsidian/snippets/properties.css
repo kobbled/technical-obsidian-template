@@ -1,0 +1,3 @@
+:is(div[class*="hide-properties"]) .mod-header {
+    display: none !important;
+}

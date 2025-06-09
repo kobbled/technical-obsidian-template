@@ -4,10 +4,21 @@
     border:none !important;
     background:none !important;
     background:transparent !important;
+    overflow: hidden;
 }
 
 iframe[name="Digiclock1"] {
     position: absolute;
     top: 10em;
     left: 2em;
-    opacity: 0.85; } 
+    opacity: 0.85; }
+
+@media screen and (max-width: 800px) {
+    .DPDC, .time-of-day {
+        display: none;
+    }
+}
+
+.markdown-source-view .DPDC {
+    display: none;
+}

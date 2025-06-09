@@ -1,22 +1,24 @@
 {
   "main": {
-    "id": "1cad0f3d5d0a11af",
+    "id": "5324373015726ba8",
     "type": "split",
     "children": [
       {
-        "id": "21af3ffc27cf86c2",
+        "id": "4509724f8bf84da7",
         "type": "tabs",
         "children": [
           {
-            "id": "b755065d6135a543",
+            "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Home.md",
                 "mode": "preview",
-                "source": true
-              }
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Home"
             }
           }
         ]
@@ -31,7 +33,7 @@
       {
         "id": "7508fae49b66c26e",
         "type": "tabs",
-        "dimension": 57.51173708920187,
+        "dimension": 71.75925925925927,
         "children": [
           {
             "id": "1fc61cbd175b1b3d",
@@ -39,8 +41,11 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
-              }
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -55,7 +60,9 @@
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -63,7 +70,9 @@
             "type": "leaf",
             "state": {
               "type": "starred",
-              "state": {}
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
             }
           },
           {
@@ -71,7 +80,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
@@ -79,14 +90,16 @@
       {
         "id": "dbcc5e7003c57857",
         "type": "tabs",
-        "dimension": 42.48826291079813,
+        "dimension": 28.24074074074074,
         "children": [
           {
             "id": "ecacad78c8488837",
             "type": "leaf",
             "state": {
               "type": "graph",
-              "state": {}
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           },
           {
@@ -121,7 +134,9 @@
                   "scale": 0.258838656218163,
                   "close": true
                 }
-              }
+              },
+              "icon": "lucide-git-fork",
+              "title": "Graph of Home"
             }
           }
         ],
@@ -138,14 +153,16 @@
       {
         "id": "5f0ece000c571db6",
         "type": "tabs",
-        "dimension": 46.86940966010734,
+        "dimension": 54.30463576158941,
         "children": [
           {
             "id": "da6126be9d5cf3f4",
             "type": "leaf",
             "state": {
               "type": "calendar",
-              "state": {}
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
             }
           },
           {
@@ -153,7 +170,9 @@
             "type": "leaf",
             "state": {
               "type": "mathpad-view",
-              "state": {}
+              "state": {},
+              "icon": "sigma",
+              "title": "Mathpad"
             }
           },
           {
@@ -161,7 +180,9 @@
             "type": "leaf",
             "state": {
               "type": "advanced-tables-toolbar",
-              "state": {}
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
             }
           }
         ]
@@ -169,7 +190,7 @@
       {
         "id": "21e3badd15c18f5d",
         "type": "tabs",
-        "dimension": 53.13059033989266,
+        "dimension": 45.69536423841059,
         "children": [
           {
             "id": "9294aae2ac2aa350",
@@ -185,7 +206,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Home"
             }
           },
           {
@@ -197,7 +220,9 @@
                 "file": "Home.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Home"
             }
           },
           {
@@ -207,8 +232,12 @@
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
-                "useHierarchy": true
-              }
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -217,19 +246,40 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Home.md"
-              }
+                "file": "Home.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Home"
+            }
+          },
+          {
+            "id": "0fd87300ff0f5e7c",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 297.5
+    "width": 313.5
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "obsidian-kanban:Create new board": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -238,7 +288,6 @@
       "command-palette:Open command palette": false,
       "workspaces:Manage workspace layouts": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false,
       "open-vscode:VSCode": false,
       "templater-obsidian:Templater": false,
       "mathpad:Open Mathpad": false,
@@ -246,48 +295,50 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "b755065d6135a543",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "Issue Tracker/example/Example Project 2/Issues.md",
-    "Issue Tracker/example/Example Project/issues/Example issue.md",
-    "Issue Tracker/example/Example Project/Issues - Example Project.md",
-    "Issue Tracker/example/Example Project 2/README.md",
-    "Issue Tracker/example/Example Project/Example Project.md",
-    "Issue Tracker/example/Example Project 2/30-39 Bugs and issues/31.01 issues/Cutout hatch in armor for easy access on the toilet.md",
-    "_templates/note.issue-tracker.issue.md",
-    "Issue Tracker/example/Example Project 2/30-39 Bugs and issues/31.01 issues/Reset reactor cores after stormtroppers fell in.md",
-    "Issue Tracker/example/Example Project 2/30-39 Bugs and issues/31.01 issues",
+    "_scripts/tv.js",
+    "_scripts/metabind_button_conditional.js",
+    "_scripts/getRelFileLink.js",
+    "_scripts/getCurrFolder.js",
+    "_scripts/dateFilters.js",
+    "_scripts/convert_props.py",
+    "_scripts/_templater/multiSuggester.js",
+    "_scripts/_templater/archiveGroceryList.js",
+    "_scripts/_templater",
+    "_templates/Weekly Template.md",
+    "_templates/TV Template.md",
+    "_templates/Topics Template.md",
+    "_templates/Table Top Game Template.md",
+    "_templates/Subscription Template.md",
+    "_templates/Spaces Template.md",
+    "_templates/Phone Apps Template.md",
+    "_templates/Monthly Template.md",
+    "_templates/Grocery List Template.md",
+    "_templates/Gorcery Archiver.md",
+    "_templates/Beer Template.md",
+    "_templates/Apps Template.md",
     "Home.md",
-    "_templates/note.issue-tracker.md",
-    "Issue Tracker/templates/note.issue-tracker.md",
-    "Issue Tracker/templates/note.issue-tracker.issue.md",
-    "Issue Tracker/templates",
-    "Issue Tracker/IssueTracker/Issue/view.js",
-    "Issue Tracker/IssueTracker/Issue/view.css",
-    "Issue Tracker/IssueTracker/view.js",
-    "Issue Tracker/IssueTracker/view.css",
-    "Issue Tracker/IssueTracker/Issue",
-    "Issue Tracker/IssueTracker",
-    "Issue Tracker/example/Example Project 2/30-39 Bugs and issues",
-    "Issue Tracker/example/Example Project 2/20-29 Development",
+    "examples/Movie Database.md",
+    "examples/movies/Enter the Void.md",
+    "examples/movies/Mr. Nobody.md",
+    "_templates/Generic Template.md",
+    "_templates/Monthly Note Template.md",
+    "_templates/Daily Template.md",
+    "_templates/Book Template.md",
+    "papers/EHLA – Extreme High-Speed Laser Material Deposition – Economical and effective protection against corrosion and wear.md",
+    "mocs/Papers MOC.md",
+    "papers/BSP-Net – Generating Compact Meshes via Binary Space Partitioning.md",
+    "examples/Multi Column Callout.md",
+    "examples/List Cards.md",
+    "examples/books",
+    "_scripts/books.js",
+    "img/papers/schopphovenEHLAExtremeHighSpeed2017/image-2-x198-y329.png",
+    "img/papers/rombachHighResolutionImageSynthesis2022/image-4-x308-y597.png",
+    "Productivity/Postit Board.canvas",
     "Issue Tracker/assets/showcase.jpg",
     "Issue Tracker/assets/example project.jpg",
     "Issue Tracker/assets/example project 2.jpg",
-    "Issue Tracker/README.md",
-    "issues/30-39 Bugs and issues/31.01 issues/Reset Core Reactors after stormtroopers fell in.md",
-    "issues/Issues.md",
-    "_templates/Weekly Note Template.md",
-    "_templates/Paper Template.md",
-    "_templates/Daily Template.md",
-    "issues/30-39 Bugs and issues/31.01 issues/Reset Core Reactors after Stormtroppers fell in.md",
-    "Dashboard.md",
-    "Widgets/Youtube Player.md",
-    "mocs/Papers MOC.md",
-    "Productivity/Daily Notes/2023-03-11.md",
-    "Productivity/Monthly Notes/2023-02.md",
-    "Productivity/Postit Board.canvas",
-    "Productivity/Daily Notes/2023-02-26.md",
-    "_templates/Monthly Note Template.md",
     "img/tenn_graneet_head.jpg",
     "img/tenn_graneet.jpg",
     "tenn_graneet.jpg"

@@ -1,6 +1,7 @@
 {
-  "livePreview": false,
+  "livePreview": true,
   "readableLineLength": true,
   "alwaysUpdateLinks": true,
-  "defaultViewMode": "preview"
+  "defaultViewMode": "preview",
+  "propertiesInDocument": "source"
 }

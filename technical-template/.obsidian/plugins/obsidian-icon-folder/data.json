@@ -1,6 +1,6 @@
 {
   "settings": {
-    "migrated": true,
+    "migrated": 6,
     "iconPacksPath": ".obsidian/plugins/obsidian-icon-folder/icons",
     "fontSize": 16,
     "iconColor": null,
@@ -13,7 +13,19 @@
       "bottom": 0,
       "left": 0
     },
-    "emojiStyle": "none",
-    "iconInTabsEnabled": false
+    "emojiStyle": "native",
+    "iconInTabsEnabled": false,
+    "iconInTitleEnabled": false,
+    "iconInFrontmatterEnabled": false,
+    "iconsBackgroundCheckEnabled": false,
+    "iconsInNotesEnabled": true,
+    "iconIdentifier": ":",
+    "iconInTitlePosition": "above",
+    "iconInFrontmatterFieldName": "icon",
+    "iconColorInFrontmatterFieldName": "iconColor",
+    "iconsInLinksEnabled": true,
+    "lucideIconPackType": "native",
+    "debugMode": false,
+    "useInternalPlugins": false
   }
 }
