@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "4509724f8bf84da7",
+        "id": "429685a052678a1c",
         "type": "tabs",
         "children": [
           {
-            "id": "e7a7b303c61786dc",
+            "id": "f1c64499c5d20470",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Home.md",
-                "mode": "preview",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Home"
+              "title": "New tab"
             }
           }
         ]
@@ -108,7 +104,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Home.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -136,7 +131,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of Home"
+              "title": "Graph view"
             }
           }
         ],
@@ -295,44 +290,44 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "f1c64499c5d20470",
   "lastOpenFiles": [
+    "examples/books/Neuromancer.md",
+    "lists/Grocery List.md",
+    "Dashboard.md",
+    "_templates/Gorcery Archiver.md",
+    "_templates/Grocery List Template.md",
+    "examples/Movie Database.md",
+    "examples/Book Database.md",
+    "Home.md",
+    "examples/Multi Column Callout.md",
+    "examples/Video Games Database.md",
+    "examples/Text Justify.md",
+    "examples/List Cards.md",
+    "examples/Image Slideshow.md",
+    "Personal/Media/libraries/movies/High and Low.md",
+    "examples/movies/High and Low.md",
+    "examples/movies/Man Bites Dog.md",
+    "examples/Image Gallery.md",
+    "examples/books/The Three-Body Problem.md",
+    "examples/movies/The 400 Blows.md",
+    "examples/movies/Oldboy.md",
+    "examples/movies/Nausicaä of the Valley of the Wind.md",
+    "examples/movies/Mr. Nobody.md",
+    "examples/movies/Nausicaa of the Valley of the Wind.md",
+    "examples/movies/Miller's Crossing.md",
+    "examples/movies/Millers Crossing.md",
+    "examples/movies/Enter the Void.md",
+    "Personal/Media/libraries/movies",
+    "Personal/Media/libraries",
+    "Personal/Media",
+    "Personal",
+    "lists/archive",
+    "lists",
+    "examples/tv",
     "_scripts/tv.js",
     "_scripts/metabind_button_conditional.js",
     "_scripts/getRelFileLink.js",
-    "_scripts/getCurrFolder.js",
-    "_scripts/dateFilters.js",
-    "_scripts/convert_props.py",
-    "_scripts/_templater/multiSuggester.js",
-    "_scripts/_templater/archiveGroceryList.js",
-    "_scripts/_templater",
-    "_templates/Weekly Template.md",
-    "_templates/TV Template.md",
-    "_templates/Topics Template.md",
-    "_templates/Table Top Game Template.md",
-    "_templates/Subscription Template.md",
-    "_templates/Spaces Template.md",
-    "_templates/Phone Apps Template.md",
-    "_templates/Monthly Template.md",
-    "_templates/Grocery List Template.md",
-    "_templates/Gorcery Archiver.md",
-    "_templates/Beer Template.md",
-    "_templates/Apps Template.md",
-    "Home.md",
-    "examples/Movie Database.md",
-    "examples/movies/Enter the Void.md",
-    "examples/movies/Mr. Nobody.md",
-    "_templates/Generic Template.md",
-    "_templates/Monthly Note Template.md",
-    "_templates/Daily Template.md",
-    "_templates/Book Template.md",
-    "papers/EHLA – Extreme High-Speed Laser Material Deposition – Economical and effective protection against corrosion and wear.md",
-    "mocs/Papers MOC.md",
-    "papers/BSP-Net – Generating Compact Meshes via Binary Space Partitioning.md",
-    "examples/Multi Column Callout.md",
-    "examples/List Cards.md",
-    "examples/books",
-    "_scripts/books.js",
     "img/papers/schopphovenEHLAExtremeHighSpeed2017/image-2-x198-y329.png",
     "img/papers/rombachHighResolutionImageSynthesis2022/image-4-x308-y597.png",
     "Productivity/Postit Board.canvas",

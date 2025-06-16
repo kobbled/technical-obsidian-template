@@ -4,22 +4,141 @@
       "id": "a6769ebc-9210-463b-acbc-81136e83cdd7",
       "name": "🎬 Movie",
       "type": "Macro",
-      "command": false,
+      "command": true,
       "macroId": "c6ef4489-3d93-4854-9d89-4571e5567097"
     },
     {
       "id": "f9ffd80a-a905-42d2-853a-bcf52a22e76b",
       "name": "🎮 Video Games",
       "type": "Macro",
-      "command": false,
+      "command": true,
       "macroId": "7ce161f0-582a-4745-81ff-9f5fe26ecdcd"
     },
     {
       "id": "75b4a9d1-7cef-4064-b40e-6f813f4728f3",
       "name": "📚 Books",
       "type": "Macro",
-      "command": false,
+      "command": true,
       "macroId": "957497dd-37a5-422a-8d8d-770036b4a47f"
+    },
+    {
+      "id": "3a11e588-7999-46e1-a7e8-f99b7598ef3d",
+      "name": "✅ New Task",
+      "type": "Capture",
+      "command": true,
+      "appendLink": false,
+      "captureTo": "Productivity/Daily Notes/2024/{{date}}",
+      "captureToActiveFile": false,
+      "createFileIfItDoesntExist": {
+        "enabled": true,
+        "createWithTemplate": true,
+        "template": "_templates/Daily Template.md"
+      },
+      "format": {
+        "enabled": true,
+        "format": "- [ ] {{VALUE:Task Name}} {{VALUE: ⏫,🔼, ,🔽,⏬}} ➕ {{date}} \\n"
+      },
+      "insertAfter": {
+        "enabled": true,
+        "after": "### Tasks/Todo",
+        "insertAtEnd": false,
+        "considerSubsections": false,
+        "createIfNotFound": false,
+        "createIfNotFoundLocation": "top"
+      },
+      "prepend": false,
+      "task": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": false,
+      "openFileInMode": "default"
+    },
+    {
+      "id": "71890060-d458-451c-999b-394d1327b393",
+      "name": "🗒️Add Quick Note",
+      "type": "Capture",
+      "command": true,
+      "appendLink": false,
+      "captureTo": "Productivity/Daily Notes/2024/{{date}}",
+      "captureToActiveFile": false,
+      "createFileIfItDoesntExist": {
+        "enabled": true,
+        "createWithTemplate": true,
+        "template": "_templates/Daily Template.md"
+      },
+      "format": {
+        "enabled": true,
+        "format": "{{VALUE: Write Note}}\\n"
+      },
+      "insertAfter": {
+        "enabled": true,
+        "after": "### Quick Notes",
+        "insertAtEnd": false,
+        "considerSubsections": false,
+        "createIfNotFound": false,
+        "createIfNotFoundLocation": "top"
+      },
+      "prepend": false,
+      "task": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": false,
+      "openFileInMode": "default"
+    },
+    {
+      "id": "a17adec3-f1ba-4038-a95c-1c69566cad75",
+      "name": "🔗 Add Link",
+      "type": "Capture",
+      "command": true,
+      "appendLink": false,
+      "captureTo": "Productivity/Daily Notes/2024/{{date}}",
+      "captureToActiveFile": false,
+      "createFileIfItDoesntExist": {
+        "enabled": true,
+        "createWithTemplate": true,
+        "template": "_templates/Daily Template.md"
+      },
+      "format": {
+        "enabled": true,
+        "format": "- {{VALUE: Add Link}} \\n"
+      },
+      "insertAfter": {
+        "enabled": true,
+        "after": "###  Links",
+        "insertAtEnd": false,
+        "considerSubsections": false,
+        "createIfNotFound": false,
+        "createIfNotFoundLocation": "top"
+      },
+      "prepend": false,
+      "task": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": false,
+      "openFileInMode": "default"
+    },
+    {
+      "id": "474e16b7-3c16-4e02-8980-12448106bbd8",
+      "name": "📺 TV",
+      "type": "Macro",
+      "command": true,
+      "macroId": "478893cc-591e-446b-a1dc-5b78330dabfe"
+    },
+    {
+      "id": "b749c2b8-536c-40bd-b608-aeb346a8e075",
+      "name": "Archive Grocery List",
+      "type": "Macro",
+      "command": true,
+      "macroId": "de0821a0-3cee-48d3-bafd-e9c4b2319e67"
     }
   ],
   "macros": [
@@ -33,7 +152,7 @@
           "id": "44840c16-1552-41ee-afb4-fca4139d01f8",
           "path": "_scripts/movies.js",
           "settings": {
-            "OMDb API Key": ""
+            "OMDb API Key": "9c4e780f"
           }
         },
         {
@@ -84,8 +203,8 @@
           "id": "1d3ba576-f893-4026-995e-acc266122a16",
           "path": "_scripts/videogames.js",
           "settings": {
-            "IGDB API Client ID": "",
-            "IGDB API Client secret": ""
+            "IGDB API Client ID": "2qf0lu1tumvxsh7kunhydqckkxn0dk",
+            "IGDB API Client secret": "ealczwz73jw300d7to9uqiqab0wjy7"
           }
         },
         {
@@ -100,7 +219,7 @@
             "templatePath": "_templates/Video Game Template.md",
             "fileNameFormat": {
               "enabled": true,
-              "format": "{{VALUE:name}}"
+              "format": "{{VALUE:fileName}}"
             },
             "folder": {
               "enabled": true,
@@ -136,7 +255,7 @@
           "id": "63202f6d-05ca-4746-b6be-7dc31ad0e8ce",
           "path": "_scripts/books.js",
           "settings": {
-            "Google Books API Key": ""
+            "Google Books API Key": "AIzaSyDvJdOpQ36Z8mrRRaKMlCCJsoqfTwsbYuw"
           }
         },
         {
@@ -176,13 +295,141 @@
         }
       ],
       "runOnStartup": false
+    },
+    {
+      "name": "TV",
+      "id": "478893cc-591e-446b-a1dc-5b78330dabfe",
+      "commands": [
+        {
+          "name": "tv",
+          "type": "UserScript",
+          "id": "1e84d746-fb21-4b5c-8794-65d8ba8242c6",
+          "path": "_scripts/tv.js",
+          "settings": {
+            "OMDb API Key": "9c4e780f"
+          }
+        },
+        {
+          "name": "TV Template",
+          "type": "NestedChoice",
+          "id": "5261985b-f469-45b0-987c-ec1258cb6a27",
+          "choice": {
+            "id": "18454e03-ecdd-4586-b0f7-e581040ddf51",
+            "name": "TV Template",
+            "type": "Template",
+            "command": false,
+            "templatePath": "_templates/TV Template.md",
+            "fileNameFormat": {
+              "enabled": true,
+              "format": "{{VALUE:fileName}}"
+            },
+            "folder": {
+              "enabled": true,
+              "folders": [
+                "examples/tv"
+              ],
+              "chooseWhenCreatingNote": false,
+              "createInSameFolderAsActiveFile": false,
+              "chooseFromSubfolders": false
+            },
+            "appendLink": false,
+            "openFileInNewTab": {
+              "enabled": false,
+              "direction": "vertical",
+              "focus": true
+            },
+            "openFile": false,
+            "openFileInMode": "default",
+            "fileExistsMode": "Increment the file name",
+            "setFileExistsBehavior": false
+          }
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "Groceries",
+      "id": "de0821a0-3cee-48d3-bafd-e9c4b2319e67",
+      "commands": [
+        {
+          "name": "Archive Grocery List",
+          "type": "NestedChoice",
+          "id": "068293f6-0432-466f-abe9-215a5c570729",
+          "choice": {
+            "id": "24a69a41-4302-4ca6-9722-1fb5d550c440",
+            "name": "Archive Grocery List",
+            "type": "Template",
+            "command": false,
+            "templatePath": "_templates/Gorcery Archiver.md",
+            "fileNameFormat": {
+              "enabled": true,
+              "format": "Grocery List"
+            },
+            "folder": {
+              "enabled": true,
+              "folders": [
+                "lists"
+              ],
+              "chooseWhenCreatingNote": false,
+              "createInSameFolderAsActiveFile": false,
+              "chooseFromSubfolders": false
+            },
+            "appendLink": false,
+            "openFileInNewTab": {
+              "enabled": false,
+              "direction": "vertical",
+              "focus": true
+            },
+            "openFile": false,
+            "openFileInMode": "default",
+            "fileExistsMode": "Append to the bottom of the file",
+            "setFileExistsBehavior": true
+          }
+        },
+        {
+          "name": "Untitled Template Choice",
+          "type": "NestedChoice",
+          "id": "227c7bc5-eb04-4b74-add8-c81396e69137",
+          "choice": {
+            "id": "26467534-3857-4ced-b9a2-968867f59bba",
+            "name": "Untitled Template Choice",
+            "type": "Template",
+            "command": false,
+            "templatePath": "_templates/Grocery List Template.md",
+            "fileNameFormat": {
+              "enabled": true,
+              "format": "Grocery List"
+            },
+            "folder": {
+              "enabled": true,
+              "folders": [
+                "lists"
+              ],
+              "chooseWhenCreatingNote": false,
+              "createInSameFolderAsActiveFile": false,
+              "chooseFromSubfolders": false
+            },
+            "appendLink": false,
+            "openFileInNewTab": {
+              "enabled": false,
+              "direction": "vertical",
+              "focus": true
+            },
+            "openFile": false,
+            "openFileInMode": "default",
+            "fileExistsMode": "Overwrite the file",
+            "setFileExistsBehavior": true
+          }
+        }
+      ],
+      "runOnStartup": false
     }
   ],
-  "inputPrompt": "single-line",
+  "inputPrompt": "multi-line",
   "devMode": false,
   "templateFolderPath": "_templates",
   "announceUpdates": true,
-  "version": "1.13.3",
+  "version": "1.13.2",
   "disableOnlineFeatures": true,
   "enableRibbonIcon": false,
   "ai": {
@@ -196,10 +443,6 @@
         "endpoint": "https://api.openai.com/v1",
         "apiKey": "",
         "models": [
-          {
-            "name": "text-davinci-003",
-            "maxTokens": 4096
-          },
           {
             "name": "gpt-3.5-turbo",
             "maxTokens": 4096
@@ -225,16 +468,8 @@
             "maxTokens": 128000
           },
           {
-            "name": "gpt-4-turbo",
-            "maxTokens": 128000
-          },
-          {
-            "name": "gpt-4o",
-            "maxTokens": 128000
-          },
-          {
-            "name": "gpt-4o-mini",
-            "maxTokens": 128000
+            "name": "text-davinci-003",
+            "maxTokens": 4096
           }
         ]
       }

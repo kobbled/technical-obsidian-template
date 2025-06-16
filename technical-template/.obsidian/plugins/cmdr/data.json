@@ -1,0 +1,55 @@
+{
+  "confirmDeletion": true,
+  "showAddCommand": true,
+  "debug": false,
+  "editorMenu": [],
+  "fileMenu": [],
+  "leftRibbon": [],
+  "rightRibbon": [],
+  "titleBar": [],
+  "statusBar": [],
+  "pageHeader": [
+    {
+      "id": "quickadd:choice:a17adec3-f1ba-4038-a95c-1c69566cad75",
+      "icon": "link",
+      "name": "QuickAdd: 🔗 Add Link",
+      "mode": "any"
+    },
+    {
+      "id": "quickadd:choice:71890060-d458-451c-999b-394d1327b393",
+      "icon": "lucide-notebook",
+      "name": "QuickAdd: 🗒️Add Quick Note",
+      "mode": "any"
+    },
+    {
+      "id": "quickadd:choice:3a11e588-7999-46e1-a7e8-f99b7598ef3d",
+      "icon": "lucide-check-circle",
+      "name": "QuickAdd: ✅ New Task",
+      "mode": "any",
+      "color": "#007a1f"
+    },
+    {
+      "id": "editor:toggle-source",
+      "icon": "lucide-code-2",
+      "name": "Toggle Live Preview/Source mode",
+      "mode": "any"
+    }
+  ],
+  "macros": [],
+  "explorer": [],
+  "hide": {
+    "statusbar": [],
+    "leftRibbon": []
+  },
+  "spacing": 8,
+  "advancedToolbar": {
+    "rowHeight": 48,
+    "rowCount": 1,
+    "spacing": 0,
+    "buttonWidth": 48,
+    "columnLayout": false,
+    "mappedIcons": [],
+    "tooltips": false,
+    "heightOffset": 0
+  }
+}

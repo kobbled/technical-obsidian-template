@@ -27,5 +27,8 @@
   "homepage",
   "obsidian-tasks-plugin",
   "frontmatter-links",
-  "frontmatter-modified-date"
+  "frontmatter-modified-date",
+  "highlightr-plugin",
+  "obsidian-meta-bind-plugin",
+  "cmdr"
 ]
