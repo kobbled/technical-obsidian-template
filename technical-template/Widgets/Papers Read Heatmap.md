@@ -1,7 +1,7 @@
 ```dataviewjs
 dv.span("** Papers Read 📝**")
 const calendarData = {
-    year: 2023,  // (optional) defaults to current year
+    year: 2022,  // (optional) defaults to current year
     colors: {    // (optional) defaults to green
         blue:        ["#8cb9ff", "#69a3ff", "#428bff", "#1872ff", "#0058e2"], // first entry is considered default if supplied
         green:       ["#c6e48b", "#7bc96f", "#49af5d", "#2e8840", "#196127"],
@@ -30,7 +30,7 @@ const convertDate = (date)=>{
 }
 
 //DataviewJS loop
-for (let page of dv.pages("#paperitem").where(p => p.status === "#paper/status/read")) {
+for (let page of dv.pages("#paperitem").where(p => p.status === "paper/status/read")) {
 	// dv.span("<br>" + page.file.name) // uncomment for troubleshooting
     calendarData.entries.push({
         date: convertDate(page.date_read),

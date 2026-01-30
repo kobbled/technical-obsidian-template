@@ -1,5 +1,5 @@
 ---
-cssClass: dashboard
+cssClasses: [dashboard, no-caption, hide-properties]
 ---
 ![[tenn_graneet_head.jpg#circle|center|150]]
 

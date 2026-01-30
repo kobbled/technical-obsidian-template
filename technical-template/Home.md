@@ -1,7 +1,7 @@
 ---
 banner: "https://blenderartists.org/uploads/default/original/4X/6/d/a/6daef6949e925d154504824c102a7b0b84a1a2b0.jpeg"
 banner_x: 0.49832
-cssClass: wide-page
+cssClasses: [wide-page, .no-caption, hide-properties]
 banner_lock: true
 ---
 
