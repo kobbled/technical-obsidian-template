@@ -1,7 +1,6 @@
 ---
-category: Movies
+category: TV
 genre: {{VALUE:genreLinks}}
-directors: {{VALUE:directorLink}}
 year: {{VALUE:Year}}
 parental-rating: {{VALUE:Rated}} 
 length: {{VALUE:Runtime}}
@@ -9,9 +8,10 @@ cast: {{VALUE:actorLinks}}
 ratingImdb: {{VALUE:imdbRating}}
 watched: {{VALUE:watched}}
 rating: {{VALUE:rating}}
+seasons: []
 imdburl: https://www.imdb.com/title/{{VALUE:imdbID}}
 posterurl: {{VALUE:Poster}}
-tags: [Movies, {{VALUE:tag}}]
+tags: [TV, {{VALUE:tag}}]
 cssClass: no-caption
 ---
 
