@@ -1,0 +1,73 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Realtor.ca Listing Clipper",
+	"behavior": "create",
+	"noteContentFormat": "**Description:**\n{{selector:#propertyDescriptionCon}}\n\n**Location:**\n{{selector:#listingAddress}}\n\n**Source:**\n[View on Realtor.ca]({{url}})\n\n**Photos:**\n\n![]({{selector:img.listViewListingImage?src|first}})\n",
+	"properties": [
+		{
+			"name": "price",
+			"value": "{{selector:#listingPriceValue|replace:\\\"$\\\":\\\"\\\"|replace:\\\",\\\":\\\"\\\"}}",
+			"type": "text"
+		},
+		{
+			"name": "square_footage",
+			"value": "{{selector:#propertyDetailsSectionContentSubCon_SquareFootage .propertyDetailsSectionContentValue|replace:\\\" sq ft\\\":\\\"\\\"|replace:\\\",\\\":\\\"\\\"}}",
+			"type": "text"
+		},
+		{
+			"name": "year_built",
+			"value": "{{selector:#propertyDetailsSectionContentSubCon_BuiltIn .propertyDetailsSectionContentValue}}",
+			"type": "text"
+		},
+		{
+			"name": "bedrooms",
+			"value": "{{selector:#BedroomIcon .listingIconNum}}",
+			"type": "text"
+		},
+		{
+			"name": "bathrooms",
+			"value": "{{selector:#BathroomIcon .listingIconNum}}",
+			"type": "text"
+		},
+		{
+			"name": "property_type",
+			"value": "{{selector:#propertyDetailsSectionContentSubCon_BuildingType .propertyDetailsSectionContentValue}}",
+			"type": "text"
+		},
+		{
+			"name": "MLS_Number",
+			"value": "{{selector:#MLNumberVal}}",
+			"type": "text"
+		},
+		{
+			"name": "address",
+			"value": "{{selector:#listingAddress}}",
+			"type": "text"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "created",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "tags",
+			"value": "real-estate, property, listing",
+			"type": "multitext"
+		},
+		{
+			"name": "total_img",
+			"value": "{{selector:#imageListImageCountCon|first|split:\\\"/\\\"|last}}",
+			"type": "text"
+		}
+	],
+	"triggers": [
+		"https://www.realtor.ca/real-estate/"
+	],
+	"noteNameFormat": "{{selector:#listingAddressTitle}}",
+	"path": "personal/Home/buying/listings"
+}

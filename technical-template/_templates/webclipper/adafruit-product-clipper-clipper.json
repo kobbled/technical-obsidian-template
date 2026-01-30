@@ -1,0 +1,58 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Adafruit Product Clipper",
+	"behavior": "create",
+	"noteContentFormat": "**poster**::\n![]({{selector:.gallery-thumbnails img?srcset|split:\" \"|first}})\n\n**Description:** \n{{\"a brief description of the product\"}}\n\n**Usage:** \n{{\"list of project uses\"}}\n\n",
+	"properties": [
+		{
+			"name": "title",
+			"value": "{{title}}",
+			"type": "text"
+		},
+		{
+			"name": "source",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "created",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "modified",
+			"value": "{{date}}",
+			"type": "text"
+		},
+		{
+			"name": "tags",
+			"value": "{{tags}}",
+			"type": "multitext"
+		},
+		{
+			"name": "posterurl",
+			"value": "{{selector:.gallery-thumbnails img?srcset|split:\\\" \\\"|first}}",
+			"type": "text"
+		},
+		{
+			"name": "price",
+			"value": "{{selector:.product-price span|replace:\\\"\\\\\"\\\":\\\"\\\"}}",
+			"type": "text"
+		},
+		{
+			"name": "product_id",
+			"value": "{{selector:.product_id span|first|replace:\\\"\\\\\"\\\":\\\"\\\"}}",
+			"type": "text"
+		},
+		{
+			"name": "product_category",
+			"value": "{{\\\"category of product\\\"}}",
+			"type": "text"
+		}
+	],
+	"triggers": [
+		"https://www.adafruit.com/"
+	],
+	"noteNameFormat": "{{title}}",
+	"path": "Spaces/kobbled/Electronics/Products"
+}

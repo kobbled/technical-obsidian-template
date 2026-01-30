@@ -1,0 +1,66 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "BoardGameGeek",
+	"behavior": "create",
+	"noteContentFormat": "## Info\n\n**description**:: {{description}}\n\n**poster**::\n![]({{image}})\n",
+	"properties": [
+		{
+			"name": "title",
+			"value": "{{title}}",
+			"type": "text"
+		},
+		{
+			"name": "developer",
+			"value": "{{selector:.publisher a}}",
+			"type": "multitext"
+		},
+		{
+			"name": "year",
+			"value": "{{selector:.game-year}}",
+			"type": "number"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "rating",
+			"value": "{{selector:.rating}}",
+			"type": "text"
+		},
+		{
+			"name": "posterurl",
+			"value": "{{image}}",
+			"type": "text"
+		},
+		{
+			"name": "tags",
+			"value": "games/board-games",
+			"type": "multitext"
+		},
+		{
+			"name": "bought",
+			"value": "",
+			"type": "checkbox"
+		},
+		{
+			"name": "vendor",
+			"value": "",
+			"type": "text"
+		},
+		{
+			"name": "Links",
+			"value": "",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"https://boardgamegeek.com/boardgame/*",
+		"https://www.boardgamegeek.com/boardgame/*",
+		"https://boardgamegeek.com/boardgameexpansion/*",
+		"https://www.boardgamegeek.com/boardgameexpansion/*"
+	],
+	"noteNameFormat": "{{title}}",
+	"path": "Personal/Media/libraries/games"
+}

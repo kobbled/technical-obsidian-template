@@ -1,0 +1,78 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Untappd Beer Clipper",
+	"behavior": "create",
+	"noteContentFormat": "**notes**::\n{{\"short description of the beer\"}}\n\n**poster**::\n![]({{selector:.label img?src|first}})",
+	"properties": [
+		{
+			"name": "Created",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "Modified",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "Category",
+			"value": "Food/Drinks",
+			"type": "text"
+		},
+		{
+			"name": "Folder",
+			"value": "Food & Drink",
+			"type": "text"
+		},
+		{
+			"name": "Subfolder",
+			"value": "Beer",
+			"type": "text"
+		},
+		{
+			"name": "brewery",
+			"value": "{{selector:.brewery a}}",
+			"type": "text"
+		},
+		{
+			"name": "abv",
+			"value": "{{selector:.abv|split:\\\"%\\\"|first|replace:\\\"\\\\\"\\\":\\\"\\\"}}",
+			"type": "text"
+		},
+		{
+			"name": "ibu",
+			"value": "{{selector:.ibu|split:\\\" \\\"|first|replace:\\\"\\\\\"\\\":\\\"\\\"}}",
+			"type": "text"
+		},
+		{
+			"name": "style",
+			"value": "{{selector:.style}}",
+			"type": "text"
+		},
+		{
+			"name": "rating",
+			"value": "{{selector:.caps?data-rating|first|round:2|replace:\\\"\\\\\"\\\":\\\"\\\"}}",
+			"type": "text"
+		},
+		{
+			"name": "Links",
+			"value": "[{{url|replace:\\\"\\\\\"\\\":\\\"\\\"}}]",
+			"type": "text"
+		},
+		{
+			"name": "tags",
+			"value": "note/info, personal/food/drinks, personal/food/drinks/beer",
+			"type": "multitext"
+		},
+		{
+			"name": "posterurl",
+			"value": "{{selector:.label img?src|first}}",
+			"type": "text"
+		}
+	],
+	"triggers": [
+		"https://untappd.com/b/"
+	],
+	"noteNameFormat": "{{title}}",
+	"path": "Personal/Food & Drink/Beer"
+}

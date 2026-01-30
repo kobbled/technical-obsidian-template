@@ -1,0 +1,54 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Medium",
+	"behavior": "create",
+	"noteContentFormat": "{{content}}",
+	"properties": [
+		{
+			"name": "title",
+			"value": "{{title}}",
+			"type": "text"
+		},
+		{
+			"name": "author",
+			"value": "{{schema:author.name|wikilink}}",
+			"type": "multitext"
+		},
+		{
+			"name": "source",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "published",
+			"value": "{{schema:datePublished|date:\\\"YYYY-MM-DD\\\"}}",
+			"type": "date"
+		},
+		{
+			"name": "created",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "description",
+			"value": "{{description}}",
+			"type": "text"
+		},
+		{
+			"name": "tags",
+			"value": "articles, medium",
+			"type": "multitext"
+		},
+		{
+			"name": "readingTime",
+			"value": "{{selector:.pw-reading-time}}",
+			"type": "text"
+		}
+	],
+	"triggers": [
+		"https://medium.com/",
+		"https://*.medium.com/"
+	],
+	"noteNameFormat": "{{title}}",
+	"path": "Clippings/Medium"
+}

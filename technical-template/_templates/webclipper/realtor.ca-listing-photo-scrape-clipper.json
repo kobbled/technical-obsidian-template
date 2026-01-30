@@ -1,0 +1,18 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Realtor.ca Listing photo scrape",
+	"behavior": "append-specific",
+	"properties": [
+		{
+			"name": "total_img",
+			"value": "{{selector:#imageListImageCountCon|first|split:\\\"/\\\"|last}}",
+			"type": "text"
+		}
+	],
+	"noteContentFormat": "{{\"Pick 10 images randomly (1-{{total_img}}) and put them in a markdown format (![]()) separated by spaces\"}}",
+	"triggers": [
+		"https://www.realtor.ca/real-estate/"
+	],
+	"noteNameFormat": "{{selector:#listingAddressTitle}}",
+	"path": "personal/Home/buying/listings"
+}
