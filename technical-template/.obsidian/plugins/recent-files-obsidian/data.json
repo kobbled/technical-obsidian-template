@@ -5,6 +5,14 @@
       "path": "examples/Movie Database.base"
     },
     {
+      "basename": "List Cards",
+      "path": "examples/List Cards.md"
+    },
+    {
+      "basename": "Nausicaä of the Valley of the Wind",
+      "path": "examples/movies/Nausicaä of the Valley of the Wind.md"
+    },
+    {
       "basename": "Dashboard",
       "path": "Dashboard.md"
     },
