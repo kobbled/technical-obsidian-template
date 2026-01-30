@@ -25,3 +25,23 @@ span[src$="#round"] img {
   border-radius: 0px !important;
   opacity : 1 !important;
 }
+
+.image-captions-figure {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.image-captions-caption {
+  padding-top: 1em;
+  display: block;
+  line-height: 1.2;
+}
+
+.no-caption .image-captions-figure {
+  background: none !important;
+}
+
+.no-caption .image-captions-caption {
+  display: none;
+}

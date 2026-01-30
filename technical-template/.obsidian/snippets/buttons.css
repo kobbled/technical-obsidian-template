@@ -1,34 +1,51 @@
-/* DAILY NOTE BUTTON*/
-.button-new-daily-note {
-    font-family: Rubik, sans-serif;
-    font-weight: bold;
-    font-size: 14px;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width:115px;
+.button-new-daily-note, .button-weekly-note, .button-monthly-note {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  font-family: Rubik, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  flex-direction: column;
+  width:115px;
+  height:100px;
+  background-color:#323953 !important;
+  color:#E8DDB5;
+  position:absolute;
+  white-space: normal;
+  border: 2px solid #131312; 
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .button-new-daily-note, .button-weekly-note, .button-monthly-note {
+    width:100px;
     height:100px;
-    display:block;
-    background-color:#323953 !important;
-    color:#E8DDB5;
-    position:absolute;
+  }
+}
+
+.button-new-daily-note  {
     top: 17vh;
     right: 1.8vh;
     opacity: 0.7;
-    animation: pulse 5s infinite; /* add pulse animation */
-    white-space: normal;
-    border: 2px solid #131312; 
-    border-radius: 10px;
     transform: rotateZ(0deg);
     margin-right: 24em;
   }
+
+  @media screen and (max-width: 600px) {
+    .button-new-daily-note {
+      top: 22vh;
+      left: 0.5vh;
+      transform: rotateZ(0deg);
+    }
+  }
+
   .button-new-daily-note::before {
     content:'✎';
     color:#E8DDB5;
     font-size:2.5rem;
-    display:block;
     margin-bottom:5px;
     transition:all .2s ease-in-out !important;
   }
@@ -38,35 +55,25 @@
   
   /* WEEKLY NOTE BUTTON*/
   .button-weekly-note {
-    font-family: Rubik, sans-serif;
-    font-weight: bold;
-    font-size: 14px;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width:115px;
-    height:100px;
-    display:block;
-    background-color:#323953 !important;
-    color:#E8DDB5;
-    position:absolute;
-    top: 17vh;
+    top: 17.4vh;
     right: 1.8vh;
     opacity: 0.7;
-    animation: pulse 5s infinite; /* add pulse animation */
-    white-space: normal;
-    border: 2px solid #131312; 
-    border-radius: 10px;
     transform: rotateZ(0deg);
     margin-right: 13.5em;
   }
+
+  @media screen and (max-width: 600px) {
+    .button-weekly-note {
+      top: 22vh;
+      left: 14.5vh;
+      transform: rotateZ(0deg);
+    }
+  }
+
   .button-weekly-note::before {
     content:'✉';
     color:#E8DDB5;
     font-size:2.5rem;
-    display:block;
     margin-bottom:5px;
     transition:all .2s ease-in-out !important;
   }
@@ -76,35 +83,24 @@
 
  /* MONTHLY NOTE BUTTON*/
  .button-monthly-note {
-  font-family: Rubik, sans-serif;
-  font-weight: bold;
-  font-size: 14px;
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width:115px;
-  height:100px;
-  display:block;
-  background-color:#323953 !important;
-  color:#E8DDB5;
-  position:absolute;
   top: 17vh;
   right: 1.8vh;
   opacity: 0.7;
-  animation: pulse 5s infinite; /* add pulse animation */
-  white-space: normal;
-  border: 2px solid #131312; 
-  border-radius: 10px;
-  transform: rotateZ(0deg);
   margin-right: 3em;
 }
+
+@media screen and (max-width: 600px) {
+  .button-monthly-note {
+    top: 22vh;
+    left: 28.5vh;
+    transform: rotateZ(0deg);
+  }
+}
+
 .button-monthly-note::before {
   content:'✔️';
   color:#E8DDB5;
   font-size:2.5rem;
-  display:block;
   margin-bottom:5px;
   transition:all .2s ease-in-out !important;
 }

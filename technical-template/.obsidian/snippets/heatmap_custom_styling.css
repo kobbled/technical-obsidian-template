@@ -1,0 +1,47 @@
+/* 
+ * Enable snippet in Settings->Appearance-CSS snippets 
+ */
+
+
+/* Change default color of empty days */
+/* Light mode */
+/* .heatmap-calendar-boxes .isEmpty {
+    background: rgb(226, 233, 226) !important;
+} */
+ /* Dark mode */
+/* .theme-dark .heatmap-calendar-boxes .isEmpty{
+    background: rgb(182, 121, 121) !important;
+} */
+
+.el-lang-dataviewjs {
+  overflow-x: visible !important;
+}
+
+.heatmap-calendar-boxes .internal-link {
+  text-align: left !important;
+}
+
+.heatmap-calendar-boxes .heatmap-calendar-content {
+    text-decoration: none !important;
+    display: none;
+    position: absolute;
+    max-width: 300px;
+    background-color: var(--background-primary);
+    font-size: 1.5em;
+    padding: 5px;
+    padding-right: 3em;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    white-space:nowrap;
+  }
+  
+  .hasData:hover .heatmap-calendar-content {
+    display: block;
+  }
+
+  .heatmap-page .block-language-dataviewjs {
+    overflow:visible !important;
+    height: 500px;
+  }
+/* ------------------------------------  */

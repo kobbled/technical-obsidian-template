@@ -4,17 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "429685a052678a1c",
+        "id": "1bc41342fbd6ad25",
         "type": "tabs",
         "children": [
           {
-            "id": "f1c64499c5d20470",
+            "id": "7b248cac960178f9",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "type": "bases",
+              "state": {
+                "file": "examples/Movie Database.base",
+                "viewName": "Movies"
+              },
+              "icon": "lucide-layout-grid",
+              "title": "Movie Database"
             }
           }
         ]
@@ -62,16 +65,6 @@
             }
           },
           {
-            "id": "c50f495850ff587b",
-            "type": "leaf",
-            "state": {
-              "type": "starred",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Plugin no longer active"
-            }
-          },
-          {
             "id": "8e8ef6d53fdfda9e",
             "type": "leaf",
             "state": {
@@ -79,6 +72,16 @@
               "state": {},
               "icon": "lucide-bookmark",
               "title": "Bookmarks"
+            }
+          },
+          {
+            "id": "a96b115da029757f",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {},
+              "icon": "clock",
+              "title": "Recent Files"
             }
           }
         ]
@@ -104,6 +107,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "examples/Movie Database.base",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -131,7 +135,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "title": "Graph of Movie Database"
             }
           }
         ],
@@ -139,7 +143,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 242.5
+    "width": 253.5
   },
   "right": {
     "id": "52277dd380415613",
@@ -148,7 +152,7 @@
       {
         "id": "5f0ece000c571db6",
         "type": "tabs",
-        "dimension": 54.30463576158941,
+        "dimension": 37.558685446009385,
         "children": [
           {
             "id": "da6126be9d5cf3f4",
@@ -161,23 +165,46 @@
             }
           },
           {
-            "id": "54796c9dda29e255",
-            "type": "leaf",
-            "state": {
-              "type": "mathpad-view",
-              "state": {},
-              "icon": "sigma",
-              "title": "Mathpad"
-            }
-          },
-          {
             "id": "34f11553111861bb",
             "type": "leaf",
             "state": {
               "type": "advanced-tables-toolbar",
               "state": {},
+              "icon": "spreadsheet",
+              "title": "Advanced Tables"
+            }
+          },
+          {
+            "id": "56576adff2ebe86b",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "examples/Movie Database.base"
+              },
+              "icon": "lucide-info",
+              "title": "File properties for Movie Database"
+            }
+          }
+        ]
+      },
+      {
+        "id": "1aeac5319ea362cd",
+        "type": "tabs",
+        "dimension": 27.816901408450708,
+        "children": [
+          {
+            "id": "775576a4a721f2cd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Dashboard.md",
+                "mode": "preview",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Plugin no longer active"
+              "title": "Dashboard"
             }
           }
         ]
@@ -185,7 +212,7 @@
       {
         "id": "21e3badd15c18f5d",
         "type": "tabs",
-        "dimension": 45.69536423841059,
+        "dimension": 34.624413145539904,
         "children": [
           {
             "id": "9294aae2ac2aa350",
@@ -193,7 +220,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Home.md",
+                "file": "examples/Movie Database.base",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -203,7 +230,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Home"
+              "title": "Backlinks for Movie Database"
             }
           },
           {
@@ -212,12 +239,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Home.md",
+                "file": "examples/Movie Database.base",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Home"
+              "title": "Outgoing links from Movie Database"
             }
           },
           {
@@ -241,13 +268,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Home.md",
+                "file": "examples/Movie Database.base",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Home"
+              "title": "Outline of Movie Database"
             }
           },
           {
@@ -273,8 +300,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-excalidraw-plugin:New drawing": false,
-      "obsidian-kanban:Create new board": false,
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -283,23 +309,30 @@
       "command-palette:Open command palette": false,
       "workspaces:Manage workspace layouts": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-excalidraw-plugin:New drawing": false,
       "open-vscode:VSCode": false,
       "templater-obsidian:Templater": false,
-      "mathpad:Open Mathpad": false,
       "homepage:Open homepage": false,
-      "periodic-notes:Open today": false
+      "audio-recorder:Start/stop recording": false,
+      "periodic-notes:Open today": false,
+      "local-media-embedder:Toggle media server": false
     }
   },
-  "active": "f1c64499c5d20470",
+  "active": "da6126be9d5cf3f4",
   "lastOpenFiles": [
+    "Dashboard.md",
+    "examples/Movie Database.base",
+    "examples/Movie Database (Bases).base",
+    "Home.md",
+    "Productivity/Weekly Notes/2026-W05.md",
+    "Productivity/Daily Notes/2026-01-29.md",
+    "Productivity/Postit Board.canvas",
     "examples/books/Neuromancer.md",
     "lists/Grocery List.md",
-    "Dashboard.md",
     "_templates/Gorcery Archiver.md",
     "_templates/Grocery List Template.md",
     "examples/Movie Database.md",
     "examples/Book Database.md",
-    "Home.md",
     "examples/Multi Column Callout.md",
     "examples/Video Games Database.md",
     "examples/Text Justify.md",
@@ -315,9 +348,6 @@
     "examples/movies/Nausicaä of the Valley of the Wind.md",
     "examples/movies/Mr. Nobody.md",
     "examples/movies/Nausicaa of the Valley of the Wind.md",
-    "examples/movies/Miller's Crossing.md",
-    "examples/movies/Millers Crossing.md",
-    "examples/movies/Enter the Void.md",
     "Personal/Media/libraries/movies",
     "Personal/Media/libraries",
     "Personal/Media",
@@ -326,11 +356,8 @@
     "lists",
     "examples/tv",
     "_scripts/tv.js",
-    "_scripts/metabind_button_conditional.js",
-    "_scripts/getRelFileLink.js",
     "img/papers/schopphovenEHLAExtremeHighSpeed2017/image-2-x198-y329.png",
     "img/papers/rombachHighResolutionImageSynthesis2022/image-4-x308-y597.png",
-    "Productivity/Postit Board.canvas",
     "Issue Tracker/assets/showcase.jpg",
     "Issue Tracker/assets/example project.jpg",
     "Issue Tracker/assets/example project 2.jpg",

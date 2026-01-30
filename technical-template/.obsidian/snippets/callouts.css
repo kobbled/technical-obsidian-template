@@ -10,11 +10,6 @@ body {
 .callout {
   box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 9px
 }
-
-:is(.theme-dark) .callout-content {
-  background-color: rgba(41, 41, 41, 0.95);
-}
-
 .callout-title-inner {
   color: var(--text-normal);
 }
