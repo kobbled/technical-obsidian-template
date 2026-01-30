@@ -1,0 +1,20 @@
+{
+  "recentFiles": [
+    {
+      "basename": "Movie Database",
+      "path": "examples/Movie Database.base"
+    },
+    {
+      "basename": "Dashboard",
+      "path": "Dashboard.md"
+    },
+    {
+      "basename": "Home",
+      "path": "Home.md"
+    }
+  ],
+  "omittedPaths": [],
+  "omittedTags": [],
+  "updateOn": "file-open",
+  "omitBookmarks": false
+}

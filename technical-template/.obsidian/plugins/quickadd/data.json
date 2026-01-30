@@ -5,21 +5,190 @@
       "name": "🎬 Movie",
       "type": "Macro",
       "command": true,
-      "macroId": "c6ef4489-3d93-4854-9d89-4571e5567097"
+      "macro": {
+        "id": "c6ef4489-3d93-4854-9d89-4571e5567097",
+        "name": "Movies",
+        "commands": [
+          {
+            "name": "movies",
+            "type": "UserScript",
+            "id": "44840c16-1552-41ee-afb4-fca4139d01f8",
+            "path": "_scripts/movies.js",
+            "settings": {
+              "OMDb API Key": "9c4e780f"
+            }
+          },
+          {
+            "name": "Movie Template",
+            "type": "NestedChoice",
+            "id": "365e3e12-2e1f-41e4-8758-323a01bcef0e",
+            "choice": {
+              "id": "6487dd0a-9376-46e9-930e-047206f7c9e5",
+              "name": "Movie Template",
+              "type": "Template",
+              "command": false,
+              "templatePath": "_templates/Movie Template.md",
+              "fileNameFormat": {
+                "enabled": true,
+                "format": "{{VALUE:fileName}}"
+              },
+              "folder": {
+                "enabled": true,
+                "folders": [
+                  "examples/movies"
+                ],
+                "chooseWhenCreatingNote": false,
+                "createInSameFolderAsActiveFile": false,
+                "chooseFromSubfolders": false
+              },
+              "appendLink": false,
+              "openFileInNewTab": {
+                "enabled": false,
+                "direction": "vertical",
+                "focus": true
+              },
+              "openFile": false,
+              "openFileInMode": "default",
+              "fileExistsMode": "Increment the file name",
+              "setFileExistsBehavior": false,
+              "fileOpening": {
+                "location": "tab",
+                "direction": "vertical",
+                "focus": true,
+                "mode": "default"
+              }
+            }
+          }
+        ]
+      },
+      "runOnStartup": false
     },
     {
       "id": "f9ffd80a-a905-42d2-853a-bcf52a22e76b",
       "name": "🎮 Video Games",
       "type": "Macro",
       "command": true,
-      "macroId": "7ce161f0-582a-4745-81ff-9f5fe26ecdcd"
+      "macro": {
+        "id": "7ce161f0-582a-4745-81ff-9f5fe26ecdcd",
+        "name": "Video Games",
+        "commands": [
+          {
+            "name": "videogames",
+            "type": "UserScript",
+            "id": "1d3ba576-f893-4026-995e-acc266122a16",
+            "path": "_scripts/videogames.js",
+            "settings": {
+              "IGDB API Client ID": "2qf0lu1tumvxsh7kunhydqckkxn0dk",
+              "IGDB API Client secret": "ealczwz73jw300d7to9uqiqab0wjy7"
+            }
+          },
+          {
+            "name": "Video Game Template",
+            "type": "NestedChoice",
+            "id": "a936d918-ada7-4fa3-ac72-7a3b5a790fe2",
+            "choice": {
+              "id": "b9fa22c3-5f28-4bb0-9df2-a6ca3c7634b6",
+              "name": "Video Game Template",
+              "type": "Template",
+              "command": false,
+              "templatePath": "_templates/Video Game Template.md",
+              "fileNameFormat": {
+                "enabled": true,
+                "format": "{{VALUE:fileName}}"
+              },
+              "folder": {
+                "enabled": true,
+                "folders": [
+                  "examples/video games"
+                ],
+                "chooseWhenCreatingNote": false,
+                "createInSameFolderAsActiveFile": false,
+                "chooseFromSubfolders": false
+              },
+              "appendLink": false,
+              "openFileInNewTab": {
+                "enabled": false,
+                "direction": "vertical",
+                "focus": true
+              },
+              "openFile": false,
+              "openFileInMode": "default",
+              "fileExistsMode": "Increment the file name",
+              "setFileExistsBehavior": false,
+              "fileOpening": {
+                "location": "tab",
+                "direction": "vertical",
+                "focus": true,
+                "mode": "default"
+              }
+            }
+          }
+        ]
+      },
+      "runOnStartup": false
     },
     {
       "id": "75b4a9d1-7cef-4064-b40e-6f813f4728f3",
       "name": "📚 Books",
       "type": "Macro",
       "command": true,
-      "macroId": "957497dd-37a5-422a-8d8d-770036b4a47f"
+      "macro": {
+        "id": "957497dd-37a5-422a-8d8d-770036b4a47f",
+        "name": "Books",
+        "commands": [
+          {
+            "name": "books",
+            "type": "UserScript",
+            "id": "63202f6d-05ca-4746-b6be-7dc31ad0e8ce",
+            "path": "_scripts/books.js",
+            "settings": {
+              "Google Books API Key": "AIzaSyDvJdOpQ36Z8mrRRaKMlCCJsoqfTwsbYuw"
+            }
+          },
+          {
+            "name": "Book Template",
+            "type": "NestedChoice",
+            "id": "c8f6a1e3-ccb5-45f8-9e29-44b25353d3fa",
+            "choice": {
+              "id": "edd5bc86-f95f-41ab-844d-fe2e9abecec4",
+              "name": "Book Template",
+              "type": "Template",
+              "command": false,
+              "templatePath": "_templates/Book Template.md",
+              "fileNameFormat": {
+                "enabled": true,
+                "format": "{{VALUE:title}}"
+              },
+              "folder": {
+                "enabled": true,
+                "folders": [
+                  "examples/books"
+                ],
+                "chooseWhenCreatingNote": false,
+                "createInSameFolderAsActiveFile": false,
+                "chooseFromSubfolders": false
+              },
+              "appendLink": false,
+              "openFileInNewTab": {
+                "enabled": false,
+                "direction": "vertical",
+                "focus": true
+              },
+              "openFile": false,
+              "openFileInMode": "default",
+              "fileExistsMode": "Increment the file name",
+              "setFileExistsBehavior": false,
+              "fileOpening": {
+                "location": "tab",
+                "direction": "vertical",
+                "focus": true,
+                "mode": "default"
+              }
+            }
+          }
+        ]
+      },
+      "runOnStartup": false
     },
     {
       "id": "3a11e588-7999-46e1-a7e8-f99b7598ef3d",
@@ -54,7 +223,13 @@
         "focus": true
       },
       "openFile": false,
-      "openFileInMode": "default"
+      "openFileInMode": "default",
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "focus": true,
+        "mode": "default"
+      }
     },
     {
       "id": "71890060-d458-451c-999b-394d1327b393",
@@ -89,7 +264,13 @@
         "focus": true
       },
       "openFile": false,
-      "openFileInMode": "default"
+      "openFileInMode": "default",
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "focus": true,
+        "mode": "default"
+      }
     },
     {
       "id": "a17adec3-f1ba-4038-a95c-1c69566cad75",
@@ -124,23 +305,255 @@
         "focus": true
       },
       "openFile": false,
-      "openFileInMode": "default"
+      "openFileInMode": "default",
+      "fileOpening": {
+        "location": "tab",
+        "direction": "vertical",
+        "focus": true,
+        "mode": "default"
+      }
     },
     {
       "id": "474e16b7-3c16-4e02-8980-12448106bbd8",
       "name": "📺 TV",
       "type": "Macro",
       "command": true,
-      "macroId": "478893cc-591e-446b-a1dc-5b78330dabfe"
+      "macro": {
+        "id": "478893cc-591e-446b-a1dc-5b78330dabfe",
+        "name": "TV",
+        "commands": [
+          {
+            "name": "tv",
+            "type": "UserScript",
+            "id": "1e84d746-fb21-4b5c-8794-65d8ba8242c6",
+            "path": "_scripts/tv.js",
+            "settings": {
+              "OMDb API Key": "9c4e780f"
+            }
+          },
+          {
+            "name": "TV Template",
+            "type": "NestedChoice",
+            "id": "5261985b-f469-45b0-987c-ec1258cb6a27",
+            "choice": {
+              "id": "18454e03-ecdd-4586-b0f7-e581040ddf51",
+              "name": "TV Template",
+              "type": "Template",
+              "command": false,
+              "templatePath": "_templates/TV Template.md",
+              "fileNameFormat": {
+                "enabled": true,
+                "format": "{{VALUE:fileName}}"
+              },
+              "folder": {
+                "enabled": true,
+                "folders": [
+                  "examples/tv"
+                ],
+                "chooseWhenCreatingNote": false,
+                "createInSameFolderAsActiveFile": false,
+                "chooseFromSubfolders": false
+              },
+              "appendLink": false,
+              "openFileInNewTab": {
+                "enabled": false,
+                "direction": "vertical",
+                "focus": true
+              },
+              "openFile": false,
+              "openFileInMode": "default",
+              "fileExistsMode": "Increment the file name",
+              "setFileExistsBehavior": false,
+              "fileOpening": {
+                "location": "tab",
+                "direction": "vertical",
+                "focus": true,
+                "mode": "default"
+              }
+            }
+          }
+        ]
+      },
+      "runOnStartup": false
     },
     {
       "id": "b749c2b8-536c-40bd-b608-aeb346a8e075",
       "name": "Archive Grocery List",
       "type": "Macro",
       "command": true,
-      "macroId": "de0821a0-3cee-48d3-bafd-e9c4b2319e67"
+      "macro": {
+        "id": "de0821a0-3cee-48d3-bafd-e9c4b2319e67",
+        "name": "Groceries",
+        "commands": [
+          {
+            "name": "Archive Grocery List",
+            "type": "NestedChoice",
+            "id": "068293f6-0432-466f-abe9-215a5c570729",
+            "choice": {
+              "id": "24a69a41-4302-4ca6-9722-1fb5d550c440",
+              "name": "Archive Grocery List",
+              "type": "Template",
+              "command": false,
+              "templatePath": "_templates/Gorcery Archiver.md",
+              "fileNameFormat": {
+                "enabled": true,
+                "format": "Grocery List"
+              },
+              "folder": {
+                "enabled": true,
+                "folders": [
+                  "lists"
+                ],
+                "chooseWhenCreatingNote": false,
+                "createInSameFolderAsActiveFile": false,
+                "chooseFromSubfolders": false
+              },
+              "appendLink": false,
+              "openFileInNewTab": {
+                "enabled": false,
+                "direction": "vertical",
+                "focus": true
+              },
+              "openFile": false,
+              "openFileInMode": "default",
+              "fileExistsMode": "Append to the bottom of the file",
+              "setFileExistsBehavior": true,
+              "fileOpening": {
+                "location": "tab",
+                "direction": "vertical",
+                "focus": true,
+                "mode": "default"
+              }
+            }
+          },
+          {
+            "name": "Untitled Template Choice",
+            "type": "NestedChoice",
+            "id": "227c7bc5-eb04-4b74-add8-c81396e69137",
+            "choice": {
+              "id": "26467534-3857-4ced-b9a2-968867f59bba",
+              "name": "Untitled Template Choice",
+              "type": "Template",
+              "command": false,
+              "templatePath": "_templates/Grocery List Template.md",
+              "fileNameFormat": {
+                "enabled": true,
+                "format": "Grocery List"
+              },
+              "folder": {
+                "enabled": true,
+                "folders": [
+                  "lists"
+                ],
+                "chooseWhenCreatingNote": false,
+                "createInSameFolderAsActiveFile": false,
+                "chooseFromSubfolders": false
+              },
+              "appendLink": false,
+              "openFileInNewTab": {
+                "enabled": false,
+                "direction": "vertical",
+                "focus": true
+              },
+              "openFile": false,
+              "openFileInMode": "default",
+              "fileExistsMode": "Overwrite the file",
+              "setFileExistsBehavior": true,
+              "fileOpening": {
+                "location": "tab",
+                "direction": "vertical",
+                "focus": true,
+                "mode": "default"
+              }
+            }
+          }
+        ]
+      },
+      "runOnStartup": false
     }
   ],
+  "inputPrompt": "multi-line",
+  "persistInputPromptDrafts": true,
+  "useSelectionAsCaptureValue": true,
+  "devMode": false,
+  "templateFolderPath": "_templates",
+  "announceUpdates": "all",
+  "version": "2.10.0",
+  "globalVariables": {},
+  "onePageInputEnabled": false,
+  "disableOnlineFeatures": true,
+  "enableRibbonIcon": false,
+  "showCaptureNotification": true,
+  "showInputCancellationNotification": false,
+  "enableTemplatePropertyTypes": false,
+  "dateAliases": {
+    "t": "today",
+    "tm": "tomorrow",
+    "yd": "yesterday",
+    "nw": "next week",
+    "nm": "next month",
+    "ny": "next year",
+    "lw": "last week",
+    "lm": "last month",
+    "ly": "last year"
+  },
+  "ai": {
+    "defaultModel": "Ask me",
+    "defaultSystemPrompt": "As an AI assistant within Obsidian, your primary goal is to help users manage their ideas and knowledge more effectively. Format your responses using Markdown syntax. Please use the [[Obsidian]] link format. You can write aliases for the links by writing [[Obsidian|the alias after the pipe symbol]]. To use mathematical notation, use LaTeX syntax. LaTeX syntax for larger equations should be on separate lines, surrounded with double dollar signs ($$). You can also inline math expressions by wrapping it in $ symbols. For example, use $$w_{ij}^{\text{new}}:=w_{ij}^{\text{current}}+etacdotdelta_jcdot x_{ij}$$ on a separate line, but you can write \"($eta$ = learning rate, $delta_j$ = error term, $x_{ij}$ = input)\" inline.",
+    "promptTemplatesFolderPath": "",
+    "showAssistant": true,
+    "providers": [
+      {
+        "name": "OpenAI",
+        "endpoint": "https://api.openai.com/v1",
+        "apiKey": "",
+        "models": [
+          {
+            "name": "gpt-3.5-turbo",
+            "maxTokens": 4096
+          },
+          {
+            "name": "gpt-3.5-turbo-16k",
+            "maxTokens": 16384
+          },
+          {
+            "name": "gpt-3.5-turbo-1106",
+            "maxTokens": 16385
+          },
+          {
+            "name": "gpt-4",
+            "maxTokens": 8192
+          },
+          {
+            "name": "gpt-4-32k",
+            "maxTokens": 32768
+          },
+          {
+            "name": "gpt-4-1106-preview",
+            "maxTokens": 128000
+          },
+          {
+            "name": "text-davinci-003",
+            "maxTokens": 4096
+          }
+        ],
+        "modelSource": "auto"
+      }
+    ]
+  },
+  "migrations": {
+    "migrateToMacroIDFromEmbeddedMacro": true,
+    "useQuickAddTemplateFolder": true,
+    "incrementFileNameSettingMoveToDefaultBehavior": true,
+    "mutualExclusionInsertAfterAndWriteToBottomOfFile": true,
+    "setVersionAfterUpdateModalRelease": true,
+    "addDefaultAIProviders": true,
+    "removeMacroIndirection": true,
+    "migrateFileOpeningSettings": true,
+    "backfillFileOpeningDefaults": true,
+    "setProviderModelDiscoveryMode": true,
+    "migrateProviderApiKeysToSecretStorage": true
+  },
   "macros": [
     {
       "name": "Movies",
@@ -187,7 +600,13 @@
             "openFile": false,
             "openFileInMode": "default",
             "fileExistsMode": "Increment the file name",
-            "setFileExistsBehavior": false
+            "setFileExistsBehavior": false,
+            "fileOpening": {
+              "location": "tab",
+              "direction": "vertical",
+              "focus": true,
+              "mode": "default"
+            }
           }
         }
       ],
@@ -239,7 +658,13 @@
             "openFile": false,
             "openFileInMode": "default",
             "fileExistsMode": "Increment the file name",
-            "setFileExistsBehavior": false
+            "setFileExistsBehavior": false,
+            "fileOpening": {
+              "location": "tab",
+              "direction": "vertical",
+              "focus": true,
+              "mode": "default"
+            }
           }
         }
       ],
@@ -290,7 +715,13 @@
             "openFile": false,
             "openFileInMode": "default",
             "fileExistsMode": "Increment the file name",
-            "setFileExistsBehavior": false
+            "setFileExistsBehavior": false,
+            "fileOpening": {
+              "location": "tab",
+              "direction": "vertical",
+              "focus": true,
+              "mode": "default"
+            }
           }
         }
       ],
@@ -341,7 +772,13 @@
             "openFile": false,
             "openFileInMode": "default",
             "fileExistsMode": "Increment the file name",
-            "setFileExistsBehavior": false
+            "setFileExistsBehavior": false,
+            "fileOpening": {
+              "location": "tab",
+              "direction": "vertical",
+              "focus": true,
+              "mode": "default"
+            }
           }
         }
       ],
@@ -383,7 +820,13 @@
             "openFile": false,
             "openFileInMode": "default",
             "fileExistsMode": "Append to the bottom of the file",
-            "setFileExistsBehavior": true
+            "setFileExistsBehavior": true,
+            "fileOpening": {
+              "location": "tab",
+              "direction": "vertical",
+              "focus": true,
+              "mode": "default"
+            }
           }
         },
         {
@@ -418,69 +861,17 @@
             "openFile": false,
             "openFileInMode": "default",
             "fileExistsMode": "Overwrite the file",
-            "setFileExistsBehavior": true
+            "setFileExistsBehavior": true,
+            "fileOpening": {
+              "location": "tab",
+              "direction": "vertical",
+              "focus": true,
+              "mode": "default"
+            }
           }
         }
       ],
       "runOnStartup": false
     }
-  ],
-  "inputPrompt": "multi-line",
-  "devMode": false,
-  "templateFolderPath": "_templates",
-  "announceUpdates": true,
-  "version": "1.13.2",
-  "disableOnlineFeatures": true,
-  "enableRibbonIcon": false,
-  "ai": {
-    "defaultModel": "Ask me",
-    "defaultSystemPrompt": "As an AI assistant within Obsidian, your primary goal is to help users manage their ideas and knowledge more effectively. Format your responses using Markdown syntax. Please use the [[Obsidian]] link format. You can write aliases for the links by writing [[Obsidian|the alias after the pipe symbol]]. To use mathematical notation, use LaTeX syntax. LaTeX syntax for larger equations should be on separate lines, surrounded with double dollar signs ($$). You can also inline math expressions by wrapping it in $ symbols. For example, use $$w_{ij}^{\text{new}}:=w_{ij}^{\text{current}}+etacdotdelta_jcdot x_{ij}$$ on a separate line, but you can write \"($eta$ = learning rate, $delta_j$ = error term, $x_{ij}$ = input)\" inline.",
-    "promptTemplatesFolderPath": "",
-    "showAssistant": true,
-    "providers": [
-      {
-        "name": "OpenAI",
-        "endpoint": "https://api.openai.com/v1",
-        "apiKey": "",
-        "models": [
-          {
-            "name": "gpt-3.5-turbo",
-            "maxTokens": 4096
-          },
-          {
-            "name": "gpt-3.5-turbo-16k",
-            "maxTokens": 16384
-          },
-          {
-            "name": "gpt-3.5-turbo-1106",
-            "maxTokens": 16385
-          },
-          {
-            "name": "gpt-4",
-            "maxTokens": 8192
-          },
-          {
-            "name": "gpt-4-32k",
-            "maxTokens": 32768
-          },
-          {
-            "name": "gpt-4-1106-preview",
-            "maxTokens": 128000
-          },
-          {
-            "name": "text-davinci-003",
-            "maxTokens": 4096
-          }
-        ]
-      }
-    ]
-  },
-  "migrations": {
-    "migrateToMacroIDFromEmbeddedMacro": true,
-    "useQuickAddTemplateFolder": true,
-    "incrementFileNameSettingMoveToDefaultBehavior": true,
-    "mutualExclusionInsertAfterAndWriteToBottomOfFile": true,
-    "setVersionAfterUpdateModalRelease": true,
-    "addDefaultAIProviders": true
-  }
+  ]
 }

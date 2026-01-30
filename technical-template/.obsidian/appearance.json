@@ -18,7 +18,9 @@
     "time_of_day",
     "headers",
     "view",
-    "properties"
+    "properties",
+    "canvas-candy",
+    "heatmap_custom_styling"
   ],
   "translucency": false,
   "interfaceFontFamily": "Inter",

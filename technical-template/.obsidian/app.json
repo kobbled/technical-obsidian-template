@@ -3,5 +3,8 @@
   "readableLineLength": true,
   "alwaysUpdateLinks": true,
   "defaultViewMode": "preview",
-  "propertiesInDocument": "source"
+  "propertiesInDocument": "hidden",
+  "showUnsupportedFiles": false,
+  "attachmentFolderPath": "./",
+  "promptDelete": false
 }
