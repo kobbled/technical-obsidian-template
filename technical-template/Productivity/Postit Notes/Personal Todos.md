@@ -1,5 +1,5 @@
 ---
-cssClass: stickies
+cssClasses: stickies, hide-properties
 ---
 
 ```tasks
