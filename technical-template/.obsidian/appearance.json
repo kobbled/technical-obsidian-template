@@ -20,7 +20,8 @@
     "view",
     "properties",
     "canvas-candy",
-    "heatmap_custom_styling"
+    "heatmap_custom_styling",
+    "bases-cards"
   ],
   "translucency": false,
   "interfaceFontFamily": "Inter",

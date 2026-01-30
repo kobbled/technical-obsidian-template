@@ -1,14 +1,42 @@
+filters:
+  and:
+    - file.inFolder("examples/movies")
+formulas:
+  packed_movie: |-
+    [
+    link("c: title", file.name),
+    link("c: subtitle",
+      if(year, year.toString() + if(rating, "  ·  ★ " + rating.toString() + "/10", ""), "")
+    ),
+    link("c: link-icon", [link(imdburl)]),
+    link("c: image-overlay align-bottom-right",
+      link("c: stack-vertical gap-smaller margin-small",
+        [
+          link("c: pill margin-small " + if(watched, "pill-watched", "pill-unwatched"),
+            if(watched, "✓ Watched", "Unwatched")
+          ),
+          link("c: pill margin-small",
+            if(ratingImdb, "IMDb " + ratingImdb.toString(), "")
+          )
+        ]
+      )
+    ),
+    link("c: image-overlay align-top-left",
+      link("c: stack-vertical gap-smaller margin-small",
+        if(genre,
+          genre.map(link("c: tag font-smaller", value.toString())),
+          ""
+        )
+      )
+    )
+    ]
+  spacer_1: ""
 views:
   - type: cards
     name: Movies
-    filters:
-      and:
-        - file.inFolder("examples/movies")
     order:
-      - file.name
-      - year
-      - ratingImdb
-      - rating
+      - formula.packed_movie
+      - formula.spacer_1
     sort:
       - property: rating
         direction: DESC

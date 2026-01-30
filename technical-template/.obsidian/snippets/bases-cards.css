@@ -1,0 +1,199 @@
+/*
+ * Bases Cards Styling
+ * Adapted from: https://github.com/EzraMarks/obsidian-bases-css-guide
+ *
+ * Uses the "property packing" technique for advanced card layouts.
+ *
+ * Conventions:
+ *   - Formula properties prefixed with "packed_" for packed display
+ *   - Formula properties prefixed with "spacer_" for vertical space
+ *   - Link hrefs prefixed with "c:" act as CSS class selectors
+ */
+
+
+/* ======== Core Setup ======== */
+
+/* Allow overflow so overlay elements can use absolute positioning */
+.bases-cards-property[data-property^="formula.packed"] .bases-cards-line,
+.bases-cards-property[data-property^="formula.packed"] {
+    overflow: visible;
+}
+
+/* Preserve normal formatting when packed properties appear in title position */
+.bases-cards-property.mod-title[data-property^="formula.packed"] {
+    --link-color: revert;
+    --link-unresolved-color: revert;
+    --link-unresolved-opacity: revert;
+    --link-decoration: revert;
+    --link-weight: revert;
+    pointer-events: revert;
+    font-weight: revert;
+}
+
+/* Remove link styling from "c:" prefixed hrefs — these are CSS selectors, not real links */
+.bases-cards-property[data-property^="formula.packed"] a[href^="c:"] {
+    color: var(--text-normal);
+    pointer-events: none;
+    text-decoration: none;
+}
+
+/* Hide spacer properties — they only exist to add card height */
+.bases-cards-property[data-property^="formula.spacer"] {
+    display: none;
+}
+
+
+/* ======== Layout Utilities ======== */
+
+.bases-cards-item {
+    --bases-cards-bottom-offset: calc(var(--bases-cards-line-height) + 8px);
+}
+
+/* Theme-aware overlay colors */
+.theme-light {
+    --custom-bases-overlay-background-color: color-mix(in srgb, var(--text-normal) 70%, transparent);
+    --custom-bases-overlay-text-color: var(--background-primary);
+}
+
+.theme-dark {
+    --custom-bases-overlay-background-color: var(--background-primary);
+    --custom-bases-overlay-text-color: var(--text-normal);
+}
+
+/* image-overlay: positions a container over the card's cover image.
+   Uses 2/3 aspect ratio for movie posters. Change to 1 for square album art. */
+.bases-cards-property[data-property^="formula.packed"] a[href~="image-overlay"] {
+    position: absolute;
+    left: 0;
+    bottom: var(--bases-cards-bottom-offset);
+    display: flex;
+    width: 100%;
+    aspect-ratio: 2 / 3;
+}
+
+/* Corner alignment helpers */
+.bases-cards-property[data-property^="formula.packed"] a[href~="align-top-left"] {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.bases-cards-property[data-property^="formula.packed"] a[href~="align-top-right"] {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.bases-cards-property[data-property^="formula.packed"] a[href~="align-bottom-left"] {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.bases-cards-property[data-property^="formula.packed"] a[href~="align-bottom-right"] {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+/* Vertical stack for grouped elements */
+.bases-cards-property[data-property^="formula.packed"] a[href~="stack-vertical"] > .value-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.bases-cards-property[data-property^="formula.packed"] a[href~="gap-small"] > .value-list-container {
+    gap: var(--size-2-2);
+}
+
+.bases-cards-property[data-property^="formula.packed"] a[href~="gap-smaller"] > .value-list-container {
+    gap: var(--size-2-1);
+}
+
+.bases-cards-property[data-property^="formula.packed"] a[href~="margin-small"] {
+    margin: var(--size-2-3);
+}
+
+.bases-cards-property[data-property^="formula.packed"] a[href~="font-smaller"] {
+    font-size: var(--font-smaller);
+}
+
+
+/* ======== Typography ======== */
+
+/* Title: bold, 2-line clamp */
+.bases-cards-property[data-property^="formula.packed"] a[href~="title"] {
+    margin-bottom: var(--size-2-2);
+    font-weight: calc(var(--font-weight) + var(--bold-modifier));
+    color: var(--text-normal);
+    font-size: 0.9em;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-wrap: pretty;
+}
+
+/* Subtitle: single line with ellipsis, leaves room for link icon */
+.bases-cards-property[data-property^="formula.packed"] a[href~="subtitle"] {
+    font-size: var(--font-small);
+    line-height: 2;
+    display: block;
+    width: calc(100% - 32px);
+}
+
+.bases-cards-property[data-property^="formula.packed"] a[href~="subtitle"] .value-list-container {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* ======== Components ======== */
+
+/* Pill: rounded overlay badge */
+.bases-cards-property[data-property^="formula.packed"] a[href~="pill"]:not(:empty) {
+    padding: 4px 10px;
+    background: var(--custom-bases-overlay-background-color);
+    color: var(--custom-bases-overlay-text-color);
+    font-weight: 600;
+    border-radius: 9999px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: 0.8rem;
+}
+
+/* Watched pill — green */
+.bases-cards-property[data-property^="formula.packed"] a[href~="pill-watched"]:not(:empty) {
+    background: color-mix(in srgb, #4ade80 80%, black 20%);
+    color: #052e16;
+}
+
+/* Unwatched pill — amber */
+.bases-cards-property[data-property^="formula.packed"] a[href~="pill-unwatched"]:not(:empty) {
+    background: color-mix(in srgb, #fbbf24 80%, black 20%);
+    color: #451a03;
+}
+
+/* Tag: accent-colored rounded label */
+.bases-cards-property[data-property^="formula.packed"] a[href~="tag"] {
+    display: inline-block;
+    background-color: color-mix(in srgb, var(--color-accent-2) 56%, black 22%);
+    color: color-mix(in srgb, var(--color-accent-2) 10%, white 100%);
+    box-shadow: var(--shadow-s);
+    border-radius: var(--tag-radius);
+    padding: var(--tag-padding-y) var(--tag-padding-x);
+}
+
+/* Link icon: clickable external link positioned at bottom-right of text area */
+.bases-cards-property[data-property^="formula.packed"] a[href~="link-icon"] a {
+    pointer-events: auto;
+    position: absolute;
+    right: 8px;
+    bottom: -46px;
+    width: 18px;
+    aspect-ratio: 1;
+    background-color: var(--text-normal);
+    color: var(--text-normal);
+    mask-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>');
+}
