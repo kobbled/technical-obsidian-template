@@ -8,9 +8,10 @@ cssclass: wide-page, minimal-float, centerImg, text-justify
 
 ## General linear model
 
-> [!blank-container|right-large] Relationship of Data, Information and Intelligence
-> ![linear regression|400](https://data-science-blog.com/wp-content/uploads/2022/05/linear-regression-error-term.png)
-> **Fig 1**: Example of [simple linear regression](https://en.wikipedia.org/wiki/Simple_linear_regression "Simple linear regression"), which has one independent variable
+> [!blank-container|right] Relationship of Data, Information and Intelligence
+> ![linear regression|300](https://data-science-blog.com/wp-content/uploads/2022/05/linear-regression-error-term.png)
+> **Fig 1**: Example of [simple linear regression](https://en.wikipedia.org/wiki/Simple_linear_regression "Simple linear regression")
+>       which has one independent variable
 
 
 In [statistics](https://en.wikipedia.org/wiki/Statistics "Statistics"), **linear regression** is a [linear](https://en.wikipedia.org/wiki/Linearity "Linearity") approach for modelling the relationship between a [scalar](https://en.wikipedia.org/wiki/Scalar_(mathematics) "Scalar (mathematics)") response and one or more explanatory variables (also known as [dependent and independent variables](https://en.wikipedia.org/wiki/Dependent_and_independent_variables "Dependent and independent variables")). The case of one explanatory variable is called _[simple linear regression](https://en.wikipedia.org/wiki/Simple_linear_regression "Simple linear regression")_; for more than one, the process is called **multiple linear regression**.<sup id="cite_ref-Freedman09_1-0"><a href="https://en.wikipedia.org/wiki/Linear_regression#cite_note-Freedman09-1">[1]</a></sup> This term is distinct from [multivariate linear regression](https://en.wikipedia.org/wiki/Multivariate_linear_regression "Multivariate linear regression"), where multiple [correlated](https://en.wikipedia.org/wiki/Correlation_and_dependence "Correlation and dependence") dependent variables are predicted, rather than a single scalar variable.<sup id="cite_ref-2"><a href="https://en.wikipedia.org/wiki/Linear_regression#cite_note-2">[2]</a></sup>
