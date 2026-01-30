@@ -11,13 +11,14 @@
             "id": "7b248cac960178f9",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "examples/Movie Database.base",
-                "viewName": "Movies"
+                "file": "examples/Text Justify.md",
+                "mode": "preview",
+                "source": true
               },
-              "icon": "lucide-layout-grid",
-              "title": "Movie Database"
+              "icon": "lucide-file",
+              "title": "Text Justify"
             }
           }
         ]
@@ -107,7 +108,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "examples/Movie Database.base",
+                "file": "examples/Text Justify.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -135,7 +136,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of Movie Database"
+              "title": "Graph of Text Justify"
             }
           }
         ],
@@ -180,10 +181,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "examples/Movie Database.base"
+                "file": "examples/Text Justify.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for Movie Database"
+              "title": "File properties for Text Justify"
             }
           }
         ],
@@ -221,7 +222,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "examples/Movie Database.base",
+                "file": "examples/Text Justify.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -231,7 +232,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Movie Database"
+              "title": "Backlinks for Text Justify"
             }
           },
           {
@@ -240,12 +241,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "examples/Movie Database.base",
+                "file": "examples/Text Justify.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Movie Database"
+              "title": "Outgoing links from Text Justify"
             }
           },
           {
@@ -269,13 +270,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "examples/Movie Database.base",
+                "file": "examples/Text Justify.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Movie Database"
+              "title": "Outline of Text Justify"
             }
           },
           {
@@ -321,8 +322,16 @@
   },
   "active": "7b248cac960178f9",
   "lastOpenFiles": [
-    "examples/List Cards.md",
+    "_templates/webclipper/untappd-beer-clipper-clipper.json",
+    "_templates/webclipper/realtor.ca-listing-photo-scrape-clipper.json",
+    "_templates/webclipper/realtor.ca-listing-clipper.json",
+    "_templates/webclipper/medium-clipper.json",
+    "_templates/webclipper/boardGameGeek-clipper.json",
+    "_templates/webclipper/adafruit-product-clipper-clipper.json",
+    "_templates/webclipper",
+    "examples/Multi Column Callout.md",
     "examples/Movie Database.base",
+    "examples/List Cards.md",
     "examples/movies/Nausicaä of the Valley of the Wind.md",
     "Dashboard.md",
     "examples/Movie Database (Bases).base",
@@ -336,7 +345,6 @@
     "_templates/Grocery List Template.md",
     "examples/Movie Database.md",
     "examples/Book Database.md",
-    "examples/Multi Column Callout.md",
     "examples/Video Games Database.md",
     "examples/Text Justify.md",
     "examples/Image Slideshow.md",
@@ -351,12 +359,6 @@
     "examples/movies/Nausicaa of the Valley of the Wind.md",
     "Personal/Media/libraries/movies",
     "Personal/Media/libraries",
-    "Personal/Media",
-    "Personal",
-    "lists/archive",
-    "lists",
-    "examples/tv",
-    "_scripts/tv.js",
     "img/papers/schopphovenEHLAExtremeHighSpeed2017/image-2-x198-y329.png",
     "img/papers/rombachHighResolutionImageSynthesis2022/image-4-x308-y597.png",
     "Issue Tracker/assets/showcase.jpg",

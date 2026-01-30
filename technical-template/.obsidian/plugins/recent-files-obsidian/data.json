@@ -1,6 +1,14 @@
 {
   "recentFiles": [
     {
+      "basename": "Text Justify",
+      "path": "examples/Text Justify.md"
+    },
+    {
+      "basename": "Multi Column Callout",
+      "path": "examples/Multi Column Callout.md"
+    },
+    {
       "basename": "Movie Database",
       "path": "examples/Movie Database.base"
     },

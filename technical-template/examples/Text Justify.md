@@ -1,5 +1,3 @@
-
-
 ---
 cssclass: wide-page, minimal-float, centerImg, text-justify
 ---

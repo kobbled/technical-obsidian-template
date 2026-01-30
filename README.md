@@ -15,7 +15,9 @@ as well as examples for Temaples, and dataviews:
 
 ## Features
 
-### Periodic Task Tracking
+### Periodic (Daily) Notes
+
+### Task/Habit Tracking
 
 ![](img/tasks.PNG)
 
@@ -27,34 +29,27 @@ as well as examples for Temaples, and dataviews:
 
 ![](img/postit_notes.PNG)
 
-### Image Grids
+### Image Styling & Tools
 
 ![](img/image-gallery.PNG)
 
-### Cards
+### Media Library Databases Using Bases
 
-![](img/list-cards.PNG)
+### Collections Management with Bases
 
-### Callout columns
+### Auto MOC generation
 
-![](img/multi-column.PNG)
-
-### Text Justify
-
-![](img/text-justify.PNG)
-
-### Dataview Cards
-
-![](img/movie_cards2.PNG)
-
-### Slideshow
-
-![](img/slidshow2.PNG)
-
-### Zotero Import
+### Zotero Paper Import
 
 ![](img/zotero_import2.PNG)
-
-### Zotero MOC
-
 ![](img/zotero-MOC.PNG)
+
+### Grocery List Manager
+
+### Cooklang Receipes Integration
+
+### External cloud folder linking
+
+### Obsidian Web Clipper AI Imports
+
+#### Realtor
