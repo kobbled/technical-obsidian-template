@@ -1,0 +1,17 @@
+views:
+  - type: cards
+    name: Movies
+    filters:
+      and:
+        - file.inFolder("examples/movies")
+    order:
+      - file.name
+      - year
+      - ratingImdb
+      - rating
+    sort:
+      - property: rating
+        direction: DESC
+      - property: ratingImdb
+        direction: DESC
+    image: posterurl
