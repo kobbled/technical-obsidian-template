@@ -1,23 +1,21 @@
 ---
 title: EHLA – Extreme High-Speed Laser Material Deposition – Economical and effective protection against corrosion and wear
-tag: [paperitem]
+tags: [paperitem, additive/cladding, materials/wear, materials/corrosion, additive/process/DED, additive/process/EHLA]
 alias: schopphovenEHLAExtremeHighSpeed2017
+DOI: 10.1002/latj.201700020
+Ref_Links: 
+Status: paper/status/read
+Priority: 
+Importance: 📚
+Authors: [Thomas Schopphoven, Andres Gasser, Gerhard Backes]
+Year: 2017
+Date_Added: 2022-12-20
+Date_Read: 2022-11-11
+Link: https://onlinelibrary.wiley.com/doi/abs/10.1002/latj.201700020
+Zotero: zotero://select/library/items/XX4J8NAF
 ---
 
-[[Papers Management Centre]]
-
-**Authors**:: Thomas Schopphoven, Andres Gasser, Gerhard Backes
-**Year**:: 2017
-**Date_Added**:: 2022-12-20
-**Date_Read**:: 2023-02-01
-**Link**:: https://onlinelibrary.wiley.com/doi/abs/10.1002/latj.201700020
-**DOI**:: 10.1002/latj.201700020
-**Ref_Links**:: 
-**Status**::  #paper/status/read
-**Priority**:: 
-**Importance**:: 📚
-**Tags**:: #materials/wear, #additive/cladding, #materials/corrosion, #additive/process/DED, #additive/process/EHLA
-**Zotero**:: [Schopphoven et al. - 2017 - EHLA Extreme High-Speed Laser Material Deposition.pdf](zotero://select/library/items/XX4J8NAF)
+[[Papers MOC]]
 
 ## Abstract
 
@@ -28,7 +26,7 @@ Special coatings protect components against corrosion and wear. However, standar
 		> [Page 1](zotero://open-pdf/library/items/XX4J8NAF?page=1&annotation=NHYAJ7BC)
 
 	
-![[img/papers/schopphovenEHLAExtremeHighSpeed2017/UQJXV9QT.png]]
+![[img/papers/schopphovenEHLAExtremeHighSpeed2017/image-2-x198-y329.png]]
 
 	
 > "_EHLA increases the feed rate from 0.5 to 2 meters per minute to between 50 and 500 meters per minute, thus coating a component 100 to 250 times faster than before_"
@@ -69,4 +67,4 @@ Special coatings protect components against corrosion and wear. However, standar
 	
 
 
-%% Import Date: 2023-02-25T23:25:48.614-07:00 %%
+%% Import Date: 2023-08-18T22:55:14.643-06:00 %%
