@@ -1,0 +1,45 @@
+filters:
+  and:
+    - file.inFolder("media/video games")
+formulas:
+  packed_game: |-
+    [
+    link("c: title", file.name),
+    link("c: subtitle",
+      if(developer, developer + if(year, "  ·  " + year.toString(), ""), if(year, year.toString(), ""))
+    ),
+    link("c: link-icon", [link(url)]),
+    link("c: image-overlay align-bottom-right",
+      link("c: stack-vertical gap-smaller margin-small",
+        [
+          link("c: pill margin-small " + if(played, "pill-watched", "pill-unwatched"),
+            if(played, "✓ Played", "Unplayed")
+          ),
+          link("c: pill margin-small",
+            if(rating, "★ " + rating.toString() + "/10", "")
+          )
+        ]
+      )
+    ),
+    link("c: image-overlay align-top-left",
+      link("c: stack-vertical gap-smaller margin-small",
+        if(genre,
+          genre.map(link("c: tag font-smaller", value.toString())),
+          ""
+        )
+      )
+    )
+    ]
+  spacer_1: ""
+views:
+  - type: cards
+    name: Video Games
+    order:
+      - formula.packed_game
+      - formula.spacer_1
+    sort:
+      - property: rating
+        direction: DESC
+      - property: year
+        direction: DESC
+    image: posterurl

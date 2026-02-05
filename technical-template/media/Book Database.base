@@ -1,0 +1,45 @@
+filters:
+  and:
+    - file.inFolder("media/books")
+formulas:
+  packed_book: |-
+    [
+    link("c: title", file.name),
+    link("c: subtitle",
+      if(Authors, Authors + if(year, "  ·  " + year.toString(), ""), "")
+    ),
+    link("c: link-icon", [link(url)]),
+    link("c: image-overlay align-bottom-right",
+      link("c: stack-vertical gap-smaller margin-small",
+        [
+          link("c: pill margin-small " + if(read, "pill-watched", "pill-unwatched"),
+            if(read, "✓ Read", "Unread")
+          ),
+          link("c: pill margin-small",
+            if(rating, "★ " + rating.toString() + "/10", "")
+          )
+        ]
+      )
+    ),
+    link("c: image-overlay align-top-left",
+      link("c: stack-vertical gap-smaller margin-small",
+        if(genre,
+          genre.map(link("c: tag font-smaller", value.toString())),
+          ""
+        )
+      )
+    )
+    ]
+  spacer_1: ""
+views:
+  - type: cards
+    name: Books
+    order:
+      - formula.packed_book
+      - formula.spacer_1
+    sort:
+      - property: rating
+        direction: DESC
+      - property: year
+        direction: DESC
+    image: posterurl
