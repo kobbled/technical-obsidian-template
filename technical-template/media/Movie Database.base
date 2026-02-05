@@ -1,6 +1,6 @@
 filters:
   and:
-    - file.inFolder("examples/movies")
+    - file.inFolder("media/movies")
 formulas:
   packed_movie: |-
     [
