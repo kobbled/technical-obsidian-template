@@ -3,7 +3,15 @@
     "allow": [
       "Bash(ls:*)",
       "Bash(xargs:*)",
-      "WebFetch(domain:github.com)"
+      "WebFetch(domain:github.com)",
+      "Bash(dir:*)",
+      "Bash(git status:*)",
+      "Bash(git check-ignore:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
+    ],
+    "additionalDirectories": [
+      "D:\\Documents\\notes"
     ]
   }
 }

@@ -11,14 +11,13 @@
             "id": "7b248cac960178f9",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "bases",
               "state": {
-                "file": "examples/Text Justify.md",
-                "mode": "preview",
-                "source": true
+                "file": "media/Movie Database.base",
+                "viewName": "Movies"
               },
-              "icon": "lucide-file",
-              "title": "Text Justify"
+              "icon": "lucide-layout-grid",
+              "title": "Movie Database"
             }
           }
         ]
@@ -81,8 +80,8 @@
             "state": {
               "type": "recent-files",
               "state": {},
-              "icon": "clock",
-              "title": "Recent Files"
+              "icon": "lucide-ghost",
+              "title": "recent-files"
             }
           }
         ]
@@ -108,7 +107,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "examples/Text Justify.md",
+                "file": "media/Movie Database.base",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -136,7 +135,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of Text Justify"
+              "title": "Graph of Movie Database"
             }
           }
         ],
@@ -181,14 +180,13 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "examples/Text Justify.md"
+                "file": "media/Movie Database.base"
               },
               "icon": "lucide-info",
-              "title": "File properties for Text Justify"
+              "title": "File properties for Movie Database"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       },
       {
         "id": "1aeac5319ea362cd",
@@ -310,55 +308,55 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "workspaces:Manage workspace layouts": false,
+      "audio-recorder:Start/stop recording": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "obsidian-excalidraw-plugin:New drawing": false,
       "open-vscode:VSCode": false,
       "templater-obsidian:Templater": false,
-      "homepage:Open homepage": false,
-      "audio-recorder:Start/stop recording": false,
       "periodic-notes:Open today": false,
+      "homepage:Open homepage": false,
       "local-media-embedder:Toggle media server": false
     }
   },
   "active": "7b248cac960178f9",
   "lastOpenFiles": [
-    "_templates/webclipper/untappd-beer-clipper-clipper.json",
-    "_templates/webclipper/realtor.ca-listing-photo-scrape-clipper.json",
-    "_templates/webclipper/realtor.ca-listing-clipper.json",
-    "_templates/webclipper/medium-clipper.json",
-    "_templates/webclipper/boardGameGeek-clipper.json",
-    "_templates/webclipper/adafruit-product-clipper-clipper.json",
-    "_templates/webclipper",
-    "examples/Multi Column Callout.md",
-    "examples/Movie Database.base",
-    "examples/List Cards.md",
-    "examples/movies/Nausicaä of the Valley of the Wind.md",
+    "config.md",
+    "Spaces/Example Project/README.md",
+    "Spaces/Example Project",
+    "Spaces",
+    "examples/recipes/Example Recipe.cook",
+    "examples/recipes/Example Recipe.cook.tmp.19576.1770277392780",
+    "examples/recipes",
+    "examples/games/Example TTRPG.md",
+    "examples/games/Example TTRPG.md.tmp.19576.1770277385362",
+    "examples/games/Example Board Game.md",
+    "examples/games",
+    "examples",
+    "_agent-docs/bases-databases.md",
+    "_agent-docs/vault_features.md",
+    "_agent-docs/metadata-schema.md",
+    "_agent-docs/metadata-schema.md.tmp.19576.1770277273904",
+    "lists/archive/Grocery List-2026-02-05.md",
+    "_agent-docs/scripts.md",
+    "_agent-docs/templates.md",
+    "_agent-docs/templates.md.tmp.19576.1770277199522",
+    "_agent-docs/css-snippets.md",
+    "_agent-docs/plugins.md",
+    "_agent-docs/gap-analysis.md",
+    "media/Video Games Database.md",
+    "Note Tools/Text Justify.md",
+    "Note Tools/Multi Column Callout.md",
+    "media/Book Database.md",
+    "Note Tools/Image Gallery.md",
+    "Note Tools/List Cards.md",
+    "examples/Image Slideshow.md",
+    "media/movies/Nausicaä of the Valley of the Wind.md",
     "Dashboard.md",
-    "examples/Movie Database (Bases).base",
     "Home.md",
     "Productivity/Weekly Notes/2026-W05.md",
     "Productivity/Daily Notes/2026-01-29.md",
     "Productivity/Postit Board.canvas",
-    "examples/books/Neuromancer.md",
-    "lists/Grocery List.md",
-    "_templates/Gorcery Archiver.md",
-    "_templates/Grocery List Template.md",
-    "examples/Movie Database.md",
-    "examples/Book Database.md",
-    "examples/Video Games Database.md",
-    "examples/Text Justify.md",
-    "examples/Image Slideshow.md",
-    "Personal/Media/libraries/movies/High and Low.md",
-    "examples/movies/High and Low.md",
-    "examples/movies/Man Bites Dog.md",
-    "examples/Image Gallery.md",
-    "examples/books/The Three-Body Problem.md",
-    "examples/movies/The 400 Blows.md",
-    "examples/movies/Oldboy.md",
-    "examples/movies/Mr. Nobody.md",
-    "examples/movies/Nausicaa of the Valley of the Wind.md",
-    "Personal/Media/libraries/movies",
-    "Personal/Media/libraries",
+    "media/books/Neuromancer.md",
     "img/papers/schopphovenEHLAExtremeHighSpeed2017/image-2-x198-y329.png",
     "img/papers/rombachHighResolutionImageSynthesis2022/image-4-x308-y597.png",
     "Issue Tracker/assets/showcase.jpg",
