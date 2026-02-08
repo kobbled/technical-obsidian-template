@@ -14,8 +14,10 @@ status: [{{VALUE:status}}]
 hours-played: {{VALUE:hoursPlayed}}
 tags: [video-games, {{VALUE:tag}}]
 cssclasses: [no-caption]
-posterurl: {{VALUE:thumbnail}} 
-install-location: 
+posterurl: {{VALUE:thumbnail}}
+install-location:
+price: {{VALUE:price}}
+date: {{VALUE:date}}
 ---
 
 ## Info
