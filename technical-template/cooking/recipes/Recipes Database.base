@@ -1,0 +1,35 @@
+filters:
+  and:
+    - file.hasTag("#personal/food/cooking")
+formulas:
+  packed_recipe: |-
+    [
+    link("c: title", file.name),
+    link("c: subtitle",
+      if(type, type.toString(), "")
+    )
+    ]
+  spacer_1: ""
+views:
+  - type: cards
+    name: Recipes
+    filters:
+      and:
+        - "!posterurl.isEmpty()"
+    order:
+      - formula.packed_recipe
+      - formula.spacer_1
+    sort:
+      - property: type
+        direction: ASC
+      - property: file.name
+        direction: ASC
+    image: posterurl
+  - type: table
+    name: Recipe List
+    order:
+      - file.link
+      - type
+    sort:
+      - property: type
+        direction: ASC
