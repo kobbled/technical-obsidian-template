@@ -1,6 +1,6 @@
 ---
 category: books
-Authors: {{VALUE:authors}}
+Authors: [{{VALUE:authors}}]
 genre: [{{VALUE:genres}}]
 platform: [{{VALUE:platform}}]
 year: {{VALUE:release}}
@@ -12,10 +12,12 @@ userRating: {{VALUE:userRating}}
 read: {{VALUE:read}}
 status: [{{VALUE:status}}]
 pages: {{VALUE:pages}}
-tags: [books]
-cssClass: no-caption
+tags: [books, {{VALUE:tag}}]
+cssclasses: [no-caption]
 posterurl: {{VALUE:thumbnail}}
 ---
+
+## Info
 
 **poster**::
 ![poster|300]({{VALUE:thumbnail}})

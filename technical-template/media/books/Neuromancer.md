@@ -1,6 +1,6 @@
 ---
 category: books
-Authors: William Gibson
+Authors: ["William Gibson"]
 genre:
   - Fiction
 platform:

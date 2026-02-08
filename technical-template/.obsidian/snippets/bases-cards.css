@@ -175,6 +175,24 @@
     color: #451a03;
 }
 
+/* Reading pill — blue */
+.bases-cards-property[data-property^="formula.packed"] a[href~="pill-reading"]:not(:empty) {
+    background: color-mix(in srgb, #60a5fa 80%, black 20%);
+    color: #172554;
+}
+
+/* Bought pill — violet */
+.bases-cards-property[data-property^="formula.packed"] a[href~="pill-bought"]:not(:empty) {
+    background: color-mix(in srgb, #a78bfa 80%, black 20%);
+    color: #1e1b4b;
+}
+
+/* Dropped pill — red */
+.bases-cards-property[data-property^="formula.packed"] a[href~="pill-dropped"]:not(:empty) {
+    background: color-mix(in srgb, #f87171 80%, black 20%);
+    color: #450a0a;
+}
+
 /* Tag: accent-colored rounded label */
 .bases-cards-property[data-property^="formula.packed"] a[href~="tag"] {
     display: inline-block;

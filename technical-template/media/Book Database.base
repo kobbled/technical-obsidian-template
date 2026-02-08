@@ -6,27 +6,43 @@ formulas:
     [
     link("c: title", file.name),
     link("c: subtitle",
-      if(Authors, Authors + if(year, "  ·  " + year.toString(), ""), "")
+      if(Authors, Authors.join(", "), "") + if(year, "  ·  " + year.toString(), "")
     ),
     link("c: link-icon", [link(url)]),
     link("c: image-overlay align-bottom-right",
       link("c: stack-vertical gap-smaller margin-small",
         [
-          link("c: pill margin-small " + if(read, "pill-watched", "pill-unwatched"),
-            if(read, "✓ Read", "Unread")
+          link("c: pill margin-small " +
+            if(read, "pill-watched",
+              if(status,
+                if(status.contains(link("reading")), "pill-reading",
+                  if(status.contains(link("dropped")), "pill-dropped",
+                    if(status.contains(link("bought")), "pill-bought", "pill-unwatched")
+                  )
+                ),
+                "pill-unwatched"
+              )
+            ),
+            if(read, "✓ Read",
+              if(status,
+                if(status.contains(link("reading")), "📖 Reading",
+                  if(status.contains(link("dropped")), "✗ Dropped",
+                    if(status.contains(link("bought")), "📦 Bought", "Unread")
+                  )
+                ),
+                "Unread"
+              )
+            )
           ),
           link("c: pill margin-small",
-            if(rating, "★ " + rating.toString() + "/10", "")
+            if(userRating, "★ " + userRating.toString(), "")
           )
         ]
       )
     ),
     link("c: image-overlay align-top-left",
       link("c: stack-vertical gap-smaller margin-small",
-        if(genre,
-          genre.map(link("c: tag font-smaller", value.toString())),
-          ""
-        )
+        if(pages, [link("c: tag font-smaller", pages.toString() + " pages")], "")
       )
     )
     ]
@@ -38,7 +54,7 @@ views:
       - formula.packed_book
       - formula.spacer_1
     sort:
-      - property: rating
+      - property: userRating
         direction: DESC
       - property: year
         direction: DESC

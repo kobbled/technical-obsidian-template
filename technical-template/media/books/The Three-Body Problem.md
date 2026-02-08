@@ -1,6 +1,6 @@
 ---
 category: books
-Authors: Cixin Liu
+Authors: ["Cixin Liu"]
 genre: [Fiction]
 year: 2014
 url: https://www.goodreads.com/search?qid=&q=9781466853447

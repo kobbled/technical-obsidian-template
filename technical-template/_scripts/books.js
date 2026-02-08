@@ -75,32 +75,46 @@ async function start(params, settings) {
 
 	const ISBN = getISBN(selectedBook);
 
+	const userPlatform = await QuickAdd.quickAddApi.checkboxPrompt(["Kobo", "Audible", "Physical"]);
 	const isRead = await QuickAdd.quickAddApi.yesNoPrompt("Read ?");
-	let myRating = "";
+
+	let readStatus = [" "];
+	let myRating = " ";
 
 	// If book already read, add a rating to it.
 	if(isRead){
+		readStatus = ["read"];
 		myRating = await QuickAdd.quickAddApi.inputPrompt("Rating", null, "");
+	} else {
+		readStatus = await QuickAdd.quickAddApi.checkboxPrompt(["reading", "on-hold", "to-read", "dropped", "bought", "wishlist"]);
 	}
 
 	QuickAdd.variables = {
 		...selectedBook,
 		fileName: replaceIllegalFileNameCharactersInString(selectedBook.title),
 		authors: formatList(selectedBook.authors, true),
-        genres: `${selectedBook.categories ? selectedBook.categories : " "}`,
+		genres: `${selectedBook.categories ? formatList((selectedBook.categories).map(item => "[[" + item + "]]"), true) : " "}`,
+		platform: `${userPlatform ? formatList((userPlatform).map(item => "[[" + item + "]]"), true) : " "}`,
 		isbn10: `${ISBN.ISBN10 ? ISBN.ISBN10 : " "}`,
 		isbn13: `${ISBN.ISBN13 ? ISBN.ISBN13 : " "}`,
-		// An URL to the GoodReads page of the book using its ISBN. 
+		// An URL to the GoodReads page of the book using its ISBN.
 		// May fail if ISBN returned by Google Books is not in Goodreads database.
 		goodreadsURL: `${ISBN.ISBN13 ? GOODREADS_URL + ISBN.ISBN13 : (ISBN.ISBN10 ? GOODREADS_URL + ISBN.ISBN10 : " ")}`,
 		thumbnail: `${selectedBook.imageLinks ? selectedBook.imageLinks.thumbnail : " "}`.replace("http:", "https:"),
 		// Publication date
 		release: `${selectedBook.publishedDate ? (new Date((selectedBook.publishedDate))).getFullYear() : " "}`,
-		// A rating for the read book, /10.
+		// Personal rating, /10.
 		rating: myRating,
-		// Is the book already read ? 1 if yes, 0 otherwise.
+		// Community rating from Google Books API.
+		userRating: `${selectedBook.averageRating ? selectedBook.averageRating : " "}`,
+		// Is the book already read?
 		read: `${isRead ? "true" : "false"}`,
-        pages: `${selectedBook.pageCount ? selectedBook.pageCount : " "}`,
+		status: `${readStatus ? formatList((readStatus).map(item => "[[" + item + "]]"), true) : " "}`,
+		tag: `${selectedBook.categories ? formatList(selectedBook.categories.map(item =>
+			"books/genre/" +
+			item.toLowerCase().replace(/\s+/g, "-").replace(/[()]/g, "")
+		), false) : " "}`,
+		pages: `${selectedBook.pageCount ? selectedBook.pageCount : " "}`,
 	};
 }
 
