@@ -99,6 +99,14 @@ async function start(params, settings) {
 		playStatus = await QuickAdd.quickAddApi.checkboxPrompt(["playing", "on-hold", "downloaded", "dropped", "bought", "wishlist"]);
 	}
 
+	let price = " ";
+	let purchaseDate = " ";
+
+	if (playStatus && (isPlayed || playStatus.includes("bought"))) {
+		price = await QuickAdd.quickAddApi.inputPrompt("Price", null, "");
+		purchaseDate = await QuickAdd.quickAddApi.inputPrompt("Purchase Date", "YYYY-MM-DD", new Date().toISOString().slice(0, 10));
+	}
+
 	const markdownName = replaceIllegalFileNameCharactersInString(selectedGame.name);
 	//log(markdownName);
 
@@ -130,6 +138,8 @@ async function start(params, settings) {
 		installed: `${isInstalled ? "true" : "false"}`,
 		status: `${playStatus ? formatList((playStatus).map(item => "[[" + item + "]]" ), true) : " "}`,
         hoursPlayed: hoursPlayed,
+		price: price,
+		date: purchaseDate,
 	};
 }
 
