@@ -45,6 +45,38 @@ GitHub-style activity heatmaps in Monthly Template using Heatmap Calendar plugin
 - Custom styling via `heatmap_custom_styling.css`
 - Visual year-at-a-glance progress tracking
 
+### Habit Tracking Dashboard
+The Home page includes at-a-glance habit summaries and year-long self-tracking heatmaps powered by three widgets in `Widgets/`.
+
+**Habits Last 7 Days** (`Widgets/Habits Last 7 Days.md`)
+Displays two collapsible panels side-by-side on the Home page:
+- **Status Table** — Dataview table of the last 7 daily notes with per-category emoji indicators (Exercise, Music, Reading, Maker, Art, Entertainment)
+- **Progress Bars** — Rolling 7-day completion counts shown as HTML progress bars against weekly targets
+
+| Category | Habits Included | Weekly Target |
+|----------|----------------|:------------:|
+| Exercise | weights, cardio | 4 |
+| Music | guitar, piano, singing, recording | 3 |
+| Reading | book_reading, article_reading | 3 |
+| Art | modelling, drawing | 2 |
+| Coding | coding | 3 |
+| Maker | electronics, printing | 2 |
+| Entertain | moviestv, videogames | 4 |
+
+**Productivity Heatmap** (`Widgets/Productivity.md`)
+Year-long GitHub-style heatmap (green gradient) showing daily productivity scores (0-10 scale). Each cell links back to its daily note for hover preview.
+
+**Mood Heatmap** (`Widgets/Mood.md`)
+Year-long heatmap (yellow gradient) showing daily mood scores (0-10 scale). Same pattern as the Productivity widget.
+
+**How to use:**
+1. Open or create a daily note using the **New Daily Note** button on the Home page
+2. Toggle habits on/off and set time spent using the sliders that appear
+3. Rate your productivity and mood using the 0-10 progress bars at the top of the daily note
+4. Return to `Home.md` — the **Habit Tracking** section updates automatically with the last 7 days, and the **Self** section shows your year-long productivity and mood trends
+
+**Customizing targets:** Edit the target numbers in `Widgets/Habits Last 7 Days.md` inside the `progress(filternLastCount(...), TARGET)` calls to match your own goals.
+
 ### Post-it Notes
 Sticky note styling for embedded content via `stickies.css`.
 - 5 color variants: yellow, green, purple, cyan, orange

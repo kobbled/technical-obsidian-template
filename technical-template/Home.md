@@ -1,7 +1,10 @@
 ---
-banner: "https://blenderartists.org/uploads/default/original/4X/6/d/a/6daef6949e925d154504824c102a7b0b84a1a2b0.jpeg"
+banner: "![[6daef6949e925d154504824c102a7b0b84a1a2b0.jpeg]]"
 banner_x: 0.49832
-cssClasses: [wide-page, .no-caption, hide-properties]
+cssClasses:
+  - wide-page
+  - .no-caption
+  - hide-properties
 banner_lock: true
 ---
 
@@ -47,23 +50,33 @@ action Periodic Notes: Open monthly note
 class button-monthly-note
 ```
 
-# <center>Categories</center> 
+# <center>Habit Tracking</center>
+---
+
+> [!multi-column]
+> >[!info|wide-2]+ Habits Last 7 Days
+> > ![[Habits Last 7 Days#^1]]
+>
+> >[!info|wide-2]+ Habits Progress
+> >![[Habits Last 7 Days#^2]]
+
+# <center>Categories</center>
 ---
 
 > [!blank]
 > - ### **Personal Notes** #mcl/list-card
-> 	- ![|center](https://e0.pxfuel.com/wallpapers/48/337/desktop-wallpaper-best-star-wars-death-star-interior-background.jpg)
+> 	- ![[desktop-wallpaper-best-star-wars-death-star-interior-background.jpg||center]]
 > 	- [[Personal Projects|Personal]] — #projects
 > 	- [[Journal MOC|Journal]] — #projects
 > 	- [[Life Goals]] — #life 
 > 
 > - ### **Work Notes**
-> 	- ![|center](http://i.gzn.jp/img/2017/12/26/death-star-construction/00_m.jpg) 
+> 	- ![[00_m.jpg||center]] 
 > 	- [[Research]]  — #research
 > 	- [[Papers MOC|Liturature]]  — #paper 
 > 
 > - ### **Hobbies**
-> 	- ![|center](https://images.mubicdn.net/images/film/116658/cache-96839-1445952162/image-w1280.jpg?size=800x)
+> 	- ![[image-w1280.jpg||center]]
 > 	- [[Movie Database]]  — #movies
 
 ----
@@ -90,6 +103,11 @@ class button-monthly-note
 >
 >>[!warning|wide-2]+ Past Due Tasks
 >> ![[Past Due Tasks]]
+
+## Self
+
+![[Productivity#^1]]
+![[Mood#^1]]
 
 ## Papers
 
