@@ -3,7 +3,7 @@ category: video-games
 genre: ["[[Shooter]]", "[[Adventure]]"]
 developer: Naughty Dog
 system: ["[[Playstation 5]]"] 
-platform: ["[[ ]]"]
+platform: ["[[Playstation]]"]
 year: 2020
 modes: ["Single player"]
 url: https://www.igdb.com/games/the-last-of-us-part-ii

@@ -11,13 +11,17 @@
             "id": "fb5e40cd057e9f33",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "canvas",
               "state": {
-                "file": "media/Video Games Database.base",
-                "viewName": "Video Games"
+                "file": "Productivity/Postit Board.canvas",
+                "viewState": {
+                  "x": -20,
+                  "y": 40,
+                  "zoom": 0
+                }
               },
-              "icon": "lucide-layout-grid",
-              "title": "Video Games Database"
+              "icon": "lucide-layout-dashboard",
+              "title": "Postit Board"
             }
           }
         ]
@@ -107,7 +111,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "media/Video Games Database.base",
+                "file": "Productivity/Postit Board.canvas",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -135,7 +139,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of Video Games Database"
+              "title": "Graph of Postit Board"
             }
           }
         ],
@@ -180,10 +184,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "media/Video Games Database.base"
+                "file": "Productivity/Postit Board.canvas"
               },
               "icon": "lucide-info",
-              "title": "File properties for Video Games Database"
+              "title": "File properties for Postit Board"
             }
           }
         ]
@@ -320,6 +324,18 @@
   },
   "active": "fb5e40cd057e9f33",
   "lastOpenFiles": [
+    "cooking/recipes/Recipes Database.base",
+    "cooking/recipes/Example Recipe.jpg",
+    "cooking/recipes/Example Recipe.md",
+    "cooking/recipes/Example Recipe.cook",
+    "cooking/recipes/Simply-Recipes-Spaghetti-Aglio-e-Olio-LEAD-2-c8e7e8c6edb04a8691463c6ea8cd4ba1.jpg",
+    "Home.md",
+    "cooking/recipes/aisle.conf",
+    "cooking/recipes",
+    "cooking",
+    "Widgets/Notes Added Heatmap.md",
+    "Productivity/Postit Board.canvas",
+    "media/Video Games Database.base",
     "media/Movie Database.base",
     "media/Book Database.base",
     "media/books/Brave New World.md",
@@ -327,12 +343,10 @@
     "examples/games/Example Board Game.md",
     "media/video games/Call of Duty Black Ops 6.md",
     "examples/video games/Call of Duty Black Ops 7.md",
-    "media/Video Games Database.base",
     "examples/video games",
     "img/image-w1280.jpg",
     "img/6daef6949e925d154504824c102a7b0b84a1a2b0.jpeg",
     "media/video games/Cyberpunk 2077.md",
-    "Home.md",
     "_agent-docs/productivity.md",
     "Productivity/Daily Notes/2026-01-29.md",
     "Productivity/Daily Notes/2026-02-07.md",
@@ -345,26 +359,16 @@
     "img/00_m.jpg",
     "config.md",
     "Home.md.tmp.3696.1770523619798",
-    "Home.md.tmp.3696.1770523615638",
     "Widgets/Mood.md",
     "Widgets/Productivity.md",
     "Widgets/Habits Last 7 Days.md",
     "_templates/Recipe Template.md",
-    "examples/books/desktop.ini",
-    "examples/books",
     "media/books/Neuromancer.md",
     "media/books/The Three-Body Problem.md",
     "media/Video Games Database.md",
     "media/Book Database.md",
     "Dashboard.md",
-    "Spaces/Example Project/README.md",
-    "Spaces/Example Project",
-    "Spaces",
-    "_agent-docs/bases-databases.md",
-    "Productivity/Postit Board.canvas",
     "img/papers/schopphovenEHLAExtremeHighSpeed2017/image-2-x198-y329.png",
-    "img/papers/rombachHighResolutionImageSynthesis2022/image-4-x308-y597.png",
-    "Issue Tracker/assets/showcase.jpg",
-    "Issue Tracker/assets/example project.jpg"
+    "img/papers/rombachHighResolutionImageSynthesis2022/image-4-x308-y597.png"
   ]
 }

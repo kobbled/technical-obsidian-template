@@ -109,6 +109,10 @@ class button-monthly-note
 ![[Productivity#^1]]
 ![[Mood#^1]]
 
+## Notes
+
+![[Notes Added Heatmap#^1]]
+
 ## Papers
 
 ![[Papers Read Heatmap#^1]]

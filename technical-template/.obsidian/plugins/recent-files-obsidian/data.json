@@ -1,6 +1,38 @@
 {
   "recentFiles": [
     {
+      "basename": "Postit Board",
+      "path": "Productivity/Postit Board.canvas"
+    },
+    {
+      "basename": "Recipes Database",
+      "path": "cooking/recipes/Recipes Database.base"
+    },
+    {
+      "basename": "Example Recipe",
+      "path": "cooking/recipes/Example Recipe.jpg"
+    },
+    {
+      "basename": "Example Recipe",
+      "path": "cooking/recipes/Example Recipe.md"
+    },
+    {
+      "basename": "Example Recipe",
+      "path": "cooking/recipes/Example Recipe.cook"
+    },
+    {
+      "basename": "Home",
+      "path": "Home.md"
+    },
+    {
+      "basename": "Work Todos",
+      "path": "Productivity/Postit Notes/Work Todos.md"
+    },
+    {
+      "basename": "Personal Todos",
+      "path": "Productivity/Postit Notes/Personal Todos.md"
+    },
+    {
       "basename": "Video Games Database",
       "path": "media/Video Games Database.base"
     },
@@ -31,10 +63,6 @@
     {
       "basename": "Cyberpunk 2077",
       "path": "media/video games/Cyberpunk 2077.md"
-    },
-    {
-      "basename": "Home",
-      "path": "Home.md"
     },
     {
       "basename": "2026-01-29",
