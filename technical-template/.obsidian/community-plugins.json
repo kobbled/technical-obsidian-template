@@ -27,5 +27,8 @@
   "recent-files-obsidian",
   "local-media-embedder",
   "advanced-canvas",
-  "cooklang-viewer-and-editor"
+  "cooklang-viewer-and-editor",
+  "js-engine",
+  "obsidian-image-toolkit",
+  "image-converter"
 ]
