@@ -1,12 +1,76 @@
 {
   "recentFiles": [
     {
+      "basename": "Home",
+      "path": "Home.md"
+    },
+    {
+      "basename": "2026-01-29",
+      "path": "Productivity/Daily Notes/2026-01-29.md"
+    },
+    {
+      "basename": "2026-02-07",
+      "path": "Productivity/Daily Notes/2026-02-07.md"
+    },
+    {
+      "basename": "2023-03-11",
+      "path": "Productivity/Daily Notes/2023-03-11.md"
+    },
+    {
+      "basename": "2023-02-26",
+      "path": "Productivity/Daily Notes/2023-02-26.md"
+    },
+    {
+      "basename": "6daef6949e925d154504824c102a7b0b84a1a2b0",
+      "path": "img/6daef6949e925d154504824c102a7b0b84a1a2b0.jpeg"
+    },
+    {
+      "basename": "9-1653608710354",
+      "path": "img/9-1653608710354.png"
+    },
+    {
+      "basename": "desktop-wallpaper-best-star-wars-death-star-interior-background",
+      "path": "img/desktop-wallpaper-best-star-wars-death-star-interior-background.jpg"
+    },
+    {
+      "basename": "image-w1280",
+      "path": "img/image-w1280.jpg"
+    },
+    {
+      "basename": "tenn_graneet_head",
+      "path": "img/tenn_graneet_head.jpg"
+    },
+    {
+      "basename": "00_m",
+      "path": "img/00_m.jpg"
+    },
+    {
+      "basename": "config",
+      "path": "config.md"
+    },
+    {
+      "basename": "Book Database",
+      "path": "media/Book Database.base"
+    },
+    {
+      "basename": "Video Games Database",
+      "path": "media/Video Games Database.base"
+    },
+    {
       "basename": "Movie Database",
       "path": "media/Movie Database.base"
     },
     {
-      "basename": "Video Games Database",
-      "path": "media/Video Games Database.md"
+      "basename": "Neuromancer",
+      "path": "media/books/Neuromancer.md"
+    },
+    {
+      "basename": "The Three-Body Problem",
+      "path": "media/books/The Three-Body Problem.md"
+    },
+    {
+      "basename": "Dashboard",
+      "path": "Dashboard.md"
     },
     {
       "basename": "Text Justify",
@@ -15,10 +79,6 @@
     {
       "basename": "Multi Column Callout",
       "path": "Note Tools/Multi Column Callout.md"
-    },
-    {
-      "basename": "Book Database",
-      "path": "media/Book Database.md"
     },
     {
       "basename": "Image Gallery",
@@ -31,14 +91,6 @@
     {
       "basename": "Nausicaä of the Valley of the Wind",
       "path": "media/movies/Nausicaä of the Valley of the Wind.md"
-    },
-    {
-      "basename": "Dashboard",
-      "path": "Dashboard.md"
-    },
-    {
-      "basename": "Home",
-      "path": "Home.md"
     }
   ],
   "omittedPaths": [],
