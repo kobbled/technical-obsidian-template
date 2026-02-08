@@ -2,6 +2,20 @@
 
 Obsidian vault template for technical/scientific note-taking. The actual vault lives in `technical-template/`. Configuration, plugins, snippets, scripts, and templates are all under `technical-template/.obsidian/` and `technical-template/_scripts/` / `technical-template/_templates/`.
 
+>[!note]
+> documentation is stored in `technical-template/_agent_docs/` folder it includes:
+> - `vault_features.md` — high-level overview of the vault structure, features, and design philosophy.
+> - `plugins.md` — detailed list of installed plugins with descriptions and usage notes.
+> - `css_snippets.md` — catalog of CSS snippets with explanations of their purpose and
+> - `bases-database.md` — list of base notes (MOCs, dashboards, templates) that form the core structure of the vault.
+> - `templates.md` — inventory of note templates with descriptions and example content.
+> - `scripts.md` — overview of JavaScript and Python scripts used for automation, including their functions and how they integrate with Templater/Dataview.
+> - `gap_analysis.md` — analysis of any gaps in the vault's functionality or areas for future improvement.
+> - `metadata-schema.md` — documentation of the metadata schema used across notes for consistency in Dataview queries and organization.
+> - `productivity.md` — guide to the productivity system implemented in the vault, including how to use the progress bars and track habits.
+>
+> Update these documents as the vault evolves to keep track of changes and ensure comprehensive documentation.
+
 ## Theme & Appearance
 
 - **Theme:** Minimal (with Minimal Theme Settings plugin for customization)
