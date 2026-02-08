@@ -144,7 +144,7 @@ Located in `_scripts/_templater/`, these are called via `tp.user.<functionName>(
 
 **Usage in Template:**
 ```
-<%* await tp.user.archiveGroceryList(tp) %>
+
 ```
 
 ---
@@ -169,12 +169,7 @@ Located in `_scripts/_templater/`, these are called via `tp.user.<functionName>(
 
 **Usage in Template:**
 ```javascript
-<%*
-let platforms = await tp.user.multiSuggester(tp,
-  ["windows", "mac", "linux"],
-  ["windows", "mac", "linux"]
-)
-%>
+
 ```
 
 ---

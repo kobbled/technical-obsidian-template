@@ -1,12 +1,12 @@
 ---
+banner: "![[9-1653608710354.png]]"
+banner_y: 0.55
 type: daily
 tags:
   - daily
 date: <%tp.date.now("YYYY-MM-DD")%>
 week: <% tp.date.now("YYYY-WW") %>
 month: <% tp.date.now("YYYY-MM") %>
-banner: "![[Eho0_vuU0AEXqt4.jpg]]"
-banner_y: 0.55
 cssclasses:
   - hide-properties
 weights: false
@@ -47,6 +47,7 @@ moviestv: false
 moviestvtime: 
 productivity: 0
 mood: 0
+
 ---
 
 ## <% tp.file.title %>
