@@ -1,6 +1,34 @@
 {
   "recentFiles": [
     {
+      "basename": "Book Database",
+      "path": "media/Book Database.base"
+    },
+    {
+      "basename": "Brave New World",
+      "path": "media/books/Brave New World.md"
+    },
+    {
+      "basename": "Shogun",
+      "path": "media/books/Shogun.md"
+    },
+    {
+      "basename": "The Three-Body Problem",
+      "path": "media/books/The Three-Body Problem.md"
+    },
+    {
+      "basename": "Movie Database",
+      "path": "media/Movie Database.base"
+    },
+    {
+      "basename": "Video Games Database",
+      "path": "media/Video Games Database.base"
+    },
+    {
+      "basename": "Home",
+      "path": "Home.md"
+    },
+    {
       "basename": "Postit Board",
       "path": "Productivity/Postit Board.canvas"
     },
@@ -21,32 +49,12 @@
       "path": "cooking/recipes/Example Recipe.cook"
     },
     {
-      "basename": "Home",
-      "path": "Home.md"
-    },
-    {
       "basename": "Work Todos",
       "path": "Productivity/Postit Notes/Work Todos.md"
     },
     {
       "basename": "Personal Todos",
       "path": "Productivity/Postit Notes/Personal Todos.md"
-    },
-    {
-      "basename": "Video Games Database",
-      "path": "media/Video Games Database.base"
-    },
-    {
-      "basename": "Movie Database",
-      "path": "media/Movie Database.base"
-    },
-    {
-      "basename": "Book Database",
-      "path": "media/Book Database.base"
-    },
-    {
-      "basename": "Brave New World",
-      "path": "media/books/Brave New World.md"
     },
     {
       "basename": "Call of Duty Black Ops 6",
@@ -103,10 +111,6 @@
     {
       "basename": "Neuromancer",
       "path": "media/books/Neuromancer.md"
-    },
-    {
-      "basename": "The Three-Body Problem",
-      "path": "media/books/The Three-Body Problem.md"
     },
     {
       "basename": "Dashboard",
