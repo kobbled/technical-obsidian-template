@@ -12,8 +12,7 @@ platform:
 year: 2020
 modes:
   - Single player
-url:
-  - https://www.igdb.com/games/cyberpunk-2077
+url: https://www.igdb.com/games/cyberpunk-2077
 rating: 8.5
 played: true
 installed: true
@@ -28,7 +27,6 @@ tags:
 cssclasses:
   - no-caption
   - table-wide
-links: 
 posterurl: https://images.igdb.com/igdb/image/upload/t_cover_big/co7497.jpg
 install-location: 
 ---

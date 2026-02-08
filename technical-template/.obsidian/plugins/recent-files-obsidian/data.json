@@ -1,6 +1,38 @@
 {
   "recentFiles": [
     {
+      "basename": "Video Games Database",
+      "path": "media/Video Games Database.base"
+    },
+    {
+      "basename": "Movie Database",
+      "path": "media/Movie Database.base"
+    },
+    {
+      "basename": "Book Database",
+      "path": "media/Book Database.base"
+    },
+    {
+      "basename": "Brave New World",
+      "path": "media/books/Brave New World.md"
+    },
+    {
+      "basename": "Call of Duty Black Ops 6",
+      "path": "media/video games/Call of Duty Black Ops 6.md"
+    },
+    {
+      "basename": "image-w1280",
+      "path": "img/image-w1280.jpg"
+    },
+    {
+      "basename": "6daef6949e925d154504824c102a7b0b84a1a2b0",
+      "path": "img/6daef6949e925d154504824c102a7b0b84a1a2b0.jpeg"
+    },
+    {
+      "basename": "Cyberpunk 2077",
+      "path": "media/video games/Cyberpunk 2077.md"
+    },
+    {
       "basename": "Home",
       "path": "Home.md"
     },
@@ -21,20 +53,12 @@
       "path": "Productivity/Daily Notes/2023-02-26.md"
     },
     {
-      "basename": "6daef6949e925d154504824c102a7b0b84a1a2b0",
-      "path": "img/6daef6949e925d154504824c102a7b0b84a1a2b0.jpeg"
-    },
-    {
       "basename": "9-1653608710354",
       "path": "img/9-1653608710354.png"
     },
     {
       "basename": "desktop-wallpaper-best-star-wars-death-star-interior-background",
       "path": "img/desktop-wallpaper-best-star-wars-death-star-interior-background.jpg"
-    },
-    {
-      "basename": "image-w1280",
-      "path": "img/image-w1280.jpg"
     },
     {
       "basename": "tenn_graneet_head",
@@ -47,18 +71,6 @@
     {
       "basename": "config",
       "path": "config.md"
-    },
-    {
-      "basename": "Book Database",
-      "path": "media/Book Database.base"
-    },
-    {
-      "basename": "Video Games Database",
-      "path": "media/Video Games Database.base"
-    },
-    {
-      "basename": "Movie Database",
-      "path": "media/Movie Database.base"
     },
     {
       "basename": "Neuromancer",

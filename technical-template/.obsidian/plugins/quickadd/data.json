@@ -35,7 +35,7 @@
               "folder": {
                 "enabled": true,
                 "folders": [
-                  "examples/movies"
+                  "media/movies"
                 ],
                 "chooseWhenCreatingNote": false,
                 "createInSameFolderAsActiveFile": false,
@@ -99,7 +99,7 @@
               "folder": {
                 "enabled": true,
                 "folders": [
-                  "examples/video games"
+                  "media/video games"
                 ],
                 "chooseWhenCreatingNote": false,
                 "createInSameFolderAsActiveFile": false,
@@ -162,7 +162,7 @@
               "folder": {
                 "enabled": true,
                 "folders": [
-                  "examples/books"
+                  "media/books"
                 ],
                 "chooseWhenCreatingNote": false,
                 "createInSameFolderAsActiveFile": false,
@@ -348,7 +348,7 @@
               "folder": {
                 "enabled": true,
                 "folders": [
-                  "examples/tv"
+                  "media/tv"
                 ],
                 "chooseWhenCreatingNote": false,
                 "createInSameFolderAsActiveFile": false,

@@ -4,49 +4,23 @@
     "type": "split",
     "children": [
       {
-        "id": "4509724f8bf84da7",
+        "id": "ce744c97868ad611",
         "type": "tabs",
         "children": [
           {
-            "id": "e7a7b303c61786dc",
+            "id": "fb5e40cd057e9f33",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "bases",
               "state": {
-                "file": "img/image-w1280.jpg"
+                "file": "media/Video Games Database.base",
+                "viewName": "Video Games"
               },
-              "icon": "lucide-image",
-              "title": "image-w1280"
-            }
-          },
-          {
-            "id": "60ca55fd7d60c750",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "img/6daef6949e925d154504824c102a7b0b84a1a2b0.jpeg"
-              },
-              "icon": "lucide-image",
-              "title": "6daef6949e925d154504824c102a7b0b84a1a2b0"
-            }
-          },
-          {
-            "id": "a92bfcc63ffbce2e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Home.md",
-                "mode": "preview",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Home"
+              "icon": "lucide-layout-grid",
+              "title": "Video Games Database"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -133,7 +107,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Home.md",
+                "file": "media/Video Games Database.base",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -161,7 +135,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of Home"
+              "title": "Graph of Video Games Database"
             }
           }
         ],
@@ -206,10 +180,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "Home.md"
+                "file": "media/Video Games Database.base"
               },
               "icon": "lucide-info",
-              "title": "File properties for Home"
+              "title": "File properties for Video Games Database"
             }
           }
         ]
@@ -344,19 +318,29 @@
       "periodic-notes:Open today": false
     }
   },
-  "active": "a92bfcc63ffbce2e",
+  "active": "fb5e40cd057e9f33",
   "lastOpenFiles": [
+    "media/Movie Database.base",
+    "media/Book Database.base",
+    "media/books/Brave New World.md",
+    "examples/games/Example TTRPG.md",
+    "examples/games/Example Board Game.md",
+    "media/video games/Call of Duty Black Ops 6.md",
+    "examples/video games/Call of Duty Black Ops 7.md",
+    "media/Video Games Database.base",
+    "examples/video games",
+    "img/image-w1280.jpg",
+    "img/6daef6949e925d154504824c102a7b0b84a1a2b0.jpeg",
+    "media/video games/Cyberpunk 2077.md",
+    "Home.md",
     "_agent-docs/productivity.md",
     "Productivity/Daily Notes/2026-01-29.md",
     "Productivity/Daily Notes/2026-02-07.md",
     "Productivity/Daily Notes/2023-03-11.md",
     "Productivity/Daily Notes/2023-02-26.md",
-    "Home.md",
     "Productivity/Daily Notes/2026-02-07 copy.md",
-    "img/6daef6949e925d154504824c102a7b0b84a1a2b0.jpeg",
     "img/9-1653608710354.png",
     "img/desktop-wallpaper-best-star-wars-death-star-interior-background.jpg",
-    "img/image-w1280.jpg",
     "img/tenn_graneet_head.jpg",
     "img/00_m.jpg",
     "config.md",
@@ -365,13 +349,9 @@
     "Widgets/Mood.md",
     "Widgets/Productivity.md",
     "Widgets/Habits Last 7 Days.md",
-    "media/Book Database.base",
     "_templates/Recipe Template.md",
     "examples/books/desktop.ini",
-    "examples/books/Brave New World.md",
     "examples/books",
-    "media/Video Games Database.base",
-    "media/Movie Database.base",
     "media/books/Neuromancer.md",
     "media/books/The Three-Body Problem.md",
     "media/Video Games Database.md",
@@ -380,14 +360,7 @@
     "Spaces/Example Project/README.md",
     "Spaces/Example Project",
     "Spaces",
-    "examples/recipes/Example Recipe.cook",
-    "examples/games/Example TTRPG.md",
-    "examples/games/Example Board Game.md",
     "_agent-docs/bases-databases.md",
-    "_agent-docs/vault_features.md",
-    "_agent-docs/metadata-schema.md",
-    "lists/archive/Grocery List-2026-02-05.md",
-    "_agent-docs/scripts.md",
     "Productivity/Postit Board.canvas",
     "img/papers/schopphovenEHLAExtremeHighSpeed2017/image-2-x198-y329.png",
     "img/papers/rombachHighResolutionImageSynthesis2022/image-4-x308-y597.png",
