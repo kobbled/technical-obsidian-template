@@ -6,7 +6,7 @@ async function archiveGroceryList(tp) {
     }
 
     const moment = tp.date.now("YYYY-MM-DD");
-    const groceryListPath = "lists/Grocery List.md";
+    const groceryListPath = "cooking/Grocery List.md";
     const groceryListBaseName = "Grocery List";
 
     const groceryListTFile = tp.file.find_tfile(groceryListPath);
@@ -18,7 +18,7 @@ async function archiveGroceryList(tp) {
     }
 
     const content = await app.vault.read(groceryListTFile);
-    const archivePath = `lists/archive/${groceryListBaseName}-${moment}.md`;
+    const archivePath = `cooking/archive/${groceryListBaseName}-${moment}.md`;
     
     try {
         await app.vault.create(archivePath, content);

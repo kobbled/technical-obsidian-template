@@ -11,13 +11,14 @@
             "id": "e7a7b303c61786dc",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "media/Book Database.base",
-                "viewName": "Books"
+                "file": "cooking/Grocery List.md",
+                "mode": "preview",
+                "source": false
               },
-              "icon": "lucide-layout-grid",
-              "title": "Book Database"
+              "icon": "lucide-file",
+              "title": "Grocery List"
             }
           }
         ]
@@ -80,8 +81,8 @@
             "state": {
               "type": "recent-files",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "recent-files"
+              "icon": "clock",
+              "title": "Recent Files"
             }
           }
         ]
@@ -107,7 +108,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "media/Book Database.base",
+                "file": "cooking/Grocery List.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -135,7 +136,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of Book Database"
+              "title": "Graph of Grocery List"
             }
           }
         ],
@@ -180,14 +181,13 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "media/Book Database.base"
+                "file": "Home.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for Book Database"
+              "title": "File properties for Home"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       },
       {
         "id": "1aeac5319ea362cd",
@@ -301,7 +301,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "periodic-notes:Open today": false,
       "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
@@ -316,55 +315,57 @@
       "open-vscode:VSCode": false,
       "templater-obsidian:Templater": false,
       "homepage:Open homepage": false,
-      "local-media-embedder:Toggle media server": false
+      "local-media-embedder:Toggle media server": false,
+      "periodic-notes:Open today": false
     }
   },
   "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
-    "media/books/Brave New World.md",
-    "media/Book Database.base",
-    "media/books/Shogun.md",
-    "media/books/The Three-Body Problem.md",
-    "media/Movie Database.base",
-    "media/Video Games Database.base",
-    "Home.md",
+    "cooking/archive/Grocery List-2026-02-11.md",
+    "cooking/Grocery List.md",
+    "lists/Grocery List.md",
+    "cooking/Recipes Database.base",
+    "cooking/archive/Grocery List-2026-02-05.md",
+    "Issue Tracker/README.md",
+    "Issue Tracker/example/Example Project/Issues - Example Project.md",
+    "Issue Tracker/example/Example Project/issues/Example issue.md",
+    "Issue Tracker/example/Example Project/Example Project.md",
+    "Spaces/Example Project/README.md",
     "Productivity/Postit Board.canvas",
-    "cooking/recipes/Recipes Database.base",
+    "apps/Apps Database.base",
+    "apps/apps",
+    "cooking/recipes/Example Recipe.cook",
+    "subscriptions/Subscription Database.base",
+    "media/Movie Database.base",
+    "_agent-docs/gap-analysis.md.tmp.22588.1770796088241",
+    "_templates/Subscription Template.md.tmp.22588.1770796080498",
+    "_templates/Apps Template.md.tmp.22588.1770796072275",
+    "subscriptions/Netflix.md",
+    "subscriptions/GitHub Pro.md",
+    "subscriptions/Spotify.md",
+    "subscriptions",
+    "apps/apps/7-Zip.md",
+    "apps/apps/Blender.md",
+    "apps/apps/VS Code.md",
+    "media/books/The Three-Body Problem.md",
+    "media/books/Brave New World.md",
+    "mocs/Papers MOC.md",
+    "mocs/Paper Symbol Key.md",
     "cooking/recipes/Example Recipe.jpg",
     "cooking/recipes/Example Recipe.md",
-    "cooking/recipes/Example Recipe.cook",
+    "Home.md",
+    "Dashboard.md",
+    "media/books/Shogun.md",
     "cooking/recipes/Simply-Recipes-Spaghetti-Aglio-e-Olio-LEAD-2-c8e7e8c6edb04a8691463c6ea8cd4ba1.jpg",
-    "cooking/recipes/aisle.conf",
-    "cooking/recipes",
-    "cooking",
     "Widgets/Notes Added Heatmap.md",
     "examples/games/Example TTRPG.md",
     "examples/games/Example Board Game.md",
-    "media/video games/Call of Duty Black Ops 6.md",
-    "examples/video games/Call of Duty Black Ops 7.md",
-    "examples/video games",
     "img/image-w1280.jpg",
     "img/6daef6949e925d154504824c102a7b0b84a1a2b0.jpeg",
-    "media/video games/Cyberpunk 2077.md",
-    "_agent-docs/productivity.md",
-    "Productivity/Daily Notes/2026-01-29.md",
-    "Productivity/Daily Notes/2026-02-07.md",
-    "Productivity/Daily Notes/2023-03-11.md",
-    "Productivity/Daily Notes/2023-02-26.md",
-    "Productivity/Daily Notes/2026-02-07 copy.md",
     "img/9-1653608710354.png",
     "img/desktop-wallpaper-best-star-wars-death-star-interior-background.jpg",
     "img/tenn_graneet_head.jpg",
     "img/00_m.jpg",
-    "config.md",
-    "Home.md.tmp.3696.1770523619798",
-    "Widgets/Mood.md",
-    "Widgets/Productivity.md",
-    "Widgets/Habits Last 7 Days.md",
-    "_templates/Recipe Template.md",
-    "media/books/Neuromancer.md",
-    "media/Video Games Database.md",
-    "media/Book Database.md",
     "img/papers/schopphovenEHLAExtremeHighSpeed2017/image-2-x198-y329.png",
     "img/papers/rombachHighResolutionImageSynthesis2022/image-4-x308-y597.png"
   ]

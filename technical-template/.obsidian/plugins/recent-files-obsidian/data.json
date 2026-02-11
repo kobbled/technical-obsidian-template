@@ -1,20 +1,60 @@
 {
   "recentFiles": [
     {
-      "basename": "Book Database",
-      "path": "media/Book Database.base"
+      "basename": "Grocery List",
+      "path": "cooking/Grocery List.md"
     },
     {
-      "basename": "Brave New World",
-      "path": "media/books/Brave New World.md"
+      "basename": "Grocery List-2026-02-11",
+      "path": "cooking/archive/Grocery List-2026-02-11.md"
     },
     {
-      "basename": "Shogun",
-      "path": "media/books/Shogun.md"
+      "basename": "Recipes Database",
+      "path": "cooking/Recipes Database.base"
     },
     {
-      "basename": "The Three-Body Problem",
-      "path": "media/books/The Three-Body Problem.md"
+      "basename": "README",
+      "path": "Issue Tracker/README.md"
+    },
+    {
+      "basename": "Issues - Example Project",
+      "path": "Issue Tracker/example/Example Project/Issues - Example Project.md"
+    },
+    {
+      "basename": "Example issue",
+      "path": "Issue Tracker/example/Example Project/issues/Example issue.md"
+    },
+    {
+      "basename": "Example Project",
+      "path": "Issue Tracker/example/Example Project/Example Project.md"
+    },
+    {
+      "basename": "README",
+      "path": "Spaces/Example Project/README.md"
+    },
+    {
+      "basename": "Postit Board",
+      "path": "Productivity/Postit Board.canvas"
+    },
+    {
+      "basename": "Work Todos",
+      "path": "Productivity/Postit Notes/Work Todos.md"
+    },
+    {
+      "basename": "Personal Todos",
+      "path": "Productivity/Postit Notes/Personal Todos.md"
+    },
+    {
+      "basename": "Apps Database",
+      "path": "apps/Apps Database.base"
+    },
+    {
+      "basename": "Example Recipe",
+      "path": "cooking/recipes/Example Recipe.cook"
+    },
+    {
+      "basename": "Subscription Database",
+      "path": "subscriptions/Subscription Database.base"
     },
     {
       "basename": "Movie Database",
@@ -25,16 +65,24 @@
       "path": "media/Video Games Database.base"
     },
     {
-      "basename": "Home",
-      "path": "Home.md"
+      "basename": "Book Database",
+      "path": "media/Book Database.base"
     },
     {
-      "basename": "Postit Board",
-      "path": "Productivity/Postit Board.canvas"
+      "basename": "The Three-Body Problem",
+      "path": "media/books/The Three-Body Problem.md"
     },
     {
-      "basename": "Recipes Database",
-      "path": "cooking/recipes/Recipes Database.base"
+      "basename": "Brave New World",
+      "path": "media/books/Brave New World.md"
+    },
+    {
+      "basename": "Papers MOC",
+      "path": "mocs/Papers MOC.md"
+    },
+    {
+      "basename": "Paper Symbol Key",
+      "path": "mocs/Paper Symbol Key.md"
     },
     {
       "basename": "Example Recipe",
@@ -45,16 +93,16 @@
       "path": "cooking/recipes/Example Recipe.md"
     },
     {
-      "basename": "Example Recipe",
-      "path": "cooking/recipes/Example Recipe.cook"
+      "basename": "Home",
+      "path": "Home.md"
     },
     {
-      "basename": "Work Todos",
-      "path": "Productivity/Postit Notes/Work Todos.md"
+      "basename": "Dashboard",
+      "path": "Dashboard.md"
     },
     {
-      "basename": "Personal Todos",
-      "path": "Productivity/Postit Notes/Personal Todos.md"
+      "basename": "Shogun",
+      "path": "media/books/Shogun.md"
     },
     {
       "basename": "Call of Duty Black Ops 6",
@@ -111,10 +159,6 @@
     {
       "basename": "Neuromancer",
       "path": "media/books/Neuromancer.md"
-    },
-    {
-      "basename": "Dashboard",
-      "path": "Dashboard.md"
     },
     {
       "basename": "Text Justify",

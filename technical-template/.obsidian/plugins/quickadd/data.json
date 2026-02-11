@@ -402,7 +402,7 @@
               "folder": {
                 "enabled": true,
                 "folders": [
-                  "lists"
+                  "cooking"
                 ],
                 "chooseWhenCreatingNote": false,
                 "createInSameFolderAsActiveFile": false,
@@ -443,7 +443,7 @@
               "folder": {
                 "enabled": true,
                 "folders": [
-                  "lists"
+                  "cooking"
                 ],
                 "chooseWhenCreatingNote": false,
                 "createInSameFolderAsActiveFile": false,
