@@ -1,7 +1,7 @@
 {
 	"nodes":[
-		{"type":"file","file":"Productivity/Postit Notes/Personal Todos.md","id":"383e5e21cd68aa5a","x":-360,"y":-260,"width":400,"height":400},
-		{"type":"file","file":"Productivity/Postit Notes/Work Todos.md","id":"c884e83f794c8b45","x":-80,"y":-60,"width":400,"height":400}
+		{"type":"file","file":"Productivity/Postit Notes/Personal Todos.md","id":"383e5e21cd68aa5a","x":-480,"y":-300,"width":400,"height":400},
+		{"type":"file","file":"Productivity/Postit Notes/Work Todos.md","id":"c884e83f794c8b45","x":0,"y":-300,"width":400,"height":400}
 	],
 	"edges":[],
 	"metadata":{
