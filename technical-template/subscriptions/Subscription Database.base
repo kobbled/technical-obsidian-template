@@ -1,0 +1,35 @@
+filters:
+  and:
+    - file.hasTag("#personal/subscriptions")
+views:
+  - type: table
+    name: By Type
+    groupBy:
+      property: type
+      direction: ASC
+    order:
+      - file.name
+      - activeSub
+      - Cost
+      - subTerm
+      - subRenewal
+      - subTermination
+    sort:
+      - property: activeSub
+        direction: DESC
+      - property: Cost
+        direction: DESC
+  - type: table
+    name: Active Only
+    filters:
+      and:
+        - activeSub == true
+    order:
+      - file.link
+      - type
+      - Cost
+      - subTerm
+      - subRenewal
+    sort:
+      - property: Cost
+        direction: DESC
