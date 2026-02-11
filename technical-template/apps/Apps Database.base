@@ -1,0 +1,30 @@
+filters:
+  and:
+    - file.hasTag("#software/apps")
+views:
+  - type: table
+    name: By Type
+    groupBy:
+      property: type
+      direction: ASC
+    order:
+      - file.name
+      - usage
+      - os
+    sort:
+      - property: os
+        direction: ASC
+      - property: usage
+        direction: DESC
+  - type: table
+    name: All Apps
+    order:
+      - file.link
+      - type
+      - usage
+      - os
+    sort:
+      - property: type
+        direction: ASC
+      - property: usage
+        direction: DESC

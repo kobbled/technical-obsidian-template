@@ -1,7 +1,7 @@
 ---
 <%*
-  const folderPath = "Personal/Computer/apps";
-  let type = await tp.system.prompt("Type of App?")
+  const folderPath = "apps";
+  let type = await tp.system.suggester(["3D Modelling", "drawing", "music", "---", "media", "gaming", "vr", "web", "---", "AI", "coding", "engineering", "robotics", "maker", "automation", "---", "document", "knowledge", "finance", "---", "storage", "utility", "audio"], ["3D Modelling", "drawing", "music", "---", "media", "gaming", "vr", "web", "---", "AI", "coding", "engineering", "robotics", "maker", "automation", "---", "document", "knowledge", "finance", "---", "storage", "utility", "audio"], false, "Type of App?")
   const type_tag = type.toLowerCase().replace(/[^a-zA-Z0-9]/g, "-"); 
   
   let os = await tp.user.multiSuggester(tp, ["windows", "mac", "linux"], ["\"windows\"", "\"mac\"", "\"linux\""], false, "Operating System")

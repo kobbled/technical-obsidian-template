@@ -1,12 +1,7 @@
 ---
 <%*
-  const subLocation = await tp.system.suggester(["Computer", "Phone", "Internet", "Media", "Home", "Car", "Courses"], ["Computer", "Phone", "Internet", "Media", "Home", "Car", "Courses"], false, "Subscription Type")
-  let folderPath = "";
-  if (subLocation === "Courses") {
-	  folderPath = "Courses/subscriptions";
-  } else {
-	  folderPath = "Personal/"+ subLocation +"/subscriptions";
-  }
+  const subLocation = await tp.system.suggester(["Computer", "Phone", "Internet", "Social", "Media", "Home", "Car", "Courses"], ["Computer", "Phone", "Internet", "Social", "Media", "Home", "Car", "Courses"], false, "Subscription Type")
+  const folderPath = "subscriptions";
 
   let type = "";
   if (subLocation === "Computer") {
@@ -17,6 +12,8 @@
     type = "media";
   } else if (subLocation === "Internet") {
     type = "internet";
+  } else if (subLocation === "Social") {
+    type = "social";
   } else if (subLocation === "Home") {
     type = "life";
   } else if (subLocation === "Car") {
