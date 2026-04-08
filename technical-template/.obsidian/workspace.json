@@ -108,7 +108,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Dashboard.md",
+                "file": "Home.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -136,7 +136,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of Dashboard"
+              "title": "Graph of Home"
             }
           }
         ],
@@ -181,13 +181,14 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "media/Movie Database.base"
+                "file": "Home.md"
               },
               "icon": "lucide-info",
-              "title": "File properties for Movie Database"
+              "title": "File properties for Home"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       },
       {
         "id": "1aeac5319ea362cd",
@@ -334,11 +335,28 @@
       "open-vscode:VS Code": false
     }
   },
-  "active": "775576a4a721f2cd",
+  "active": "e7a7b303c61786dc",
   "lastOpenFiles": [
+    "config.md",
+    "Note Tools/Text Justify.md",
+    "Note Tools/List Cards.md",
+    "Note Tools/Image Gallery.md",
+    "Note Tools/Multi Column Callout.md",
+    "Spaces/Example Project/README.md",
+    "media/Book Database.base",
+    "media/Movie Database.base",
+    "media/Video Games Database.base",
+    "Issue Tracker/assets/showcase.jpg",
+    "Issue Tracker/assets/example project 2.jpg",
+    "Issue Tracker/assets/example project.jpg",
+    "Issue Tracker/example/Example Project/Issues - Example Project.md",
+    "Issue Tracker/example/Example Project/Example Project.md",
+    "Issue Tracker/README.md",
+    "apps/Apps Database.base",
+    "cooking/Recipes Database.base",
+    "Dashboard.md",
     "Home.md",
     "Widgets/Youtube Player.md",
-    "Dashboard.md",
     "Widgets/Tasks to Start this Month.md",
     "Widgets/Papers Last Read.md",
     "Widgets/Papers Read Heatmap.md",
@@ -353,35 +371,18 @@
     "_templates/fileclass",
     "Widgets/Papers to Read (Priority).md.tmp.21824.1775626054285",
     "CLAUDE.md",
-    "media/Movie Database.base",
-    "media/Video Games Database.base",
-    "media/Book Database.base",
     "cooking/Grocery List.md",
     "cooking/archive/Grocery List-2026-02-11.md",
     "lists/Grocery List.md",
-    "cooking/Recipes Database.base",
     "cooking/archive/Grocery List-2026-02-05.md",
-    "Issue Tracker/README.md",
-    "Issue Tracker/example/Example Project/Issues - Example Project.md",
-    "Issue Tracker/example/Example Project/issues/Example issue.md",
-    "Issue Tracker/example/Example Project/Example Project.md",
-    "Spaces/Example Project/README.md",
-    "apps/Apps Database.base",
     "apps/apps",
     "cooking/recipes/Example Recipe.cook",
-    "subscriptions/Netflix.md",
-    "subscriptions/GitHub Pro.md",
-    "subscriptions/Spotify.md",
-    "apps/apps/7-Zip.md",
     "cooking/recipes/Example Recipe.jpg",
     "cooking/recipes/Simply-Recipes-Spaghetti-Aglio-e-Olio-LEAD-2-c8e7e8c6edb04a8691463c6ea8cd4ba1.jpg",
     "img/image-w1280.jpg",
     "img/6daef6949e925d154504824c102a7b0b84a1a2b0.jpeg",
     "img/9-1653608710354.png",
     "img/desktop-wallpaper-best-star-wars-death-star-interior-background.jpg",
-    "img/tenn_graneet_head.jpg",
-    "img/00_m.jpg",
-    "img/papers/schopphovenEHLAExtremeHighSpeed2017/image-2-x198-y329.png",
-    "img/papers/rombachHighResolutionImageSynthesis2022/image-4-x308-y597.png"
+    "img/tenn_graneet_head.jpg"
   ]
 }
