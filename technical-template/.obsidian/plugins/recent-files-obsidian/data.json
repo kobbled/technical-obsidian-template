@@ -1,12 +1,80 @@
 {
   "recentFiles": [
     {
-      "basename": "Dashboard",
-      "path": "Dashboard.md"
-    },
-    {
       "basename": "Home",
       "path": "Home.md"
+    },
+    {
+      "basename": "config",
+      "path": "config.md"
+    },
+    {
+      "basename": "Text Justify",
+      "path": "Note Tools/Text Justify.md"
+    },
+    {
+      "basename": "List Cards",
+      "path": "Note Tools/List Cards.md"
+    },
+    {
+      "basename": "Image Gallery",
+      "path": "Note Tools/Image Gallery.md"
+    },
+    {
+      "basename": "Multi Column Callout",
+      "path": "Note Tools/Multi Column Callout.md"
+    },
+    {
+      "basename": "README",
+      "path": "Spaces/Example Project/README.md"
+    },
+    {
+      "basename": "Book Database",
+      "path": "media/Book Database.base"
+    },
+    {
+      "basename": "Movie Database",
+      "path": "media/Movie Database.base"
+    },
+    {
+      "basename": "Video Games Database",
+      "path": "media/Video Games Database.base"
+    },
+    {
+      "basename": "showcase",
+      "path": "Issue Tracker/assets/showcase.jpg"
+    },
+    {
+      "basename": "example project 2",
+      "path": "Issue Tracker/assets/example project 2.jpg"
+    },
+    {
+      "basename": "example project",
+      "path": "Issue Tracker/assets/example project.jpg"
+    },
+    {
+      "basename": "Issues - Example Project",
+      "path": "Issue Tracker/example/Example Project/Issues - Example Project.md"
+    },
+    {
+      "basename": "Example Project",
+      "path": "Issue Tracker/example/Example Project/Example Project.md"
+    },
+    {
+      "basename": "README",
+      "path": "Issue Tracker/README.md"
+    },
+    {
+      "basename": "Apps Database",
+      "path": "apps/Apps Database.base"
+    },
+    {
+      "basename": "Recipes Database",
+      "path": "cooking/Recipes Database.base"
+    },
+    {
+      "basename": "Dashboard",
+      "path": "Dashboard.md"
     },
     {
       "basename": "Youtube Player",
@@ -53,18 +121,6 @@
       "path": "Productivity/Postit Board.canvas"
     },
     {
-      "basename": "Movie Database",
-      "path": "media/Movie Database.base"
-    },
-    {
-      "basename": "Video Games Database",
-      "path": "media/Video Games Database.base"
-    },
-    {
-      "basename": "Book Database",
-      "path": "media/Book Database.base"
-    },
-    {
       "basename": "Grocery List",
       "path": "cooking/Grocery List.md"
     },
@@ -73,28 +129,8 @@
       "path": "cooking/archive/Grocery List-2026-02-11.md"
     },
     {
-      "basename": "Recipes Database",
-      "path": "cooking/Recipes Database.base"
-    },
-    {
-      "basename": "README",
-      "path": "Issue Tracker/README.md"
-    },
-    {
-      "basename": "Issues - Example Project",
-      "path": "Issue Tracker/example/Example Project/Issues - Example Project.md"
-    },
-    {
       "basename": "Example issue",
       "path": "Issue Tracker/example/Example Project/issues/Example issue.md"
-    },
-    {
-      "basename": "Example Project",
-      "path": "Issue Tracker/example/Example Project/Example Project.md"
-    },
-    {
-      "basename": "README",
-      "path": "Spaces/Example Project/README.md"
     },
     {
       "basename": "Work Todos",
@@ -103,10 +139,6 @@
     {
       "basename": "Personal Todos",
       "path": "Productivity/Postit Notes/Personal Todos.md"
-    },
-    {
-      "basename": "Apps Database",
-      "path": "apps/Apps Database.base"
     },
     {
       "basename": "Example Recipe",
@@ -167,38 +199,6 @@
     {
       "basename": "2026-02-07",
       "path": "Productivity/Daily Notes/2026-02-07.md"
-    },
-    {
-      "basename": "2023-03-11",
-      "path": "Productivity/Daily Notes/2023-03-11.md"
-    },
-    {
-      "basename": "2023-02-26",
-      "path": "Productivity/Daily Notes/2023-02-26.md"
-    },
-    {
-      "basename": "9-1653608710354",
-      "path": "img/9-1653608710354.png"
-    },
-    {
-      "basename": "desktop-wallpaper-best-star-wars-death-star-interior-background",
-      "path": "img/desktop-wallpaper-best-star-wars-death-star-interior-background.jpg"
-    },
-    {
-      "basename": "tenn_graneet_head",
-      "path": "img/tenn_graneet_head.jpg"
-    },
-    {
-      "basename": "00_m",
-      "path": "img/00_m.jpg"
-    },
-    {
-      "basename": "config",
-      "path": "config.md"
-    },
-    {
-      "basename": "Neuromancer",
-      "path": "media/books/Neuromancer.md"
     }
   ],
   "omittedPaths": [],

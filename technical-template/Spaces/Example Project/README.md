@@ -1,6 +1,6 @@
 ---
 Created: 2024-01-15
-Modified: 2024-01-15
+Modified: 2026-04-08
 tags:
   - project
   - space
@@ -41,7 +41,7 @@ Spaces/
 Use the `getRelFileLink.js` script to link to external cloud storage:
 
 ```dataviewjs
-const getRelFileLink = require("_scripts/getRelFileLink.js")
+const getRelFileLink = require(app.vault.adapter.basePath +  "/_scripts/getRelFileLink.js")
 dv.span(getRelFileLink(dv.current().file.path, 1, "Project Folder", ""))
 ```
 
