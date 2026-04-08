@@ -1,0 +1,10 @@
+{
+  "ribbonIcon": true,
+  "ribbonCommandUsesCode": true,
+  "showFileContextMenuItem": true,
+  "executeTemplate": "code \"{{vaultpath}}\" \"{{vaultpath}}/{{filepath}}\"",
+  "urlProtocol": "vscode",
+  "openFile": true,
+  "workspacePath": "{{vaultpath}}",
+  "useUrlInsiders": false
+}

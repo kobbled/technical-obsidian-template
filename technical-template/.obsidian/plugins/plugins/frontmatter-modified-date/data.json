@@ -1,0 +1,11 @@
+{
+  "frontmatterProperty": "Modified",
+  "momentFormat": "YYYY-MM-DD",
+  "excludedFolders": [],
+  "useKeyupEvents": false,
+  "onlyUpdateExisting": true,
+  "timeout": 10,
+  "excludeField": "exclude_modified_update",
+  "appendField": "append_modified_update",
+  "appendMaximumFrequency": "day"
+}

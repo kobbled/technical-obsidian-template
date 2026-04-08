@@ -1,0 +1,10 @@
+{
+	"id": "cooklang-viewer-and-editor",
+	"name": "Cooklang",
+	"version": "0.1.0",
+	"minAppVersion": "0.12.0",
+	"description": "Display and edit recipes written in the Cooklang format.",
+	"author": "Roger Veciana i Rovira",
+	"authorUrl": "https://geoexamples.com",
+	"isDesktopOnly": false
+}

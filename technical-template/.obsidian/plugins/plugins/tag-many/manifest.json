@@ -1,0 +1,10 @@
+{
+	"id": "tag-many",
+	"name": "TagMany",
+	"version": "0.2.7",
+	"minAppVersion": "0.15.0",
+	"description": "Add the same tag(s) to multiple notes in a folder (optionally including subfolders) at once.",
+	"author": "Joshua Martius",
+	"authorUrl": "https://fngt.nl/joshua",
+	"isDesktopOnly": true
+}

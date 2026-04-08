@@ -1,0 +1,19 @@
+{
+  "height": null,
+  "style": "solid",
+  "showInInternalEmbed": true,
+  "internalEmbedHeight": null,
+  "showInPreviewEmbed": true,
+  "previewEmbedHeight": null,
+  "frontmatterField": null,
+  "bannerDragModifier": "none",
+  "iconHorizontalAlignment": "right",
+  "iconHorizontalTransform": null,
+  "iconVerticalAlignment": "custom",
+  "iconVerticalTransform": "-80px",
+  "useTwemoji": true,
+  "showPreviewInLocalModal": true,
+  "localSuggestionsLimit": 20,
+  "bannersFolder": "img/wallpaper",
+  "allowMobileDrag": false
+}

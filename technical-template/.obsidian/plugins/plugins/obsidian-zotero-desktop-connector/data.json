@@ -1,0 +1,29 @@
+{
+  "database": "Zotero",
+  "noteImportFolder": "Papers",
+  "pdfExportImageDPI": 120,
+  "pdfExportImageFormat": "jpg",
+  "pdfExportImageQuality": 90,
+  "citeFormats": [
+    {
+      "name": "Format #1",
+      "format": "pandoc",
+      "brackets": true
+    }
+  ],
+  "exportFormats": [
+    {
+      "name": "Import #1",
+      "outputPathTemplate": "Papers/{{title|replace(\":\", \" –\")|replace(\"^\", \"\")|replace(\"%\", \"\")}}.md",
+      "imageOutputPathTemplate": "img/papers/{{citekey}}/",
+      "imageBaseNameTemplate": "image",
+      "templatePath": "_templates/Paper Template.md"
+    }
+  ],
+  "citeSuggestTemplate": "[[{{citekey}}]]",
+  "openNoteAfterImport": false,
+  "whichNotesToOpenAfterImport": "first-imported-note",
+  "shouldConcat": true,
+  "exeVersion": "1.0.15",
+  "_exeInternalVersion": 1
+}

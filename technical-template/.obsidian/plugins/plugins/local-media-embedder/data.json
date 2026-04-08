@@ -1,0 +1,5 @@
+{
+  "port": 5555,
+  "baselink": "http://127.0.0.1",
+  "showInMenuItem": true
+}

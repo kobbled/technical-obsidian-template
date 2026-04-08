@@ -1,0 +1,10 @@
+{
+	"id": "scales-chords",
+	"name": "Scales and Chords",
+	"version": "1.0.1",
+	"minAppVersion": "0.9.12",
+	"description": "Use this plugin to capture musical tab notation in your Obsidian vault.  Chords will become clickable links to modal images (provided by scales-chords.com)",
+	"author": "egradman",
+	"authorUrl": "https://www.gradman.com",
+	"isDesktopOnly": false
+}
