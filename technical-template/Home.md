@@ -113,9 +113,15 @@ class button-monthly-note
 
 ![[Notes Added Heatmap#^1]]
 
+>[!todo]+ Newly Added Notes
+> ![[Newest Notes#^1]]
+
 ## Papers
 
 ![[Papers Read Heatmap#^1]]
 
->[!note]+ Newly Added Papers
-> ![[Newly Added Papers#^1]]
+>[!todo]+ Newly Added Papers (Unread)
+> ![[Newly Added Papers (unread)#^1]]
+
+>[!info]+ Papers Last Read
+> ![[Papers Last Read#^1]]

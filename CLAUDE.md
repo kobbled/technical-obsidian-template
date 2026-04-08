@@ -53,7 +53,7 @@ All in `technical-template/.obsidian/snippets/`. These are the primary visual cu
 - **clock.css** — Digital clock display positioning; hidden on mobile via media query.
 - **time_of_day.css** — Absolute positioning for time-of-day display elements.
 
-## Plugins (29 community)
+## Plugins (33 community)
 
 Listed in `technical-template/.obsidian/community-plugins.json`. Plugin data in `technical-template/.obsidian/plugins/<id>/`.
 
@@ -95,6 +95,7 @@ Listed in `technical-template/.obsidian/community-plugins.json`. Plugin data in 
 | **Dynamic Table of Contents** | Auto-generated TOC that updates with the document. |
 | **Tag Wrangler** | Rename, merge, toggle, search tags from the tag pane. |
 | **Recent Files** | Sidebar list of recently opened files. |
+| **Calendar Bases** | Adds calendar layout to Bases for displaying date-based notes. |
 
 ### Integration & Utility
 | Plugin | What it does |
@@ -102,7 +103,7 @@ Listed in `technical-template/.obsidian/community-plugins.json`. Plugin data in 
 | **Zotero Integration** | Citation and bibliography import from Zotero (desktop only). |
 | **Cooklang** | Display/edit recipes in Cooklang format. |
 | **Open in VSCode** | Open vault in VS Code (desktop only). |
-| **Local Media Embedder** | Embed local video/image/audio files (desktop only). |
+| **Local Media Embedder** | Embed local video/image/audio files from device. |
 | **Show Current File Path** | Displays full path in the status bar. |
 | **Update Modified Date** | Auto-updates `modified` frontmatter field on save. |
 

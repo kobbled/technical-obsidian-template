@@ -45,8 +45,14 @@ GitHub-style activity heatmaps in Monthly Template using Heatmap Calendar plugin
 - Custom styling via `heatmap_custom_styling.css`
 - Visual year-at-a-glance progress tracking
 
+### Habits Calendar (Bases)
+`Productivity/Habits Calendar.base` — a Calendar Bases view of all daily notes showing habit activity per day. Includes:
+- Calendar view with an emoji summary formula showing which habits were done each day
+- Table view with all boolean habit columns visible
+- Powered by the **Calendar Bases** plugin
+
 ### Habit Tracking Dashboard
-The Home page includes at-a-glance habit summaries and year-long self-tracking heatmaps powered by three widgets in `Widgets/`.
+The Home page includes at-a-glance habit summaries and year-long self-tracking heatmaps powered by widgets in `Widgets/`.
 
 **Habits Last 7 Days** (`Widgets/Habits Last 7 Days.md`)
 Displays two collapsible panels side-by-side on the Home page:
@@ -68,6 +74,17 @@ Year-long GitHub-style heatmap (green gradient) showing daily productivity score
 
 **Mood Heatmap** (`Widgets/Mood.md`)
 Year-long heatmap (yellow gradient) showing daily mood scores (0-10 scale). Same pattern as the Productivity widget.
+
+**Newest Notes** (`Widgets/Newest Notes.md`)
+Dataview table of the 10 most recently created `#note/knowledge` notes.
+
+**Papers Widgets** (`Widgets/Newly Added Papers (unread).md`, `Widgets/Papers Last Read.md`, `Widgets/Papers to Read (Priority).md`)
+- Newly Added Papers (unread) — recently added unread papers sorted by date
+- Papers Last Read — DataviewJS table of papers read in the last 4 months
+- Papers to Read (Priority) — unread papers sorted by priority and date added
+
+**Tasks to Start this Month** (`Widgets/Tasks to Start this Month.md`)
+Tasks query showing non-recurring tasks with start dates in the current month.
 
 **How to use:**
 1. Open or create a daily note using the **New Daily Note** button on the Home page
@@ -107,6 +124,7 @@ Obsidian Bases plugin for database-style views of media collections. See [bases-
 | Books | 1 | `libraries/books` |
 | Video Games | 7 (All, Playing, On-Hold, Backlog, Rankings, PC Installed, Steam) | `libraries/video-games` |
 | Board/TTRPG | 2 | `libraries/games` |
+| Productivity | 1 (Habits Calendar) | `Productivity/` |
 
 **Features:**
 - Card layouts via `bases-cards.css` with property packing technique

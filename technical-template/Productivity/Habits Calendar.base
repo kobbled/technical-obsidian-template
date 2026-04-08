@@ -1,0 +1,39 @@
+filters:
+  and:
+    - file.inFolder("Productivity/Daily Notes")
+    - type == "daily"
+formulas:
+  habit_emojis: if(weights, "🏋️", "") + if(cardio, "🏃", "") + if(guitar, "🎸", "") + if(piano, "🎹", "") + if(singing, "🎤", "") + if(recording, "🎙️", "") + if(drawing, "✏️", "") + if(modelling, "🗿", "") + if(coding, "💻", "") + if(moding, "🎮", "") + if(electronics, "🔌", "") + if(printing, "🖨️", "") + if(ttrpg, "🎲", "") + if(book_reading, "📚", "") + if(article_reading, "📰", "") + if(cv, "📄", "") + if(obsidian, "💎", "") + if(videogames, "🕹️", "") + if(moviestv, "🎬", "")
+views:
+  - type: calendar
+    name: calendar
+    order:
+      - formula.habit_emojis
+    startDate: note.date
+  - type: table
+    name: Habits
+    order:
+      - file.link
+      - weights
+      - cardio
+      - guitar
+      - piano
+      - singing
+      - recording
+      - drawing
+      - modelling
+      - coding
+      - moding
+      - electronics
+      - printing
+      - ttrpg
+      - book_reading
+      - article_reading
+      - cv
+      - obsidian
+      - videogames
+      - moviestv
+      - formula.habit_emojis
+    sort:
+      - property: file.name
+        direction: DESC

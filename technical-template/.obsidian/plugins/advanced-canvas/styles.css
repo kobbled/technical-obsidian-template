@@ -10,9 +10,6 @@
   width: 100%;
   border-radius: 0 var(--input-radius) var(--input-radius) 0;
 }
-.ac-settings-heading {
-  border-bottom: 1px solid var(--color-accent);
-}
 .ac-settings-heading:not(:first-child) {
   margin-top: var(--size-4-10) !important;
 }
@@ -154,7 +151,6 @@ details.setting-item > *:not(summary) {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 0 !important;
   text-align: center;
   vertical-align: middle;
 }
@@ -392,6 +388,10 @@ details.setting-item > *:not(summary) {
 .canvas-wrapper[data-disable-font-size-relative-to-zoom=true] {
   --zoom-multiplier: 1 !important;
 }
+.canvas-wrapper.mod-readonly .canvas-controls .canvas-control-group:nth-child(3),
+.canvas-wrapper.mod-readonly .canvas-card-menu {
+  display: none;
+}
 .canvas-wrapper.mod-readonly[data-hide-background-grid-when-in-readonly=true] .canvas-background {
   visibility: hidden;
 }
@@ -457,10 +457,10 @@ details.setting-item > *:not(summary) {
 .canvas-wrapper[data-focus-mode-enabled=true] .canvas:has(.canvas-node.is-focused) .canvas-node:not(.is-focused) {
   filter: blur(5px);
 }
-.canvas-wrapper[data-focus-mode-enabled=true] .canvas:has(.canvas-node.is-focused) .canvas-edges {
+.canvas-wrapper[data-focus-mode-enabled=true] .canvas:has(.canvas-node.is-focused) .canvas-edges > g:not(.is-focused) {
   filter: blur(5px);
 }
-.canvas-wrapper[data-focus-mode-enabled=true] .canvas:has(.canvas-node.is-focused) .canvas-path-label-wrapper {
+.canvas-wrapper[data-focus-mode-enabled=true] .canvas:has(.canvas-node.is-focused) .canvas-path-label-wrapper > .canvas-path-label:not(.is-focused) {
   filter: blur(5px);
 }
 .canvas-wrapper.presentation-mode .canvas-controls {

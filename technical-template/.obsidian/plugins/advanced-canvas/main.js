@@ -197,7 +197,7 @@ var BBoxHelper = class {
     let minY = Infinity;
     let maxX = -Infinity;
     let maxY = -Infinity;
-    for (let bbox of bboxes) {
+    for (const bbox of bboxes) {
       minX = Math.min(minX, bbox.minX);
       minY = Math.min(minY, bbox.minY);
       maxX = Math.max(maxX, bbox.maxX);
@@ -206,8 +206,8 @@ var BBoxHelper = class {
     return { minX, minY, maxX, maxY };
   }
   static scaleBBox(bbox, scale) {
-    let diffX = (scale - 1) * (bbox.maxX - bbox.minX);
-    let diffY = (scale - 1) * (bbox.maxY - bbox.minY);
+    const diffX = (scale - 1) * (bbox.maxX - bbox.minX);
+    const diffY = (scale - 1) * (bbox.maxY - bbox.minY);
     return {
       minX: bbox.minX - diffX / 2,
       maxX: bbox.maxX + diffX / 2,
@@ -428,6 +428,10 @@ var _CanvasHelper = class _CanvasHelper {
     var _a;
     for (const stylableAttribute of stylableAttributes) {
       const selectedStyle = (_a = stylableAttribute.options.find((option) => currentStyleAttributes[stylableAttribute.key] === option.value)) != null ? _a : stylableAttribute.options.find((value) => value.value === null);
+      if (!selectedStyle) {
+        console.warn(`No "null" style option found for stylable attribute "${stylableAttribute.key}"`);
+        continue;
+      }
       const menuOption = _CanvasHelper.createExpandablePopupMenuOption({
         id: `menu-option-${stylableAttribute.key}`,
         label: stylableAttribute.label,
@@ -486,6 +490,7 @@ var _CanvasHelper = class _CanvasHelper {
         const iconElement = document.createElement("div");
         iconElement.classList.add("menu-item-icon");
         let selectedStyle = (_c = stylableAttribute.options.find((option) => currentStyleAttributes[stylableAttribute.key] === option.value)) != null ? _c : stylableAttribute.options.find((value) => value.value === null);
+        if (!selectedStyle) continue;
         (0, import_obsidian2.setIcon)(iconElement, selectedStyle.icon);
         stylableAttributeElement.appendChild(iconElement);
         const labelElement = document.createElement("div");
@@ -783,7 +788,7 @@ var EdgePathfindingAStar = class extends EdgePathfindingMethod {
     const fromPosWithMargin = BBoxHelper.moveInDirection(this.fromPos, this.fromSide, 10);
     const toPosWithMargin = BBoxHelper.moveInDirection(this.toPos, this.toSide, 10);
     const allowDiagonal = this.plugin.settings.getSetting("edgeStylePathfinderAllowDiagonal");
-    let pathArray = this.aStarAlgorithm(fromPosWithMargin, toPosWithMargin, nodeBBoxes, CanvasHelper.GRID_SIZE / 2, allowDiagonal);
+    const pathArray = this.aStarAlgorithm(fromPosWithMargin, toPosWithMargin, nodeBBoxes, CanvasHelper.GRID_SIZE / 2, allowDiagonal);
     if (!pathArray) return null;
     pathArray.splice(0, 0, this.fromPos);
     pathArray.splice(pathArray.length, 0, this.toPos);
@@ -1652,9 +1657,9 @@ var VariableBreakpointCanvasExtension = class extends CanvasExtension {
 
 // src/settings.ts
 var README_URL = "https://github.com/Developer-Mike/obsidian-advanced-canvas?tab=readme-ov-file";
-var SPENT_HOURS = 200;
-var RECEIVED_DONATIONS = 357;
-var HOURLY_RATE_GOAL = 20;
+var SPENT_HOURS = 250;
+var RECEIVED_DONATIONS = 606;
+var HOURLY_RATE_GOAL = 15;
 var KOFI_PAGE_URL = "https://ko-fi.com/X8X27IA08";
 var KOFI_BADGE_URI = "data:image/webp;base64,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";
 var DEFAULT_SETTINGS_VALUES = {
@@ -1666,7 +1671,6 @@ var DEFAULT_SETTINGS_VALUES = {
   maxNodeWidth: -1,
   disableFontSizeRelativeToZoom: false,
   canvasMetadataCompatibilityEnabled: true,
-  treatFileNodeEdgesAsLinks: true,
   enableSingleNodeLinks: true,
   combineCustomStylesInDropdown: false,
   nodeStylingFeatureEnabled: true,
@@ -1732,7 +1736,6 @@ var DEFAULT_SETTINGS_VALUES = {
   selectEdgeByDirection: false
 };
 var SETTINGS = {
-  // @ts-ignore
   general: {
     label: "General",
     description: "General settings of the Advanced Canvas plugin.",
@@ -1820,11 +1823,6 @@ var SETTINGS = {
     description: "Make .canvas files compatible with the backlinks and outgoing links feature and show the connections in the graph view.",
     infoSection: "full-metadata-cache-support",
     children: {
-      treatFileNodeEdgesAsLinks: {
-        label: "Treat edges between file nodes as links",
-        description: "When enabled, edges between file nodes will be treated as links. This means that if file node A.md has an edge to file node B.md in the canvas, file A.md will have a link to file B.md in the outgoing links section and show a connection in the graph view.",
-        type: "boolean"
-      },
       enableSingleNodeLinks: {
         label: "Enable support for linking to a node using a [[wikilink]]",
         description: "When enabled, you can link and embed a node using [[canvas-file#node-id]].",
@@ -2206,7 +2204,7 @@ var AdvancedCanvasPluginSettingTab = class extends import_obsidian4.PluginSettin
     this.settingsManager = settingsManager;
   }
   display() {
-    let { containerEl } = this;
+    const { containerEl } = this;
     containerEl.empty();
     this.createKofiBanner(containerEl);
     for (const [headingId, heading] of Object.entries(SETTINGS)) {
@@ -2221,7 +2219,7 @@ var AdvancedCanvasPluginSettingTab = class extends import_obsidian4.PluginSettin
       settingsHeaderChildrenContainerEl.classList.add("settings-header-children");
       settingsHeaderChildrenContainerEl.appendChild(document.createElement("span"));
       containerEl.appendChild(settingsHeaderChildrenContainerEl);
-      for (let [settingId, setting] of Object.entries(heading.children)) {
+      for (const [settingId, setting] of Object.entries(heading.children)) {
         if (!(settingId in DEFAULT_SETTINGS_VALUES)) continue;
         switch (setting.type) {
           case "text":
@@ -2446,9 +2444,9 @@ var Patcher = class _Patcher {
     this.plugin = plugin;
     this.patch();
   }
-  static async waitForViewRequest(plugin, viewType, patch) {
+  static async waitForMapValueLookup(map, viewType, patch) {
     return new Promise((resolve) => {
-      const uninstaller = around(plugin.app.viewRegistry.viewByType, {
+      const uninstaller = around(map, {
         [viewType]: (next) => function(...args) {
           const view = next.call(this, ...args);
           patch(view);
@@ -2459,6 +2457,9 @@ var Patcher = class _Patcher {
         }
       });
     });
+  }
+  static async waitForViewRequest(plugin, viewType, patch) {
+    return this.waitForMapValueLookup(plugin.app.viewRegistry.viewByType, viewType, patch);
   }
   static OverrideExisting(fn) {
     return Object.assign(fn, { __overrideExisting: true });
@@ -2484,6 +2485,14 @@ var Patcher = class _Patcher {
     if (uninstallers) uninstallers.push(uninstaller);
     plugin.register(uninstaller);
     return object;
+  }
+  static async patchOnce(plugin, object, patches) {
+    const uninstallers = [];
+    const value = await new Promise(
+      (resolve) => this.patch(plugin, object, patches(resolve), false, uninstallers)
+    );
+    for (const uninstall of uninstallers) uninstall();
+    return value;
   }
   static tryPatchWorkspacePrototype(plugin, getTarget, patches, uninstallers) {
     return new Promise((resolve) => {
@@ -2811,7 +2820,8 @@ var CanvasPatcher = class extends Patcher {
         return result;
       }),
       importData: Patcher.OverrideExisting((next) => function(data, clearCanvas, silent) {
-        const targetFilePath = this.view.file.path;
+        var _a;
+        const targetFilePath = (_a = this.view.file) == null ? void 0 : _a.path;
         const setData = (data2) => {
           if (!this.view.file || this.view.file.path !== targetFilePath) return;
           this.importData(data2, true, true);
@@ -3002,7 +3012,6 @@ var LinkSuggestionsPatcher = class extends Patcher {
     if (!this.plugin.settings.getSetting("enableSingleNodeLinks")) return;
     const suggestManager = (_a = this.plugin.app.workspace.editorSuggest.suggests.find((s) => s.suggestManager)) == null ? void 0 : _a.suggestManager;
     if (!suggestManager) return console.warn("LinkSuggestionsPatcher: No suggest manager found.");
-    const that = this;
     Patcher.patchThisAndPrototype(this.plugin, suggestManager, {
       getHeadingSuggestions: Patcher.OverrideExisting((next) => async function(context, path, subpath) {
         const result = await next.call(this, context, path, subpath);
@@ -3010,12 +3019,13 @@ var LinkSuggestionsPatcher = class extends Patcher {
         const currentFilePath = this.getSourcePath();
         const targetFile = this.app.metadataCache.getFirstLinkpathDest(path, currentFilePath);
         if (!targetFile) return result;
-        if (!(targetFile instanceof import_obsidian6.TFile) || targetFile.extension !== "canvas") return result;
+        if (!(targetFile instanceof import_obsidian6.TFile) || targetFile.extension !== "canvas")
+          return result;
         const fileCache = this.app.metadataCache.getFileCache(targetFile);
         if (!fileCache) return result;
         const canvasNodeCaches = fileCache.nodes;
         if (!canvasNodeCaches) return result;
-        for (const [nodeId, nodeCache] of Object.entries(canvasNodeCaches)) {
+        for (const nodeId of Object.keys(canvasNodeCaches)) {
           if (nodeId === subpath) continue;
           const suggestion = {
             file: targetFile,
@@ -3093,10 +3103,17 @@ var EmbedPatcher = class extends Patcher {
 // src/patchers/metadata-cache-patcher.ts
 var import_obsidian8 = require("obsidian");
 
+// src/utils/filepath-helper.ts
+var FilepathHelper = class {
+  static extension(path) {
+    var _a;
+    return (path == null ? void 0 : path.includes(".")) ? (_a = path == null ? void 0 : path.split(".")) == null ? void 0 : _a.pop() : void 0;
+  }
+};
+
 // src/utils/hash-helper.ts
 var HashHelper = class _HashHelper {
-  static async getFileHash(plugin, file) {
-    const bytes = await plugin.app.vault.readBinary(file);
+  static async getBytesHash(bytes) {
     const cryptoBytes = await crypto.subtle.digest("SHA-256", new Uint8Array(bytes));
     return _HashHelper.arrayBufferToHexString(cryptoBytes);
   }
@@ -3111,11 +3128,33 @@ var HashHelper = class _HashHelper {
   }
 };
 
-// src/utils/filepath-helper.ts
-var FilepathHelper = class {
-  static extension(path) {
+// src/utils/task-queue.ts
+var TaskQueue = class {
+  constructor() {
+    this.running = false;
+    this.queue = [];
+    this.onFinished = () => {
+    };
+  }
+  async add(task) {
+    return new Promise((resolve) => {
+      this.queue.push([resolve, task]);
+      if (!this.running) this.run();
+    });
+  }
+  setOnFinished(callback) {
+    this.onFinished = callback;
+  }
+  async run() {
     var _a;
-    return (path == null ? void 0 : path.includes(".")) ? (_a = path == null ? void 0 : path.split(".")) == null ? void 0 : _a.pop() : void 0;
+    this.running = true;
+    while (this.queue.length > 0) {
+      const [resolver, task] = (_a = this.queue.shift()) != null ? _a : [void 0, void 0];
+      await (task == null ? void 0 : task());
+      resolver == null ? void 0 : resolver();
+    }
+    this.running = false;
+    this.onFinished();
   }
 };
 
@@ -3123,7 +3162,6 @@ var FilepathHelper = class {
 var MetadataCachePatcher = class extends Patcher {
   async patch() {
     if (!this.plugin.settings.getSetting("canvasMetadataCompatibilityEnabled")) return;
-    const that = this;
     Patcher.patchPrototype(this.plugin, this.plugin.app.metadataCache, {
       getCache: Patcher.OverrideExisting((next) => function(filepath, ...args) {
         if (FilepathHelper.extension(filepath) === "canvas") {
@@ -3134,181 +3172,181 @@ var MetadataCachePatcher = class extends Patcher {
         return next.call(this, filepath, ...args);
       }),
       computeFileMetadataAsync: Patcher.OverrideExisting((next) => async function(file, ...args) {
-        var _a, _b, _c, _d, _e, _f, _g;
-        if (FilepathHelper.extension(file.path) !== "canvas")
-          return next.call(this, file, ...args);
-        this.uniqueFileLookup.add(file.name.toLowerCase(), file);
-        const fileHash = await HashHelper.getFileHash(that.plugin, file);
-        this.saveFileCache(file.path, {
-          hash: fileHash,
-          // Hash wouldn't get set in the original function
-          mtime: file.stat.mtime,
-          size: file.stat.size
-        });
-        const content = JSON.parse(await this.vault.cachedRead(file) || "{}");
-        const frontmatter = (_a = content.metadata) == null ? void 0 : _a.frontmatter;
-        const frontmatterData = {};
-        if (frontmatter) {
-          frontmatterData.frontmatterPosition = {
-            start: { line: 0, col: 0, offset: 0 },
-            end: { line: 0, col: 0, offset: 0 }
-          };
-          frontmatterData.frontmatter = frontmatter;
-          frontmatterData.frontmatterLinks = Object.entries(frontmatter).flatMap(([key, value]) => {
-            const getLinks = (value2) => value2.map((v) => {
-              if (!v.startsWith("[[") || !v.endsWith("]]")) return null;
-              const [link, ...aliases] = v.slice(2, -2).split("|");
-              return {
-                key,
-                displayText: aliases.length > 0 ? aliases.join("|") : link,
-                link,
-                original: v
-              };
-            }).filter((v) => v !== null);
-            if (typeof value === "string") return getLinks([value]);
-            else if (Array.isArray(value)) return getLinks(value);
-            return [];
-          });
-        }
-        const fileNodesEmbeds = (_d = (_c = (_b = content.nodes) == null ? void 0 : _b.map((nodeData, index) => nodeData.type === "file" && nodeData.file ? {
-          link: nodeData.file,
-          original: nodeData.file,
-          displayText: nodeData.file,
-          position: {
-            start: { line: 0, col: 1, offset: 0 },
-            // 0 for nodes
-            end: { line: 0, col: 1, offset: index }
-            // index of node
-          }
-        } : null)) == null ? void 0 : _c.filter((entry) => entry !== null)) != null ? _d : [];
-        const textEncoder = new TextEncoder();
-        const nodesMetadataPromises = (_g = (_f = (_e = content.nodes) == null ? void 0 : _e.map((node) => node.type === "text" ? textEncoder.encode(node.text).buffer : null)) == null ? void 0 : _f.map((buffer) => buffer ? this.computeMetadataAsync(buffer) : Promise.resolve(null))) != null ? _g : [];
-        const nodesMetadata = await Promise.all(nodesMetadataPromises);
-        const textNodesEmbeds = nodesMetadata.map((metadata, index) => {
-          var _a2;
-          return ((_a2 = metadata == null ? void 0 : metadata.embeds) != null ? _a2 : []).map((embed2) => {
-            var _a3, _b2;
-            return {
-              ...embed2,
-              position: {
-                nodeId: (_b2 = (_a3 = content.nodes) == null ? void 0 : _a3[index]) == null ? void 0 : _b2.id,
-                start: { line: 0, col: 1, offset: 0 },
-                // 0 for node 
-                end: { line: 0, col: 1, offset: index }
-                // index of node
-              }
-            };
-          });
-        }).flat();
-        const textNodesLinks = nodesMetadata.map((metadata, index) => {
-          var _a2;
-          return ((_a2 = metadata == null ? void 0 : metadata.links) != null ? _a2 : []).map((link) => {
-            var _a3, _b2;
-            return {
-              ...link,
-              position: {
-                nodeId: (_b2 = (_a3 = content.nodes) == null ? void 0 : _a3[index]) == null ? void 0 : _b2.id,
-                start: { line: 0, col: 1, offset: 0 },
-                // 0 for node 
-                end: { line: 0, col: 1, offset: index }
-                // index of node
-              }
-            };
-          });
-        }).flat();
-        this.metadataCache[fileHash] = {
-          v: 1,
-          ...frontmatterData,
-          embeds: [
-            ...fileNodesEmbeds,
-            ...textNodesEmbeds
-          ],
-          links: [
-            ...textNodesLinks
-          ],
-          nodes: {
-            ...nodesMetadata.reduce((acc, metadata, index) => {
-              var _a2, _b2;
-              const nodeId = (_b2 = (_a2 = content.nodes) == null ? void 0 : _a2[index]) == null ? void 0 : _b2.id;
-              if (nodeId && metadata)
-                acc[nodeId] = metadata;
-              return acc;
-            }, {})
-          }
-        };
-        this.trigger("changed", file, "", this.metadataCache[fileHash]);
-        if (await Promise.race([this.workQueue.promise.then(() => false), new Promise((resolve) => setTimeout(() => resolve(true), 0))]))
-          this.trigger("finished", file, "", this.metadataCache[fileHash], true);
-        this.resolveLinks(file.path, content);
+        if (file instanceof import_obsidian8.TFile && (file == null ? void 0 : file.extension) === "canvas")
+          return CanvasMetadataHandler.computeCanvasFileMetadataAsync.call(this, file);
+        return next.call(this, file, ...args);
       }),
-      resolveLinks: Patcher.OverrideExisting((next) => async function(filepath, cachedContent) {
-        var _a, _b;
-        if (FilepathHelper.extension(filepath) !== "canvas")
-          return next.call(this, filepath);
-        const file = this.vault.getAbstractFileByPath(filepath);
-        if (!file) return;
-        const metadataCache = this.metadataCache[(_a = this.fileCache[filepath]) == null ? void 0 : _a.hash];
-        if (!metadataCache) return;
-        const metadataReferences = [...metadataCache.links || [], ...metadataCache.embeds || []];
-        this.resolvedLinks[filepath] = metadataReferences.reduce((acc, metadataReference) => {
-          const resolvedLinkpath = this.getFirstLinkpathDest(metadataReference.link, filepath);
-          if (!resolvedLinkpath) return acc;
-          acc[resolvedLinkpath.path] = (acc[resolvedLinkpath.path] || 0) + 1;
-          return acc;
-        }, {});
-        if (that.plugin.settings.getSetting("treatFileNodeEdgesAsLinks")) {
-          ;
-          ((_b = cachedContent.edges) != null ? _b : []).forEach((edge) => {
-            var _a2, _b2;
-            const from = (_a2 = cachedContent.nodes) == null ? void 0 : _a2.find((node) => node.id === edge.fromNode);
-            const to = (_b2 = cachedContent.nodes) == null ? void 0 : _b2.find((node) => node.id === edge.toNode);
-            if (!from || !to) return;
-            if (from.type !== "file" || to.type !== "file" || !from.file || !from.file) return;
-            const fromFile = from.file;
-            const toFile = to.file;
-            this.registerInternalLinkAC(file.name, fromFile, toFile);
-            if (!(edge.toEnd !== "none" || edge.fromEnd === "arrow"))
-              this.registerInternalLinkAC(file.name, toFile, fromFile);
-          });
-        }
-        this.trigger("resolve", file);
-        this.trigger("resolved");
-      }),
-      registerInternalLinkAC: (_next) => async function(canvasName, from, to) {
-        var _a, _b, _c, _d;
-        if (from === to) return;
-        const fromFile = this.vault.getAbstractFileByPath(from);
-        if (!fromFile || !(fromFile instanceof import_obsidian8.TFile)) return;
-        if (!["md", "canvas"].includes(fromFile.extension)) return;
-        const fromFileHash = (_b = (_a = this.fileCache[from]) == null ? void 0 : _a.hash) != null ? _b : await HashHelper.getFileHash(that.plugin, fromFile);
-        const fromFileMetadataCache = (_c = this.metadataCache[fromFileHash]) != null ? _c : { v: 1 };
-        this.metadataCache[fromFileHash] = {
-          ...fromFileMetadataCache,
-          links: [
-            ...fromFileMetadataCache.links || [],
-            {
-              link: to,
-              original: to,
-              displayText: `${canvasName} \u2192 ${to}`,
-              position: {
-                start: { line: 0, col: 0, offset: 0 },
-                end: { line: 0, col: 0, offset: 0 }
-              }
-            }
-          ]
-        };
-        this.resolvedLinks[from] = {
-          ...this.resolvedLinks[from],
-          [to]: (((_d = this.resolvedLinks[from]) == null ? void 0 : _d[to]) || 0) + 1
-        };
-      }
+      resolveLinks: Patcher.OverrideExisting((next) => async function(filepath) {
+        const result = next.call(this, filepath);
+        if (FilepathHelper.extension(filepath) === "canvas")
+          CanvasMetadataHandler.resolveCanvasLinks.call(this, filepath);
+        return result;
+      })
     });
-    this.plugin.registerEvent(this.plugin.app.vault.on("modify", (file) => {
-      if (FilepathHelper.extension(file.path) !== "canvas") return;
-      this.plugin.app.metadataCache.computeFileMetadataAsync(file);
-    }));
   }
 };
+var _CanvasMetadataHandler = class _CanvasMetadataHandler {
+  static async computeCanvasFileMetadataAsync(file) {
+    this.uniqueFileLookup.add(file.name.toLowerCase(), file);
+    let isStale = true;
+    if (!this.fileCache.hasOwnProperty(file.path))
+      this.saveFileCache(file.path, { mtime: 0, size: 0, hash: "" });
+    else {
+      const cache2 = this.fileCache[file.path];
+      const unchanged = cache2.mtime === file.stat.mtime && cache2.size === file.stat.size;
+      const hasMetadataCache = cache2.hash && this.metadataCache.hasOwnProperty(cache2.hash);
+      if (unchanged && hasMetadataCache)
+        isStale = false;
+    }
+    if (isStale) {
+      _CanvasMetadataHandler.linkResolveQueue.setOnFinished(() => this.trigger("finished"));
+      await _CanvasMetadataHandler.metadataQueue.add(
+        () => _CanvasMetadataHandler.updateMetadataCache.call(this, file)
+      );
+    }
+    _CanvasMetadataHandler.linkResolveQueue.setOnFinished(() => this.trigger("resolved"));
+    await _CanvasMetadataHandler.linkResolveQueue.add(
+      () => _CanvasMetadataHandler.resolveCanvasLinks.call(this, file.path)
+    );
+  }
+  static async updateMetadataCache(file) {
+    const bytes = await this.vault.readBinary(file);
+    const data = new TextDecoder().decode(new Uint8Array(bytes));
+    const hash = await HashHelper.getBytesHash(bytes);
+    const cache2 = {
+      mtime: file.stat.mtime,
+      size: file.stat.size,
+      hash
+    };
+    this.saveFileCache(file.path, cache2);
+    let metadata = this.metadataCache[cache2.hash];
+    if (metadata) return this.trigger(
+      "changed",
+      file,
+      data,
+      metadata
+    );
+    const slowIndexingTimeout = setTimeout(() => {
+      new import_obsidian8.Notice(`Canvas indexing taking a long time for file ${file.path}`);
+    }, 1e4);
+    try {
+      metadata = await _CanvasMetadataHandler.computeCanvasMetadataAsync.call(this, data);
+    } finally {
+      clearTimeout(slowIndexingTimeout);
+    }
+    if (metadata) {
+      this.saveMetaCache(hash, metadata);
+      this.trigger("changed", file, data, metadata);
+    } else {
+      console.log("Canvas metadata failed to parse", file);
+    }
+  }
+  static async computeCanvasMetadataAsync(data) {
+    var _a, _b, _c, _d, _e;
+    const content = JSON.parse(data || "{}");
+    const metadata = {
+      v: 1
+    };
+    const frontmatter = (_a = content.metadata) == null ? void 0 : _a.frontmatter;
+    metadata.frontmatterPosition = {
+      start: { line: 0, col: 0, offset: 0 },
+      end: { line: 0, col: 0, offset: 0 }
+    };
+    metadata.frontmatter = frontmatter;
+    metadata.frontmatterLinks = [];
+    for (const [key, value] of Object.entries(frontmatter != null ? frontmatter : {})) {
+      const getLinks = (value2) => value2.map((v) => {
+        if (!v.startsWith("[[") || !v.endsWith("]]")) return null;
+        const [link, ...aliases] = v.slice(2, -2).split("|");
+        return {
+          key,
+          displayText: aliases.length > 0 ? aliases.join("|") : link,
+          link,
+          original: v
+        };
+      }).filter((v) => v !== null);
+      if (typeof value === "string") (_b = metadata.frontmatterLinks) == null ? void 0 : _b.push(...getLinks([value]));
+      else if (Array.isArray(value)) (_c = metadata.frontmatterLinks) == null ? void 0 : _c.push(...getLinks(value));
+    }
+    metadata.nodes = {};
+    metadata.links = [];
+    metadata.embeds = [];
+    await Promise.all(((_d = content.nodes) != null ? _d : []).map(async (node, index) => {
+      var _a2, _b2;
+      if (node.type !== "text") return;
+      const text = node.text;
+      const buffer = new TextEncoder().encode(text).buffer;
+      const nodeMetadata = await this.computeMetadataAsync(buffer);
+      if (!nodeMetadata) return;
+      metadata.nodes[node.id] = nodeMetadata;
+      metadata.links.push(...((_a2 = nodeMetadata.links) != null ? _a2 : []).map((link) => ({
+        ...link,
+        position: {
+          nodeId: node.id,
+          start: { line: 0, col: 1, offset: 0 },
+          // 0 for node
+          end: { line: 0, col: 1, offset: index }
+          // index of node
+        }
+      })));
+      metadata.embeds.push(...((_b2 = nodeMetadata.embeds) != null ? _b2 : []).map((embed2) => ({
+        ...embed2,
+        position: {
+          nodeId: node.id,
+          start: { line: 0, col: 1, offset: 0 },
+          // 0 for node
+          end: { line: 0, col: 1, offset: index }
+          // index of node
+        }
+      })));
+    }));
+    for (const [index, node] of ((_e = content.nodes) != null ? _e : []).entries()) {
+      if (node.type !== "file") continue;
+      const file = node.file;
+      if (!file) continue;
+      metadata.embeds.push({
+        link: file,
+        original: file,
+        displayText: file,
+        position: {
+          start: { line: 0, col: 1, offset: 0 },
+          // 0 for nodes
+          end: { line: 0, col: 1, offset: index }
+          // index of node
+        }
+      });
+    }
+    return metadata;
+  }
+  static async resolveCanvasLinks(filepath) {
+    var _a, _b, _c, _d, _e;
+    const file = this.vault.getAbstractFileByPath(filepath);
+    if (!(file instanceof import_obsidian8.TFile)) return;
+    const metadata = this.getFileCache(file);
+    const references = [...(_a = metadata == null ? void 0 : metadata.links) != null ? _a : [], ...(_b = metadata == null ? void 0 : metadata.embeds) != null ? _b : []];
+    const referenceLinks = references.map((ref) => ref.link).sort();
+    const resolvedLinks = {};
+    const unresolvedLinks = {};
+    for (const link of referenceLinks) {
+      const resolved = this.getFirstLinkpathDest(link, filepath);
+      if (resolved) {
+        (_d = resolvedLinks[_c = resolved.path]) != null ? _d : resolvedLinks[_c] = 0;
+        resolvedLinks[resolved.path]++;
+      } else {
+        const strippedLink = link.endsWith(".md") ? link.slice(0, -3) : link;
+        (_e = unresolvedLinks[strippedLink]) != null ? _e : unresolvedLinks[strippedLink] = 0;
+        unresolvedLinks[strippedLink]++;
+      }
+    }
+    this.resolvedLinks[filepath] = resolvedLinks;
+    this.unresolvedLinks[filepath] = unresolvedLinks;
+    await sleep(1);
+    this.trigger("resolve", file);
+  }
+};
+_CanvasMetadataHandler.metadataQueue = new TaskQueue();
+_CanvasMetadataHandler.linkResolveQueue = new TaskQueue();
+var CanvasMetadataHandler = _CanvasMetadataHandler;
 
 // src/patchers/backlinks-patcher.ts
 var import_obsidian9 = require("obsidian");
@@ -3359,7 +3397,6 @@ var BacklinksPatcher = class extends Patcher {
 var OutgoingLinksPatcher = class extends Patcher {
   async patch() {
     if (!this.plugin.settings.getSetting("canvasMetadataCompatibilityEnabled")) return;
-    const that = this;
     await Patcher.waitForViewRequest(this.plugin, "outgoing-link", (view) => {
       Patcher.patchPrototype(this.plugin, view.outgoingLink, {
         recomputeLinks: Patcher.OverrideExisting((next) => function(...args) {
@@ -3383,12 +3420,32 @@ var OutgoingLinksPatcher = class extends Patcher {
   }
 };
 
+// src/patchers/file-manager-patcher.ts
+var FileManagerPatcher = class extends Patcher {
+  async patch() {
+    if (!this.plugin.settings.getSetting("canvasMetadataCompatibilityEnabled")) return;
+    const that = this;
+    Patcher.patch(this.plugin, this.plugin.app.fileManager, {
+      processFrontMatter: Patcher.OverrideExisting((next) => async function(file, fn, options) {
+        if ((file == null ? void 0 : file.extension) === "canvas") {
+          that.plugin.app.vault.process(file, (data) => {
+            const content = JSON.parse(data);
+            fn(content.metadata.frontmatter);
+            return JSON.stringify(content, null, 2);
+          });
+          return;
+        }
+        return next.call(this, file, fn, options);
+      })
+    });
+  }
+};
+
 // src/patchers/properties-patcher.ts
 var PropertiesPatcher = class extends Patcher {
   async patch() {
     if (!this.plugin.settings.getSetting("canvasMetadataCompatibilityEnabled")) return;
     if (!this.plugin.app.viewRegistry.viewByType["file-properties"]) return;
-    const that = this;
     await Patcher.waitForViewRequest(this.plugin, "file-properties", (view) => {
       Patcher.patchPrototype(this.plugin, view, {
         isSupportedFile: Patcher.OverrideExisting((next) => function(file) {
@@ -3607,7 +3664,7 @@ var MetadataCanvasExtension = class extends CanvasExtension {
   }
   onCanvasChanged(canvas) {
     var _a;
-    let metadata = (_a = canvas.data) == null ? void 0 : _a.metadata;
+    const metadata = (_a = canvas.data) == null ? void 0 : _a.metadata;
     if (!metadata || metadata.version !== CURRENT_SPEC_VERSION)
       return new import_obsidian11.Notice("Metadata node not found or version mismatch. Should have been migrated (but wasn't).");
     const that = this;
@@ -3629,8 +3686,8 @@ var MetadataCanvasExtension = class extends CanvasExtension {
   }
   onMetadataChanged(canvas) {
     var _a, _b, _c;
-    if (this.canvasCssclassesCache.has(canvas.view))
-      canvas.wrapperEl.classList.remove(...this.canvasCssclassesCache.get(canvas.view));
+    const oldCssClasses = this.canvasCssclassesCache.get(canvas.view);
+    if (oldCssClasses) canvas.wrapperEl.classList.remove(...oldCssClasses);
     const currentClasses = (_c = (_b = (_a = canvas.metadata) == null ? void 0 : _a.frontmatter) == null ? void 0 : _b.cssclasses) != null ? _c : [];
     this.canvasCssclassesCache.set(canvas.view, currentClasses);
     if (currentClasses.length > 0) canvas.wrapperEl.classList.add(...currentClasses);
@@ -3819,11 +3876,21 @@ var NodeRatioCanvasExtension = class extends CanvasExtension {
 
 // src/canvas-extensions/group-canvas-extension.ts
 var GROUP_NODE_SIZE = { width: 300, height: 300 };
+var GROUP_NODE_PADDING = 20;
 var GroupCanvasExtension = class extends CanvasExtension {
   isEnabled() {
     return true;
   }
   init() {
+    this.plugin.addCommand({
+      id: "create-group-around-selection",
+      name: "Group selected nodes",
+      checkCallback: CanvasHelper.canvasCommand(
+        this.plugin,
+        (canvas) => canvas.selection.size > 0,
+        (canvas) => this.createGroupAroundSelection(canvas)
+      )
+    });
     this.plugin.registerEvent(this.plugin.app.workspace.on(
       "advanced-canvas:canvas-changed",
       (canvas) => {
@@ -3847,6 +3914,19 @@ var GroupCanvasExtension = class extends CanvasExtension {
         );
       }
     ));
+  }
+  createGroupAroundSelection(canvas) {
+    const bbox = BBoxHelper.combineBBoxes(
+      Array.from(canvas.selection.values()).map((e) => e.getBBox())
+    );
+    const paddedBBox = BBoxHelper.enlargeBBox(bbox, GROUP_NODE_PADDING);
+    canvas.createGroupNode({
+      pos: { x: paddedBBox.minX, y: paddedBBox.minY },
+      size: {
+        width: paddedBBox.maxX - paddedBBox.minX,
+        height: paddedBBox.maxY - paddedBBox.minY
+      }
+    });
   }
 };
 
@@ -4070,7 +4150,7 @@ var PresentationCanvasExtension = class extends CanvasExtension {
     if (shouldEnterFullscreen) {
       try {
         await canvas.wrapperEl.requestFullscreen();
-      } catch (_err) {
+      } catch (e) {
         this.presentationUsesFullscreen = false;
       }
     }
@@ -4244,7 +4324,7 @@ var ZOrderingCanvasExtension = class extends CanvasExtension {
     this.setNodesZIndex([selectedNode], targetZIndex);
   }
   moveMaxLayers(canvas, selectedNodes, forward) {
-    let targetZIndex = forward ? Math.max(...this.getAllZIndexes(canvas)) + 1 : Math.min(...this.getAllZIndexes(canvas)) - selectedNodes.length;
+    const targetZIndex = forward ? Math.max(...this.getAllZIndexes(canvas)) + 1 : Math.min(...this.getAllZIndexes(canvas)) - selectedNodes.length;
     this.setNodesZIndex(selectedNodes, targetZIndex);
   }
   removePersistentZIndexes(_canvas, nodes) {
@@ -4665,7 +4745,7 @@ var CommandsCanvasExtension = class extends CanvasExtension {
         (canvas) => {
           const canvasFile = canvas.view.file;
           if (!canvasFile) return;
-          let selectedNodesData = canvas.getSelectionData().nodes.map((node) => node);
+          const selectedNodesData = canvas.getSelectionData().nodes.map((node) => node);
           const backlinks = /* @__PURE__ */ new Set();
           if (selectedNodesData.length > 0) {
             for (const nodeData of selectedNodesData) {
@@ -4931,7 +5011,7 @@ var AutoResizeNodeCanvasExtension = class extends CanvasExtension {
     const renderedMarkdownContainer = node.nodeEl.querySelector(".markdown-preview-view.markdown-rendered");
     if (!renderedMarkdownContainer) return;
     renderedMarkdownContainer.style.height = "min-content";
-    let newHeight = renderedMarkdownContainer.clientHeight;
+    const newHeight = renderedMarkdownContainer.clientHeight;
     renderedMarkdownContainer.style.removeProperty("height");
     this.setNodeHeight(node, newHeight);
   }
@@ -4962,6 +5042,8 @@ var AutoResizeNodeCanvasExtension = class extends CanvasExtension {
 
 // src/canvas-extensions/portals-canvas-extension.ts
 var import_obsidian15 = require("obsidian");
+var PORTAL_ID_DELIMITER = "||";
+var PORTAL_ID_PREFIX = `acportal${PORTAL_ID_DELIMITER}`;
 var PORTAL_PADDING = 50;
 var MIN_OPEN_PORTAL_SIZE = { width: 200, height: 200 };
 var PortalsCanvasExtension = class _PortalsCanvasExtension extends CanvasExtension {
@@ -5033,12 +5115,12 @@ var PortalsCanvasExtension = class _PortalsCanvasExtension extends CanvasExtensi
     canvas.history.data.pop();
   }
   onContainingNodesRequested(_canvas, _bbox, nodes) {
-    const filteredNodes = nodes.filter((node) => !_PortalsCanvasExtension.isPortalElement(node));
+    const filteredNodes = nodes.filter((node) => !_PortalsCanvasExtension.isPortalElement(node.id));
     nodes.splice(0, nodes.length, ...filteredNodes);
   }
   onSelectionChanged(canvas, _oldSelection, updateSelection) {
     updateSelection(() => {
-      const updatedSelection = Array.from(canvas.selection).filter((canvasElement) => !_PortalsCanvasExtension.isPortalElement(canvasElement));
+      const updatedSelection = Array.from(canvas.selection).filter((canvasElement) => !_PortalsCanvasExtension.isPortalElement(canvasElement.id));
       canvas.selection = new Set(updatedSelection);
     });
   }
@@ -5096,13 +5178,13 @@ var PortalsCanvasExtension = class _PortalsCanvasExtension extends CanvasExtensi
       canvas.removeEdge(edge);
   }
   onEdgeConnectionTryDraggingBefore(_canvas, edge, _event, cancelRef) {
-    if (!_PortalsCanvasExtension.isPortalElement(edge)) return;
+    if (!_PortalsCanvasExtension.isPortalElement(edge.id)) return;
     cancelRef.value = true;
     new import_obsidian15.Notice("Updating edges from portals is not supported yet.");
   }
   onEdgeConnectionDraggingAfter(canvas, edge, _event, _newEdge, _side, _previousEnds) {
-    if (_PortalsCanvasExtension.isPortalElement(edge)) return;
-    if (!_PortalsCanvasExtension.isPortalElement(edge.from.node) || !_PortalsCanvasExtension.isPortalElement(edge.to.node)) return;
+    if (_PortalsCanvasExtension.isPortalElement(edge.id)) return;
+    if (!_PortalsCanvasExtension.isPortalElement(edge.from.node.id) || !_PortalsCanvasExtension.isPortalElement(edge.to.node.id)) return;
     canvas.removeEdge(edge);
     new import_obsidian15.Notice("Creating edges with both ends in portals are not supported yet.");
   }
@@ -5146,14 +5228,14 @@ var PortalsCanvasExtension = class _PortalsCanvasExtension extends CanvasExtensi
   }
   // Remove all edges and nodes from portals
   onGetData(_canvas, data) {
-    data.nodes = data.nodes.filter((nodeData) => _PortalsCanvasExtension.getNestedIds(nodeData.id).length === 1);
+    data.nodes = data.nodes.filter((nodeData) => !_PortalsCanvasExtension.isPortalElement(nodeData.id));
     for (const nodeData of data.nodes) delete nodeData.isPortalLoaded;
     const portalsIdMap = new Map(
       data.nodes.filter((nodeData) => nodeData.portal).map((nodeData) => [nodeData.id, nodeData])
     );
     data.edges = data.edges.filter((edgeData) => {
       var _a;
-      if (_PortalsCanvasExtension.getNestedIds(edgeData.id).length > 1) return false;
+      if (_PortalsCanvasExtension.isPortalElement(edgeData.id)) return false;
       const isFromNodeFromPortal = _PortalsCanvasExtension.getNestedIds(edgeData.fromNode).length > 1;
       const isToNodeFromPortal = _PortalsCanvasExtension.getNestedIds(edgeData.toNode).length > 1;
       if (!isFromNodeFromPortal && !isToNodeFromPortal) return true;
@@ -5168,6 +5250,7 @@ var PortalsCanvasExtension = class _PortalsCanvasExtension extends CanvasExtensi
   }
   // Add all edges and nodes from portals
   async onSetData(canvas, dataRef) {
+    if (!(dataRef == null ? void 0 : dataRef.nodes)) return dataRef;
     const data = JSON.parse(JSON.stringify(dataRef));
     const addedData = await Promise.all(data.nodes.map((nodeData) => this.tryOpenPortal(canvas, nodeData)));
     for (const newData of addedData) {
@@ -5202,7 +5285,9 @@ var PortalsCanvasExtension = class _PortalsCanvasExtension extends CanvasExtensi
       y: portalNodeData.y - sourceMinCoordinates.minY + PORTAL_PADDING
     };
     for (const nodeDataFromPortal of portalFileData.nodes) {
-      const newNodeId = `${portalNodeData.id}-${nodeDataFromPortal.id}`;
+      let newNodeId = `${portalNodeData.id}${PORTAL_ID_DELIMITER}${nodeDataFromPortal.id}`;
+      if (!newNodeId.startsWith(PORTAL_ID_PREFIX))
+        newNodeId = PORTAL_ID_PREFIX + newNodeId;
       const addedNode = {
         ...nodeDataFromPortal,
         id: newNodeId,
@@ -5215,9 +5300,15 @@ var PortalsCanvasExtension = class _PortalsCanvasExtension extends CanvasExtensi
       addedData.edges.push(...nestedNodes.edges);
     }
     for (const edgeDataFromPortal of portalFileData.edges) {
-      const newEdgeId = `${portalNodeData.id}-${edgeDataFromPortal.id}`;
-      const fromNodeId = `${portalNodeData.id}-${edgeDataFromPortal.fromNode}`;
-      const toNodeId = `${portalNodeData.id}-${edgeDataFromPortal.toNode}`;
+      let newEdgeId = `${portalNodeData.id}${PORTAL_ID_DELIMITER}${edgeDataFromPortal.id}`;
+      if (!newEdgeId.startsWith(PORTAL_ID_PREFIX))
+        newEdgeId = PORTAL_ID_PREFIX + newEdgeId;
+      let fromNodeId = `${portalNodeData.id}${PORTAL_ID_DELIMITER}${edgeDataFromPortal.fromNode}`;
+      if (!fromNodeId.startsWith(PORTAL_ID_PREFIX))
+        fromNodeId = PORTAL_ID_PREFIX + fromNodeId;
+      let toNodeId = `${portalNodeData.id}${PORTAL_ID_DELIMITER}${edgeDataFromPortal.toNode}`;
+      if (!toNodeId.startsWith(PORTAL_ID_PREFIX))
+        toNodeId = PORTAL_ID_PREFIX + toNodeId;
       addedData.edges.push({
         ...edgeDataFromPortal,
         id: newEdgeId,
@@ -5253,18 +5344,22 @@ var PortalsCanvasExtension = class _PortalsCanvasExtension extends CanvasExtensi
   getParentPortalId(elementId) {
     const nestedIds = _PortalsCanvasExtension.getNestedIds(elementId);
     if (nestedIds.length < 2) return void 0;
-    return nestedIds.slice(0, -1).join("-");
+    return nestedIds.slice(0, -1).join(PORTAL_ID_DELIMITER);
   }
   static getNestedIds(id) {
-    return id.split("-");
+    if (!this.isPortalElement(id)) return [id];
+    const trimmedId = id.substring(PORTAL_ID_PREFIX.length);
+    return trimmedId.split(PORTAL_ID_DELIMITER);
   }
-  static isPortalElement(canvasElement) {
-    return this.getNestedIds(canvasElement.id).length > 1;
+  static isPortalElement(id) {
+    return id.startsWith(PORTAL_ID_PREFIX);
   }
   isChildOfPortal(portal, canvasElement, directChild = true) {
+    const nestedIds = _PortalsCanvasExtension.getNestedIds(canvasElement.id);
+    if (nestedIds.length < 2) return false;
     return canvasElement.id !== portal.id && // Not the portal itself
-    canvasElement.id.startsWith(portal.id) && // Is a child of the portal
-    (!directChild || _PortalsCanvasExtension.getNestedIds(canvasElement.id).length === _PortalsCanvasExtension.getNestedIds(portal.id).length + 1);
+    nestedIds.contains(portal.id) && // Is a child of the portal
+    (!directChild || nestedIds[nestedIds.length - 2] === portal.id);
   }
 };
 
@@ -5362,9 +5457,9 @@ var BetterDefaultSettingsCanvasExtension = class extends CanvasExtension {
   async onDoubleClick(canvas, event, preventDefault) {
     if (event.defaultPrevented || event.target !== canvas.wrapperEl || canvas.isDragging || canvas.readonly) return;
     preventDefault.value = true;
-    let pos = canvas.posFromEvt(event);
+    const pos = canvas.posFromEvt(event);
     switch (this.plugin.settings.getSetting("nodeTypeOnDoubleClick")) {
-      case "file":
+      case "file": {
         const file = await new FileSelectModal(this.plugin.app, void 0, true).awaitInput();
         canvas.createFileNode({
           pos,
@@ -5372,6 +5467,7 @@ var BetterDefaultSettingsCanvasExtension = class extends CanvasExtension {
           file
         });
         break;
+      }
       default:
         canvas.createTextNode({
           pos,
@@ -5530,10 +5626,11 @@ var ColorPaletteCanvasExtension = class extends CanvasExtension {
   }
   getCustomColors() {
     const colors = [];
-    while (true) {
-      const colorId = (DEFAULT_COLORS_COUNT + colors.length + 1).toString();
-      if (!getComputedStyle(document.body).getPropertyValue(`--canvas-color-${colorId}`)) break;
-      colors.push(colorId);
+    const style = getComputedStyle(document.body);
+    let colorIndex = DEFAULT_COLORS_COUNT + 1;
+    while (style.getPropertyValue(`--canvas-color-${colorIndex}`)) {
+      colors.push(colorIndex.toString());
+      colorIndex++;
     }
     return colors;
   }
@@ -5566,6 +5663,20 @@ var CollapsibleGroupsCanvasExtension = class extends CanvasExtension {
       "advanced-canvas:data-loaded:before",
       (_canvas, data, _setData) => this.collapseNodes(data)
     ));
+    this.plugin.addCommand({
+      id: "toggle-collapse-group",
+      name: "Toggle collapse group",
+      checkCallback: CanvasHelper.canvasCommand(
+        this.plugin,
+        (canvas) => canvas.selection.size === 1 && canvas.selection.values().next().value.getData().type === "group",
+        (canvas) => this.toggleCollapseGroup(canvas, canvas.selection.values().next().value)
+      )
+    });
+  }
+  toggleCollapseGroup(canvas, node) {
+    const data = node.getData();
+    this.setCollapsed(node.canvas, node, data.collapsed ? void 0 : true);
+    canvas.markMoved(node);
   }
   onNodeChanged(canvas, groupNode) {
     var _a, _b;
@@ -5575,11 +5686,7 @@ var CollapsibleGroupsCanvasExtension = class extends CanvasExtension {
     const collapseEl = document.createElement("span");
     collapseEl.className = "collapse-button";
     (0, import_obsidian17.setIcon)(collapseEl, groupNodeData.collapsed ? "plus-circle" : "minus-circle");
-    collapseEl.onclick = () => {
-      const groupNodeData2 = groupNode.getData();
-      this.setCollapsed(canvas, groupNode, groupNodeData2.collapsed ? void 0 : true);
-      canvas.markMoved(groupNode);
-    };
+    collapseEl.onclick = () => this.toggleCollapseGroup(canvas, groupNode);
     groupNode.collapseEl = collapseEl;
     (_b = groupNode.labelEl) == null ? void 0 : _b.insertAdjacentElement("afterend", collapseEl);
   }
@@ -5618,7 +5725,9 @@ var CollapsibleGroupsCanvasExtension = class extends CanvasExtension {
     bbox.maxY = maxPos.y;
   }
   expandNodes(data) {
-    data.nodes = data.nodes.flatMap((groupNodeData) => {
+    var _a;
+    if (!data) return;
+    data.nodes = (_a = data.nodes) == null ? void 0 : _a.flatMap((groupNodeData) => {
       const collapsedData = groupNodeData.collapsedData;
       if (collapsedData === void 0) return [groupNodeData];
       delete groupNodeData.collapsedData;
@@ -5632,8 +5741,9 @@ var CollapsibleGroupsCanvasExtension = class extends CanvasExtension {
     });
   }
   collapseNodes(data) {
-    data.nodes.forEach((groupNodeData) => {
-      var _a, _b, _c, _d;
+    var _a;
+    (_a = data == null ? void 0 : data.nodes) == null ? void 0 : _a.forEach((groupNodeData) => {
+      var _a2, _b, _c, _d;
       if (!groupNodeData.collapsed) return;
       const groupNodeBBox = CanvasHelper.getBBox([groupNodeData]);
       const containedNodesData = data.nodes.filter(
@@ -5645,16 +5755,16 @@ var CollapsibleGroupsCanvasExtension = class extends CanvasExtension {
       data.nodes = data.nodes.filter((nodeData) => !containedNodesData.includes(nodeData));
       data.edges = data.edges.filter((edgeData) => !containedEdgesData.includes(edgeData));
       const newContainedNodesData = containedNodesData.filter((nodeData) => {
-        var _a2, _b2, _c2;
-        return !((_c2 = (_b2 = (_a2 = groupNodeData.collapsedData) == null ? void 0 : _a2.nodes) == null ? void 0 : _b2.some((e) => e.id === nodeData.id)) != null ? _c2 : false);
+        var _a3, _b2, _c2;
+        return !((_c2 = (_b2 = (_a3 = groupNodeData.collapsedData) == null ? void 0 : _a3.nodes) == null ? void 0 : _b2.some((e) => e.id === nodeData.id)) != null ? _c2 : false);
       });
       const newContainedEdgesData = containedEdgesData.filter((edgeData) => {
-        var _a2, _b2, _c2;
-        return !((_c2 = (_b2 = (_a2 = groupNodeData.collapsedData) == null ? void 0 : _a2.edges) == null ? void 0 : _b2.some((n) => n.id === edgeData.id)) != null ? _c2 : false);
+        var _a3, _b2, _c2;
+        return !((_c2 = (_b2 = (_a3 = groupNodeData.collapsedData) == null ? void 0 : _a3.edges) == null ? void 0 : _b2.some((n) => n.id === edgeData.id)) != null ? _c2 : false);
       });
       groupNodeData.collapsedData = {
         nodes: [
-          ...(_b = (_a = groupNodeData.collapsedData) == null ? void 0 : _a.nodes) != null ? _b : [],
+          ...(_b = (_a2 = groupNodeData.collapsedData) == null ? void 0 : _a2.nodes) != null ? _b : [],
           ...newContainedNodesData.map((nodeData) => ({
             ...nodeData,
             // Store the relative position of the node to the group
@@ -7077,18 +7187,19 @@ var EdgeHighlightCanvasExtension = class extends CanvasExtension {
     ));
   }
   onSelectionChanged(canvas, oldSelection) {
+    var _a, _b, _c, _d, _e;
     const connectedEdgesToBeHighlighted = new Set(canvas.getSelectionData().nodes.flatMap((nodeData) => {
-      var _a, _b;
+      var _a2, _b2;
       return [
-        ...(_a = canvas.edgeFrom.get(canvas.nodes.get(nodeData.id))) != null ? _a : [],
-        ...this.plugin.settings.getSetting("highlightIncomingEdges") ? (_b = canvas.edgeTo.get(canvas.nodes.get(nodeData.id))) != null ? _b : [] : []
+        ...(_a2 = canvas.edgeFrom.get(canvas.nodes.get(nodeData.id))) != null ? _a2 : [],
+        ...this.plugin.settings.getSetting("highlightIncomingEdges") ? (_b2 = canvas.edgeTo.get(canvas.nodes.get(nodeData.id))) != null ? _b2 : [] : []
       ];
     }));
     for (const edge of canvas.edges.values()) {
-      edge.lineGroupEl.classList.toggle(
-        "is-focused",
-        canvas.selection.has(edge) || connectedEdgesToBeHighlighted.has(edge)
-      );
+      const isFocused = canvas.selection.has(edge) || connectedEdgesToBeHighlighted.has(edge);
+      edge.lineGroupEl.classList.toggle("is-focused", isFocused);
+      (_b = (_a = edge.lineEndGroupEl) == null ? void 0 : _a.classList) == null ? void 0 : _b.toggle("is-focused", isFocused);
+      (_e = (_d = (_c = edge.labelElement) == null ? void 0 : _c.textareaEl) == null ? void 0 : _d.classList) == null ? void 0 : _e.toggle("is-focused", isFocused);
     }
   }
 };
@@ -7159,7 +7270,7 @@ var NodeExposerExtension = class extends CanvasExtension {
   }
   setDataAttributes(element, nodeData) {
     for (const exposedDataKey of getExposedNodeData(this.plugin.settings)) {
-      const datasetPairs = nodeData[exposedDataKey] instanceof Object ? Object.entries(nodeData[exposedDataKey]) : [[exposedDataKey, nodeData[exposedDataKey]]];
+      const datasetPairs = nodeData[exposedDataKey] && typeof nodeData[exposedDataKey] === "object" ? Object.entries(nodeData[exposedDataKey]) : [[exposedDataKey, nodeData[exposedDataKey]]];
       for (const [key, value] of datasetPairs) {
         if (!value) delete element.dataset[key];
         else element.dataset[key] = value;
@@ -7190,7 +7301,7 @@ var NodeInteractionExposerExtension = class extends CanvasExtension {
             else interactionEl.dataset[modifiedKey] = value;
           }
         }
-        if (PortalsCanvasExtension.isPortalElement(node)) interactionEl.dataset.isFromPortal = "true";
+        if (PortalsCanvasExtension.isPortalElement(node.id)) interactionEl.dataset.isFromPortal = "true";
         else delete interactionEl.dataset.isFromPortal;
       }
     ));
@@ -7215,7 +7326,7 @@ var EdgeExposerExtension = class extends CanvasExtension {
         const edgeData = edge == null ? void 0 : edge.getData();
         if (!edgeData) return;
         for (const exposedDataKey of getExposedEdgeData(this.plugin.settings)) {
-          const datasetPairs = edgeData[exposedDataKey] instanceof Object ? Object.entries(edgeData[exposedDataKey]) : [[exposedDataKey, edgeData[exposedDataKey]]];
+          const datasetPairs = edgeData[exposedDataKey] && typeof edgeData[exposedDataKey] === "object" ? Object.entries(edgeData[exposedDataKey]) : [[exposedDataKey, edgeData[exposedDataKey]]];
           for (const [key, value] of datasetPairs) {
             const stringifiedKey = key == null ? void 0 : key.toString();
             if (!stringifiedKey) continue;
@@ -7272,17 +7383,85 @@ var CanvasWrapperExposerExtension = class extends CanvasExtension {
   }
 };
 
+// src/patchers/bases-table-view-patcher.ts
+var BasesTableViewPatcher = class extends Patcher {
+  async patch() {
+    if (!this.plugin.settings.getSetting("canvasMetadataCompatibilityEnabled")) return;
+    const bases = this.plugin.app.internalPlugins.getEnabledPluginById("bases");
+    if (!bases) return;
+    this.patchViewFactory(bases);
+  }
+  async patchViewFactory(bases) {
+    const that = this;
+    await Patcher.patchOnce(this.plugin, bases.registrations.table, (resolve) => ({
+      factory: Patcher.OverrideExisting((next) => function(...args) {
+        const view = next.call(this, ...args);
+        that.patchTableView(view);
+        resolve(view);
+        return view;
+      })
+    }));
+  }
+  async patchTableView(basesView) {
+    const that = this;
+    await Patcher.patchOnce(this.plugin, basesView, (resolve) => ({
+      updateVirtualDisplay: Patcher.OverrideExisting((next) => function(...args) {
+        const result = next.call(this, ...args);
+        if (this.rows.length > 0) {
+          const row = this.rows.first();
+          that.patchTableRow(row);
+          resolve(row);
+        }
+        return result;
+      })
+    }));
+  }
+  async patchTableRow(row) {
+    const that = this;
+    await Patcher.patchOnce(this.plugin, row, (resolve) => ({
+      render: Patcher.OverrideExisting((next) => function(...args) {
+        let result = next.call(this, ...args);
+        if (this.cells.length > 0) {
+          const cell = this.cells.first();
+          that.patchTableCell(cell);
+          resolve(cell);
+          result = next.call(this, ...args);
+        }
+        return result;
+      })
+    }));
+  }
+  async patchTableCell(cell) {
+    Patcher.patchPrototype(this.plugin, cell, {
+      render: Patcher.OverrideExisting((next) => function(ctx) {
+        var _a;
+        const isCanvas = ((_a = ctx.file) == null ? void 0 : _a.extension) === "canvas";
+        if (isCanvas) ctx.file.extension = "md";
+        const result = next.call(this, ctx);
+        if (isCanvas) ctx.file.extension = "canvas";
+        return result;
+      })
+    });
+  }
+};
+
 // src/main.ts
 var PATCHERS = [
+  // Core canvas patchers
   CanvasPatcher,
+  SearchCommandPatcher,
+  // Core metadata patchers
+  MetadataCachePatcher,
+  FileManagerPatcher,
+  // Direct metadata dependant patchers
+  PropertiesPatcher,
+  !(0, import_obsidian19.requireApiVersion)("1.12.0") && BacklinksPatcher,
+  OutgoingLinksPatcher,
+  // Metadata dependant patchers
+  (0, import_obsidian19.requireApiVersion)("1.9.0") && BasesTableViewPatcher,
   LinkSuggestionsPatcher,
   EmbedPatcher,
-  MetadataCachePatcher,
-  BacklinksPatcher,
-  OutgoingLinksPatcher,
-  PropertiesPatcher,
-  SearchPatcher,
-  SearchCommandPatcher
+  SearchPatcher
 ];
 var CANVAS_EXTENSIONS = [
   // Advanced JSON Canvas Extensions
@@ -7325,6 +7504,7 @@ var AdvancedCanvasPlugin = class extends import_obsidian19.Plugin {
     this.settings.addSettingsTab();
     this.windowsManager = new WindowsManager(this);
     this.patchers = PATCHERS.map((Patcher2) => {
+      if (!Patcher2) return;
       try {
         return new Patcher2(this);
       } catch (e) {

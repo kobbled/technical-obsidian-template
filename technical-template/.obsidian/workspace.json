@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "cooking/Grocery List.md",
+                "file": "Home.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Grocery List"
+              "title": "Home"
             }
           }
         ]
@@ -108,7 +108,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "cooking/Grocery List.md",
+                "file": "Dashboard.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -136,7 +136,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "Graph of Grocery List"
+              "title": "Graph of Dashboard"
             }
           }
         ],
@@ -181,10 +181,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "Home.md"
+                "file": "media/Movie Database.base"
               },
               "icon": "lucide-info",
-              "title": "File properties for Home"
+              "title": "File properties for Movie Database"
             }
           }
         ]
@@ -206,6 +206,20 @@
               },
               "icon": "lucide-file",
               "title": "Dashboard"
+            }
+          },
+          {
+            "id": "df96f824f5de9274",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Widgets/Youtube Player.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Youtube Player"
             }
           }
         ]
@@ -297,7 +311,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 313.5
+    "width": 395.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -316,13 +330,34 @@
       "templater-obsidian:Templater": false,
       "homepage:Open homepage": false,
       "local-media-embedder:Toggle media server": false,
-      "periodic-notes:Open today": false
+      "periodic-notes:Open today": false,
+      "open-vscode:VS Code": false
     }
   },
-  "active": "e7a7b303c61786dc",
+  "active": "775576a4a721f2cd",
   "lastOpenFiles": [
-    "cooking/archive/Grocery List-2026-02-11.md",
+    "Home.md",
+    "Widgets/Youtube Player.md",
+    "Dashboard.md",
+    "Widgets/Tasks to Start this Month.md",
+    "Widgets/Papers Last Read.md",
+    "Widgets/Papers Read Heatmap.md",
+    "Widgets/Papers to Read (Priority).md",
+    "Widgets/Newly Added Papers (unread).md",
+    "Widgets/Newly Added Papers.md",
+    "Widgets/Newest Notes.md",
+    "Widgets/Habits Last 7 Days.md",
+    "Productivity/Habits Calendar.base",
+    "Productivity/Postit Board.canvas",
+    "_templates/fileclass/daily.md",
+    "_templates/fileclass",
+    "Widgets/Papers to Read (Priority).md.tmp.21824.1775626054285",
+    "CLAUDE.md",
+    "media/Movie Database.base",
+    "media/Video Games Database.base",
+    "media/Book Database.base",
     "cooking/Grocery List.md",
+    "cooking/archive/Grocery List-2026-02-11.md",
     "lists/Grocery List.md",
     "cooking/Recipes Database.base",
     "cooking/archive/Grocery List-2026-02-05.md",
@@ -331,35 +366,15 @@
     "Issue Tracker/example/Example Project/issues/Example issue.md",
     "Issue Tracker/example/Example Project/Example Project.md",
     "Spaces/Example Project/README.md",
-    "Productivity/Postit Board.canvas",
     "apps/Apps Database.base",
     "apps/apps",
     "cooking/recipes/Example Recipe.cook",
-    "subscriptions/Subscription Database.base",
-    "media/Movie Database.base",
-    "_agent-docs/gap-analysis.md.tmp.22588.1770796088241",
-    "_templates/Subscription Template.md.tmp.22588.1770796080498",
-    "_templates/Apps Template.md.tmp.22588.1770796072275",
     "subscriptions/Netflix.md",
     "subscriptions/GitHub Pro.md",
     "subscriptions/Spotify.md",
-    "subscriptions",
     "apps/apps/7-Zip.md",
-    "apps/apps/Blender.md",
-    "apps/apps/VS Code.md",
-    "media/books/The Three-Body Problem.md",
-    "media/books/Brave New World.md",
-    "mocs/Papers MOC.md",
-    "mocs/Paper Symbol Key.md",
     "cooking/recipes/Example Recipe.jpg",
-    "cooking/recipes/Example Recipe.md",
-    "Home.md",
-    "Dashboard.md",
-    "media/books/Shogun.md",
     "cooking/recipes/Simply-Recipes-Spaghetti-Aglio-e-Olio-LEAD-2-c8e7e8c6edb04a8691463c6ea8cd4ba1.jpg",
-    "Widgets/Notes Added Heatmap.md",
-    "examples/games/Example TTRPG.md",
-    "examples/games/Example Board Game.md",
     "img/image-w1280.jpg",
     "img/6daef6949e925d154504824c102a7b0b84a1a2b0.jpeg",
     "img/9-1653608710354.png",

@@ -2,10 +2,10 @@
 
 ## Overview
 
-This document identifies features, plugins, and structures present in the production notes vault (`D:\Documents\notes`) that are missing from or incomplete in the template vault (`technical-template/`). Last revised: 2026-02-10.
+This document identifies features, plugins, and structures present in the production notes vault (`D:\Documents\notes`) that are missing from or incomplete in the template vault (`technical-template/`). Last revised: 2026-04-07.
 
-**Production vault:** 29 databases, 37 community plugins, 18 CSS snippets, 19 templates
-**Template vault:** 4 databases, 33 community plugins, 20 CSS snippets, 21 templates + 6 web clipper configs
+**Production vault:** 29 databases, 38 community plugins, 18 CSS snippets, 19 templates
+**Template vault:** 7 databases, 37 community plugins, 20 CSS snippets, 21 templates + 6 web clipper configs
 
 ---
 
@@ -15,16 +15,15 @@ This document identifies features, plugins, and structures present in the produc
 
 | Plugin | Purpose | Priority |
 |--------|---------|----------|
-| `cm-editor-syntax-highlight-obsidian` | Enhanced code syntax highlighting in edit mode | Medium |
-| `obsidian-excel-to-markdown-table` | Import Excel/CSV data as markdown tables | Medium |
-| `tag-many` | Bulk tag operations on multiple notes | Low |
-| `metadata-menu` | Metadata Menu with fileclasses for typed property management | Medium |
+| `metaedit` | MetaEdit — frontmatter metadata management helper | Low |
+| `scales-chords` | Musical tab notation with clickable chord links (niche) | Low |
+| `simple-canvasearch` | Fuzzy search within an open Canvas | Low |
 
 ### Enabled in Template but Not in Production
 
 | Plugin | Purpose | Notes |
 |--------|---------|-------|
-| `obsidian-dynamic-toc` | Auto-generated table of contents | Template-only addition |
+| (none) | All template plugins now exist in production | — |
 
 ### Plugin Folders in Template but Not Enabled
 
@@ -32,17 +31,22 @@ These exist in `plugins/` but are absent from `community-plugins.json`:
 
 | Plugin Folder | Notes |
 |---------------|-------|
-| `frontmatter-links` | Enabled in production; should be added to template's `community-plugins.json` |
-| `mathpad` | Not in production |
-| `number-headings-obsidian` | Not in production |
-| `obsidian-kanban` | Not in production (in production plugin folder but not enabled either) |
-| `obsidian-snippet-downloader` | Not in production |
+| `mathpad` | Not in production — leftover folder |
+| `number-headings-obsidian` | Not in production — leftover folder |
+| `obsidian-dynamic-toc` | Removed from production; leftover folder in template |
+| `obsidian-snippet-downloader` | Not in production — leftover folder |
 
 ### Previously Identified Plugin Gaps — Now Resolved
 
 - `js-engine` — Added to template
 - `obsidian-image-toolkit` — Added to template
 - `image-converter` — Added to template
+- `cm-editor-syntax-highlight-obsidian` — Added to template (2026-04-07)
+- `obsidian-excel-to-markdown-table` — Added to template (2026-04-07)
+- `tag-many` — Added to template (2026-04-07)
+- `metadata-menu` — Added to template (2026-04-07)
+- `calendar-bases` — Added to template (2026-04-07)
+- `frontmatter-links` — Enabled in `community-plugins.json` (2026-04-07)
 
 ---
 
@@ -66,7 +70,7 @@ The template actually has **more** snippets than production. No snippets are mis
 
 ### Current State
 
-**Template: 6 databases** | **Production: 29 databases**
+**Template: 7 databases** | **Production: 29+ databases**
 
 Template databases:
 1. `media/Book Database.base` — Card view of books
@@ -75,6 +79,7 @@ Template databases:
 4. `cooking/recipes/Recipes Database.base` — Card view of recipes
 5. `apps/Apps Database.base` — Table view of apps grouped by type
 6. `subscriptions/Subscription Database.base` — Table view of subscriptions with active filter
+7. `Productivity/Habits Calendar.base` — Calendar view of daily habit booleans + emoji summary (2026-04-07)
 
 ### Missing Databases — By Category
 
@@ -94,12 +99,13 @@ Template databases:
 |----------|---------------|-----------|----------|
 | `TV Database.base` | `file.inFolder("media/tv")` | Cards with watched/unwatched pills, genre tags, season count | High |
 
-#### Video Games (2 missing filtered views)
+#### Video Games (3 missing filtered views)
 
 | Database | Filter Pattern | View Type | Priority |
 |----------|---------------|-----------|----------|
 | `Video Games Playing.base` | `status == ["[[playing]]"]` | Cards | High |
 | `Video Games Backlog.base` | `status == ["[[bought]]"]` and `status != ["[[played]]"]` | Cards | Medium |
+| `Video Games On-Hold.base` | `status == ["[[on-hold]]"]` | Cards | Low |
 
 #### Board Games & TTRPG (2 missing — entire category)
 
@@ -108,12 +114,10 @@ Template databases:
 | `Board Games Database.base` | `file.inFolder("media/games")` + `genre == ["[[Board Game]]"]` | Cards with owned/wishlist pills | High |
 | `TTRPG Database.base` | `file.inFolder("media/games")` + `genre.contains(link("TTRPG"))` | Cards | High |
 
-#### Non-Media (4 missing — entire categories)
+#### Non-Media (2 missing)
 
 | Database | Filter Pattern | View Type | Priority |
 |----------|---------------|-----------|----------|
-| `Apps Database.base` | `file.hasTag("#software/apps")` | Table grouped by type, with usage/OS columns | High |
-| `Subscription Database.base` | `file.hasTag("#personal/subscriptions")` | Table grouped by type + Active Only filtered view | High |
 | `Beer Database.base` | `file.hasTag("#personal/food/drinks/beer")` | Cards with brewery, ABV, rating, style | Medium |
 | `Papers Database.base` | `file.hasTag("#paperitem")` | Table with By Status, To Read, Reading, Read views | Medium |
 
@@ -130,6 +134,53 @@ The template's existing databases (Book, Movie, Video Games) already use these p
 
 ---
 
+## Habit Tracking System
+
+### Current State (as of 2026-04-07)
+
+The template has a complete habit tracking system matching production:
+
+- **Daily Template** — Contains all `*time` frontmatter fields (weightstime, cardiotime, guitartime, etc.) and the JS Engine reactive time-slider block
+- **Weekly Template** — Includes `*time` columns in dataview tables for each habit category
+- **Monthly Template** — Heatmap calendars use `page.*time` for intensity, showing actual minutes tracked
+- **`Productivity/Habits Calendar.base`** — Calendar view of all daily habits with emoji summary formula; table view with all boolean columns (Added 2026-04-07)
+- **`_templates/fileclass/daily.md`** — Metadata Menu fileclass defining all 38 daily note fields as typed properties (Boolean for habit toggles, Number with step:30 for time fields) (Added 2026-04-07)
+
+### How It Works
+
+1. Each daily note has boolean toggles for each habit (weights, cardio, guitar, etc.)
+2. When a toggle is enabled, a JS Engine block reactively shows a time slider for that habit
+3. The slider writes `*time` values (in 30-min increments) back to frontmatter
+4. Weekly/Monthly notes aggregate these via Dataview
+5. `Habits Calendar.base` shows a visual calendar with emoji summaries per day
+6. `metadata-menu` plugin uses the fileclass to provide typed UI for all these fields
+
+### Emoji Reference
+
+| Habit | Property | Emoji |
+|-------|----------|-------|
+| Weights | `weights` / `weightstime` | 🏋️ |
+| Cardio | `cardio` / `cardiotime` | 🏃 |
+| Guitar | `guitar` / `guitartime` | 🎸 |
+| Piano | `piano` / `pianotime` | 🎹 |
+| Singing | `singing` / `singingtime` | 🎤 |
+| Recording | `recording` / `recordingtime` | 🎙️ |
+| Drawing | `drawing` / `drawingtime` | ✏️ |
+| 3D Modelling | `modelling` / `modellingtime` | 🗿 |
+| Coding | `coding` / `codingtime` | 💻 |
+| Modding | `moding` / `modingtime` | 🎮 |
+| Electronics | `electronics` / `makertime` | 🔌 |
+| 3D Printing | `printing` / `makertime` | 🖨️ |
+| TTRPG | `ttrpg` / `ttrpgtime` | 🎲 |
+| Book Reading | `book_reading` / `readingtime` | 📚 |
+| Article Reading | `article_reading` / `readingtime` | 📰 |
+| CV Work | `cv` / `cvtime` | 📄 |
+| Obsidian | `obsidian` / `obsidiantime` | 💎 |
+| Video Games | `videogames` / `videogametime` | 🕹️ |
+| Movies/TV | `moviestv` / `moviestvtime` | 🎬 |
+
+---
+
 ## Example Content Gaps
 
 ### Current Example Content in Template
@@ -141,6 +192,8 @@ The template's existing databases (Book, Movie, Video Games) already use these p
 | Video Games | 3 | `media/video games/` |
 | Recipes | 1 | `cooking/recipes/` |
 | Papers | 3 | `papers/` |
+| Apps | 3 | `apps/` (VS Code, Blender, 7-Zip) |
+| Subscriptions | 3 | `subscriptions/` (Spotify, GitHub Pro, Netflix) |
 | Spaces | 1 | `Spaces/Example Project/` |
 
 ### Missing Example Content
@@ -150,54 +203,12 @@ The template's existing databases (Book, Movie, Video Games) already use these p
 | TV Shows | 0 entries | `media/tv/` folder doesn't exist. No examples to populate `TV Database.base` | High |
 | Board Games | 0 entries | No `media/games/` folder. No examples for `Board Games Database.base` | High |
 | TTRPG | 0 entries | No examples for `TTRPG Database.base` | High |
-| Apps | 3 entries | `apps/` folder with VS Code, Blender, 7-Zip | Complete |
-| Subscriptions | 3 entries | `subscriptions/` folder with Spotify, GitHub Pro, Netflix | Complete |
 | Beer | 0 entries | Template and Untappd clipper exist but no example entries | Medium |
 | Topics | 0 entries | No `Topics/` knowledge base folder or examples | Low |
-
-### Recommended Example Additions
-
-```
-technical-template/
-├── media/
-│   ├── tv/                          # NEW - TV show examples
-│   │   ├── Example TV Show 1.md
-│   │   └── Example TV Show 2.md
-│   └── games/                       # NEW - board game/TTRPG examples
-│       ├── Example Board Game.md
-│       └── Example TTRPG.md
-├── apps/                            # NEW - software catalog examples
-│   ├── Example App 1.md
-│   └── Example App 2.md
-├── subscriptions/                   # NEW - subscription examples
-│   └── Example Subscription.md
-└── beer/                            # NEW - beer collection examples
-    └── Example Beer.md
-```
 
 ---
 
 ## Folder Structure Gaps
-
-### Template vs Production Organization
-
-The production vault organizes content under a `Personal/` hierarchy. The template uses a flatter structure. Key structural differences:
-
-| Production Path | Template Path | Status |
-|----------------|---------------|--------|
-| `Personal/Media/books/` | `media/books/` | Different root but functional |
-| `Personal/Media/movies/` | `media/movies/` | Different root but functional |
-| `Personal/Media/video-games/` | `media/video games/` | Different root but functional |
-| `Personal/Media/libraries/tv/` | `media/tv/` | **Missing — folder doesn't exist** |
-| `Personal/Media/libraries/games/` | `media/games/` | **Missing — folder doesn't exist** |
-| `Personal/Computer/apps/` | — | **Missing — no apps folder** |
-| `Personal/Food & Drink/Beer/` | — | **Missing — no beer folder** |
-| `Personal/Cooking/` | `cooking/` | Present |
-| `Spaces/` | `Spaces/` | Present (1 example vs 3 real projects) |
-| `Topics/` | — | **Missing — no knowledge base section** |
-| `Clippings/` | — | **Missing — no web clipper imports folder** |
-| `Courses/` | — | **Missing — no courses section** |
-| `Paper MOCS/` | `mocs/` | Present but minimal (2 files vs 14+) |
 
 ### Missing Folders to Add
 
@@ -205,7 +216,6 @@ The production vault organizes content under a `Personal/` hierarchy. The templa
 |--------|---------|----------|
 | `media/tv/` | TV show entries for TV Database | High |
 | `media/games/` | Board game and TTRPG entries | High |
-| `apps/` | Software/apps catalog entries (or ensure template `folderPath` points somewhere valid) | High |
 | `Clippings/` | Landing zone for web clipper imports | Medium |
 | `Topics/` | Knowledge base with topic notes | Low |
 
@@ -213,34 +223,13 @@ The production vault organizes content under a `Personal/` hierarchy. The templa
 
 ## Template File Differences
 
-### Apps Template — Suggester Mismatch
-
-**Production** (`_templates/Apps Template.md`): Uses `tp.system.suggester()` with 23 predefined app type categories (3D Modelling, drawing, music, media, gaming, vr, web, AI, coding, engineering, robotics, maker, automation, document, knowledge, finance, storage, utility, audio).
-
-**Template**: Uses `tp.system.prompt("Type of App?")` — free-text input with no predefined options.
-
-**Impact:** Template users get no guidance on app categorization. The production version's suggester ensures consistent tagging.
-
-**Fix:** Update template's Apps Template to use the production's suggester list.
-
-### Apps Template — Folder Path
-
-Both templates use `folderPath = "Personal/Computer/apps"` but this folder doesn't exist in the template vault. The template should either:
-- Create this folder, or
-- Update the path to match the template's structure (e.g., `apps/`)
-
-### Subscription Template — Missing "Social" Type
-
-**Production**: Subscription type suggester includes "Social" as an option.
-**Template**: Omits "Social" from the type list.
-
-**Fix:** Add "Social" to the Subscription Template's type suggester.
-
 ### Daily Note Fileclass (metadata-menu)
 
-**Production** has `_templates/fileclass/daily.md` — a Metadata Menu configuration defining 32 tracked fields for daily notes (productivity, mood, and 18 activity categories each with boolean toggle + time tracking). This powers the conditional habit sliders.
+**Template** now has `_templates/fileclass/daily.md` — a Metadata Menu configuration defining 38 typed fields for daily notes (productivity, mood, and 19 activity categories each with boolean toggle + time tracking). This powers the conditional habit sliders. Added 2026-04-07.
 
-**Template**: Does not have this file. This is tightly coupled to the `metadata-menu` plugin which is also missing from the template. If `metadata-menu` is added, this fileclass should be included.
+### Movie Template — watchlistRank
+
+`watchlistRank:` field added to `_templates/Movie Template.md` (2026-04-07). Allows ranking unwatched movies by priority in the watchlist view.
 
 ---
 
@@ -250,17 +239,19 @@ Both templates use `folderPath = "Personal/Computer/apps"` but this folder doesn
 
 | Widget | Purpose | Priority |
 |--------|---------|----------|
-| `Newest Notes.md` | Dataview table of 10 most recently created `#note/knowledge` notes | Medium |
-| `Papers Last Read.md` | DataviewJS table of papers read in last 4 months | Medium |
-| `Papers to Read (Priority).md` | Dataview table of unread papers sorted by priority | Medium |
-| `Tasks to Start this Month.md` | Tasks query for upcoming start dates | Medium |
+| (none) | All key widgets now added | — |
 
-### Widget Name Differences
+### Current Widget State
 
-| Template Widget | Production Widget | Difference |
-|----------------|-------------------|------------|
-| `Newly Added Papers.md` | `Newly Added Papers (unread).md` | Production specifies unread filter in name |
-| `Youtube Player.md` | — | Template-only widget |
+| Widget | Status | Notes |
+|--------|--------|-------|
+| `Newest Notes.md` | Added 2026-04-07 | Dataview table of 10 most recent `#note/knowledge` notes |
+| `Newly Added Papers (unread).md` | Added 2026-04-07 | Papers widget filtered to unread only (replaces old `Newly Added Papers.md`) |
+| `Papers Last Read.md` | Added 2026-04-07 | DataviewJS table of papers read in last 4 months |
+| `Papers to Read (Priority).md` | Added 2026-04-07 | Unread papers sorted by priority |
+| `Tasks to Start this Month.md` | Added 2026-04-07 | Tasks query for upcoming start dates |
+| `Habits Last 7 Days.md` | Template-only | Referenced by Home.md; not present in production Widgets/ (may be embedded directly there) |
+| `Youtube Player.md` | Template-only | Not in production |
 
 ---
 
@@ -288,6 +279,7 @@ The template's paper system is functional but minimal. Adding the `Papers Databa
 | Create `Board Games Database.base` | Card view with owned/wishlist pills | Not Started |
 | Create `TTRPG Database.base` | Card view filtered by TTRPG genre | Not Started |
 | Create `Movies Watchlist.base` | Filtered card view (unwatched only) | Not Started |
+| Create `Productivity/Habits Calendar.base` | Calendar view of daily habit emojis | Complete |
 | Create `Apps Database.base` | Table view grouped by type | Complete |
 | Create `Subscription Database.base` | Table with active/inactive filter views | Complete |
 | Add 2-3 example app entries | Demonstrate apps template output | Complete |
@@ -301,25 +293,24 @@ The template's paper system is functional but minimal. Adding the `Papers Databa
 |------|-------------|--------|
 | Create `Video Games Playing.base` | Status-filtered card view | Not Started |
 | Create `Video Games Backlog.base` | Backlog-filtered card view | Not Started |
+| Create `Video Games On-Hold.base` | On-hold filtered card view | Not Started |
 | Create `Movies Ranking.base` | Table sorted by rating | Not Started |
 | Create `Movies Recent.base` | Table sorted by creation date | Not Started |
 | Create `Beer Database.base` | Card view with brewery/ABV/style | Not Started |
 | Create `Papers Database.base` | Table with status-based tabs | Not Started |
 | Add 1-2 example beer entries | Demonstrate beer template and Untappd clipper | Not Started |
-| Add missing widgets | Newest Notes, Papers Last Read, Papers to Read, Tasks to Start | Not Started |
-| Add `frontmatter-links` to `community-plugins.json` | Plugin folder exists but not enabled | Not Started |
 | Add `Clippings/` folder | Landing zone for web clipper imports | Not Started |
 
 ### Phase 3 — Lower Priority (Plugins & Structure)
 
 | Task | Description | Status |
 |------|-------------|--------|
-| Add `cm-editor-syntax-highlight-obsidian` plugin | Enhanced code syntax highlighting | Not Started |
-| Add `obsidian-excel-to-markdown-table` plugin | Excel/CSV import capability | Not Started |
-| Add `tag-many` plugin | Bulk tag operations | Not Started |
-| Evaluate `metadata-menu` plugin | Fileclasses for typed properties — adds complexity | Not Started |
+| Add `metaedit` plugin | Metadata helper (minor benefit) | Not Started |
+| Evaluate `scales-chords` plugin | Musical notation — niche use | Not Started |
+| Evaluate `simple-canvasearch` plugin | Canvas search — niche use | Not Started |
 | Create genre-filtered movie databases | Animation, Anime filtered views | Not Started |
 | Add `Topics/` folder with example topic note | Knowledge base structure | Not Started |
+| Remove orphaned plugin folders | `mathpad`, `number-headings-obsidian`, `obsidian-dynamic-toc`, `obsidian-snippet-downloader` | Not Started |
 
 ---
 
@@ -342,6 +333,12 @@ The template's paper system is functional but minimal. Adding the `Papers Databa
 | JS Engine Plugin | Complete | Added to template |
 | Image Toolkit Plugin | Complete | Added to template |
 | Image Converter Plugin | Complete | Added to template |
+| cm-editor-syntax-highlight | Complete | Added 2026-04-07 |
+| obsidian-excel-to-markdown-table | Complete | Added 2026-04-07 |
+| tag-many | Complete | Added 2026-04-07 |
+| metadata-menu | Complete | Added 2026-04-07 |
+| calendar-bases | Complete | Added 2026-04-07 |
+| frontmatter-links enabled | Complete | Added to community-plugins.json 2026-04-07 |
 | Book Database | Complete | `media/Book Database.base` |
 | Video Games Database | Complete | `media/Video Games Database.base` |
 | Recipes Database | Complete | `cooking/recipes/Recipes Database.base` |
@@ -357,3 +354,12 @@ The template's paper system is functional but minimal. Adding the `Papers Databa
 | Apps Template Folder Path | Complete | Updated to `apps/` |
 | Subscription Template Folder Path | Complete | Simplified to `subscriptions/` |
 | Subscription Template Social Type | Complete | Added "Social" to type suggester |
+| Habits Calendar.base | Complete | `Productivity/Habits Calendar.base` — Added 2026-04-07 |
+| Daily fileclass | Complete | `_templates/fileclass/daily.md` — Added 2026-04-07 |
+| Movie Template watchlistRank | Complete | Added `watchlistRank:` field 2026-04-07 |
+| Newest Notes widget | Complete | Added 2026-04-07 |
+| Newly Added Papers (unread) widget | Complete | Added 2026-04-07 (replaces old Newly Added Papers.md) |
+| Papers Last Read widget | Complete | Added 2026-04-07 |
+| Papers to Read (Priority) widget | Complete | Added 2026-04-07 |
+| Tasks to Start this Month widget | Complete | Added 2026-04-07 |
+| Home.md widget embeds | Complete | Updated Notes/Papers sections 2026-04-07 |

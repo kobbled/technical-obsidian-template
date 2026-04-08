@@ -13,6 +13,7 @@ imdburl: https://www.imdb.com/title/{{VALUE:imdbID}}
 posterurl: {{VALUE:Poster}}
 tags: [Movies, {{VALUE:tag}}]
 cssClass: no-caption
+watchlistRank: 
 ---
 
 **plot**:: {{VALUE:Plot}}
